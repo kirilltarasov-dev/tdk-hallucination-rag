@@ -1,8 +1,10 @@
 """Experimental controls for the prompt-only change; no model accuracy tests."""
 
 import json
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from src.verification.neuro_symbolic import parse_extraction, verify_text
 from src.verification.prompt_clarity import INSTRUCTION_V2, build_prompt_v2, verify_text_v2
@@ -51,6 +53,28 @@ class PromptClarityControls(unittest.TestCase):
                                   example_input["response"])
         self.assertFalse(parsed.unresolved)
         self.assertNotEqual(parsed.facts[0].value, parsed.answer.value)
+
+    def test_jsonl_roundtrip_replays_and_rejects_a_changed_extraction(self):
+        from experiments import exp033_prompt_clarity_pilot as pilot
+        from experiments.exp033_replay_saved_results import restore_replay_types
+        rows = []
+        for case in CASES:
+            result = verify_text_v2(case["question"], case["documents"], case["response"],
+                                    lambda **kwargs: json.dumps(case["oracle_extraction"]))
+            rows.append({"experiment_id": "EXP-033", "case_id": case["case_id"],
+                         "question": case["question"], "documents": case["documents"],
+                         "response": case["response"], "verification": result})
+        serialized = json.loads(json.dumps(rows))
+        with tempfile.TemporaryDirectory() as directory:
+            raw = Path(directory) / "stub.jsonl"
+            raw.write_text("\n".join(json.dumps(row) for row in rows) + "\n")
+            with patch.object(pilot, "RAW", raw):
+                expected = pilot.summarize(CASES, {}, rows)
+                actual = pilot.summarize(CASES, {}, restore_replay_types(CASES, serialized))
+                self.assertEqual(actual, expected)
+        serialized[0]["verification"]["parsed_extraction"]["answer"]["value"] = "Changed"
+        with self.assertRaisesRegex(ValueError, "Semantic replay mismatch"):
+            restore_replay_types(CASES, serialized)
 
 
 if __name__ == "__main__":

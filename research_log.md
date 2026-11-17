@@ -355,3 +355,69 @@ prompt-only correction is the next proposed development experiment; details
 and case-level observations are in `docs/exp032_failure_analysis.md`. No general
 hallucination reduction, independent human validation, or successful integrated
 neuro-symbolic effectiveness result is claimed.
+
+## 2026-11-17 — EXP-033: Prompt-Only Extraction Correction
+
+### Objective and controlled design
+Test the correction proposed after EXP-032: replace only the extraction
+instruction, making quotation requirements and semantic distinctions explicit
+and adding one separately authored format example. The model/revision, same
+12 fictional development cases, schema, strict validator, R3/R5/R6 rules,
+greedy sampling, one call per case, and 1,024-token output cap were fixed.
+The instruction was adapted using observed development failures; no independent
+test or population significance claim is made.
+
+Source commit `dc65da0` and annotated tag `exp033-freeze-2026-11-17` preceded
+inference. Preflight reproduced the complete EXP-032 summary, checked its
+source hashes, and confirmed identical serialized input data in both prompts.
+Thirty software tests passed, including equal decisions for equal extraction
+outputs under both wrappers. Twelve local calls ran with HF_HUB_OFFLINE=1;
+there were no retries, answer repairs, or further prompt variants.
+
+### Outputs and results
+- Manifest: `results/raw/exp033_prompt_clarity_manifest.json`.
+- Raw: `results/raw/exp033_prompt_clarity_pilot.jsonl`.
+- Summary: `results/processed/exp033_prompt_clarity_pilot_summary.json`.
+- Interpretation and case review: `docs/exp033_results.md`.
+- Raw SHA-256: `2809aef264bf53fe078c19baa7df9e693ba139717f59a08393d81f2c371b22ac`.
+
+Structural validity rose from 0/12 to 11/12 and exact typed-extraction agreement
+from 0/12 to 7/12 (7 gains, 0 losses on that endpoint). Verdict agreement was
+10/12 and rule-ID agreement 8/12. UNKNOWN outputs fell from 12/12 to 4/12.
+Two outputs, P09 and P10, incorrectly received VERIFIED relative to their
+authored expected UNKNOWN. The baseline's zero such errors came from returning
+UNKNOWN everywhere and cannot be treated as evidence of useful verification.
+
+Mean extraction latency was 4.485 s, median 4.342 s, nearest-rank p95 6.042 s,
+excluding loading and prompt construction. Mean prompt length increased from
+2,814.9 to 3,892.9 characters. No efficiency improvement is established.
+
+### Interpretation and limitations
+P05 still discards a wrong-event fact as unresolved. P08 emits a fact without
+a winner value and is rejected. P09 quotes both incompatible answer claims
+but extracts only the first, yielding a false confirmation. P10 treats a venue
+as a winner; the parser's fixed `won` relation is not independently grounded
+in the meaning of the source. P11 correctly removes the negated win from the
+source but mislabels an affirmative response as abstention; its correct
+UNKNOWN/rule result conceals that extraction error.
+
+P12 correctly returns VERIFIED relative to the supplied false passage, while
+the authored fictional truth contradicts it. This exposes the distinction
+between evidence agreement and external truth even when extraction is exact.
+The combined prompt revision improves compliance on these reused controls but
+does not establish reliable semantic verification or hallucination reduction.
+A narrowly controlled predicate/scope intervention, followed separately by a
+complete-answer-claim intervention and new-case evaluation, is scientifically
+justified. EXP-031 human annotation and broader effectiveness evaluation remain
+outstanding.
+
+### EXP-033 post-run replay check
+The original frozen summarizer compared parsed dataclass tuples with lists
+read from JSONL. Valid EXP-033 extractions exposed this representation mismatch;
+EXP-032 had parsed_extraction=null in every case and did not expose it.
+`experiments/exp033_replay_saved_results.py` verifies canonical JSON
+equivalence of every replayed field before restoring tuple types for the
+frozen summarizer. It exactly reproduces the existing summary from all 12 raw
+records. A regression test checks round-trip equality and rejects changed
+extraction values. No inference source, raw output, or measured metric was
+altered to address this offline replay issue.

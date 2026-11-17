@@ -2,10 +2,11 @@
 
 **Status:** Deterministic core implemented and tested on oracle facts. A narrow
 neural extraction adapter is now implemented in `src/verification/neuro_symbolic.py`,
-and was evaluated in the initial EXP-032 pilot. All 12 model outputs failed
-extraction validation and yielded UNKNOWN; the oracle rule checks passed.
-This is a development artifact and a negative feasibility result, not evidence
-that the thesis's neuro-symbolic effectiveness claim has been demonstrated.
+and was evaluated in EXP-032/033. The initial prompt failed validation on all
+12 cases; the revised prompt produced 11 valid and 7 exact typed extractions,
+but also two incorrect VERIFIED decisions. Oracle rule checks passed.
+These development results do not demonstrate the thesis's neuro-symbolic
+effectiveness claim; semantic extraction remains an unresolved limitation.
 
 `src/verification/symbolic_rules.py` accepts a typed question frame, a list
 of structured facts with source IDs and source spans, and an answer claim or
