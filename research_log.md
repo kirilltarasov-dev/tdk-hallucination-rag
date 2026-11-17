@@ -473,3 +473,57 @@ hallucination reduction, end-to-end speed, or computational-efficiency claim
 is made. Complete representation of incompatible answer claims is the next
 separate intervention to investigate, followed by new-case validation and
 independent human factual/faithfulness annotation.
+
+## 2026-11-17 — EXP-035: Offline Complete-Response Claim Guard
+
+### Objective and controlled intervention
+
+Investigate the remaining known P09 false confirmation after EXP-034: the
+neural extractor omitted a second incompatible affirmative answer claim.
+Keep the 12 cases, saved EXP-033 extractions, strict parser, symbolic core,
+and EXP-034 predicate guard fixed. Add only a finite-language inventory of
+all supported assertions, rejections, and refusals in the complete response.
+Unsupported text or incompatible/mismatched answer states yield UNKNOWN.
+
+### Freeze, execution, and artifacts
+
+Protocol and implementation commit `4b2a1e2`, annotated tag
+`exp035-freeze-2026-11-17`, preceded execution. All 52 software tests passed,
+including 12 new authored claim-language controls. Preflight reproduced the
+frozen EXP-034 baseline and all upstream source hashes. No model calls ran.
+
+- Protocol: `docs/exp035_answer_claim_guard_protocol.md`.
+- Runner: `experiments/exp035_answer_claim_guard_replay.py`.
+- Manifest: `results/raw/exp035_answer_claim_guard_manifest.json`.
+- Derived raw records: `results/raw/exp035_answer_claim_guard_offline_replay.jsonl`.
+- Summary: `results/processed/exp035_answer_claim_guard_summary.json`.
+- Interpretation: `docs/exp035_results.md`.
+
+### Measured outcomes and limits
+
+Only P09 changed, VERIFIED to UNKNOWN under G3_INCOMPATIBLE_ANSWERS. Both
+"Team Amber" and "Team Cobalt" are retained as asserted winners in the trace.
+Oracle-relative incorrect VERIFIED changed 1 to 0 out of 12, agreement with
+authored verdicts 11 to 12, decisive verdicts 7 to 6, correct decisive verdicts
+6 to 6, VERIFIED 4 to 3, and UNKNOWN 5 to 6. Six guards passed, one blocked,
+and five existing UNKNOWN cases were skipped. Exact neural extraction is
+unchanged at 7/12; this intervention does not repair or regenerate answers.
+
+P12 remains VERIFIED against its false-but-consistent source despite being
+false under the fictional external truth. Accordingly 12/12 oracle agreement
+is not perfect factual verification. Rejected-quotation handling is covered
+by authored unit controls, not by an independent new model sample. Finite
+language restrictions can reject valid paraphrases or extra explanations.
+
+Post-run verification reproduced the saved summary and every record, checked
+all frozen source hashes, and confirmed that all 12 original model strings
+were unchanged. Derived raw SHA-256:
+`53241e5bd813ac3cc704c75495fea40b1faeddb9e5191c4fbeffb148f9f5878f`.
+Historical raw results and frozen implementations were preserved.
+
+The two guards address known development failures. Freeze this combined
+variant before separately evaluating new formulations and reporting both
+false confirmations and coverage loss; do not keep tuning against these 12
+cases as evidence of general effectiveness. EXP-031 human annotation and a
+real end-to-end effectiveness comparison remain open. No significance,
+hallucination reduction, or computational saving is claimed here.

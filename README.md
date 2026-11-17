@@ -16,11 +16,13 @@ test. Its answer/fake-answer substring counts are custom diagnostics, not
 human-validated error rates or official ED*.
 EXP-030 is an offline supplemental EM/F1 analysis.
 
-The latest completed experiment is EXP-034, an offline predicate-guard replay
-on the saved EXP-033 outputs. One known false confirmation became UNKNOWN;
-oracle-relative incorrect VERIFIED counts changed from 2/12 to 1/12, while
-correct decisive verdicts stayed at 6/12. It introduces no new model prediction
-or factual-truth validation.
+The latest completed experiment is EXP-035, an offline complete-response claim
+guard added after EXP-034 on saved EXP-033 outputs. The remaining known
+oracle-relative false confirmation became UNKNOWN (1/12 to 0/12); correct
+decisive verdicts stayed at 6/12 and UNKNOWN increased from 5/12 to 6/12.
+Agreement with all 12 authored development verdicts does not establish factual
+truth: the false-but-consistent-source case still receives VERIFIED. No new
+model predictions or held-out effectiveness evidence were produced.
 
 EXP-031 annotation materials are prepared for all 100 EXP-029 pairs in
 `deliverables/EXP031_Blinded_Annotation_Template.xlsx`; no human labels or
@@ -42,7 +44,7 @@ matching is a lexical benchmark score, not a direct hallucination rate. See
 [`research_log.md`](research_log.md) for experiment objectives, raw/processed
 paths, paired comparisons, and limitations. The current supervisor-review
 manuscript is in `deliverables/TDK_Research_Paper_v7_Kirill_Tarasov.docx`; it
-includes EXP-029 and predates the EXP-032–034 development work documented in the log.
+includes EXP-029 and predates the EXP-032–035 development work documented in the log.
 
 ## Data and provenance
 
@@ -103,6 +105,11 @@ variant is not suitable as an automatic factual-approval gate.
 The [EXP-034 results](docs/exp034_results.md) isolate a conservative predicate
 guard on saved extractions. Its controlled-language grammar has explicit
 coverage costs and does not address missing answer claims or false sources.
+
+The [EXP-035 results](docs/exp035_results.md) document the added answer-claim
+guard. It detects the known omitted incompatible assertion using a finite
+full-response grammar. New formulations and independent human factual labels
+are still required; the combined variant is frozen before that next evaluation.
 
 ## Mac inference environment
 

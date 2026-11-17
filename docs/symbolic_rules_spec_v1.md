@@ -14,6 +14,13 @@ those saved outputs. It blocked the venue-as-winner case, leaving one
 oracle-relative incorrect VERIFIED decision and the false-source truth
 limitation. This does not change the core R3/R5/R6 definitions below.
 
+EXP-035 adds `src/verification/answer_claim_guard.py` after that guard. Its
+finite complete-response inventory blocks P09's omitted incompatible assertion.
+All 12 reused development verdicts now match the authored source-consistency
+oracle, with 6 UNKNOWN and the false-source case still VERIFIED. Exact neural
+extraction remains 7/12. The combined variant needs new-formulation evaluation;
+these diagnostic replays do not establish general effectiveness.
+
 `src/verification/symbolic_rules.py` accepts a typed question frame, a list
 of structured facts with source IDs and source spans, and an answer claim or
 abstention flag. It returns one of four verdicts with the rule ID and all

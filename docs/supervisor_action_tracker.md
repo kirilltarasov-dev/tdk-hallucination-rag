@@ -8,7 +8,7 @@ separate research scope.
 
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
-| Align title with measured work | Open | A rule core and neural extraction adapter are implemented. EXP-033 has 7/12 exact typed matches; EXP-034's offline predicate guard blocks one known false confirmation, leaving one oracle-relative false VERIFIED and the false-source limitation. General effectiveness remains unestablished. |
+| Align title with measured work | Open | A rule core and neural extraction adapter are implemented. EXP-033 has 7/12 exact typed matches; EXP-034/035 offline guards block both known oracle-relative false confirmations on reused development cases, with 6/12 UNKNOWN. False-but-consistent sources still pass, and no new-formulation evaluation exists. General effectiveness remains unestablished. |
 | Use a hallucination-specific metric for the title claim | Annotation prepared | RGB-compatible lexical score is not a hallucination rate. EXP-031 has a blinded 100-pair worksheet and a frozen codebook, but no independent human labels or semantic result yet. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
