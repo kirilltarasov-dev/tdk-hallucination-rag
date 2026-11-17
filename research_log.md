@@ -762,3 +762,37 @@ full plan at 31.1%; these are planning conventions, not effort or scientific
 quality measures. Two earlier Done statuses were downgraded because v7 still
 predates the measured symbolic experiments and repeats a table number.
 Evidence by requirement: `docs/supervisor_plan_completion_audit_2026-11-17.md`.
+
+## 2026-11-17 — EXP-040: Generated-Answer Pilot Prepared, Not Executed
+
+Prepared a minimal release policy for the existing combined verifier:
+VERIFIED releases the original draft verbatim; REFUTED, CONFLICT, UNKNOWN and
+extraction failure produce an explicit abstention with the original reason
+preserved in the trace. Historical prompts, parser and guards are unchanged.
+No repair loop, new retriever, or source-trust mechanism is implied.
+
+Prepared 40 new fictional questions in ten families, four variants each.
+Eight false-source controls remain in the primary evaluation. The protocol
+compares a shared generated draft, same-model self-review and NS-release with
+matched concise-answer prompts. This is restricted synthetic integration, not
+the broad thesis effectiveness test. Authored truth is hidden from model input.
+No independent annotation or naturally sampled benchmark is claimed.
+
+Primary endpoint is restricted target-answer utility (+1 correct, 0 abstain,
+-1 wrong), with unscorable outputs exposed and bounded, not silently classified.
+The engineering screen requires a positive utility change, at least 80% correct
+baseline-answer retention, complete scoring, and sufficient baseline events.
+The 80% threshold is not lowered after EXP-036. Whole-family uncertainty is
+exploratory. The protocol also specifies per-stage costs and actual token counts.
+
+The runner defaults to read-only preflight. Execution is bounded to 120 local
+calls and 51,200 maximum generated tokens, with no downloads or paid services.
+It checks the source freeze, writes exclusive per-call and per-case logs,
+preserves partial runs, and replays saved prompts, decisions and scores before
+summary creation. Source consistency remains distinct from authored truth.
+
+83 Python tests passed, including nine new integration/accounting checks on
+stub outputs. Preflight verified historical source hashes, all 40 new fixture
+questions, and zero EXP-040 inference artifacts. Stub tests are not experiment
+results. All measured EXP-036/039 findings remain unchanged. New inference is
+pending review of the concrete experiment and authorization to execute it.

@@ -1,0 +1,594 @@
+{
+  "experiment_id": "EXP-040",
+  "provenance": "Authored fictional ground truth; not independent human labels.",
+  "cases": [
+    {
+      "case_id": "E040-000",
+      "family": "clean",
+      "question": "Who won the 2101 Aster Circuit 1?",
+      "event": "Aster Circuit 1",
+      "year": 2101,
+      "documents": {
+        "D1": "Velvet Otters 1 won the 2101 Aster Circuit 1."
+      },
+      "authored_truth": "Velvet Otters 1",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-001",
+      "family": "clean",
+      "question": "Who won the 2102 Aster Circuit 2?",
+      "event": "Aster Circuit 2",
+      "year": 2102,
+      "documents": {
+        "D1": "Velvet Otters 2 won the 2102 Aster Circuit 2."
+      },
+      "authored_truth": "Velvet Otters 2",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-002",
+      "family": "clean",
+      "question": "Who won the 2103 Aster Circuit 3?",
+      "event": "Aster Circuit 3",
+      "year": 2103,
+      "documents": {
+        "D1": "Velvet Otters 3 won the 2103 Aster Circuit 3."
+      },
+      "authored_truth": "Velvet Otters 3",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-003",
+      "family": "clean",
+      "question": "Who won the 2104 Aster Circuit 4?",
+      "event": "Aster Circuit 4",
+      "year": 2104,
+      "documents": {
+        "D1": "Velvet Otters 4 won the 2104 Aster Circuit 4."
+      },
+      "authored_truth": "Velvet Otters 4",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-004",
+      "family": "duplicate_support",
+      "question": "Who won the 2105 Aster Circuit 5?",
+      "event": "Aster Circuit 5",
+      "year": 2105,
+      "documents": {
+        "D1": "Velvet Otters 5 won the 2105 Aster Circuit 5.",
+        "D2": "Velvet Otters 5 won the 2105 Aster Circuit 5."
+      },
+      "authored_truth": "Velvet Otters 5",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-005",
+      "family": "duplicate_support",
+      "question": "Who won the 2106 Aster Circuit 6?",
+      "event": "Aster Circuit 6",
+      "year": 2106,
+      "documents": {
+        "D1": "Velvet Otters 6 won the 2106 Aster Circuit 6.",
+        "D2": "Velvet Otters 6 won the 2106 Aster Circuit 6."
+      },
+      "authored_truth": "Velvet Otters 6",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-006",
+      "family": "duplicate_support",
+      "question": "Who won the 2107 Aster Circuit 7?",
+      "event": "Aster Circuit 7",
+      "year": 2107,
+      "documents": {
+        "D1": "Velvet Otters 7 won the 2107 Aster Circuit 7.",
+        "D2": "Velvet Otters 7 won the 2107 Aster Circuit 7."
+      },
+      "authored_truth": "Velvet Otters 7",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-007",
+      "family": "duplicate_support",
+      "question": "Who won the 2108 Aster Circuit 8?",
+      "event": "Aster Circuit 8",
+      "year": 2108,
+      "documents": {
+        "D1": "Velvet Otters 8 won the 2108 Aster Circuit 8.",
+        "D2": "Velvet Otters 8 won the 2108 Aster Circuit 8."
+      },
+      "authored_truth": "Velvet Otters 8",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-008",
+      "family": "wrong_year",
+      "question": "Who won the 2109 Aster Circuit 9?",
+      "event": "Aster Circuit 9",
+      "year": 2109,
+      "documents": {
+        "D1": "Velvet Otters 9 won the 2109 Aster Circuit 9.",
+        "D2": "Silver Ibises 9 won the 2108 Aster Circuit 9."
+      },
+      "authored_truth": "Velvet Otters 9",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-009",
+      "family": "wrong_year",
+      "question": "Who won the 2110 Aster Circuit 10?",
+      "event": "Aster Circuit 10",
+      "year": 2110,
+      "documents": {
+        "D1": "Silver Ibises 10 won the 2109 Aster Circuit 10.",
+        "D2": "Velvet Otters 10 won the 2110 Aster Circuit 10."
+      },
+      "authored_truth": "Velvet Otters 10",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-010",
+      "family": "wrong_year",
+      "question": "Who won the 2111 Aster Circuit 11?",
+      "event": "Aster Circuit 11",
+      "year": 2111,
+      "documents": {
+        "D1": "Velvet Otters 11 won the 2111 Aster Circuit 11.",
+        "D2": "Silver Ibises 11 won the 2110 Aster Circuit 11."
+      },
+      "authored_truth": "Velvet Otters 11",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-011",
+      "family": "wrong_year",
+      "question": "Who won the 2112 Aster Circuit 12?",
+      "event": "Aster Circuit 12",
+      "year": 2112,
+      "documents": {
+        "D1": "Silver Ibises 12 won the 2111 Aster Circuit 12.",
+        "D2": "Velvet Otters 12 won the 2112 Aster Circuit 12."
+      },
+      "authored_truth": "Velvet Otters 12",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-012",
+      "family": "wrong_event",
+      "question": "Who won the 2113 Aster Circuit 13?",
+      "event": "Aster Circuit 13",
+      "year": 2113,
+      "documents": {
+        "D1": "Velvet Otters 13 won the 2113 Aster Circuit 13.",
+        "D2": "Silver Ibises 13 won the 2113 Boreal Circuit."
+      },
+      "authored_truth": "Velvet Otters 13",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-013",
+      "family": "wrong_event",
+      "question": "Who won the 2114 Aster Circuit 14?",
+      "event": "Aster Circuit 14",
+      "year": 2114,
+      "documents": {
+        "D1": "Silver Ibises 14 won the 2114 Boreal Circuit.",
+        "D2": "Velvet Otters 14 won the 2114 Aster Circuit 14."
+      },
+      "authored_truth": "Velvet Otters 14",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-014",
+      "family": "wrong_event",
+      "question": "Who won the 2115 Aster Circuit 15?",
+      "event": "Aster Circuit 15",
+      "year": 2115,
+      "documents": {
+        "D1": "Velvet Otters 15 won the 2115 Aster Circuit 15.",
+        "D2": "Silver Ibises 15 won the 2115 Boreal Circuit."
+      },
+      "authored_truth": "Velvet Otters 15",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-015",
+      "family": "wrong_event",
+      "question": "Who won the 2116 Aster Circuit 16?",
+      "event": "Aster Circuit 16",
+      "year": 2116,
+      "documents": {
+        "D1": "Silver Ibises 16 won the 2116 Boreal Circuit.",
+        "D2": "Velvet Otters 16 won the 2116 Aster Circuit 16."
+      },
+      "authored_truth": "Velvet Otters 16",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-016",
+      "family": "document_paraphrase",
+      "question": "Who won the 2117 Aster Circuit 17?",
+      "event": "Aster Circuit 17",
+      "year": 2117,
+      "documents": {
+        "D1": "Velvet Otters 17 took first place in the 2117 Aster Circuit 17."
+      },
+      "authored_truth": "Velvet Otters 17",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-017",
+      "family": "document_paraphrase",
+      "question": "Who won the 2118 Aster Circuit 18?",
+      "event": "Aster Circuit 18",
+      "year": 2118,
+      "documents": {
+        "D1": "Velvet Otters 18 took first place in the 2118 Aster Circuit 18."
+      },
+      "authored_truth": "Velvet Otters 18",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-018",
+      "family": "document_paraphrase",
+      "question": "Who won the 2119 Aster Circuit 19?",
+      "event": "Aster Circuit 19",
+      "year": 2119,
+      "documents": {
+        "D1": "Velvet Otters 19 took first place in the 2119 Aster Circuit 19."
+      },
+      "authored_truth": "Velvet Otters 19",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-019",
+      "family": "document_paraphrase",
+      "question": "Who won the 2120 Aster Circuit 20?",
+      "event": "Aster Circuit 20",
+      "year": 2120,
+      "documents": {
+        "D1": "Velvet Otters 20 took first place in the 2120 Aster Circuit 20."
+      },
+      "authored_truth": "Velvet Otters 20",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-020",
+      "family": "negated_distractor",
+      "question": "Who won the 2121 Aster Circuit 21?",
+      "event": "Aster Circuit 21",
+      "year": 2121,
+      "documents": {
+        "D1": "Velvet Otters 21 won the 2121 Aster Circuit 21.",
+        "D2": "Silver Ibises 21 did not win the 2121 Aster Circuit 21."
+      },
+      "authored_truth": "Velvet Otters 21",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-021",
+      "family": "negated_distractor",
+      "question": "Who won the 2122 Aster Circuit 22?",
+      "event": "Aster Circuit 22",
+      "year": 2122,
+      "documents": {
+        "D1": "Silver Ibises 22 did not win the 2122 Aster Circuit 22.",
+        "D2": "Velvet Otters 22 won the 2122 Aster Circuit 22."
+      },
+      "authored_truth": "Velvet Otters 22",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-022",
+      "family": "negated_distractor",
+      "question": "Who won the 2123 Aster Circuit 23?",
+      "event": "Aster Circuit 23",
+      "year": 2123,
+      "documents": {
+        "D1": "Velvet Otters 23 won the 2123 Aster Circuit 23.",
+        "D2": "Silver Ibises 23 did not win the 2123 Aster Circuit 23."
+      },
+      "authored_truth": "Velvet Otters 23",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-023",
+      "family": "negated_distractor",
+      "question": "Who won the 2124 Aster Circuit 24?",
+      "event": "Aster Circuit 24",
+      "year": 2124,
+      "documents": {
+        "D1": "Silver Ibises 24 did not win the 2124 Aster Circuit 24.",
+        "D2": "Velvet Otters 24 won the 2124 Aster Circuit 24."
+      },
+      "authored_truth": "Velvet Otters 24",
+      "unambiguous_true_evidence": true,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-024",
+      "family": "conflict",
+      "question": "Who won the 2125 Aster Circuit 25?",
+      "event": "Aster Circuit 25",
+      "year": 2125,
+      "documents": {
+        "D1": "Velvet Otters 25 won the 2125 Aster Circuit 25.",
+        "D2": "Silver Ibises 25 won the 2125 Aster Circuit 25."
+      },
+      "authored_truth": "Velvet Otters 25",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": true
+    },
+    {
+      "case_id": "E040-025",
+      "family": "conflict",
+      "question": "Who won the 2126 Aster Circuit 26?",
+      "event": "Aster Circuit 26",
+      "year": 2126,
+      "documents": {
+        "D1": "Silver Ibises 26 won the 2126 Aster Circuit 26.",
+        "D2": "Velvet Otters 26 won the 2126 Aster Circuit 26."
+      },
+      "authored_truth": "Velvet Otters 26",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": true
+    },
+    {
+      "case_id": "E040-026",
+      "family": "conflict",
+      "question": "Who won the 2127 Aster Circuit 27?",
+      "event": "Aster Circuit 27",
+      "year": 2127,
+      "documents": {
+        "D1": "Velvet Otters 27 won the 2127 Aster Circuit 27.",
+        "D2": "Silver Ibises 27 won the 2127 Aster Circuit 27."
+      },
+      "authored_truth": "Velvet Otters 27",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": true
+    },
+    {
+      "case_id": "E040-027",
+      "family": "conflict",
+      "question": "Who won the 2128 Aster Circuit 28?",
+      "event": "Aster Circuit 28",
+      "year": 2128,
+      "documents": {
+        "D1": "Silver Ibises 28 won the 2128 Aster Circuit 28.",
+        "D2": "Velvet Otters 28 won the 2128 Aster Circuit 28."
+      },
+      "authored_truth": "Velvet Otters 28",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": true
+    },
+    {
+      "case_id": "E040-028",
+      "family": "no_target_evidence",
+      "question": "Who won the 2129 Aster Circuit 29?",
+      "event": "Aster Circuit 29",
+      "year": 2129,
+      "documents": {
+        "D1": "Silver Ibises 29 won the 2128 Aster Circuit 29."
+      },
+      "authored_truth": "Velvet Otters 29",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-029",
+      "family": "no_target_evidence",
+      "question": "Who won the 2130 Aster Circuit 30?",
+      "event": "Aster Circuit 30",
+      "year": 2130,
+      "documents": {
+        "D1": "Silver Ibises 30 won the 2129 Aster Circuit 30."
+      },
+      "authored_truth": "Velvet Otters 30",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-030",
+      "family": "no_target_evidence",
+      "question": "Who won the 2131 Aster Circuit 31?",
+      "event": "Aster Circuit 31",
+      "year": 2131,
+      "documents": {
+        "D1": "Silver Ibises 31 won the 2130 Aster Circuit 31."
+      },
+      "authored_truth": "Velvet Otters 31",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-031",
+      "family": "no_target_evidence",
+      "question": "Who won the 2132 Aster Circuit 32?",
+      "event": "Aster Circuit 32",
+      "year": 2132,
+      "documents": {
+        "D1": "Silver Ibises 32 won the 2131 Aster Circuit 32."
+      },
+      "authored_truth": "Velvet Otters 32",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": false,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-032",
+      "family": "false_source_only",
+      "question": "Who won the 2133 Aster Circuit 33?",
+      "event": "Aster Circuit 33",
+      "year": 2133,
+      "documents": {
+        "D1": "Silver Ibises 33 won the 2133 Aster Circuit 33."
+      },
+      "authored_truth": "Velvet Otters 33",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-033",
+      "family": "false_source_only",
+      "question": "Who won the 2134 Aster Circuit 34?",
+      "event": "Aster Circuit 34",
+      "year": 2134,
+      "documents": {
+        "D1": "Silver Ibises 34 won the 2134 Aster Circuit 34."
+      },
+      "authored_truth": "Velvet Otters 34",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-034",
+      "family": "false_source_only",
+      "question": "Who won the 2135 Aster Circuit 35?",
+      "event": "Aster Circuit 35",
+      "year": 2135,
+      "documents": {
+        "D1": "Silver Ibises 35 won the 2135 Aster Circuit 35."
+      },
+      "authored_truth": "Velvet Otters 35",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-035",
+      "family": "false_source_only",
+      "question": "Who won the 2136 Aster Circuit 36?",
+      "event": "Aster Circuit 36",
+      "year": 2136,
+      "documents": {
+        "D1": "Silver Ibises 36 won the 2136 Aster Circuit 36."
+      },
+      "authored_truth": "Velvet Otters 36",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": false
+    },
+    {
+      "case_id": "E040-036",
+      "family": "false_source_majority",
+      "question": "Who won the 2137 Aster Circuit 37?",
+      "event": "Aster Circuit 37",
+      "year": 2137,
+      "documents": {
+        "D1": "Silver Ibises 37 won the 2137 Aster Circuit 37.",
+        "D2": "Velvet Otters 37 won the 2137 Aster Circuit 37.",
+        "D3": "Silver Ibises 37 won the 2137 Aster Circuit 37."
+      },
+      "authored_truth": "Velvet Otters 37",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": true
+    },
+    {
+      "case_id": "E040-037",
+      "family": "false_source_majority",
+      "question": "Who won the 2138 Aster Circuit 38?",
+      "event": "Aster Circuit 38",
+      "year": 2138,
+      "documents": {
+        "D1": "Silver Ibises 38 won the 2138 Aster Circuit 38.",
+        "D2": "Velvet Otters 38 won the 2138 Aster Circuit 38.",
+        "D3": "Silver Ibises 38 won the 2138 Aster Circuit 38."
+      },
+      "authored_truth": "Velvet Otters 38",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": true
+    },
+    {
+      "case_id": "E040-038",
+      "family": "false_source_majority",
+      "question": "Who won the 2139 Aster Circuit 39?",
+      "event": "Aster Circuit 39",
+      "year": 2139,
+      "documents": {
+        "D1": "Silver Ibises 39 won the 2139 Aster Circuit 39.",
+        "D2": "Velvet Otters 39 won the 2139 Aster Circuit 39.",
+        "D3": "Silver Ibises 39 won the 2139 Aster Circuit 39."
+      },
+      "authored_truth": "Velvet Otters 39",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": true
+    },
+    {
+      "case_id": "E040-039",
+      "family": "false_source_majority",
+      "question": "Who won the 2140 Aster Circuit 40?",
+      "event": "Aster Circuit 40",
+      "year": 2140,
+      "documents": {
+        "D1": "Silver Ibises 40 won the 2140 Aster Circuit 40.",
+        "D2": "Velvet Otters 40 won the 2140 Aster Circuit 40.",
+        "D3": "Silver Ibises 40 won the 2140 Aster Circuit 40."
+      },
+      "authored_truth": "Velvet Otters 40",
+      "unambiguous_true_evidence": false,
+      "truth_limit_control": true,
+      "has_source_conflict": true
+    }
+  ]
+}

@@ -28,6 +28,13 @@ These are AI-only exploratory assessments, not human-validated error rates.
 The [full supervisor checklist audit](docs/supervisor_plan_completion_audit_2026-11-17.md)
 distinguishes completed items from partial work and remaining experiments.
 
+[EXP-040](docs/exp040_generated_answer_protocol.md) is prepared, not executed:
+40 new fictional questions compare generated drafts, same-model self-review,
+and a release-only policy using the unchanged combined symbolic verifier.
+The planned budget is 120 local calls. This is a synthetic integration pilot,
+not natural held-out QA or a real-retriever evaluation. Default preflight makes
+no model calls: `python3 -B -m experiments.exp040_generated_answers`.
+
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all
 three paired arms, extraction defects, uncertainty, and coverage losses.
