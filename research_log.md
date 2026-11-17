@@ -849,3 +849,27 @@ Next: isolate extraction/valid-language coverage on development material before
 any revised method or fresh test. Preserve false-source limitations. A limited
 demonstrator can show the current measured behavior, but natural-data efficacy,
 independent semantic validation and the full supervisor scope remain open.
+
+## 2026-11-17 — EXP-041: Polarity Development Ablation Prepared
+
+Following the author's instruction to proceed with development after EXP-040,
+prepared two separately versioned candidates: a prompt with explicit negative
+and first-place examples, and a finite full-source polarity/coverage audit.
+Historical files remain unchanged. Negative statements cannot be silently
+ignored: a win affirmed and denied for the same entity/event/year must be
+CONFLICT. Missing, malformed or mismatched neural facts are not auto-repaired.
+
+Sixteen purpose-built development cases compare V2/V3 prompts and G1/G2 guards
+in a 2x2 design, sharing each extraction between both symbolic analyses.
+This isolates prompt versus guard bundles, not every sentence/subfeature.
+Authored responses, truth-limit control, expected source verdicts and typed
+extraction records precede inference. The candidate gate requires a decisive
+gain, no lost correct decisive baseline case, no newly false VERIFIED, and no
+false confirmation of the explicit positive/negative conflict. Passing only
+makes the candidate eligible for a separate fresh transfer evaluation.
+
+Budget explained before execution: 32 local cached-model calls, maximum 32,768
+output tokens, greedy, no downloads/paid calls/retries. Source/data/protocol
+freeze precedes inference. Default preflight makes no model calls. Nine new
+boundary/accounting tests pass; the historical EXP-040 replay also passes.
+This entry is preparation, not a result. See the frozen EXP-041 protocol.

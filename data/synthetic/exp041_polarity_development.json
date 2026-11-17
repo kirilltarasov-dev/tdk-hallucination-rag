@@ -1,0 +1,626 @@
+{
+  "experiment_id": "EXP-041",
+  "status": "authored_development_fixtures",
+  "cases": [
+    {
+      "case_id": "D041-00",
+      "family": "clean",
+      "question": "Who won the 2061 Cedar Shield?",
+      "documents": {
+        "D1": "Amber Cranes won the 2061 Cedar Shield."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Cedar Shield",
+          "year": 2061,
+          "source_span": "Who won the 2061 Cedar Shield?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                "event": "Cedar Shield",
+                "year": 2061,
+                "value": "Amber Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "VERIFIED",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-01",
+      "family": "paraphrase",
+      "question": "Who won the 2062 Maple Trophy?",
+      "documents": {
+        "D1": "Amber Cranes took first place in the 2062 Maple Trophy."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Maple Trophy",
+          "year": 2062,
+          "source_span": "Who won the 2062 Maple Trophy?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                "event": "Maple Trophy",
+                "year": 2062,
+                "value": "Amber Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "VERIFIED",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-02",
+      "family": "wrong_year",
+      "question": "Who won the 2063 Birch Cup?",
+      "documents": {
+        "D1": "Amber Cranes took first place in the 2062 Birch Cup."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Birch Cup",
+          "year": 2063,
+          "source_span": "Who won the 2063 Birch Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes took first place in the 2062 Birch Cup.",
+                "event": "Birch Cup",
+                "year": 2062,
+                "value": "Amber Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "UNKNOWN",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-03",
+      "family": "negative_distractor",
+      "question": "Who won the 2064 Elm Medal?",
+      "documents": {
+        "D1": "Amber Cranes won the 2064 Elm Medal.",
+        "D2": "Indigo Lynxes did not win the 2064 Elm Medal."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Elm Medal",
+          "year": 2064,
+          "source_span": "Who won the 2064 Elm Medal?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes won the 2064 Elm Medal.",
+                "event": "Elm Medal",
+                "year": 2064,
+                "value": "Amber Cranes"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "VERIFIED",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-04",
+      "family": "negative_first",
+      "question": "Who won the 2065 Laurel Prize?",
+      "documents": {
+        "D1": "Indigo Lynxes did not win the 2065 Laurel Prize.",
+        "D2": "Amber Cranes won the 2065 Laurel Prize."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Laurel Prize",
+          "year": 2065,
+          "source_span": "Who won the 2065 Laurel Prize?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                "event": "Laurel Prize",
+                "year": 2065,
+                "value": "Amber Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "VERIFIED",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-05",
+      "family": "positive_negative_conflict",
+      "question": "Who won the 2066 Willow Shield?",
+      "documents": {
+        "D1": "Amber Cranes won the 2066 Willow Shield.",
+        "D2": "Amber Cranes did not win the 2066 Willow Shield."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Willow Shield",
+          "year": 2066,
+          "source_span": "Who won the 2066 Willow Shield?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes won the 2066 Willow Shield.",
+                "event": "Willow Shield",
+                "year": 2066,
+                "value": "Amber Cranes"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "CONFLICT",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-06",
+      "family": "negative_only",
+      "question": "Who won the 2067 Cypress Trophy?",
+      "documents": {
+        "D1": "Amber Cranes did not win the 2067 Cypress Trophy."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Cypress Trophy",
+          "year": 2067,
+          "source_span": "Who won the 2067 Cypress Trophy?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "UNKNOWN",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-07",
+      "family": "negative_paraphrase",
+      "question": "Who won the 2068 Alder Cup?",
+      "documents": {
+        "D1": "Amber Cranes did not take first place in the 2068 Alder Cup."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Alder Cup",
+          "year": 2068,
+          "source_span": "Who won the 2068 Alder Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "UNKNOWN",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-08",
+      "family": "reported_paraphrase",
+      "question": "Who won the 2069 Hazel Medal?",
+      "documents": {
+        "D1": "A report claimed Amber Cranes took first place in the 2069 Hazel Medal."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Hazel Medal",
+          "year": 2069,
+          "source_span": "Who won the 2069 Hazel Medal?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "UNKNOWN",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-09",
+      "family": "hypothetical_paraphrase",
+      "question": "Who won the 2070 Aspen Prize?",
+      "documents": {
+        "D1": "If Amber Cranes took first place in the 2070 Aspen Prize, they would celebrate."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aspen Prize",
+          "year": 2070,
+          "source_span": "Who won the 2070 Aspen Prize?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "UNKNOWN",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-10",
+      "family": "not_only_phrase",
+      "question": "Who won the 2071 Rowan Shield?",
+      "documents": {
+        "D1": "Amber Cranes not only won the 2071 Rowan Shield, they set a record."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Rowan Shield",
+          "year": 2071,
+          "source_span": "Who won the 2071 Rowan Shield?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes not only won the 2071 Rowan Shield, they set a record.",
+                "event": "Rowan Shield",
+                "year": 2071,
+                "value": "Amber Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "UNKNOWN",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-11",
+      "family": "denied_quote",
+      "question": "Who won the 2072 Spruce Trophy?",
+      "documents": {
+        "D1": "The claim \"Amber Cranes took first place in the 2072 Spruce Trophy.\" is false."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Spruce Trophy",
+          "year": 2072,
+          "source_span": "Who won the 2072 Spruce Trophy?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "UNKNOWN",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-12",
+      "family": "false_source",
+      "question": "Who won the 2073 Larch Cup?",
+      "documents": {
+        "D1": "Indigo Lynxes won the 2073 Larch Cup."
+      },
+      "response": "Indigo Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Larch Cup",
+          "year": 2073,
+          "source_span": "Who won the 2073 Larch Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                "event": "Larch Cup",
+                "year": 2073,
+                "value": "Indigo Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Indigo Lynxes",
+          "source_span": "Indigo Lynxes won."
+        }
+      },
+      "expected_source_verdict": "VERIFIED",
+      "external_fictional_truth": "Amber Cranes"
+    },
+    {
+      "case_id": "D041-13",
+      "family": "two_positive_conflict",
+      "question": "Who won the 2074 Beech Medal?",
+      "documents": {
+        "D1": "Amber Cranes won the 2074 Beech Medal.",
+        "D2": "Indigo Lynxes won the 2074 Beech Medal."
+      },
+      "response": "Amber Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Beech Medal",
+          "year": 2074,
+          "source_span": "Who won the 2074 Beech Medal?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                "event": "Beech Medal",
+                "year": 2074,
+                "value": "Amber Cranes"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                "event": "Beech Medal",
+                "year": 2074,
+                "value": "Indigo Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Amber Cranes",
+          "source_span": "Amber Cranes won."
+        }
+      },
+      "expected_source_verdict": "CONFLICT",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-14",
+      "family": "wrong_answer",
+      "question": "Who won the 2075 Oak Prize?",
+      "documents": {
+        "D1": "Amber Cranes won the 2075 Oak Prize."
+      },
+      "response": "Indigo Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Oak Prize",
+          "year": 2075,
+          "source_span": "Who won the 2075 Oak Prize?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes won the 2075 Oak Prize.",
+                "event": "Oak Prize",
+                "year": 2075,
+                "value": "Amber Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Indigo Lynxes",
+          "source_span": "Indigo Lynxes won."
+        }
+      },
+      "expected_source_verdict": "REFUTED",
+      "external_fictional_truth": null
+    },
+    {
+      "case_id": "D041-15",
+      "family": "false_abstention",
+      "question": "Who won the 2076 Fir Shield?",
+      "documents": {
+        "D1": "Amber Cranes won the 2076 Fir Shield."
+      },
+      "response": "I cannot determine the winner.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Fir Shield",
+          "year": 2076,
+          "source_span": "Who won the 2076 Fir Shield?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                "event": "Fir Shield",
+                "year": 2076,
+                "value": "Amber Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "ABSTENTION",
+          "value": null,
+          "source_span": "I cannot determine the winner."
+        }
+      },
+      "expected_source_verdict": "REFUTED",
+      "external_fictional_truth": null
+    }
+  ]
+}
