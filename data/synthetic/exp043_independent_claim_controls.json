@@ -1,0 +1,198 @@
+{
+  "experiment_id": "EXP-043",
+  "provenance": "Authored development grammar controls",
+  "cases": [
+    {
+      "case_id": "C043-00",
+      "condition": "short",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won.",
+      "expected_status": "SINGLE_CLAIM",
+      "expected_value": "Saffron Larks"
+    },
+    {
+      "case_id": "C043-01",
+      "condition": "year_first",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won the 2091 Opal Cup.",
+      "expected_status": "SINGLE_CLAIM",
+      "expected_value": "Saffron Larks"
+    },
+    {
+      "case_id": "C043-02",
+      "condition": "year_last",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won the Opal Cup in 2091.",
+      "expected_status": "SINGLE_CLAIM",
+      "expected_value": "Saffron Larks"
+    },
+    {
+      "case_id": "C043-03",
+      "condition": "repeated_same",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won. Saffron Larks won.",
+      "expected_status": "SINGLE_CLAIM",
+      "expected_value": "Saffron Larks"
+    },
+    {
+      "case_id": "C043-04",
+      "condition": "rejected_quote",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "The claim \"Cobalt Pumas won.\" is false. Saffron Larks won.",
+      "expected_status": "SINGLE_CLAIM",
+      "expected_value": "Saffron Larks"
+    },
+    {
+      "case_id": "C043-05",
+      "condition": "contrast",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won, not Cobalt Pumas.",
+      "expected_status": "SINGLE_CLAIM",
+      "expected_value": "Saffron Larks"
+    },
+    {
+      "case_id": "C043-06",
+      "condition": "other_claim",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Cobalt Pumas won.",
+      "expected_status": "SINGLE_CLAIM",
+      "expected_value": "Cobalt Pumas"
+    },
+    {
+      "case_id": "C043-07",
+      "condition": "refusal_one",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "I cannot determine the winner.",
+      "expected_status": "ABSTENTION",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-08",
+      "condition": "refusal_two",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "I do not know who won.",
+      "expected_status": "ABSTENTION",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-09",
+      "condition": "refusal_three",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "There is insufficient information to answer.",
+      "expected_status": "ABSTENTION",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-10",
+      "condition": "refusal_four",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Insufficient information.",
+      "expected_status": "ABSTENTION",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-11",
+      "condition": "two_winners",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won. Cobalt Pumas won.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-12",
+      "condition": "self_negation",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won. Saffron Larks did not win.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-13",
+      "condition": "mixed_refusal",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "I cannot determine the winner. Saffron Larks won.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-14",
+      "condition": "negative_only",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Cobalt Pumas did not win.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-15",
+      "condition": "quote_only",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "The claim \"Cobalt Pumas won.\" is false.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-16",
+      "condition": "wrong_year",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won the 2090 Opal Cup.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-17",
+      "condition": "wrong_event",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won the 2091 Quartz Cup.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-18",
+      "condition": "answer_paraphrase",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks took first place.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-19",
+      "condition": "auxiliary_claim",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks won. The venue was large.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-20",
+      "condition": "bare_name",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-21",
+      "condition": "hedged",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Saffron Larks probably won.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-22",
+      "condition": "empty",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    },
+    {
+      "case_id": "C043-23",
+      "condition": "refusal_and_denial",
+      "question": "Who won the 2091 Opal Cup?",
+      "response": "Cobalt Pumas did not win. I cannot determine the winner.",
+      "expected_status": "UNRESOLVED",
+      "expected_value": null
+    }
+  ]
+}

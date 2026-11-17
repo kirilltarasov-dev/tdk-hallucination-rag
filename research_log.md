@@ -976,3 +976,31 @@ counterexample, English interpretation and SVG/PNG status grid. The figure was
 visually inspected. Raw SHA-256:
 6332e65dbdc60a83b2fbafe03a7edae7ac85291a693e8ae8d49e2368c0ed00e8.
 Details: docs/exp042_results.md. Historical sources/results remain unchanged.
+
+## 2026-11-17 — EXP-043: Independent Answer Composition Prepared
+
+Following the author's instruction to implement the EXP-042 implication, added
+a context-free answer component using the existing finite claim inventory and
+a text-only question frame. Its API accepts only question and response. It
+does not use source text, neural question interpretation or an oracle to infer
+what the answer asserts. Unsupported or incomplete responses remain unresolved.
+
+The explicit candidate composes this claim with strictly validated original
+neural question/facts. Only the neural answer and answer:UNRESOLVED flag can be
+replaced. Invalid complete extraction, unresolved question/documents, or frame
+disagreement still block a verdict. Both old and derived claims are traced;
+raw neural strings and all historical results remain unchanged. The live adapter
+retains the V3 joint call; it is not yet a facts-only neural extraction prompt.
+
+Prepared an offline controlled replay: primary is the 16 EXP-041 V3 extractions
+with common G2 rules; secondary is V2, plus the EXP-042 context probe and 24
+authored grammar controls. No model calls, downloads or paid services. The
+predeclared gate requires restoring D041-14 REFUTED, no lost correct decisive
+primary verdict, no new false VERIFIED, and all declared control/claim matches.
+Passing means ready for fresh transfer only; context invariance is structural
+and reused traces do not establish generalization or generated-answer efficacy.
+
+Ten new tests pass for substitution boundaries, full-response consumption,
+unresolved-source preservation and a stubbed live adapter. Model stubs are not
+research results. Freeze source, controls and analysis before aggregate replay.
+Protocol: docs/exp043_independent_answer_protocol.md.
