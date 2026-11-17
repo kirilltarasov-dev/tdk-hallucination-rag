@@ -421,3 +421,55 @@ frozen summarizer. It exactly reproduces the existing summary from all 12 raw
 records. A regression test checks round-trip equality and rejects changed
 extraction values. No inference source, raw output, or measured metric was
 altered to address this offline replay issue.
+
+## 2026-11-17 — EXP-034: Offline Predicate/Scope Guard Ablation
+
+### Objective and controlled configuration
+
+Test a deterministic predicate/scope guard on the exact saved EXP-033
+extractions. The guard requires a declared affirmative-win question form and
+full document form for every extracted fact. Unsupported text yields UNKNOWN;
+passing checks preserve the existing R3/R5/R6 verdict. Invalid and explicitly
+unresolved extractions retain their previous UNKNOWN. The guard does not repair
+extractions, recover omitted answer claims, or decide source truth.
+
+Code/protocol commit `46b2611` and annotated tag
+`exp034-freeze-2026-11-17` preceded execution. Preflight reproduced EXP-033
+and verified its frozen hashes. All 40 software tests passed. Exactly 12
+saved cases were processed with zero model calls. These are known development
+cases, and the new raw-directory artifact is an explicitly derived offline
+record, not a new model generation.
+
+### Outputs and measured transitions
+
+- Manifest: `results/raw/exp034_relation_guard_manifest.json`.
+- Derived records: `results/raw/exp034_relation_guard_offline_replay.jsonl`.
+- Summary: `results/processed/exp034_relation_guard_summary.json`.
+- Interpretation: `docs/exp034_results.md`.
+- Derived-record SHA-256: `f89e8dbe2eeee62988c43a38ab5cb44d0dea1f28b666443613f215952a5ee4ca`.
+
+Only P10 changed, from VERIFIED to UNKNOWN: both its location question and
+venue statement fail the declared win grammar. Oracle-relative incorrect
+VERIFIED counts decreased from 2/12 to 1/12; agreement with the authored
+expected verdict changed from 10/12 to 11/12. Decisive verdicts decreased
+from 8/12 to 7/12, while correct decisive oracle-relative verdicts stayed
+6/12. UNKNOWN increased from 4/12 to 5/12. The guard passed nine cases,
+blocked one, and skipped one unresolved and one invalid extraction.
+
+### Interpretation and limitations
+
+The change removes one known false confirmation by abstaining. Exact neural
+extraction agreement remains 7/12, since all extracted strings are unchanged.
+P09's incompatible-answer omission remains incorrectly VERIFIED. P12's
+consistent false evidence remains VERIFIED relative to the source and does
+not establish external truth. The replay does not isolate the separate
+contributions of the question and fact-source checks to P10.
+
+Unit controls show real scope costs: correct but unlisted paraphrases,
+conjunction-containing names, and unsupported irrelevant extracted facts can
+be blocked. No correct decisive verdict was lost on the 12 saved cases, but
+coverage preservation on new text is unmeasured. No population significance,
+hallucination reduction, end-to-end speed, or computational-efficiency claim
+is made. Complete representation of incompatible answer claims is the next
+separate intervention to investigate, followed by new-case validation and
+independent human factual/faithfulness annotation.

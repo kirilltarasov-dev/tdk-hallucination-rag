@@ -8,6 +8,12 @@ but also two incorrect VERIFIED decisions. Oracle rule checks passed.
 These development results do not demonstrate the thesis's neuro-symbolic
 effectiveness claim; semantic extraction remains an unresolved limitation.
 
+A separate controlled-language predicate guard in
+`src/verification/relation_guard.py` was evaluated offline in EXP-034 on
+those saved outputs. It blocked the venue-as-winner case, leaving one
+oracle-relative incorrect VERIFIED decision and the false-source truth
+limitation. This does not change the core R3/R5/R6 definitions below.
+
 `src/verification/symbolic_rules.py` accepts a typed question frame, a list
 of structured facts with source IDs and source spans, and an answer claim or
 abstention flag. It returns one of four verdicts with the rule ID and all

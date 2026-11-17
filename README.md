@@ -7,7 +7,7 @@ Retrieval-Augmented Generation and Neuro-Symbolic Verification*.
 **Research status (2026-11-17):** The current experiments support a
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
-hallucination reduction or a neuro-symbolic verification result. The latest
+hallucination reduction or neuro-symbolic effectiveness. The latest
 completed model experiment is EXP-033, a prompt-only correction on 12 synthetic
 development cases: 11 valid extractions, 7 exact typed matches, and 2 incorrect
 VERIFIED verdicts relative to the authored oracle. The latest S1/S3
@@ -15,6 +15,12 @@ comparison is EXP-029, a frozen 100-question RGB `en_fact` counterfactual stress
 test. Its answer/fake-answer substring counts are custom diagnostics, not
 human-validated error rates or official ED*.
 EXP-030 is an offline supplemental EM/F1 analysis.
+
+The latest completed experiment is EXP-034, an offline predicate-guard replay
+on the saved EXP-033 outputs. One known false confirmation became UNKNOWN;
+oracle-relative incorrect VERIFIED counts changed from 2/12 to 1/12, while
+correct decisive verdicts stayed at 6/12. It introduces no new model prediction
+or factual-truth validation.
 
 EXP-031 annotation materials are prepared for all 100 EXP-029 pairs in
 `deliverables/EXP031_Blinded_Annotation_Template.xlsx`; no human labels or
@@ -36,7 +42,7 @@ matching is a lexical benchmark score, not a direct hallucination rate. See
 [`research_log.md`](research_log.md) for experiment objectives, raw/processed
 paths, paired comparisons, and limitations. The current supervisor-review
 manuscript is in `deliverables/TDK_Research_Paper_v7_Kirill_Tarasov.docx`; it
-includes EXP-029 and predates the EXP-032/033 development pilots documented in the log.
+includes EXP-029 and predates the EXP-032–034 development work documented in the log.
 
 ## Data and provenance
 
@@ -93,6 +99,10 @@ incomplete.
 The [EXP-033 results](docs/exp033_results.md) explain the compliance/reliability
 tradeoff and the remaining predicate-scope and multiple-claim failures. The
 variant is not suitable as an automatic factual-approval gate.
+
+The [EXP-034 results](docs/exp034_results.md) isolate a conservative predicate
+guard on saved extractions. Its controlled-language grammar has explicit
+coverage costs and does not address missing answer claims or false sources.
 
 ## Mac inference environment
 
