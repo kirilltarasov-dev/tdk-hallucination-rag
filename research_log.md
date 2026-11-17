@@ -936,3 +936,43 @@ diagnostic visibility, quote/semantic separation, invariance accounting and
 summary integrity. Test stubs are not experimental results. Freeze all inputs
 and analysis before inference. EXP-041 remains NOT_ELIGIBLE regardless of this
 diagnostic outcome. See docs/exp042_answer_context_protocol.md.
+
+## 2026-11-17 — EXP-042: Observed Answer-Context Dependence
+
+Executed the frozen diagnostic once at commit 5ff02ed, tag
+exp042-freeze-2026-11-17: 32 calls, all stopped normally, no retries/replacements.
+Within each of four identities, only the source text changed; question and
+response were byte-identical. Both V2 and V3 matched intended answer signatures
+in 12/16 contexts and showed semantic variation in all four identities.
+
+By context, V2 matched support 4/4, other winner 4/4, wrong year 4/4, explicit
+denial 0/4. V3 matched 4/4, 3/4, 4/4, 1/4 respectively. All 32 answer blocks
+were inspectable and quoted the entire response verbatim. V2 produced two
+UNRESOLVED and two ABSTENTION labels for affirmative claims; V3 produced one
+UNRESOLVED and three ABSTENTION labels. No missing block was treated as an
+abstention or as evidence of semantic drift.
+
+Full extraction validity was 15/16 for V2 and 16/16 for V3. The invalid V2
+Golden Badgers denial record has an independently inspectable but wrong answer
+label; it was not repaired or accepted as a complete extraction. Other matched
+counterexamples have valid full extractions. In the Violet Otters example,
+both prompts change SINGLE_CLAIM to ABSTENTION when the source changes from
+affirming to denying the win, while still quoting `Violet Otters won.` exactly.
+
+Observed conclusion: the surrounding source can affect transcription of an
+unchanged assertion. This is a counterexample within a small authored probe,
+not a population frequency, hidden-reasoning claim or general hallucination
+result. Newer prompt V3 did not remove the defect; EXP-041 remains NOT_ELIGIBLE.
+Separating answer transcription from source-dependent verification is now a
+motivated next candidate, but its quality and coverage are still unmeasured.
+
+Actual workload: 41,698 input tokens, 7,152 output tokens, 140.083 seconds summed
+call time, 5.022 GB process peak MLX allocation. V2/V3 mean call latencies were
+4.286/4.469 seconds. No efficiency claim is made. Full EXP-042 diagnostic replay
+and historical EXP-041 replay passed; all 100 Python tests passed.
+
+Preserved raw calls, runtime/source manifest, summary with every matched
+counterexample, English interpretation and SVG/PNG status grid. The figure was
+visually inspected. Raw SHA-256:
+6332e65dbdc60a83b2fbafe03a7edae7ac85291a693e8ae8d49e2368c0ed00e8.
+Details: docs/exp042_results.md. Historical sources/results remain unchanged.

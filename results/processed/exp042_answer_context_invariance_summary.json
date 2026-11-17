@@ -1,0 +1,1355 @@
+{
+  "experiment_id": "EXP-042",
+  "status": "completed_development_diagnostic",
+  "metrics": {
+    "V2": {
+      "n": 16,
+      "answer_blocks_valid": 16,
+      "intended_answer_matches": 12,
+      "whole_response_quoted": 16,
+      "full_extractions_valid": 15,
+      "answer_status_counts": {
+        "SINGLE_CLAIM": 12,
+        "UNRESOLVED": 2,
+        "ABSTENTION": 2
+      },
+      "by_context": {
+        "supports": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 4,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 4,
+          "answer_status_counts": {
+            "SINGLE_CLAIM": 4
+          }
+        },
+        "other_winner": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 4,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 4,
+          "answer_status_counts": {
+            "SINGLE_CLAIM": 4
+          }
+        },
+        "wrong_year": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 4,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 4,
+          "answer_status_counts": {
+            "SINGLE_CLAIM": 4
+          }
+        },
+        "explicit_denial": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 0,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 3,
+          "answer_status_counts": {
+            "UNRESOLVED": 2,
+            "ABSTENTION": 2
+          }
+        }
+      },
+      "identities_with_observed_variation": 4,
+      "fully_inspectable_identities": 4,
+      "identities_correct_in_all_contexts": 0
+    },
+    "V3": {
+      "n": 16,
+      "answer_blocks_valid": 16,
+      "intended_answer_matches": 12,
+      "whole_response_quoted": 16,
+      "full_extractions_valid": 16,
+      "answer_status_counts": {
+        "SINGLE_CLAIM": 12,
+        "UNRESOLVED": 1,
+        "ABSTENTION": 3
+      },
+      "by_context": {
+        "supports": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 4,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 4,
+          "answer_status_counts": {
+            "SINGLE_CLAIM": 4
+          }
+        },
+        "other_winner": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 3,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 4,
+          "answer_status_counts": {
+            "UNRESOLVED": 1,
+            "SINGLE_CLAIM": 3
+          }
+        },
+        "wrong_year": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 4,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 4,
+          "answer_status_counts": {
+            "SINGLE_CLAIM": 4
+          }
+        },
+        "explicit_denial": {
+          "n": 4,
+          "answer_blocks_valid": 4,
+          "intended_answer_matches": 1,
+          "whole_response_quoted": 4,
+          "full_extractions_valid": 4,
+          "answer_status_counts": {
+            "SINGLE_CLAIM": 1,
+            "ABSTENTION": 3
+          }
+        }
+      },
+      "identities_with_observed_variation": 4,
+      "fully_inspectable_identities": 4,
+      "identities_correct_in_all_contexts": 0
+    }
+  },
+  "identity_results": [
+    {
+      "identity": "I1",
+      "prompt_variant": "V2",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "supports": [
+          "SINGLE_CLAIM",
+          "dawn herons"
+        ],
+        "other_winner": [
+          "SINGLE_CLAIM",
+          "dawn herons"
+        ],
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "dawn herons"
+        ],
+        "explicit_denial": [
+          "UNRESOLVED",
+          null
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "supports",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "dawn herons"
+          ],
+          "right_signature": [
+            "UNRESOLVED",
+            null
+          ]
+        },
+        {
+          "left": "other_winner",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "dawn herons"
+          ],
+          "right_signature": [
+            "UNRESOLVED",
+            null
+          ]
+        },
+        {
+          "left": "wrong_year",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "dawn herons"
+          ],
+          "right_signature": [
+            "UNRESOLVED",
+            null
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "explicit_denial"
+      ]
+    },
+    {
+      "identity": "I2",
+      "prompt_variant": "V2",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "other_winner": [
+          "SINGLE_CLAIM",
+          "violet otters"
+        ],
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "violet otters"
+        ],
+        "explicit_denial": [
+          "ABSTENTION",
+          null
+        ],
+        "supports": [
+          "SINGLE_CLAIM",
+          "violet otters"
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "other_winner",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "violet otters"
+          ],
+          "right_signature": [
+            "ABSTENTION",
+            null
+          ]
+        },
+        {
+          "left": "wrong_year",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "violet otters"
+          ],
+          "right_signature": [
+            "ABSTENTION",
+            null
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "supports",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "violet otters"
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "explicit_denial"
+      ]
+    },
+    {
+      "identity": "I3",
+      "prompt_variant": "V2",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "golden badgers"
+        ],
+        "explicit_denial": [
+          "ABSTENTION",
+          null
+        ],
+        "supports": [
+          "SINGLE_CLAIM",
+          "golden badgers"
+        ],
+        "other_winner": [
+          "SINGLE_CLAIM",
+          "golden badgers"
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "wrong_year",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "golden badgers"
+          ],
+          "right_signature": [
+            "ABSTENTION",
+            null
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "supports",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "golden badgers"
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "other_winner",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "golden badgers"
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "explicit_denial"
+      ]
+    },
+    {
+      "identity": "I4",
+      "prompt_variant": "V2",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "explicit_denial": [
+          "UNRESOLVED",
+          null
+        ],
+        "supports": [
+          "SINGLE_CLAIM",
+          "scarlet swans"
+        ],
+        "other_winner": [
+          "SINGLE_CLAIM",
+          "scarlet swans"
+        ],
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "scarlet swans"
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "explicit_denial",
+          "right": "supports",
+          "left_signature": [
+            "UNRESOLVED",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "scarlet swans"
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "other_winner",
+          "left_signature": [
+            "UNRESOLVED",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "scarlet swans"
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "wrong_year",
+          "left_signature": [
+            "UNRESOLVED",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "scarlet swans"
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "explicit_denial"
+      ]
+    },
+    {
+      "identity": "I1",
+      "prompt_variant": "V3",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "supports": [
+          "SINGLE_CLAIM",
+          "dawn herons"
+        ],
+        "other_winner": [
+          "UNRESOLVED",
+          null
+        ],
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "dawn herons"
+        ],
+        "explicit_denial": [
+          "SINGLE_CLAIM",
+          "dawn herons"
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "supports",
+          "right": "other_winner",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "dawn herons"
+          ],
+          "right_signature": [
+            "UNRESOLVED",
+            null
+          ]
+        },
+        {
+          "left": "other_winner",
+          "right": "wrong_year",
+          "left_signature": [
+            "UNRESOLVED",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "dawn herons"
+          ]
+        },
+        {
+          "left": "other_winner",
+          "right": "explicit_denial",
+          "left_signature": [
+            "UNRESOLVED",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "dawn herons"
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "other_winner"
+      ]
+    },
+    {
+      "identity": "I2",
+      "prompt_variant": "V3",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "other_winner": [
+          "SINGLE_CLAIM",
+          "violet otters"
+        ],
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "violet otters"
+        ],
+        "explicit_denial": [
+          "ABSTENTION",
+          null
+        ],
+        "supports": [
+          "SINGLE_CLAIM",
+          "violet otters"
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "other_winner",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "violet otters"
+          ],
+          "right_signature": [
+            "ABSTENTION",
+            null
+          ]
+        },
+        {
+          "left": "wrong_year",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "violet otters"
+          ],
+          "right_signature": [
+            "ABSTENTION",
+            null
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "supports",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "violet otters"
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "explicit_denial"
+      ]
+    },
+    {
+      "identity": "I3",
+      "prompt_variant": "V3",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "golden badgers"
+        ],
+        "explicit_denial": [
+          "ABSTENTION",
+          null
+        ],
+        "supports": [
+          "SINGLE_CLAIM",
+          "golden badgers"
+        ],
+        "other_winner": [
+          "SINGLE_CLAIM",
+          "golden badgers"
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "wrong_year",
+          "right": "explicit_denial",
+          "left_signature": [
+            "SINGLE_CLAIM",
+            "golden badgers"
+          ],
+          "right_signature": [
+            "ABSTENTION",
+            null
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "supports",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "golden badgers"
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "other_winner",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "golden badgers"
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "explicit_denial"
+      ]
+    },
+    {
+      "identity": "I4",
+      "prompt_variant": "V3",
+      "all_blocks_inspectable": true,
+      "observed_semantic_variation": true,
+      "all_four_intended_answers_correct": false,
+      "constant_but_wrong": false,
+      "signatures": {
+        "explicit_denial": [
+          "ABSTENTION",
+          null
+        ],
+        "supports": [
+          "SINGLE_CLAIM",
+          "scarlet swans"
+        ],
+        "other_winner": [
+          "SINGLE_CLAIM",
+          "scarlet swans"
+        ],
+        "wrong_year": [
+          "SINGLE_CLAIM",
+          "scarlet swans"
+        ]
+      },
+      "counterexamples": [
+        {
+          "left": "explicit_denial",
+          "right": "supports",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "scarlet swans"
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "other_winner",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "scarlet swans"
+          ]
+        },
+        {
+          "left": "explicit_denial",
+          "right": "wrong_year",
+          "left_signature": [
+            "ABSTENTION",
+            null
+          ],
+          "right_signature": [
+            "SINGLE_CLAIM",
+            "scarlet swans"
+          ]
+        }
+      ],
+      "support_correct_to_other_incorrect": [
+        "explicit_denial"
+      ]
+    }
+  ],
+  "case_results": [
+    {
+      "case_id": "I042-1-supports",
+      "identity": "I1",
+      "condition": "supports",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "dawn herons"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-1-supports",
+      "identity": "I1",
+      "condition": "supports",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "dawn herons"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-1-other_winner",
+      "identity": "I1",
+      "condition": "other_winner",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "UNRESOLVED",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-1-other_winner",
+      "identity": "I1",
+      "condition": "other_winner",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "dawn herons"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-1-wrong_year",
+      "identity": "I1",
+      "condition": "wrong_year",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "dawn herons"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-1-wrong_year",
+      "identity": "I1",
+      "condition": "wrong_year",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "dawn herons"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-1-explicit_denial",
+      "identity": "I1",
+      "condition": "explicit_denial",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "dawn herons"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-1-explicit_denial",
+      "identity": "I1",
+      "condition": "explicit_denial",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Dawn Herons won."
+      },
+      "signature": [
+        "UNRESOLVED",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-other_winner",
+      "identity": "I2",
+      "condition": "other_winner",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "violet otters"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-other_winner",
+      "identity": "I2",
+      "condition": "other_winner",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "violet otters"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-wrong_year",
+      "identity": "I2",
+      "condition": "wrong_year",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "violet otters"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-wrong_year",
+      "identity": "I2",
+      "condition": "wrong_year",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "violet otters"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-explicit_denial",
+      "identity": "I2",
+      "condition": "explicit_denial",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "ABSTENTION",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-explicit_denial",
+      "identity": "I2",
+      "condition": "explicit_denial",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "ABSTENTION",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-supports",
+      "identity": "I2",
+      "condition": "supports",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "violet otters"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-2-supports",
+      "identity": "I2",
+      "condition": "supports",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "violet otters"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-3-wrong_year",
+      "identity": "I3",
+      "condition": "wrong_year",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "golden badgers"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-3-wrong_year",
+      "identity": "I3",
+      "condition": "wrong_year",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "golden badgers"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-3-explicit_denial",
+      "identity": "I3",
+      "condition": "explicit_denial",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "ABSTENTION",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-3-explicit_denial",
+      "identity": "I3",
+      "condition": "explicit_denial",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "ABSTENTION",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": false,
+      "full_extraction_error": "D1.event: quotation must occur verbatim in its source"
+    },
+    {
+      "case_id": "I042-3-supports",
+      "identity": "I3",
+      "condition": "supports",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "golden badgers"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-3-supports",
+      "identity": "I3",
+      "condition": "supports",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "golden badgers"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-3-other_winner",
+      "identity": "I3",
+      "condition": "other_winner",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "golden badgers"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-3-other_winner",
+      "identity": "I3",
+      "condition": "other_winner",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "golden badgers"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-explicit_denial",
+      "identity": "I4",
+      "condition": "explicit_denial",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "UNRESOLVED",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-explicit_denial",
+      "identity": "I4",
+      "condition": "explicit_denial",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "ABSTENTION",
+        null
+      ],
+      "intended_answer_match": false,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-supports",
+      "identity": "I4",
+      "condition": "supports",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "scarlet swans"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-supports",
+      "identity": "I4",
+      "condition": "supports",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "scarlet swans"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-other_winner",
+      "identity": "I4",
+      "condition": "other_winner",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "scarlet swans"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-other_winner",
+      "identity": "I4",
+      "condition": "other_winner",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "scarlet swans"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-wrong_year",
+      "identity": "I4",
+      "condition": "wrong_year",
+      "prompt_variant": "V3",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "scarlet swans"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    },
+    {
+      "case_id": "I042-4-wrong_year",
+      "identity": "I4",
+      "condition": "wrong_year",
+      "prompt_variant": "V2",
+      "answer_block_valid": true,
+      "answer_error": null,
+      "answer_block": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      },
+      "signature": [
+        "SINGLE_CLAIM",
+        "scarlet swans"
+      ],
+      "intended_answer_match": true,
+      "whole_response_quoted": true,
+      "full_extraction_valid": true,
+      "full_extraction_error": null
+    }
+  ],
+  "resources": {
+    "V2": {
+      "mean_seconds": 4.285922416740505,
+      "p50_seconds": 4.463329479447566,
+      "p95_seconds": 4.982337833032943,
+      "input_tokens": 17353,
+      "output_tokens": 3604
+    },
+    "V3": {
+      "mean_seconds": 4.469237716104544,
+      "p50_seconds": 4.736652770952787,
+      "p95_seconds": 4.892611415940337,
+      "input_tokens": 24345,
+      "output_tokens": 3548
+    }
+  },
+  "conclusion": "OBSERVED_CONTEXT_DEPENDENCE",
+  "limitations": "Four authored identities; no population frequency, human validation, efficacy or model-internal reasoning claim.",
+  "raw_sha256": "6332e65dbdc60a83b2fbafe03a7edae7ac85291a693e8ae8d49e2368c0ed00e8",
+  "manifest_sha256": "2f6651a9d0a43b2e5dddf2c33ef95d6d70860ddc58f7e0b004edb5dcb6c8abb8"
+}

@@ -1,6 +1,6 @@
 # Research Hypotheses and Evidence Boundaries
 
-**Updated:** 2026-11-17. EXP-036, EXP-040 and the EXP-041 development ablation have completed.
+**Updated:** 2026-11-17. Completed through the EXP-042 development diagnostic.
 
 ## Current defensible finding
 
@@ -63,6 +63,15 @@ about those systems but cannot retroactively evaluate a verifier absent from
 those runs. A new full-system evaluation is needed for the new symbolic layer.
 
 ## What a credible thesis can conclude
+
+EXP-042 isolates a transcription defect: changing only the source text altered
+the extracted status/value of a fixed answer in all four authored identities
+under both frozen prompts. Each prompt matched the intended claim in 12/16
+contexts; neither was invariant across the whole probe. All 32 answer quotations
+were exact, showing that quote validity is not semantic fidelity. This motivates
+separating answer transcription from evidence-dependent judgment, but does not
+validate that proposed correction or establish a population failure frequency.
+See `docs/exp042_results.md`. Prior failed effectiveness gates remain unchanged.
 
 EXP-041 is subsequent development, not transfer validation. A polarity-aware
 prompt improved exact extraction from 8/16 to 12/16, but its combination with a

@@ -38,7 +38,7 @@ not verified factual hallucinations. All four false-only-source answers remained
 wrong and VERIFIED. This is synthetic integration, not natural QA or real
 retrieval. Replay: `python3 -B -m experiments.exp040_generated_answers --check`.
 
-The latest local inference experiment, [EXP-041](docs/exp041_results.md), is a
+[EXP-041](docs/exp041_results.md) is a
 32-call development ablation on 16 authored response/context cases. The new
 prompt improved valid extractions from 13 to 16 and exact typed matches from
 8 to 12. Combined with the new polarity/coverage guard, it gained three correct
@@ -47,6 +47,17 @@ no-regression gate failed. A prompt-only change also caused one false VERIFIED
 on an affirmed-and-denied win; the new guard caught that conflict. This is not
 independent transfer and does not replace EXP-040. Replay:
 `python3 -B -m experiments.exp041_polarity_development --check`.
+
+The latest local inference experiment, [EXP-042](docs/exp042_results.md), tested
+answer transcription while changing only evidence: four fixed question/response
+identities, four contexts each, two frozen prompts, 32 calls. Both prompts
+transcribed 12/16 answers correctly; all four identities exhibited status/value
+changes under each prompt. Explicit source denial caused assertions to be labeled
+ABSTENTION or UNRESOLVED despite exact answer quotations. All answer blocks were
+inspectable; full extraction validity was 15/16 for V2 and 16/16 for V3. This is
+a development counterexample to context invariance, not a repair result or a
+population error rate. Replay:
+`python3 -B -m experiments.exp042_answer_context_invariance --check`.
 
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all
