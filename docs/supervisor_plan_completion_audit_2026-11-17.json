@@ -1,0 +1,734 @@
+{
+  "date": "2026-11-17",
+  "source": "/Users/QXZ6WEJ/Downloads/Improvement Plan To-Do List, Neuro-Symbolic Verification and Demonstrator for tdk.docx",
+  "source_sha256": "e172e4b99977fb8c2eae5df690a149ef2f3a87478453c83d127e5814e700f642",
+  "rubric": "One original checkbox is one item, including overlapping requirements. Done=fully evidenced in scope; Partial=substantive artifact or preparation but acceptance incomplete; Open=no qualifying implementation/result. Half credit for Partial is a disclosed planning convention, not time, effort, scientific quality or probability of success.",
+  "summary": {
+    "P0": {
+      "total": 28,
+      "Open": 4,
+      "Partial": 14,
+      "Done": 10,
+      "strict_completed_percent": 35.7,
+      "half_credit_planning_percent": 60.7
+    },
+    "P1": {
+      "total": 59,
+      "Done": 1,
+      "Partial": 25,
+      "Open": 33,
+      "strict_completed_percent": 1.7,
+      "half_credit_planning_percent": 22.9
+    },
+    "P2": {
+      "total": 11,
+      "Open": 11,
+      "strict_completed_percent": 0.0,
+      "half_credit_planning_percent": 0.0
+    },
+    "TDK_P0_P1": {
+      "total": 87,
+      "Open": 37,
+      "Partial": 39,
+      "Done": 11,
+      "strict_completed_percent": 12.6,
+      "half_credit_planning_percent": 35.1
+    },
+    "Full_plan": {
+      "total": 98,
+      "Open": 48,
+      "Partial": 39,
+      "Done": 11,
+      "strict_completed_percent": 11.2,
+      "half_credit_planning_percent": 31.1
+    }
+  },
+  "items": [
+    {
+      "id": "P0-01",
+      "priority": "P0",
+      "requirement": "Align the title with what is measured: either implement the neuro-symbolic verifier (sections 7–9) or narrow the title, e.g. When Evidence Filtering Hurts: Diagnosing and Repairing RAG Failure Modes in Small Language Models.",
+      "status": "Open",
+      "evidence": "A rule core and neural extraction adapter are implemented. EXP-036 prospectively tested 48 authored cases with 33/48 exact typed matches. Primary false confirmations fell 7 to 0, but correct-decision retention was 75%, failing the 80% target. All three false-source controls still pass; real-world validation is open. General effectiveness remains unestablished."
+    },
+    {
+      "id": "P0-02",
+      "priority": "P0",
+      "requirement": "Drop \"reducing hallucinations\" from the title unless a hallucination-specific metric is reported (D).",
+      "status": "Partial",
+      "evidence": "EXP-039 supplies an explicitly unvalidated AI assessment; a validated semantic error metric supporting the title remains absent."
+    },
+    {
+      "id": "P0-03",
+      "priority": "P0",
+      "requirement": "Remove internal wording: \"Supervisor Review Version\" on the title page, \"approved research direction\", \"the thesis title describes…\".",
+      "status": "Done",
+      "evidence": "v6 draft omits the review-version marker and approved-direction wording."
+    },
+    {
+      "id": "P0-04",
+      "priority": "P0",
+      "requirement": "Replace EXP-IDs in the main text with descriptive names (\"hard filter\", \"safe fallback\"); move the ID mapping to an appendix table.",
+      "status": "Done",
+      "evidence": "Main text uses descriptive system names; Appendix A maps identifiers."
+    },
+    {
+      "id": "P0-05",
+      "priority": "P0",
+      "requirement": "Fix the logic slip in Section 4.3: at 80% noise every question has a relevant passage, so say \"the model failed to use the available relevant passage in 27 of 29 cases\".",
+      "status": "Done",
+      "evidence": "The draft states that every 80%-noise question had relevant evidence and 27/29 semantic errors failed to use it."
+    },
+    {
+      "id": "P0-06",
+      "priority": "P0",
+      "requirement": "Report the significant results the paper already contains: hard filter vs. standard RAG (18 vs. 35 discordant, exact McNemar p ≈ 0.027) and safe fallback vs. hard filter (25 vs. 0, p ≈ 6·10⁻⁸).",
+      "status": "Done",
+      "evidence": "Exact p-values were independently recalculated from saved raw rows and included as development results."
+    },
+    {
+      "id": "P0-07",
+      "priority": "P0",
+      "requirement": "Rewrite the abstract around 3–4 key numbers instead of every intermediate result.",
+      "status": "Done",
+      "evidence": "v6 draft has a compact abstract with baseline, intervention, and transfer numbers."
+    },
+    {
+      "id": "P0-08",
+      "priority": "P0",
+      "requirement": "Move planned-but-unbuilt parts (end-to-end S4, application, symbolic verification) into a Future Work section; write the body in the past tense about completed work.",
+      "status": "Partial",
+      "evidence": "v7 separated planned work, but now incorrectly says neural-symbolic evaluation has not occurred; EXP-032–036 must be integrated."
+    },
+    {
+      "id": "P0-09",
+      "priority": "P0",
+      "requirement": "Rewrite the Own Contribution section in the first person, item by item, including the supervisor's role and the repository link.",
+      "status": "Partial",
+      "evidence": "First-person contribution and supervisor role are in v6; no public repository URL exists."
+    },
+    {
+      "id": "P1-01",
+      "priority": "P1",
+      "requirement": "Answer RQ1–RQ4 one by one in the conclusion (yes / no / partially + the supporting number).",
+      "status": "Done",
+      "evidence": "v7 conclusion answers RQ1–RQ4 individually with scope and numerical support."
+    },
+    {
+      "id": "P0-10",
+      "priority": "P0",
+      "requirement": "Declare RGB en_refine 80% noise as the development set in the paper and keep it out of all final tables (or mark it clearly as \"dev\").",
+      "status": "Done",
+      "evidence": "v6 and README label all intervention results at 80% noise as development evidence."
+    },
+    {
+      "id": "P0-11",
+      "priority": "P0",
+      "requirement": "Freeze the current method (prompts, labels, fallback rule) with a tagged git commit before any new test run.",
+      "status": "Done",
+      "evidence": "Local commit `77829b1` and annotated tag `exp029-freeze-2026-11-17` precede inference. Future final tests need their own freeze; this is not a public release."
+    },
+    {
+      "id": "P1-02",
+      "priority": "P1",
+      "requirement": "Pre-register hypotheses H1–H4, the primary metric and the primary comparison (timestamped commit + OSF registration).",
+      "status": "Partial",
+      "evidence": "Frozen local experiment protocols and hypothesis document exist; no full H1-H4 OSF preregistration."
+    },
+    {
+      "id": "P1-03",
+      "priority": "P1",
+      "requirement": "Run the full RGB noise curve 0–100% plus the en_int (information integration) and en_fact (counterfactual) subsets.",
+      "status": "Partial",
+      "evidence": "S1 RGB noise curve and EXP-029 en_fact exist; en_int and full method-by-noise matrix are absent."
+    },
+    {
+      "id": "P1-04",
+      "priority": "P1",
+      "requirement": "Evaluate the 100% noise condition for both hard filter and safe fallback to quantify the filtering vs. negative-rejection trade-off.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-05",
+      "priority": "P1",
+      "requirement": "Add at least two independent test sets with a real retriever over a Wikipedia corpus: one of Natural Questions-Open / TriviaQA / PopQA and one multi-hop set (HotpotQA or MuSiQue).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-06",
+      "priority": "P1",
+      "requirement": "Add a conflict / unanswerable benchmark (e.g. FaithEval) to test the \"conflict-aware\" claim directly.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P2-01",
+      "priority": "P2",
+      "requirement": "Add a numerical-reasoning set (FinQA or TAT-QA) and a temporal QA set (e.g. TimeQA) to test the arithmetic and temporal rules of the symbolic layer (section 8).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P2-02",
+      "priority": "P2",
+      "requirement": "Build the own test set (SciLit-QA): 300–500 questions from recent open-access papers, balanced question types, two annotators, Cohen's κ, a datasheet, and a public release with DOI.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P1-07",
+      "priority": "P1",
+      "requirement": "Run S0 (no retrieval) on every dataset to detect contamination and parametric-knowledge effects.",
+      "status": "Partial",
+      "evidence": "S0 measured on en_refine; not every evaluation dataset."
+    },
+    {
+      "id": "P1-08",
+      "priority": "P1",
+      "requirement": "Size each test condition for statistical power: about 1,000 questions are needed to detect a +2–3 pp gain with 80% power (current power at n = 300 is about 33%).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P0-12",
+      "priority": "P0",
+      "requirement": "Record dataset versions, sizes, licences and split hashes in a table.",
+      "status": "Partial",
+      "evidence": "`docs/dataset_manifest.md` verifies all three local files against one upstream commit and records CC BY-NC-SA 4.0; the manuscript table is pending."
+    },
+    {
+      "id": "P1-09",
+      "priority": "P1",
+      "requirement": "Evaluate at least three model families in the 7–8B class (keep Mistral-7B-v0.3, add a Llama 3.x 8B and a Qwen 7–8B instruct model), each pinned by Hugging Face commit hash.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-10",
+      "priority": "P1",
+      "requirement": "Add one 3–4B model to justify the \"small language model\" claim.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P2-03",
+      "priority": "P2",
+      "requirement": "Compare 4-bit vs. bf16 on a 300-question subset to show quantization does not drive the results.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P0-13",
+      "priority": "P0",
+      "requirement": "State explicitly which model the S3 assessor uses; use a verifier that differs from the generator.",
+      "status": "Open",
+      "evidence": "Existing S3 assessor uses the generator model. A distinct verifier requires a new design and controlled evaluation. The new symbolic rule prototype does not replace the neural assessor."
+    },
+    {
+      "id": "P1-11",
+      "priority": "P1",
+      "requirement": "Cross-encoder reranker with a threshold (the cheap industrial alternative).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-12",
+      "priority": "P1",
+      "requirement": "NLI-based document filtering (Yoran et al., ICLR 2024) — the closest prior work to S3.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-13",
+      "priority": "P1",
+      "requirement": "CRAG-style retrieval evaluator (Yan et al., 2024).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P2-04",
+      "priority": "P2",
+      "requirement": "Self-RAG 7B (public checkpoint), RECOMP-style compression, Chain-of-Verification.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P1-14",
+      "priority": "P1",
+      "requirement": "Calibrated fallback: assessor returns label probabilities; on an empty filtered context keep the top 1–2 documents, abstain if even those are below threshold τ; tune τ on dev only.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-15",
+      "priority": "P1",
+      "requirement": "Conflict detection: pairwise NLI between surviving documents; answer with both sources or abstain when they contradict.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-16",
+      "priority": "P1",
+      "requirement": "Neuro-symbolic verification layer (section 8): neural extraction of question constraints, evidence facts and answer claims, checked by a symbolic rule engine and an SMT solver that returns a proof or a counter-example.",
+      "status": "Partial",
+      "evidence": "Neural extraction plus deterministic Python rules measured in EXP-032–036; no SMT solver or broad pipeline validation."
+    },
+    {
+      "id": "P1-17",
+      "priority": "P1",
+      "requirement": "Repair loop: targeted regeneration on failed checks, at most k = 2 iterations, then abstain or warn.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-18",
+      "priority": "P1",
+      "requirement": "Replace the LLM router (2.07 s): run the symbolic checks on every answer (milliseconds) and call neural repair only when a rule fails or the verdict is UNKNOWN.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P0-14",
+      "priority": "P0",
+      "requirement": "Use JSON-schema-constrained decoding for assessor, verifier and router outputs; report parse failures (target: 0).",
+      "status": "Partial",
+      "evidence": "EXP-032 implements strict post-generation JSON/type/provenance checks and visible UNKNOWN/error records. Decoding is not schema constrained; historical text-prefix parsers are unchanged."
+    },
+    {
+      "id": "P1-19",
+      "priority": "P1",
+      "requirement": "Run S4 end-to-end and measure its real latency; drop the offline simulation from the headline results.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P0-15",
+      "priority": "P0",
+      "requirement": "Keep the RGB-compatible lexical score for comparability, and add EM and token-F1.",
+      "status": "Partial",
+      "evidence": "EXP-030 computed supplemental EM/F1 on the 288 single-answer-group questions per condition; EM is 0/288 for both systems because responses are verbose. The manuscript table and multi-group treatment remain open."
+    },
+    {
+      "id": "P1-20",
+      "priority": "P1",
+      "requirement": "Add a semantic LLM judge (a stronger model than the generator) and validate it against human labels.",
+      "status": "Partial",
+      "evidence": "EXP-038/039 assistant labels exist; no human validation or pinned stronger-judge benchmark."
+    },
+    {
+      "id": "P1-21",
+      "priority": "P1",
+      "requirement": "Add a hallucination-specific metric: truthfulness score +1 correct / 0 abstain / −1 wrong (as in the Meta CRAG benchmark).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-22",
+      "priority": "P1",
+      "requirement": "Report abstention behaviour: negative rejection rate, false abstention rate, risk–coverage curve and AURC.",
+      "status": "Partial",
+      "evidence": "Abstention counts and synthetic UNKNOWN coverage exist; negative rejection/false abstention/risk-coverage/AURC package incomplete."
+    },
+    {
+      "id": "P2-05",
+      "priority": "P2",
+      "requirement": "Report faithfulness: claim-level support rate (NLI) and citation precision/recall (ALCE-style).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P1-23",
+      "priority": "P1",
+      "requirement": "Report assessor quality per class, especially the rate of discarding the relevant passage.",
+      "status": "Partial",
+      "evidence": "EXP-018 reports development support precision/recall and class counts; EXP-028/029 passage retention is measured. Full test class-quality report absent."
+    },
+    {
+      "id": "P0-16",
+      "priority": "P0",
+      "requirement": "Report cost on named hardware: latency p50/p95, model calls, input/output tokens, peak memory.",
+      "status": "Partial",
+      "evidence": "Mac hardware and mean stage latencies are documented; distributional latency, token counts, and memory are missing."
+    },
+    {
+      "id": "P0-17",
+      "priority": "P0",
+      "requirement": "Keep paired exact McNemar tests and paired bootstrap CIs; report effect sizes in percentage points.",
+      "status": "Done",
+      "evidence": "EXP-026 and EXP-028 report paired transitions, percentage-point effects, exact p-values, and bootstrap intervals."
+    },
+    {
+      "id": "P1-24",
+      "priority": "P1",
+      "requirement": "Apply Holm–Bonferroni correction across models × datasets.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-25",
+      "priority": "P1",
+      "requirement": "Use 3–5 passage-order permutations and a hierarchical bootstrap (question × seed).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-26",
+      "priority": "P1",
+      "requirement": "Test the position of the relevant passage (start / middle / end) as a factor.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-27",
+      "priority": "P1",
+      "requirement": "Use a non-inferiority test (margin −1 pp) for the cheaper selective-verification variant.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P0-18",
+      "priority": "P0",
+      "requirement": "Never report p-values from dev data next to test results without a clear label.",
+      "status": "Done",
+      "evidence": "v6 labels the 80%-noise tests as development evidence; EXP-028 is explicitly condition transfer on the same questions."
+    },
+    {
+      "id": "P1-28",
+      "priority": "P1",
+      "requirement": "Two annotators label at least 300 random responses; report Cohen's κ and the confusion matrix of lexical score vs. LLM judge vs. human.",
+      "status": "Partial",
+      "evidence": "EXP-031/038 supply materials for 200 responses; zero actual human labels, no two-annotator 300-response study or kappa."
+    },
+    {
+      "id": "P1-29",
+      "priority": "P1",
+      "requirement": "Re-apply the M1–M5 failure taxonomy on test data with a written codebook and κ.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-30",
+      "priority": "P1",
+      "requirement": "Ablations: fallback variant, verifier type (self / NLI / symbolic / combined), k = 5/10/20 documents, router type.",
+      "status": "Partial",
+      "evidence": "Hard/fallback comparisons and synthetic guard ablations exist; NLI/symbolic full-system, k and router matrix incomplete."
+    },
+    {
+      "id": "P0-19",
+      "priority": "P0",
+      "requirement": "Publish the repository on GitHub under MIT or Apache-2.0 and link it in the paper.",
+      "status": "Open",
+      "evidence": "No Git remote or project code license exists. Upstream RGB data retain their separate CC BY-NC-SA 4.0 license."
+    },
+    {
+      "id": "P2-06",
+      "priority": "P2",
+      "requirement": "Tag the submitted version and archive it on Zenodo with a DOI.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P1-31",
+      "priority": "P1",
+      "requirement": "Add a Linux/CUDA backend (vLLM or Transformers) next to MLX; report agreement between backends on a 300-question subset.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P0-20",
+      "priority": "P0",
+      "requirement": "Lock dependencies (uv or Poetry) and provide a Docker image.",
+      "status": "Partial",
+      "evidence": "`requirements-mlx-macos.lock` is a 43-package version snapshot; no Docker/Linux inference environment exists."
+    },
+    {
+      "id": "P1-32",
+      "priority": "P1",
+      "requirement": "Drive every run from a YAML config (e.g. Hydra); store the config hash in each result file.",
+      "status": "Partial",
+      "evidence": "Newer runs hash protocols/data/model settings; no universal YAML-config run interface."
+    },
+    {
+      "id": "P0-21",
+      "priority": "P0",
+      "requirement": "Save question-level JSONL results: prompt, context IDs, assessor scores, draft, final answer, all metrics, latency, tokens.",
+      "status": "Partial",
+      "evidence": "Historical raw rows are preserved and EXP-028 stores questions, contexts, assessments, answers, and stage timings; not every run stores full prompts, tokens, or memory."
+    },
+    {
+      "id": "P1-33",
+      "priority": "P1",
+      "requirement": "Provide make reproduce-tables, make reproduce-figures and a 50-question make run-small.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P0-22",
+      "priority": "P0",
+      "requirement": "Unit-test the scorer and the output parser; run them in GitHub Actions CI.",
+      "status": "Partial",
+      "evidence": "Local tests cover scoring, historical parsers, symbolic rules, and extraction boundaries. Linux GitHub Actions workflow is configured but has not run remotely. These tests do not measure neural extraction accuracy."
+    },
+    {
+      "id": "P0-23",
+      "priority": "P0",
+      "requirement": "Publish all prompts verbatim in the repository and in an appendix.",
+      "status": "Partial",
+      "evidence": "Prompts are in source files; the manuscript appendix does not reproduce them verbatim."
+    },
+    {
+      "id": "P1-34",
+      "priority": "P1",
+      "requirement": "Document hardware, run times and the estimated cost of a full reproduction in the README.",
+      "status": "Partial",
+      "evidence": "README and run manifests document hardware and some timings; no complete reproduction cost estimate."
+    },
+    {
+      "id": "P1-35",
+      "priority": "P1",
+      "requirement": "Replace the Scientific Literature Assistant with the RAG Red-Team Arena (section 10).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-36",
+      "priority": "P1",
+      "requirement": "Build it in milestones M1–M5 with a coding agent; every milestone ends with a passing test.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-37",
+      "priority": "P1",
+      "requirement": "Measure attack success rate per system and per attack type, latency p50/p95, cost per 1,000 queries and peak memory on a 16–24 GB machine.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-38",
+      "priority": "P1",
+      "requirement": "Log a full trace per question (facts, rules fired, proof or counter-example) for auditability.",
+      "status": "Partial",
+      "evidence": "Synthetic verification outputs contain fact/rule traces; Arena question-level audit logging is absent."
+    },
+    {
+      "id": "P2-07",
+      "priority": "P2",
+      "requirement": "Release the collected attacks as an adversarial test set with a datasheet.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P2-08",
+      "priority": "P2",
+      "requirement": "Run a live session at the TDK presentation and a small user study (10–15 participants) under university ethics rules.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P1-39",
+      "priority": "P1",
+      "requirement": "Record a 2–3 minute demo video; include a screenshot as a figure.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-40",
+      "priority": "P1",
+      "requirement": "Introduction lists the contributions (diagnosis, mechanism, method, resources) and states the main result with numbers.",
+      "status": "Partial",
+      "evidence": "v7 introduction describes mechanism, aims and scope; requested explicit contribution list and current result statement incomplete."
+    },
+    {
+      "id": "P1-41",
+      "priority": "P1",
+      "requirement": "Method section gives each component formally: input, output, decision rule, threshold.",
+      "status": "Partial",
+      "evidence": "Existing S0–S3 decision policies and symbolic specification are described; complete current integrated method formalization absent."
+    },
+    {
+      "id": "P1-42",
+      "priority": "P1",
+      "requirement": "Experimental setup separates dev and test explicitly, and lists datasets, models, baselines, metrics, statistics and hardware.",
+      "status": "Partial",
+      "evidence": "v7 separates development and condition transfer; setup must integrate new experiments and complete dataset/model/cost reporting."
+    },
+    {
+      "id": "P1-43",
+      "priority": "P1",
+      "requirement": "Appendix: prompts, annotation guidelines, full result tables, experiment-ID mapping.",
+      "status": "Partial",
+      "evidence": "v7 has EXP mapping; complete prompts, annotation guidelines and full result tables not included."
+    },
+    {
+      "id": "P0-24",
+      "priority": "P0",
+      "requirement": "System architecture diagram with the failure type → intervention mapping.",
+      "status": "Open",
+      "evidence": "No current architecture figure maps failures to interventions."
+    },
+    {
+      "id": "P0-25",
+      "priority": "P0",
+      "requirement": "Remove the duplication between the noise-curve table and Figure 1; add confidence bands and one line per model.",
+      "status": "Partial",
+      "evidence": "Duplicate figure was removed from v6; a multi-model uncertainty plot depends on additional model runs."
+    },
+    {
+      "id": "P1-44",
+      "priority": "P1",
+      "requirement": "Sankey or stacked bar of FIXED / DAMAGED transitions (the mechanism in one picture).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-45",
+      "priority": "P1",
+      "requirement": "Risk–coverage curve (accuracy vs. abstention trade-off).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-46",
+      "priority": "P1",
+      "requirement": "Accuracy vs. cost Pareto plot (the real saving of selective verification).",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P2-09",
+      "priority": "P2",
+      "requirement": "UpSet plot of co-occurring failure labels; demo screenshot.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P0-26",
+      "priority": "P0",
+      "requirement": "Number and caption every table (currently only one of four is captioned).",
+      "status": "Partial",
+      "evidence": "v7 captions tables but repeats Table 1 after Table 4; numbering is not clean."
+    },
+    {
+      "id": "P0-27",
+      "priority": "P0",
+      "requirement": "Add a percentage column and a multi-label note to the failure taxonomy table.",
+      "status": "Done",
+      "evidence": "Table 3 and its note specify denominators and label overlap."
+    },
+    {
+      "id": "P1-47",
+      "priority": "P1",
+      "requirement": "Main results table: models × methods with accuracy, Δ, 95% CI, corrected p and truthfulness score; bold the best, mark significance.",
+      "status": "Partial",
+      "evidence": "v7 has single-model tables and paired effects; full requested matrix/corrected p/truthfulness table absent."
+    },
+    {
+      "id": "P1-48",
+      "priority": "P1",
+      "requirement": "Separate tables for datasets, ablations, cost, and metric validation (human vs. lexical vs. judge, κ).",
+      "status": "Partial",
+      "evidence": "Dataset manifest and several result tables exist; requested ablation, cost and human-validation tables incomplete."
+    },
+    {
+      "id": "P1-49",
+      "priority": "P1",
+      "requirement": "Grow from 4 to 35–50 references, grouped by theme, with a summary comparison table of related methods.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-50",
+      "priority": "P1",
+      "requirement": "Cover: RAG foundations and surveys (Lewis et al. 2020; hallucination surveys by Ji et al. and Huang et al.); robustness to irrelevant context (Shi et al. 2023; Yoran et al. 2024; Liu et al. \"Lost in the Middle\" 2024); adaptive and corrective RAG (Self-RAG, CRAG, Adaptive-RAG, FLARE, RECOMP); verification (Chain-of-Verification, SelfCheckGPT, FActScore, AlignScore, MiniCheck, RAGTruth, ALCE); neuro-symbolic reasoning (PAL, Program-of-Thoughts, Logic-LM); statistics (McNemar 1947; Dietterich 1998; Dror et al. 2018).",
+      "status": "Partial",
+      "evidence": "Four references cover a small part of the requested themes; most specified literature is absent."
+    },
+    {
+      "id": "P1-51",
+      "priority": "P1",
+      "requirement": "Add Hungarian context (e.g. PULI models, HuLU benchmark, relevant work of the supervisor's group) to satisfy the \"domestic and international literature\" criterion.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P2-10",
+      "priority": "P2",
+      "requirement": "Add neuro-symbolic and formal-reasoning references (Logic-LM, LINC, SatLM, DeepProbLog, Scallop, Z3 by de Moura and Bjørner 2008) and RAG poisoning work (e.g. PoisonedRAG) for the demonstrator.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    },
+    {
+      "id": "P0-28",
+      "priority": "P0",
+      "requirement": "Use IEEE citation style with DOIs; replace arXiv preprints with peer-reviewed versions where they exist.",
+      "status": "Partial",
+      "evidence": "Existing references use numbered citations but there are only four; one remains an arXiv version. Literature review is still too narrow."
+    },
+    {
+      "id": "P1-52",
+      "priority": "P1",
+      "requirement": "Define JSON schemas for the constraint frame, facts and claims; write rules R1–R6 and the safety rules; version them in the repository.",
+      "status": "Partial",
+      "evidence": "Versioned typed frame/facts/claims and selected rules exist; full R1–R6 and safety-rule schemas are incomplete."
+    },
+    {
+      "id": "P1-53",
+      "priority": "P1",
+      "requirement": "Implement the extractors with constrained decoding; unit-test them on 30 hand-written examples.",
+      "status": "Partial",
+      "evidence": "Extractors and fixture tests exist; post-generation validation is not constrained decoding."
+    },
+    {
+      "id": "P1-54",
+      "priority": "P1",
+      "requirement": "Implement normalisation (dates, ordinals, units, aliases) with unit tests.",
+      "status": "Partial",
+      "evidence": "Basic string normalization and typed years exist; dates/ordinals/units/entity aliases are incomplete."
+    },
+    {
+      "id": "P1-55",
+      "priority": "P1",
+      "requirement": "Implement the clingo/Z3 engine and verdict logic; emit the proof trace as JSON.",
+      "status": "Partial",
+      "evidence": "Python rule engine emits verdict traces; clingo/Z3 implementation absent."
+    },
+    {
+      "id": "P1-56",
+      "priority": "P1",
+      "requirement": "Annotate extraction gold data (200 passages, 200 questions) and report κ.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P1-57",
+      "priority": "P1",
+      "requirement": "Run oracle vs. real extraction, the per-rule ablation (drop R1…R6 one at a time) and the comparison with S2, NLI-only and CoVe.",
+      "status": "Partial",
+      "evidence": "Oracle/real extraction and guard comparisons exist on synthetic cases; full per-rule and S2/NLI/CoVe evaluation absent."
+    },
+    {
+      "id": "P1-58",
+      "priority": "P1",
+      "requirement": "Measure latency of each stage on the named hardware.",
+      "status": "Partial",
+      "evidence": "EXP-036/037 extraction/drafting latency distributions exist; full pipeline per-stage measurement incomplete."
+    },
+    {
+      "id": "P1-59",
+      "priority": "P1",
+      "requirement": "Add a proof-trace figure with one VERIFIED and one REFUTED example to the paper.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this requirement was found in the repository or current manuscript."
+    },
+    {
+      "id": "P2-11",
+      "priority": "P2",
+      "requirement": "Probabilistic extension: weight facts by NLI confidence in a probabilistic logic language (e.g. Scallop or ProbLog) and compare with hard rules.",
+      "status": "Open",
+      "evidence": "No completed artifact satisfying this IEEE-extension requirement was found."
+    }
+  ]
+}

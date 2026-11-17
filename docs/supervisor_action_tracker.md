@@ -6,16 +6,22 @@ improvement plan against the actual repository and current supervisor draft.
 checked; it does not mean the TDK paper is ready to submit. P1 and P2 remain
 separate research scope.
 
+The full 98-checkbox audit is now in
+`docs/supervisor_plan_completion_audit_2026-11-17.md`. It supersedes earlier
+percentage estimates: P0 has 10 Done, 14 Partial and 4 Open. With an explicit
+Done=1 / Partial=0.5 / Open=0 convention, P0 planning progress is 60.7%; strict
+completion is 35.7%. Neither is a measured percentage of remaining effort.
+
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
 | Align title with measured work | Open | A rule core and neural extraction adapter are implemented. EXP-036 prospectively tested 48 authored cases with 33/48 exact typed matches. Primary false confirmations fell 7 to 0, but correct-decision retention was 75%, failing the 80% target. All three false-source controls still pass; real-world validation is open. General effectiveness remains unestablished. |
-| Use a hallucination-specific metric for the title claim | Annotation prepared | RGB-compatible lexical score is not a hallucination rate. EXP-031 has an audited 100-pair reviewer packet, offline reader, codebook, and source-preserving intake/locking tools. Only the project author is available. EXP-037 small-model drafting was unreliable; EXP-038 provides separate assistant drafts for all 200 responses and a review/export interface. Human confirmation and semantic results remain pending; independent double review is unavailable. |
+| Use a hallucination-specific metric for the title claim | Partial | EXP-039 reports an AI-only analysis of all 200 EXP-038 drafts: false-assertion YES 37/100 for S1 and 35/100 for S3; no established advantage. This is unvalidated assistant assessment, not a human-validated hallucination rate. Human confirmation remains zero. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
 | Correct Section 4.3 evidence-miss logic | Done | The draft states that every 80%-noise question had relevant evidence and 27/29 semantic errors failed to use it. |
 | Report hard-filter and fallback-rescue paired tests | Done | Exact p-values were independently recalculated from saved raw rows and included as development results. |
 | Rewrite abstract around key outcomes | Done | v6 draft has a compact abstract with baseline, intervention, and transfer numbers. |
-| Put unbuilt components in Future Work | Done | v6 distinguishes completed S0–S3, offline S4 routing, and planned symbolic layer and Arena. |
+| Put unbuilt components in Future Work | Partial | v6/v7 separated planned work, but v7 is now stale about the symbolic prototype. It must integrate EXP-032–039 and distinguish the measured restricted prototype from the unbuilt complete pipeline and Arena. |
 | Own Contribution in first person, supervisor role, repository URL | Partial | First-person contribution and supervisor role are in v6; no public repository URL exists. |
 | Label 80%-noise RGB as development | Done | v6 and README label all intervention results at 80% noise as development evidence. |
 | Freeze method with tagged commit before new test | Done for EXP-029 | Local commit `77829b1` and annotated tag `exp029-freeze-2026-11-17` precede inference. Future final tests need their own freeze; this is not a public release. |
@@ -33,7 +39,7 @@ separate research scope.
 | Publish prompts in repository and appendix | Partial | Prompts are in source files; the manuscript appendix does not reproduce them verbatim. |
 | Architecture figure | Open | No current architecture figure maps failures to interventions. |
 | Remove duplicated noise table/figure; add comparative uncertainty plot | Partial | Duplicate figure was removed from v6; a multi-model uncertainty plot depends on additional model runs. |
-| Number and caption tables | Done | Four main tables and the appendix mapping table have captions in v6. |
+| Number and caption tables | Partial | Latest v7 has captions but repeats Table 1 after Table 4; numbering still needs correction. |
 | Taxonomy percentages and multi-label note | Done | Table 3 and its note specify denominators and label overlap. |
 | IEEE references with DOIs and peer-reviewed versions | Partial | Existing references use numbered citations but there are only four; one remains an arXiv version. Literature review is still too narrow. |
 
@@ -41,9 +47,10 @@ separate research scope.
 
 1. Freeze the evaluation protocol and repository state before any new model
    result; do not tune on new questions.
-2. EXP-029 inference is complete and its raw outputs preserved. Obtain
-   independent semantic annotation before using its lexical diagnostics as
-   factual-error evidence.
+2. EXP-029 inference and EXP-039 AI-only semantic analysis are complete.
+   The latter shows no established S3 advantage and must remain labeled as
+   unvalidated assistant assessment. Human validation remains an evidence gap;
+   it does not prevent further explicitly exploratory analysis.
 3. Resolve the title/method choice with the supervisor: either implement and
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.

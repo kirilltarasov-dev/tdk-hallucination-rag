@@ -13,11 +13,20 @@ transfer run. On 45 primary cases, the combined guards reduced oracle-relative
 false confirmations from 7 to 0, but correct-decision retention was 18/24 (75%),
 below the predeclared 80% target. The joint feasibility hypothesis did not pass.
 All three separately reported false-source controls remained VERIFIED.
-The latest S1/S3
+The latest S1/S3 inference
 comparison is EXP-029, a frozen 100-question RGB `en_fact` counterfactual stress
 test. Its answer/fake-answer substring counts are custom diagnostics, not
 human-validated error rates or official ED*.
 EXP-030 is an offline supplemental EM/F1 analysis.
+
+The latest offline analysis, [EXP-039](docs/exp039_results.md), pairs the frozen
+EXP-038 assistant assessments with these original outputs. Assistant labels
+indicate false assertions in 37/100 S1 and 35/100 S3 responses, with 7 and 4
+unclear judgments respectively. The 92 complete pairs show no established S3
+advantage (6 removed / 3 introduced labels; nominal exact p=0.5078125).
+These are AI-only exploratory assessments, not human-validated error rates.
+The [full supervisor checklist audit](docs/supervisor_plan_completion_audit_2026-11-17.md)
+distinguishes completed items from partial work and remaining experiments.
 
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all
@@ -29,7 +38,7 @@ remain development evidence and were not overwritten.
 
 EXP-031 annotation materials are prepared for all 100 EXP-029 pairs in
 `deliverables/EXP031_Blinded_Annotation_Template.xlsx`; no human labels or
-semantic effectiveness result exist yet. The codebook is
+human-validated semantic effectiveness result exist yet. The codebook is
 `docs/exp031_semantic_annotation_protocol.md`.
 The audited [reviewer packet](deliverables/EXP031_Reviewer_Packet.zip) includes
 the unchanged workbook and an offline full-text reader.
@@ -46,7 +55,8 @@ all 100 blinded pairs and prepared 200 assistant assessments with rationales.
 The current [author-review page](deliverables/EXP038_Assisted_Author_Review.html)
 and [instructions](deliverables/EXP038_Review_Instructions.md) support explicit
 per-response review and JSON backup/restore. Human-reviewed labels remain zero;
-no inter-rater agreement, semantic S1/S3 effect, or new thesis proof is claimed.
+no inter-rater agreement or thesis proof is claimed. EXP-039 separately reports
+the conditional AI-label comparison after the author requested AI-only analysis.
 
 ## Evaluated systems
 

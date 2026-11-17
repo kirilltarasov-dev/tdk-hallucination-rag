@@ -82,5 +82,7 @@ the duplicate question, and unresolved reference defects before unblinding.
 Artifacts: `results/annotation/exp038_assistant_authored_table.json`,
 `results/annotation/exp038_assistant_proposals.json`,
 `experiments/exp038_author_drafts.py`, and the author-review interface/intake.
-No system-specific effect size, significance test, or human hallucination metric
-has been computed from these drafts.
+At the completion of EXP-038 no system-specific comparison had been computed.
+On the author's subsequent explicit request, EXP-039 separately analyzed these
+unchanged drafts as AI-only exploratory judgments. See `docs/exp039_results.md`.
+No human hallucination metric or independent validation has been produced.

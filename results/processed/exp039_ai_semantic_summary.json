@@ -1,0 +1,139 @@
+{
+  "experiment_id": "EXP-039",
+  "status": "exploratory_AI_only_not_human_validated",
+  "pairs": 100,
+  "human_reviewed_responses": 0,
+  "source_sha256": {
+    "results/annotation/exp038_assistant_proposals.json": "d4cb313d80d833b8b10886a8e8e6d1bedbc5ec8a79aa2fcc973ac9c49516a374",
+    "results/annotation/exp038_assistant_authored_table.json": "a8cca1cc305629ab153bcbca5e055c84987fc4c2de0d70402382326676770171",
+    "results/annotation/exp031_blinded_pairs.jsonl": "3e907a7ce184c1807d4942fd8b93a8003a94cb3bb0150af884e0b7e4991eb130",
+    "results/raw/exp029_en_fact_counterfactual.jsonl": "181e424a99ddefaee94b708717ae907dcedfe063356f3dbec9799b58085650ac",
+    "results/annotation/exp031_blind_key.json": "db8ec588b58ec46411387f4cb1e09349565a505cba9b49336192b7a438baab8d",
+    "docs/exp039_ai_semantic_analysis_protocol.md": "5372a95c20c904bcaa1fd15565590005fc41645cd2e11a5ba671506686eabc2c",
+    "/Users/QXZ6WEJ/Documents/tdk-hallucination-rag/experiments/exp039_ai_semantic_analysis.py": "76aa4b175dfef6642ce756e27a7b85de3dd0dd308aff50ec408fa83bbc709938"
+  },
+  "counts": {
+    "S1": {
+      "false_assertion": {
+        "NO": 56,
+        "UNCLEAR": 7,
+        "YES": 37
+      },
+      "answer_status": {
+        "ABSTAINS": 5,
+        "CORRECT": 57,
+        "INCORRECT": 29,
+        "MIXED": 5,
+        "UNCLEAR": 4
+      },
+      "evidence_status": {
+        "CONTRADICTED": 11,
+        "MIXED": 55,
+        "NO_CLAIM": 4,
+        "SUPPORTED": 21,
+        "UNCLEAR": 9
+      },
+      "context_answerable": {
+        "UNCLEAR": 72,
+        "YES": 28
+      },
+      "conflict_acknowledged": {
+        "NO": 35,
+        "NOT_APPLICABLE": 37,
+        "UNCLEAR": 5,
+        "YES": 23
+      }
+    },
+    "S3": {
+      "false_assertion": {
+        "NO": 61,
+        "UNCLEAR": 4,
+        "YES": 35
+      },
+      "answer_status": {
+        "ABSTAINS": 5,
+        "CORRECT": 59,
+        "INCORRECT": 26,
+        "MIXED": 6,
+        "UNCLEAR": 4
+      },
+      "evidence_status": {
+        "CONTRADICTED": 10,
+        "MIXED": 37,
+        "NO_CLAIM": 4,
+        "SUPPORTED": 41,
+        "UNCLEAR": 7,
+        "UNSUPPORTED": 1
+      },
+      "context_answerable": {
+        "NO": 1,
+        "UNCLEAR": 52,
+        "YES": 47
+      },
+      "conflict_acknowledged": {
+        "NO": 19,
+        "NOT_APPLICABLE": 58,
+        "UNCLEAR": 3,
+        "YES": 20
+      }
+    }
+  },
+  "primary_paired": {
+    "complete_pairs": 92,
+    "question_clusters": 91,
+    "excluded_ids": [
+      "EXP031-013",
+      "EXP031-050",
+      "EXP031-059",
+      "EXP031-072",
+      "EXP031-084",
+      "EXP031-088",
+      "EXP031-093",
+      "EXP031-097"
+    ],
+    "removed_false_assertion_labels": 6,
+    "introduced_false_assertion_labels": 3,
+    "S3_minus_S1_percentage_points": -3.260869565217391,
+    "nominal_exact_mcnemar_p": 0.5078125,
+    "question_cluster_bootstrap_95_percent_interval_pp": [
+      -9.782608695652174,
+      3.1914893617021276
+    ]
+  },
+  "first_ID_per_question_sensitivity": {
+    "complete_pairs": 91,
+    "question_clusters": 91,
+    "excluded_ids": [
+      "EXP031-013",
+      "EXP031-050",
+      "EXP031-059",
+      "EXP031-072",
+      "EXP031-084",
+      "EXP031-088",
+      "EXP031-093",
+      "EXP031-097"
+    ],
+    "removed_false_assertion_labels": 6,
+    "introduced_false_assertion_labels": 3,
+    "S3_minus_S1_percentage_points": -3.2967032967032965,
+    "nominal_exact_mcnemar_p": 0.5078125,
+    "question_cluster_bootstrap_95_percent_interval_pp": [
+      -9.89010989010989,
+      3.2967032967032965
+    ]
+  },
+  "full_sample_unclear_assignment_difference_bounds_pp": [
+    -9,
+    2
+  ],
+  "false_assertion_YES_and_evidence_SUPPORTED": {
+    "S1": 18,
+    "S3": 20
+  },
+  "limitations": [
+    "Unvalidated, retrospective assistant labels; no independent human or external fact checks.",
+    "Conditional statistics do not model judge or benchmark-reference errors.",
+    "Duplicate question clustered for bootstrap; nominal full-row McNemar dependence remains.",
+    "S1/S3 filtering comparison does not test the later symbolic verifier."
+  ]
+}

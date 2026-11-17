@@ -727,3 +727,38 @@ zero, independent double annotation unavailable, and no kappa, paired semantic
 comparison or thesis-effectiveness claim produced. A real completed author
 export is required before subsequent assisted single-author analysis. Details:
 `docs/exp038_assistant_draft_protocol.md`, `docs/exp038_assisted_review_status.md`.
+
+## 2026-11-17 — EXP-039: Exploratory AI-Only Semantic Comparison
+
+The project author explicitly requested proceeding with the assistant's own
+assessment. Analyzed the frozen EXP-038 labels separately from human annotation;
+no review confirmations or labels were changed. Recorded analysis choices before
+calculating S1/S3 counts. This is retrospective analysis, not preregistration.
+Verified all 100 pair mappings against original EXP-029 questions, references,
+responses and contexts, plus frozen proposal hashes and the unchanged blank
+human workbook. No inference calls were made.
+
+False-assertion YES/NO/UNCLEAR counts: S1 37/56/7, S3 35/61/4. On 92 complete
+pairs, six YES labels were removed and three introduced: S3-minus-S1 -3.26 pp,
+question-cluster bootstrap interval [-9.78, +3.19], nominal exact McNemar
+p=0.5078125. Deduplicating the known question leaves 91 complete pairs and the
+same p-value. Full-sample unknown-label assignment bounds are [-9, +2] pp.
+Answer-status CORRECT counts are 57/100 and 59/100. False-assertion YES together
+with evidence SUPPORTED occurs 18 times for S1 and 20 for S3. Support is not truth.
+
+Conclusion: no established S3 benefit, even conditional on these AI labels.
+The labels remain unvalidated, reference-dependent and retrospective; zero human
+reviews and no independent factual checks. This is not a validated hallucination
+metric and does not test the later symbolic verifier. Protocol, derived paired
+rows, processed summary and interpretation are saved as EXP-039. Deterministic
+replay matched; all 74 existing Python tests passed. Original raw results and
+annotation inputs are unchanged.
+
+Also audited all 98 checkboxes in the supervisor's original improvement plan.
+P0: 10 Done / 14 Partial / 4 Open. P1: 1 Done / 25 Partial / 33 Open. P2: all
+11 Open. Counts preserve overlapping original requirements. The optional
+half-credit convention estimates P0 progress at 60.7%, P0+P1 at 35.1%, and the
+full plan at 31.1%; these are planning conventions, not effort or scientific
+quality measures. Two earlier Done statuses were downgraded because v7 still
+predates the measured symbolic experiments and repeats a table number.
+Evidence by requirement: `docs/supervisor_plan_completion_audit_2026-11-17.md`.
