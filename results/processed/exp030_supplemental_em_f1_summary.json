@@ -1,0 +1,47 @@
+{
+  "experiment_id": "EXP-030",
+  "design": "Offline supplemental lexical metric sensitivity on saved paired outputs; no inference",
+  "normalization": "NFKC, casefold, ASCII punctuation and English article removal, whitespace collapse",
+  "scope": "EM and max-alias token-F1 on 288/300 single-required-answer-group questions per condition",
+  "source_sha256": {
+    "results/raw/exp019_s3_filtered_rag_80_noise.jsonl": "4157ff98b7fcfc8a32f7b702d01a7e5d49edeecdc601ddb1cf7dffc278646dea",
+    "results/raw/exp005_s1_full_noise_0.8.jsonl": "c0913fcb65faaadb957c924935430019823d25936a34ca8f25e285a1c1481a42",
+    "results/raw/exp021_s3_safe_fallback_80_noise.jsonl": "2095b4392dc91fa9246c09220c7a41e316335e2737c84e1f0c140e0749eff3c7",
+    "results/raw/exp005_s1_full_noise_0.6.jsonl": "aca140965854919fdd791cbbfaa90c0ea9b4b346f558f79bb970145e31184e93",
+    "results/raw/exp028_s3_safe_fallback_noise_0.6.jsonl": "3de39341e0a4b34a0427063bf47a2ce9ac239122c89867596b93b0b54453fd74"
+  },
+  "results": {
+    "noise_0.8": {
+      "all_question_rgb_compatible_counts": {
+        "s1": 268,
+        "s3_safe_fallback": 276,
+        "n": 300
+      },
+      "supplemental_subset_n": 288,
+      "excluded_multi_group_n": 12,
+      "s1_exact_match_count": 0,
+      "s3_exact_match_count": 0,
+      "s1_mean_token_f1": 0.23420228276072086,
+      "s3_mean_token_f1": 0.27059429110362565
+    },
+    "noise_0.6": {
+      "all_question_rgb_compatible_counts": {
+        "s1": 294,
+        "s3_safe_fallback": 290,
+        "n": 300
+      },
+      "supplemental_subset_n": 288,
+      "excluded_multi_group_n": 12,
+      "s1_exact_match_count": 0,
+      "s3_exact_match_count": 0,
+      "s1_mean_token_f1": 0.291555605727792,
+      "s3_mean_token_f1": 0.29395959711071273
+    }
+  },
+  "limitations": [
+    "The 12 multi-group questions per condition are excluded from EM/F1 but remain in the canonical RGB score.",
+    "Verbose correct answers receive low extractive token-F1 and usually fail exact match.",
+    "These lexical metrics do not measure semantic support, contradiction, or hallucination rate.",
+    "Both conditions reuse en_refine questions previously examined during development."
+  ]
+}

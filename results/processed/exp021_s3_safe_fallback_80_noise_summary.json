@@ -1,0 +1,23 @@
+{
+  "experiment_id": "EXP-021",
+  "name": "S3 Safe-Fallback Filtered RAG @ 80% Noise",
+  "source_experiment": "EXP-019",
+  "examples": 300,
+  "noise_rate": 0.8,
+  "correct": 276,
+  "accuracy": 0.92,
+  "fallback_cases": 31,
+  "filtered_cases": 269,
+  "average_generation_latency_seconds": 0.8938221569025578,
+  "runtime_seconds": 268.1954030410852,
+  "policy": {
+    "non_empty_filtered_context": "use DIRECT + INFERENTIAL documents from EXP-019",
+    "empty_filtered_context": "restore original five-document context instead of forced abstention"
+  },
+  "reference_results": {
+    "s1_standard_rag_correct": 268,
+    "s1_standard_rag_accuracy": 0.8933333333333333,
+    "s3_hard_filter_correct": 251,
+    "s3_hard_filter_accuracy": 0.8366666666666667
+  }
+}

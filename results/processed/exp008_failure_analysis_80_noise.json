@@ -1,0 +1,530 @@
+{
+  "experiment_id": "EXP-008",
+  "source_experiment": "EXP-005",
+  "system": "S1_standard_rag",
+  "dataset": "RGB_en_refine",
+  "noise_rate": 0.8,
+  "official_rgb_failures": 32,
+  "semantic_errors": 29,
+  "evaluator_false_negatives": 3,
+  "unannotated": 0,
+  "failure_type_counts": {
+    "M1": 27,
+    "M3": 18,
+    "M2": 10,
+    "M4": 10,
+    "M5": 4,
+    "E1": 3
+  },
+  "failure_type_definitions": {
+    "M1": "relevant_evidence_miss",
+    "M2": "distractor_hijacking",
+    "M3": "false_abstention",
+    "M4": "temporal_or_entity_confusion",
+    "M5": "unsupported_inference",
+    "E1": "evaluator_false_negative"
+  },
+  "cases": [
+    {
+      "example_id": 2,
+      "question": "Who won the 2022 Citrus Bowl?",
+      "gold_answers": [
+        "Kentucky"
+      ],
+      "prediction": "The document does not provide information about the 2022 Citrus Bowl winner. However, it does mention a 2022 VRBO Citrus Bowl, but it does not specify the winner of that game. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly states that Kentucky won, but the model incorrectly abstains."
+    },
+    {
+      "example_id": 8,
+      "question": "What won best drama at 79th Golden Globes?",
+      "gold_answers": [
+        "The Power of the Dog"
+      ],
+      "prediction": "The document provided does not contain information about the 79th Golden Globes. However, the 80th Golden Globes document mentions that \"The Fabelmans\" won best drama. Therefore, 'The Fabelmans' won best drama at the 79th Golden Globes.",
+      "semantic_error": true,
+      "failure_types": [
+        "M2",
+        "M4"
+      ],
+      "notes": "The model follows evidence about the 80th Golden Globes instead of the relevant evidence about the 79th Golden Globes."
+    },
+    {
+      "example_id": 38,
+      "question": "What is the weight of the Surface Laptop SE?",
+      "gold_answers": [
+        [
+          "2.45",
+          "1,112.4"
+        ]
+      ],
+      "prediction": "The weight of the Surface Laptop SE is 2.79 lbs (1,265 g) for the Cobalt Blue and Platinum models.",
+      "semantic_error": true,
+      "failure_types": [
+        "M2",
+        "M4"
+      ],
+      "notes": "The model uses the weight of Surface Laptop 3 instead of Surface Laptop SE."
+    },
+    {
+      "example_id": 46,
+      "question": "When is the final of the 2022 FIFA World Cup?",
+      "gold_answers": [
+        [
+          "December 18",
+          "Dec 18",
+          "Dec. 18",
+          "18 December",
+          "18 Dec",
+          "18 Dec."
+        ]
+      ],
+      "prediction": "The final of the 2022 FIFA World Cup took place on a date that is not specified in the provided documents. The documents only mention that the final was played after extra time and ended in a draw, with Argentina winning the penalty shootout against France. The exact date of the final is not provided in the documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence states that the tournament ran through December 18, but the model claims the final date is unavailable."
+    },
+    {
+      "example_id": 53,
+      "question": "Who won the men's singles Australian Open 2022?",
+      "gold_answers": [
+        [
+          "Rafael Nadal",
+          "Nadal"
+        ]
+      ],
+      "prediction": "Novak Djokovic won the men's singles Australian Open in 2023, not 2022. The document provided does not contain information about the 2022 Australian Open.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M4"
+      ],
+      "notes": "Relevant evidence identifies Nadal as the 2022 winner, but the model focuses on a distractor about Djokovic in 2023."
+    },
+    {
+      "example_id": 57,
+      "question": "Who is the runner-up in the women's singles at the 2023 French Open?",
+      "gold_answers": [
+        "Karolina Muchova"
+      ],
+      "prediction": "The document does not provide the name of the runner-up in the women's singles at the 2023 French Open. However, it is mentioned that Coco Gauff was the last American to be eliminated in the tournament, and she was the runner-up to Iga Swiatek in the 2022 French Open. Therefore, it is possible that Coco Gauff could have been the runner-up again in the 2023 French Open, but this is not confirmed in the document.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M4"
+      ],
+      "notes": "Relevant evidence explicitly identifies Karolina Muchova as the runner-up, but the model overlooks it and speculates about Coco Gauff based on 2022 distractor evidence."
+    },
+    {
+      "example_id": 58,
+      "question": "Who won the men's singles French Open 2022?",
+      "gold_answers": [
+        [
+          "Rafael Nadal",
+          "Nadal"
+        ]
+      ],
+      "prediction": "The document does not provide the name of the winner of the men's singles French Open 2022. However, it is mentioned that Novak Djokovic won the French Open in 2023. So, it can be inferred that Novak Djokovic won the men's singles French Open in 2022.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M4",
+        "M5"
+      ],
+      "notes": "Relevant evidence explicitly states that Rafael Nadal won the 2022 French Open, but the model follows 2023 Djokovic evidence and makes an unsupported inference that Djokovic also won in 2022."
+    },
+    {
+      "example_id": 112,
+      "question": "Who is the chief meteorologist for KPLR-TV?",
+      "gold_answers": [
+        "John Fuller"
+      ],
+      "prediction": "The document does not provide the name of the chief meteorologist for KPLR-TV. However, it is mentioned that Chris Higgins did a live broadcast on KPLR-TV Ch. 11 during his class at SLU. But it is not clear if Chris Higgins is the chief meteorologist or not. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly states that John Fuller is the chief meteorologist for KPLR-TV, but the model incorrectly abstains."
+    },
+    {
+      "example_id": 118,
+      "question": "Who did Serena Williams lose to in her last match at the U.S. Open?",
+      "gold_answers": [
+        "Ajla Tomljanovic"
+      ],
+      "prediction": "Serena Williams lost to Ajla Tomljanović in her last match at the U.S. Open.",
+      "semantic_error": false,
+      "failure_types": [
+        "E1"
+      ],
+      "notes": "Prediction is semantically correct; Unicode spelling Tomljanović differs from benchmark answer Tomljanovic."
+    },
+    {
+      "example_id": 148,
+      "question": "What was the inflation rate in the U.S. in August 2022?",
+      "gold_answers": [
+        "8.3%"
+      ],
+      "prediction": "The document does not provide the inflation rate for August 2022. However, it does mention the inflation rate for July 2022, which was 8.5%. The inflation rate for August 2022 is expected to be announced in the future by the U.S. Bureau of Labor Statistics.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M4"
+      ],
+      "notes": "Relevant evidence explicitly gives the August 2022 inflation rate as 8.3%, but the model focuses on the July 2022 value and incorrectly claims the August value is unavailable."
+    },
+    {
+      "example_id": 157,
+      "question": "What is the starting price for Virginia Tech 2023 football season tickets?",
+      "gold_answers": [
+        "$350"
+      ],
+      "prediction": "The document does not provide information about the starting price for Virginia Tech 2023 football season tickets. However, it mentions that season tickets are currently on sale and start at $350 for another team, not Virginia Tech. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence gives the correct starting price of $350, but the model incorrectly concludes that this price belongs to another team and abstains."
+    },
+    {
+      "example_id": 165,
+      "question": "What caused Ben Davies to be unavailable for Wales in the upcoming Nations League matches?",
+      "gold_answers": [
+        "Knee",
+        "injury"
+      ],
+      "prediction": "Ben Davies' unavailability for Wales in the upcoming Nations League matches is due to a small leg fracture he suffered with his club, Tottenham Hotspur.",
+      "semantic_error": false,
+      "failure_types": [
+        "E1"
+      ],
+      "notes": "The prediction correctly identifies Ben Davies' small leg fracture as the cause of his absence. The relevant evidence describes both a small leg fracture and a knee injury, while the lexical benchmark expects the terms 'Knee' and 'injury'."
+    },
+    {
+      "example_id": 177,
+      "question": "Who was awarded the 2022 Nobel Prize for Physiology and Medicine?",
+      "gold_answers": [
+        [
+          "Svante Pääbo",
+          "Svante Paabo"
+        ]
+      ],
+      "prediction": "I can not answer the question because the provided documents do not contain information about the 2022 Nobel Prize for Physiology and Medicine. The Nobel Prize in Physiology or Medicine 2023 has not been awarded yet, and the Nobel Prize in Physiology or Medicine 2022 has not been announced as of the time this response was generated.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence identifies Svante Pääbo as the 2022 laureate, but the model overlooks this evidence and incorrectly claims that the 2022 prize had not yet been announced."
+    },
+    {
+      "example_id": 191,
+      "question": "What is the title of Chicago P.D. Season 10, Episode 4?",
+      "gold_answers": [
+        "Dónde Vives"
+      ],
+      "prediction": "The title of Chicago P.D. Season 10, Episode 4 is \"Donde Vives.\"",
+      "semantic_error": false,
+      "failure_types": [
+        "E1"
+      ],
+      "notes": "The prediction 'Donde Vives' is semantically the same episode title as the gold answer 'Dónde Vives'. The benchmark failure is caused by the missing accent mark."
+    },
+    {
+      "example_id": 198,
+      "question": "When does season 5 of The Crown premiere?",
+      "gold_answers": [
+        [
+          "November 9",
+          "Nov 9",
+          "Nov. 9",
+          "9 November",
+          "9 Nov",
+          "9 Nov."
+        ]
+      ],
+      "prediction": "The document does not provide a specific premiere date for Season 5 of The Crown. However, it is mentioned that production for the fifth season will kick off in July 2021, and it was previously reported that the season likely won't arrive on Netflix until 2022.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly gives the release date as 9 November 2022, but the model overlooks it and incorrectly claims that no specific premiere date is provided."
+    },
+    {
+      "example_id": 201,
+      "question": "which party controls the house after 2022 midterm elections?",
+      "gold_answers": [
+        "Republican "
+      ],
+      "prediction": "Based on the information provided, it is not explicitly stated which party will control the House after the 2022 midterm elections. The document mentions that the Democrats currently have a 9-seat margin in the House, and a Democratic loss in the House of fewer than 12 seats would be very unexpected. However, it also mentions that the Democrats' strong performance in the midterms has frozen any movement to replace Pelosi, which could indicate that they are maintaining control. Therefore, I cannot answer the question definitively based on the provided documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M5"
+      ],
+      "notes": "Relevant evidence explicitly states that Republicans take control of the House, but the model focuses on distracting predictive and Democratic-performance evidence and reaches an unsupported conclusion that control is unclear."
+    },
+    {
+      "example_id": 214,
+      "question": "What was the unemployment rate in November 2022?",
+      "gold_answers": [
+        "3.7%"
+      ],
+      "prediction": "The document does not provide the unemployment rate for November 2022. However, it does mention that the unemployment rate for December 2022 was 4.1 percent.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M4"
+      ],
+      "notes": "Relevant evidence explicitly states that the seasonally adjusted U.S. unemployment rate in November 2022 was 3.7%, but the model focuses on the December 2022 value of 4.1% and incorrectly claims the November value is unavailable."
+    },
+    {
+      "example_id": 215,
+      "question": "Who did the USA play in the round of 16 at 2022 FIFA World Cup?",
+      "gold_answers": [
+        "Netherlands"
+      ],
+      "prediction": "The document does not provide information about the team the USA played in the round of 16 at the 2022 FIFA World Cup. The document only mentions that the USA clinched a berth in the Round of 16 by winning against Iran, but it does not specify who they would play next.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly identifies the Netherlands as the USA's Round of 16 opponent, but the model overlooks it and incorrectly abstains."
+    },
+    {
+      "example_id": 216,
+      "question": "Who is Argentina's semi opponent?",
+      "gold_answers": [
+        "Croatia"
+      ],
+      "prediction": "Argentina's semi-final opponent is not specified in the provided documents. The documents only mention potential opponents for the semi-finals, quarter-finals, and the final, but do not specify the specific match-ups for any of these rounds.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly states that Argentina played Croatia in the World Cup semifinal, but the model overlooks this evidence and incorrectly claims that the opponent is unspecified."
+    },
+    {
+      "example_id": 217,
+      "question": "Who won the election in Georgia?",
+      "gold_answers": [
+        "Brian Kemp"
+      ],
+      "prediction": "The document does not provide specific information about the election year in Georgia. However, it mentions that Democrats won the Governor's office in Georgia. So, based on the context, it can be inferred that the Democrats won the election in Georgia, but the exact year is not specified in the provided documents.\n\nThere are factual errors in the provided documents as they do not specify the exact year of the election in Georgia.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M5"
+      ],
+      "notes": "Relevant evidence explicitly states that Brian Kemp defeated Stacey Abrams in the Georgia governor's race, but the model follows distracting evidence and incorrectly infers that Democrats won the Georgia election."
+    },
+    {
+      "example_id": 220,
+      "question": "Which company won Yahoo Finance's 2022 \"Company of the Year\" Award?",
+      "gold_answers": [
+        "Costco"
+      ],
+      "prediction": "The document does not provide the specific year for the \"Company of the Year\" award for Zoom. However, it mentions Yahoo Finance's 2020 Company of the Year, which was Zoom. As for the 2022 award, the document states that Yahoo Finance has announced its 2022 Company of the Year, but it does not reveal the winner. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly states that Costco was Yahoo Finance's 2022 Company of the Year, but the model overlooks it and incorrectly claims that the winner is not revealed."
+    },
+    {
+      "example_id": 232,
+      "question": "What movie won the Oscar for Best Animated Film in 2023?",
+      "gold_answers": [
+        "Guillermo del Toro's Pinocchio"
+      ],
+      "prediction": "The document does not provide information about the year 2023, so I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly states that Guillermo del Toro's Pinocchio won Best Animated Feature at the 2023 Oscars, but the model overlooks it and incorrectly abstains."
+    },
+    {
+      "example_id": 247,
+      "question": "Who won the Best R&B Album at the 2023 Grammys?",
+      "gold_answers": [
+        "Robert Glasper"
+      ],
+      "prediction": "According to the provided document, the Best R&B Album at the 2023 Grammys was not specified. The document only mentions that Beyoncé won four trophies, including two in the R&B field, but it does not specify which categories those awards were for. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly states that Robert Glasper was announced as the winner of Best R&B Album, but the model overlooks it and incorrectly abstains."
+    },
+    {
+      "example_id": 259,
+      "question": "Who won Best Director at the 95th Academy Awards Ceremony?",
+      "gold_answers": [
+        "Daniel Scheinert",
+        "Daniel Kwan"
+      ],
+      "prediction": "The document does not provide information about who won Best Director at the 95th Academy Awards. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence identifies Daniel Kwan and Daniel Scheinert as the directors whose film won the directing category, but the model overlooks this evidence and incorrectly abstains."
+    },
+    {
+      "example_id": 262,
+      "question": "Which movie won Best International Feature Film at the 95th Academy Awards Ceremony?",
+      "gold_answers": [
+        "All Quiet on the Western Front"
+      ],
+      "prediction": "The document does not provide the answer to this question. The list of nominees for Best International Feature Film is given, but the winner is not specified. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence identifies All Quiet on the Western Front as the Best International Feature Film winner. The source indicates the winner through list ordering and bold formatting, but the model incorrectly concludes that no winner is specified."
+    },
+    {
+      "example_id": 273,
+      "question": "where is 2023 CAA World Congress of Sports?",
+      "gold_answers": [
+        "JW Marriott Los Angeles"
+      ],
+      "prediction": "The 2023 CAA World Congress of Sports will be held in Los Angeles, California.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1"
+      ],
+      "notes": "The prediction correctly identifies Los Angeles but omits the specific venue, JW Marriott Los Angeles L.A. LIVE, which is explicitly provided in the relevant evidence and required by the benchmark answer."
+    },
+    {
+      "example_id": 286,
+      "question": "When was Pixel Fold announced?",
+      "gold_answers": [
+        [
+          "May 10",
+          "May 10",
+          "May. 10",
+          "10 May",
+          "10 May",
+          "10 May."
+        ]
+      ],
+      "prediction": "The document does not provide a specific date for when the Pixel Fold was announced. However, it mentions that it is available for pre-order and will begin shipping next month, which suggests that it was announced recently.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence provides the date May 10, 2023 in the document header associated with the Pixel Fold announcement, but the model overlooks it and incorrectly claims that no specific announcement date is provided."
+    },
+    {
+      "example_id": 287,
+      "question": "What is the name of Google's foldable smartphone?",
+      "gold_answers": [
+        "Pixel Fold"
+      ],
+      "prediction": "The document does not provide the exact name of Google's foldable smartphone. However, it mentions that before the official launch, names like \"Google Passport\", \"Google Logbook\" and \"Pixel Notepad\" were suggested for it. So, it is possible that the final name could be one of these or a different name altogether. Without more specific information, I can not answer the question definitively.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M2",
+        "M5"
+      ],
+      "notes": "Relevant evidence repeatedly identifies the device as the Pixel Fold, but the model focuses on distracting pre-launch candidate names and makes the unsupported inference that the final name may still be unknown."
+    },
+    {
+      "example_id": 288,
+      "question": "How many jobs were created in April 2023?",
+      "gold_answers": [
+        [
+          "253,000",
+          "253000"
+        ]
+      ],
+      "prediction": "The document does not provide information about the number of jobs created in April 2023. The last mentioned month in the document is March 2023.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "notes": "Relevant evidence explicitly states that 253,000 jobs were created in April 2023, but the model incorrectly claims that the documents only contain information through March."
+    },
+    {
+      "example_id": 289,
+      "question": "When is the end date for the federal PHE for COVID-19?",
+      "gold_answers": [
+        [
+          "May 11",
+          "May 11",
+          "May. 11",
+          "11 May",
+          "11 May",
+          "11 May."
+        ]
+      ],
+      "prediction": "The document does not provide a specific end date for the federal Public Health Emergency (PHE) for COVID-19. It mentions that the HHS must renew the federal PHE every 90 days to maintain, but it does not specify when the renewal will end or when the PHE will end. The document focuses more on the transition of COVID-19 policies and the continuation of certain flexibilities and actions after the end of the current phase of the response.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3"
+      ],
+      "notes": "Relevant evidence explicitly identifies May 11 as the transition date marking the end of the current COVID-19 PHE phase, but the model overlooks it and incorrectly claims that no specific end date is provided."
+    },
+    {
+      "example_id": 297,
+      "question": "Who won the U.S. Open golf tournament 2023?",
+      "gold_answers": [
+        "Wyndham Clark"
+      ],
+      "prediction": "I can not answer the question because the provided documents do not contain information about the year 2023. The documents only contain information about the U.S. Open golf tournament that took place in 2015 and 2022.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "notes": "Relevant evidence explicitly states that Wyndham Clark won the 2023 U.S. Open, but the model incorrectly claims that the documents contain information only about the 2015 and 2022 tournaments."
+    },
+    {
+      "example_id": 299,
+      "question": "Who was the MVP of Super Bowl 2022?",
+      "gold_answers": [
+        "Cooper Kupp"
+      ],
+      "prediction": "The documents provided do not contain information about the Super Bowl held in 2022. The latest Super Bowl mentioned in the documents is Super Bowl LVII held on February 12, 2023. Therefore, I can not answer the question because of the insufficient information in documents.",
+      "semantic_error": true,
+      "failure_types": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "notes": "Relevant evidence explicitly states that Cooper Kupp was named Super Bowl MVP after the Rams' Super Bowl LVI victory, but the model overlooks it, incorrectly concludes that the documents contain no information about the 2022 Super Bowl, and abstains."
+    }
+  ]
+}

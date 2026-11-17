@@ -1,0 +1,152 @@
+[
+  {
+    "error_id": 1,
+    "error_type": "FN",
+    "example_id": 1,
+    "question": "The genre of the drama \"Good Sam\" is what?",
+    "document": "Sam Griffith (Sophia Bush) is a female lead, still a rarity in medical dramas. The cast diversity is notable: Malcolm Kinglsey (Edwin Hodge) is a Black man from a wealthy, prominent family. Wealthy Black Americans aren't usually showcased on television. Malcolm is also a love interest for Sam, adding to the representation of interracial relationships on television. However, most of the diversity comes in the form of the secondary cast (Skye P. Marshall, Omar Maskati, Davi Santos), who are very involved in the main storylines. Did we miss something on diversity?                     Suggest an update.        A scene with a major character being shot. Scenes of heart surgery. A scene with a patient who was punched by his wife for cheating.  Did you know you can flag iffy content? Adjust limits for Violence & Scariness in your kid's entertainment guide.       Swear words like \"ass,\" \"damnit,\" \"ass kisser.\"  Did you know you can flag iffy content? Adjust limits for Language in your kid's entertainment guide.       Parents need to know that Good Sam is a medical procedural featuring a father-and-daughter heart surgeon team who hash out their familial drama as they save patients. Parents should be aware of scenes featuring simulated heart surgery and other scary topics, such as conversations about a near-fatal car accident, \"coding\" (needing to be resuscitated), and other medical lingo.",
+    "detector_reason": "The document does not provide information about the genre of the drama \"Good Sam\".",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 2,
+    "error_type": "FN",
+    "example_id": 1,
+    "question": "The genre of the drama \"Good Sam\" is what?",
+    "document": "When you purchase through links on our site, we may earn an affiliate commission. Here’s how it works. Sophia Bush is back on TV for Good Sam, and here's how the CBS drama compares to other current medical shows. Spoilers ahead for the series premiere of Good Sam on CBS. CBS has officially gotten into the medical drama game with the debut of Good Sam, starring Sophia Bush in her big series regular return to network television after her exit from Chicago P.D. in 2017. As Dr. Sam Griffith, Bush – in her first turn playing a doctor on TV – takes on a leadership role at her hospital by becoming chief of surgery… with the complication that her father (played by Jason Isaacs) formerly held that position before ending up in a coma after being shot. When he awakes and must work under his daughter, there are more problems than just medical mysteries for Sam to deal with.  The show packed a lot into the pilot episode to establish not only Sam and dad Rob “Griff” Griffith, but also her mom and her team of doctors who are used to following Griff’s lead rather than Sam’s. CBS was the only broadcast network without a medical drama prior to Good Sam, and recruiting a TV veteran like Sophia Bush and a big name like Jason Isaacs was a strong way to start. So, how does it compare to the other, long-running medical dramas on TV?",
+    "detector_reason": "The document does not provide information about the genre of the drama \"Good Sam\".",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 3,
+    "error_type": "FN",
+    "example_id": 2,
+    "question": "Who won the 2022 Citrus Bowl?",
+    "document": "This time, it was the No. 15 Iowa Hawkeyes who Kentucky took down in the final minutes en route to a 20-17 victory. It’s the fourth straight bowl win for Kentucky, which is tied with Alabama among Power 5 programs. It also broke the school record for consecutive bowl wins.",
+    "detector_reason": "The document does not mention the 2022 Citrus Bowl winner.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 4,
+    "error_type": "FN",
+    "example_id": 2,
+    "question": "Who won the 2022 Citrus Bowl?",
+    "document": "Game summary of the Kentucky Wildcats vs. Iowa Hawkeyes NCAAF game, final score 20-17, from January 1, 2022 on ESPN ... Vrbo Citrus Bowl. 15. IOWA. 10-4. Iowa ...",
+    "detector_reason": "The document does not provide information about the winner of the 2022 Citrus Bowl.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 5,
+    "error_type": "FN",
+    "example_id": 3,
+    "question": "What position did Jason Semore hold at Valdosta State before returning to Georgia Tech?",
+    "document": "At some point, he and Batt may talk about the possibility of Key taking over the program, but Key understands Batt’s job right now is to vet coaches and Key’s job is to try to put the best possible product on the field to state his case. Even if Batt chooses to hire from outside, a great run as the interim could vault Key into contention for other head coaching jobs. Key also wants to make sure his players don’t believe winning is easy after doing it twice in a row. Though he doesn’t mind letting them enjoy the new vibe on campus. “It’s been a while since we had this kind of momentum in the program,” tight end Dylan Leonard told reporters Monday. “It’s our first time with back-to-back wins. It’s great for us as players, but it’s also cool to see the fan base. You hear different conversations in the classroom. There’s a little more hype. It’s really cool walking around campus seeing people be excited about us.” Advertisement Semore worked as an analyst at Georgia Tech in 2019 and 2020 before going to Valdosta State last season to be the defensive coordinator. At the Division II powerhouse, Semore saw a team with a different attitude. The Blazers walk onto the field every week expecting to win. When Semore returned to Georgia Tech this season as the linebackers coach, the Yellow Jackets didn’t feel that way. But after consecutive wins, they are starting to develop that feeling.",
+    "detector_reason": "The document does not provide information about Jason Semore's position at Valdosta State before returning to Georgia Tech.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 6,
+    "error_type": "FN",
+    "example_id": 3,
+    "question": "What position did Jason Semore hold at Valdosta State before returning to Georgia Tech?",
+    "document": "A hugely successful high school quarterback, he threw for over 5,300 yards and 59 touchdowns at North Florida Christian High School before spending the early part of his college career at FSU. However, it was at West Virginia where his playing career took off, leading the Big 12 in completion percentage in 2014 while becoming a semifinalist for the Davey O’Brien Award. A new addition to the Marshall coaching staff for the 2023 college football season, Jason Semore becomes the Thundering Herd’s defensive coordinator. He arrives in Huntington having spent the last season with Georgia Tech, the latest stop on a varied and successful coaching career that has seen him gain experience in multiple roles at several different levels of competition. A linebacker at Adams State from 2001-2005, Semore spent 2022 working with the Georgia Tech linebackers and was slated to become their special teams coordinator with responsibilities for nickel backs and safeties. Instead, he reprises a role he previously held at Valdosta State, Montana, and the Colorado School of Mines, in addition to co-DC duties at his alma mater. He has tasted success in each of those stints. Semore helped lead Colorado School of Mines to a 10-2 season, assisted Montana in achieving three consecutive winning seasons and top-ranked Big Sky defense, and his defense fueled a Valdosta State run to the DII title game in 2021.",
+    "detector_reason": "The document does not provide information about Jason Semore's position at Valdosta State before returning to Georgia Tech.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 7,
+    "error_type": "FN",
+    "example_id": 3,
+    "question": "What position did Jason Semore hold at Valdosta State before returning to Georgia Tech?",
+    "document": "“And he really understood everything about the defense and how it worked. And I was like, ‘Man, this guy’s a young guy, but he’s ready to do this.’” When Stitt was hired as head coach at FCS Montana in December 2014, he hired Semore first as safeties coach and special-teams coordinator and then moved him up to defensive coordinator. “He really relates well to the players, and he just has a way of getting the most out of them,” Stitt said. “They really, really play hard for him.” It also was at Oklahoma State where Gundy gave him his nickname, Boogie. It had nothing to do with Semore; it was the nickname of an assistant who had just left the team. “It was probably because he didn’t remember my name,” Semore said. “It was right when I got hired, and then everybody started calling me that.” His job at Oklahoma State also connected him with Andrew Thacker, then a GA. Thacker helped bring him to Temple in 2018 as a defensive analyst, and Collins brought him to Tech for a similar position that he held before taking a defensive coordinator job at Division II Valdosta State. But back to the nickname. Said Malone, the Kansas State assistant coach who brought him to Oklahoma State from Tulsa, “I do remember Jason always being like, ‘Damn, he doesn’t know my name’ when he first got there.",
+    "detector_reason": "The document does not provide information about Jason Semore's position at Valdosta State before returning to Georgia Tech.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 8,
+    "error_type": "FP",
+    "example_id": 3,
+    "question": "What position did Jason Semore hold at Valdosta State before returning to Georgia Tech?",
+    "document": "“My preference has always been defense as a player and a coach,” Semore said. “Defense is more reactive in nature and I liked to play the game emotionally and there was always less thinking for me. On the other hand, offense is more execution and assignment based. Defense has those principals, but it’s based on effort and technique.” He said his father, Russ, who coached him at Ganado High, inspired him to go into coaching. The elder Semore went to Ganado High and returned after college and the military to start a coaching career. And after graduating from Ganado, Jason went on to play college football at Adams State University in Colorado. His coaching stops have included Adams State, the Colorado School of Mines, the University of Tulsa, Oklahoma State University, the University of Montana, Temple University, Valdosta State University and Georgia Tech.  He was not drafted into the NFL after college, and said he modeled his style of play on the football field after linebackers Dan Morgan of the Carolina Panthers and Hall of Famer and native New Mexican Brian Urlacher of the Chicago Bears. “My father was my inspiration,” Jason said. “He taught me the value of team and about being a part of something bigger than myself. He was always a coach, so I got to see first-hand how investing in other people and team dynamics lead to shared joy in life.",
+    "detector_reason": "The document mentions Jason Semore's coaching stops, which include Valdosta State University.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 9,
+    "error_type": "FP",
+    "example_id": 4,
+    "question": "How many vehicles did Tesla deliver in 2021?",
+    "document": "Jan 2, 2023 ... Tesla reports 1.31 million deliveries in 2022, growth of 40% over last ... Musk asked employees to “volunteer” to deliver as many cars to ...",
+    "detector_reason": "The document provides the number of deliveries for the previous year, which can help in estimating the number of deliveries for the year in question.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 10,
+    "error_type": "FP",
+    "example_id": 7,
+    "question": "When will Truth Social launch on iOS?",
+    "document": "Reports say that Trump has been privately complaining that Google was trying to \"fuck\" him. According to Rolling Stones' source, however, the truth is that Truth Social hasn't even submitted an Android app to the Google Play store yet. Still, though, the launch of a web app is significant. Truth Social profiles and posts will now be completely shareable on other platforms. Using the iPhone app, if you want to share a Truth Social post on another platform, you have to take a screenshot. Now, Truth Social users will be able to post links directly to any account or post. In turn, non-Truth Social users will have direct access to sign up and engage with content on the site. (Note: Internal Truth Social links currently require users to login to their account in order to see the content.) In short: It's going to be a lot easier for Trump's fanbase to share his content on other platforms. Launched in February, Truth Social struggled during the first few months. Downloads plummeted after the initial rush to download due to a long waitlist of users wanting to sign up. However, in recent weeks, Trump finally started posting on his own platform, which has helped give the conservative social network another bounce.  Truth Social announced a public beta of the web app just last week. According to a press release from Wednesday, the initial web app rollout was scheduled for some time over the next week or two.",
+    "detector_reason": "The document mentions the launch of the web app and a scheduled rollout over the next week or two for Truth Social, which is the platform in question.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 11,
+    "error_type": "FN",
+    "example_id": 8,
+    "question": "What won best drama at 79th Golden Globes?",
+    "document": "Best Picture Drama: “The Power of the Dog” Jane Campion’s first film in more than a decade, “The Power of the Dog,” took home the most prestigious award of the night. “Power of the Dog” won Best Picture Drama, Best Director Motion Picture (Jane Campion), and Best Supporting Actor — Motion Picture (Kodi Smit-McPhee).  The acclaimed Netflix drama was the most-nominated movie along with “Belfast,” with each film earning seven nominations. Campion became the third woman to win in this category at Golden Globes. Best Television Series — Musical or Comedy: “Hacks” HBO Max’s “Hacks” won the main Television (Musical or Comedy) category and Best Actress — Comedy/Musical for star Jean Smart at the 79th Golden Globes Awards. While other shows in this category were also strong contenders, such as Apple TV+’s “Ted Lasso,” “Hacks” proved to be a favorite in this category with its first season. “Hacks can laugh all the way to the bank with this one,” announced the official Golden Globes account via Twitter. “Congratulations on taking home the #GoldenGlobe for Best Musical/Comedy Series.” Best Television Series — Drama: “Succession” HBO’s “Succession” was the big winner at this year’s Golden Globes, scooping three major categories.",
+    "detector_reason": "The document does not contain information about the best drama at the 79th Golden Globes.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 12,
+    "error_type": "FP",
+    "example_id": 8,
+    "question": "What won best drama at 79th Golden Globes?",
+    "document": "Dec 13, 2021 ... The 79th annual Golden Globe Awards will be held on Sunday, Jan. 9, 2022. Chris Pizzello / AP. The nominees for best picture, drama, ...",
+    "detector_reason": "The document mentions the nominees for best picture, drama, which is relevant to the question about the winner of best drama at the 79th Golden Globes.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 13,
+    "error_type": "FN",
+    "example_id": 9,
+    "question": "How much are GA Tech softball 2022 season tickets?",
+    "document": "THE FLATS – Georgia Tech softball 2023 season and single-game tickets are now on sale and can be purchased HERE. Season tickets are located in the reserved chairback sections of Mewborn Field and cost $100 per seat. Season ticket members enjoy every game in the same seat for a discounted rate. Single-game tickets are also available as detailed below. More ticketing information, including the steps to become a member of the Mew Crew and the benefits of joining, can be found on the official Georgia Tech Softball Tickets page. Single-Game Pricing: Reserved Chairback: $5 Adult GA Bench: $3 Youth/Senior GA Bench: $2 Group (10+) GA Bench: $2 Standing room only tickets will be sold for $2 each if all other sections are sold out. Georgia Tech students and faculty/staff can receive free admission to regular season home games while seats remain available by showing a valid BuzzCard at the entrance. Tech’s 56-game 2023 regular season schedule is highlighted by 33 home games and four Atlantic Coast Conference series at Mewborn Field. The Yellow Jackets will also host three home tournaments, most notably the ACC/B1G Challenge, as well as a pair of SEC schools, including this season’s edition of Clean, Old-Fashioned Hate. The White and Gold are slated to face six ranked opponents throughout the year, hosting four of them for eight total games.",
+    "detector_reason": "The document does not contain information about the 2022 season tickets for Georgia Tech softball.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 14,
+    "error_type": "FN",
+    "example_id": 9,
+    "question": "How much are GA Tech softball 2022 season tickets?",
+    "document": "THE FLATS – Georgia Tech softball 2023 season and single-game tickets are now on sale and can be purchased HERE. Season tickets are located in the reserved chairback sections of Mewborn Field and cost $100 per seat. Season ticket members enjoy every game in the same seat for a discounted rate. Single-game tickets are also available as detailed below. More ticketing information, including the steps to become a member of the Mew Crew and the benefits of joining, can be found on the official Georgia Tech Softball Tickets page. Single-Game Pricing: Reserved Chairback: $5 Adult GA Bench: $3 Youth/Senior GA Bench: $2 Group (10+) GA Bench: $2 Standing room only tickets will be sold for $2 each if all other sections are sold out. Georgia Tech students and faculty/staff can receive free admission to regular season home games while seats remain available by showing a valid BuzzCard at the entrance. Tech’s 56-game 2023 regular season schedule is highlighted by 33 home games and four Atlantic Coast Conference series at Mewborn Field. The Yellow Jackets will also host three home tournaments, most notably the ACC/B1G Challenge, as well as a pair of SEC schools, including this season’s edition of Clean, Old-Fashioned Hate. The White and Gold are slated to face six ranked opponents throughout the year, hosting four of them for eight total games.",
+    "detector_reason": "The document does not contain information about the 2022 season tickets for Georgia Tech softball.",
+    "failure_category": "",
+    "notes": ""
+  },
+  {
+    "error_id": 15,
+    "error_type": "FP",
+    "example_id": 9,
+    "question": "How much are GA Tech softball 2022 season tickets?",
+    "document": "No visiting team colors may be worn in this area. All non-courtside students will be seated in the general admission seating area in Section 113. *The GTAA reserves the right to distribute student tickets via a ticket lottery if demand is high for a certain game. Such changes will be communicated to the student body in a timely manner. For 2021-22 regular season home games Georgia Tech students only need to show their valid BuzzCard at the West Entrance of McCamish Pavilion for entry. Seats are available on a first-come, first-served basis with gates opening 1 hour prior to tipoff. Georgia Tech student seating is available as general admission. Students will need to visit the box office near Gate 3 (first-base side) and display their BuzzCard in order to receive a ticket to the game. Postseason home games - Contact the Georgia Tech ticket office at 1-888-TECH-TIX for pricing information. Regular season home games - Show your valid Buzzcard at entrance for FREE admission. Postseason home matches - Contact the Georgia Tech ticket office at 1-888-TECH-TIX for pricing information. Regular season home games - Show your valid Buzzcard at entrance for FREE admission. Postseason home matches - Contact the Georgia Tech ticket office at 1-888-TECH-TIX for pricing information. Regular season home games - Show your valid Buzzcard at entrance for FREE admission.",
+    "detector_reason": "The document mentions that regular season home games for Georgia Tech do not require tickets for students, which implies that the softball 2022 season tickets might be free for students. However, it does not provide specific pricing information for the softball",
+    "failure_category": "",
+    "notes": ""
+  }
+]

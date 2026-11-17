@@ -1,0 +1,187 @@
+{
+  "2": {
+    "semantic_error": true,
+    "failure_types": ["M1", "M3"],
+    "notes": "Relevant evidence explicitly states that Kentucky won, but the model incorrectly abstains."
+  },
+
+  "8": {
+    "semantic_error": true,
+    "failure_types": ["M2", "M4"],
+    "notes": "The model follows evidence about the 80th Golden Globes instead of the relevant evidence about the 79th Golden Globes."
+  },
+
+  "38": {
+    "semantic_error": true,
+    "failure_types": ["M2", "M4"],
+    "notes": "The model uses the weight of Surface Laptop 3 instead of Surface Laptop SE."
+  },
+
+  "46": {
+    "semantic_error": true,
+    "failure_types": ["M1", "M3"],
+    "notes": "Relevant evidence states that the tournament ran through December 18, but the model claims the final date is unavailable."
+  },
+
+  "53": {
+    "semantic_error": true,
+    "failure_types": ["M1", "M2", "M4"],
+    "notes": "Relevant evidence identifies Nadal as the 2022 winner, but the model focuses on a distractor about Djokovic in 2023."
+  },
+
+  "118": {
+    "semantic_error": false,
+    "failure_types": ["E1"],
+    "notes": "Prediction is semantically correct; Unicode spelling Tomljanović differs from benchmark answer Tomljanovic."
+  }, 
+  "57": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M2", "M4"],
+  "notes": "Relevant evidence explicitly identifies Karolina Muchova as the runner-up, but the model overlooks it and speculates about Coco Gauff based on 2022 distractor evidence."
+},
+
+"58": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M2", "M4", "M5"],
+  "notes": "Relevant evidence explicitly states that Rafael Nadal won the 2022 French Open, but the model follows 2023 Djokovic evidence and makes an unsupported inference that Djokovic also won in 2022."
+},
+
+"112": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly states that John Fuller is the chief meteorologist for KPLR-TV, but the model incorrectly abstains."
+},
+
+"148": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M2", "M4"],
+  "notes": "Relevant evidence explicitly gives the August 2022 inflation rate as 8.3%, but the model focuses on the July 2022 value and incorrectly claims the August value is unavailable."
+},
+
+"157": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence gives the correct starting price of $350, but the model incorrectly concludes that this price belongs to another team and abstains."
+},
+"165": {
+  "semantic_error": false,
+  "failure_types": ["E1"],
+  "notes": "The prediction correctly identifies Ben Davies' small leg fracture as the cause of his absence. The relevant evidence describes both a small leg fracture and a knee injury, while the lexical benchmark expects the terms 'Knee' and 'injury'."
+},
+
+"177": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence identifies Svante Pääbo as the 2022 laureate, but the model overlooks this evidence and incorrectly claims that the 2022 prize had not yet been announced."
+},
+
+"191": {
+  "semantic_error": false,
+  "failure_types": ["E1"],
+  "notes": "The prediction 'Donde Vives' is semantically the same episode title as the gold answer 'Dónde Vives'. The benchmark failure is caused by the missing accent mark."
+},
+
+"198": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly gives the release date as 9 November 2022, but the model overlooks it and incorrectly claims that no specific premiere date is provided."
+},
+
+"201": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M2", "M5"],
+  "notes": "Relevant evidence explicitly states that Republicans take control of the House, but the model focuses on distracting predictive and Democratic-performance evidence and reaches an unsupported conclusion that control is unclear."
+},
+"214": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M2", "M4"],
+  "notes": "Relevant evidence explicitly states that the seasonally adjusted U.S. unemployment rate in November 2022 was 3.7%, but the model focuses on the December 2022 value of 4.1% and incorrectly claims the November value is unavailable."
+},
+
+"215": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly identifies the Netherlands as the USA's Round of 16 opponent, but the model overlooks it and incorrectly abstains."
+},
+
+"216": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly states that Argentina played Croatia in the World Cup semifinal, but the model overlooks this evidence and incorrectly claims that the opponent is unspecified."
+},
+
+"217": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M2", "M5"],
+  "notes": "Relevant evidence explicitly states that Brian Kemp defeated Stacey Abrams in the Georgia governor's race, but the model follows distracting evidence and incorrectly infers that Democrats won the Georgia election."
+},
+
+"220": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly states that Costco was Yahoo Finance's 2022 Company of the Year, but the model overlooks it and incorrectly claims that the winner is not revealed."
+},
+"232": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly states that Guillermo del Toro's Pinocchio won Best Animated Feature at the 2023 Oscars, but the model overlooks it and incorrectly abstains."
+},
+
+"247": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly states that Robert Glasper was announced as the winner of Best R&B Album, but the model overlooks it and incorrectly abstains."
+},
+
+"259": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence identifies Daniel Kwan and Daniel Scheinert as the directors whose film won the directing category, but the model overlooks this evidence and incorrectly abstains."
+},
+
+"262": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence identifies All Quiet on the Western Front as the Best International Feature Film winner. The source indicates the winner through list ordering and bold formatting, but the model incorrectly concludes that no winner is specified."
+},
+
+"273": {
+  "semantic_error": true,
+  "failure_types": ["M1"],
+  "notes": "The prediction correctly identifies Los Angeles but omits the specific venue, JW Marriott Los Angeles L.A. LIVE, which is explicitly provided in the relevant evidence and required by the benchmark answer."
+},
+"286": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence provides the date May 10, 2023 in the document header associated with the Pixel Fold announcement, but the model overlooks it and incorrectly claims that no specific announcement date is provided."
+},
+
+"287": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M2", "M5"],
+  "notes": "Relevant evidence repeatedly identifies the device as the Pixel Fold, but the model focuses on distracting pre-launch candidate names and makes the unsupported inference that the final name may still be unknown."
+},
+
+"288": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3", "M4"],
+  "notes": "Relevant evidence explicitly states that 253,000 jobs were created in April 2023, but the model incorrectly claims that the documents only contain information through March."
+},
+
+"289": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3"],
+  "notes": "Relevant evidence explicitly identifies May 11 as the transition date marking the end of the current COVID-19 PHE phase, but the model overlooks it and incorrectly claims that no specific end date is provided."
+},
+
+"297": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3", "M4"],
+  "notes": "Relevant evidence explicitly states that Wyndham Clark won the 2023 U.S. Open, but the model incorrectly claims that the documents contain information only about the 2015 and 2022 tournaments."
+},
+"299": {
+  "semantic_error": true,
+  "failure_types": ["M1", "M3", "M4"],
+  "notes": "Relevant evidence explicitly states that Cooper Kupp was named Super Bowl MVP after the Rams' Super Bowl LVI victory, but the model overlooks it, incorrectly concludes that the documents contain no information about the 2022 Super Bowl, and abstains."
+}
+}

@@ -1,0 +1,55 @@
+{
+  "experiment_id": "EXP-027",
+  "design": "Offline counterfactual parser-policy sensitivity; no model inference",
+  "dataset": "RGB en_refine",
+  "noise_rate": 0.8,
+  "paired_examples": 300,
+  "source_sha256": {
+    "results/raw/exp012_s2_full_80_noise.jsonl": "08f0d41dc19ec516dee02b12a07ea257b5d57fd1c0a23a528a616b45fd21949e",
+    "results/raw/exp024_full_verification_routing_80_noise.jsonl": "6dead7cfa67570ba4f22138695ad687a88defaafd5fd06b0f2cf2541a306a9ea"
+  },
+  "historical_policy": "Retain draft when FINAL_ANSWER is absent (EXP-012 parser behavior)",
+  "strict_policy": "For INSUFFICIENT verdict with no nonempty FINAL_ANSWER field, output the canonical abstention phrase",
+  "scoring": "EXP-013 corrected RGB-compatible lexical scoring",
+  "missing_final_answer_count": 15,
+  "missing_by_router_decision": {
+    "VERIFY": 13,
+    "SKIP": 2
+  },
+  "scores": {
+    "draft_correct": 268,
+    "historical_s2_correct": 269,
+    "strict_s2_correct": 265,
+    "historical_s4_correct": 269,
+    "strict_s4_correct": 265
+  },
+  "changed_s2_correctness_ids": [
+    9,
+    167,
+    241,
+    269
+  ],
+  "changed_simulated_s4_correctness_ids": [
+    9,
+    167,
+    241,
+    269
+  ],
+  "strict_s2_transitions_vs_draft": {
+    "CORRECT_UNCHANGED": 262,
+    "WRONG_UNCHANGED": 29,
+    "FIXED": 3,
+    "DAMAGED": 6
+  },
+  "strict_s4_transitions_vs_draft": {
+    "CORRECT_UNCHANGED": 263,
+    "WRONG_UNCHANGED": 30,
+    "DAMAGED": 5,
+    "FIXED": 2
+  },
+  "limitations": [
+    "The strict policy is a hypothetical parser change applied offline, not a measured end-to-end run.",
+    "Lexical score changes do not establish semantic correctness; affected cases require manual review.",
+    "The original raw outputs and canonical historical scores are preserved."
+  ]
+}

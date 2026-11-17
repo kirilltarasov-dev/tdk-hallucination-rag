@@ -1,0 +1,71 @@
+{
+  "experiment_id": "EXP-025",
+  "name": "Offline Selective Verification Simulation",
+  "design": "Counterfactual recombination of existing S2 final answers and EXP-024 routing decisions; no new inference",
+  "dataset": "RGB en_refine",
+  "noise_rate": 0.8,
+  "paired_examples": 300,
+  "sources": {
+    "results/raw/exp012_s2_full_80_noise.jsonl": {
+      "sha256": "08f0d41dc19ec516dee02b12a07ea257b5d57fd1c0a23a528a616b45fd21949e",
+      "rows": 300
+    },
+    "results/raw/exp024_full_verification_routing_80_noise.jsonl": {
+      "sha256": "6dead7cfa67570ba4f22138695ad687a88defaafd5fd06b0f2cf2541a306a9ea",
+      "rows": 300
+    }
+  },
+  "scoring": "EXP-013 canonical RGB-compatible lexical scoring; insufficient-information response fails for noise < 1",
+  "s1_draft_correct": 268,
+  "s2_universal_correct": 269,
+  "simulated_s4_correct": 269,
+  "simulated_s4_score": 0.8966666666666666,
+  "simulated_s4_delta_vs_s1_correct": 1,
+  "simulated_s4_delta_vs_s2_correct": 0,
+  "routing_decisions": {
+    "SKIP": 253,
+    "VERIFY": 47
+  },
+  "verifier_calls_if_executed": 47,
+  "verifier_call_rate_if_executed": 0.15666666666666668,
+  "verifier_calls_avoided_vs_s2": 253,
+  "s1_to_s2_transitions": {
+    "CORRECT_UNCHANGED": 266,
+    "WRONG_UNCHANGED": 29,
+    "FIXED": 3,
+    "DAMAGED": 2
+  },
+  "s1_to_simulated_s4_transitions": {
+    "CORRECT_UNCHANGED": 267,
+    "WRONG_UNCHANGED": 30,
+    "FIXED": 2,
+    "DAMAGED": 1
+  },
+  "s2_transition_by_routing_decision": {
+    "CORRECT_UNCHANGED": {
+      "SKIP": 237,
+      "VERIFY": 29
+    },
+    "WRONG_UNCHANGED": {
+      "SKIP": 14,
+      "VERIFY": 15
+    },
+    "FIXED": {
+      "SKIP": 1,
+      "VERIFY": 2
+    },
+    "DAMAGED": {
+      "SKIP": 1,
+      "VERIFY": 1
+    }
+  },
+  "s2_fixes_retained": 2,
+  "s2_fixes_missed": 1,
+  "s2_damages_avoided": 1,
+  "s2_damages_retained": 1,
+  "limitations": [
+    "This is not an end-to-end S4 run and does not establish S4 latency or compute efficiency.",
+    "It inherits EXP-012 verifier output parsing and fallback behavior.",
+    "The routing policy was developed using examples from the same RGB condition; this is not independent evaluation."
+  ]
+}

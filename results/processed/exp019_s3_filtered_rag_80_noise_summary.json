@@ -1,0 +1,40 @@
+{
+  "experiment_id": "EXP-019",
+  "system_variant": "S3",
+  "dataset": "RGB_en_refine",
+  "noise_rate": 0.8,
+  "passage_num": 5,
+  "total_examples": 300,
+  "correct": 251,
+  "accuracy": 0.8366666666666667,
+  "s1_reference": {
+    "experiment": "EXP-006 canonical rescore",
+    "correct": 268,
+    "total": 300,
+    "accuracy": 0.8933333333333333
+  },
+  "delta_vs_s1": {
+    "correct_examples": -17,
+    "percentage_points": -5.666666666666664
+  },
+  "empty_after_filter": 31,
+  "average_kept_documents": 1.4,
+  "kept_document_count_distribution": {
+    "0": 31,
+    "1": 156,
+    "2": 82,
+    "3": 24,
+    "4": 7
+  },
+  "predicted_support_class_distribution": {
+    "TOPICAL": 807,
+    "INFERENTIAL": 89,
+    "DIRECT": 331,
+    "NO_SUPPORT": 273
+  },
+  "parse_errors": 0,
+  "average_assessment_latency_seconds": 5.463364536660568,
+  "average_generation_latency_seconds": 0.734668215427082,
+  "average_total_latency_seconds": 6.19803275208765,
+  "total_runtime_seconds": 1859.6649549999274
+}

@@ -1,0 +1,44 @@
+{
+  "experiment_id": "EXP-022",
+  "comparison": "S1 Standard RAG vs S3 Safe-Fallback Filtered RAG @ 80% noise",
+  "paired_examples": 300,
+  "s1_correct": 268,
+  "s1_accuracy": 0.8933333333333333,
+  "s3_correct": 276,
+  "s3_accuracy": 0.92,
+  "transitions": {
+    "CORRECT_UNCHANGED": 258,
+    "FIXED": 18,
+    "DAMAGED": 10,
+    "WRONG_UNCHANGED": 14
+  },
+  "net_change": 8,
+  "policy_counts": {
+    "FILTERED": 269,
+    "FALLBACK_ORIGINAL": 31
+  },
+  "transitions_by_policy": {
+    "FILTERED": {
+      "CORRECT_UNCHANGED": 233,
+      "FIXED": 18,
+      "DAMAGED": 10,
+      "WRONG_UNCHANGED": 8
+    },
+    "FALLBACK_ORIGINAL": {
+      "CORRECT_UNCHANGED": 25,
+      "WRONG_UNCHANGED": 6
+    }
+  },
+  "average_kept_documents_by_transition": {
+    "CORRECT_UNCHANGED": 1.4224806201550388,
+    "FIXED": 1.5555555555555556,
+    "DAMAGED": 1.4,
+    "WRONG_UNCHANGED": 0.7857142857142857
+  },
+  "average_generation_documents_by_transition": {
+    "CORRECT_UNCHANGED": 1.9069767441860466,
+    "FIXED": 1.5555555555555556,
+    "DAMAGED": 1.4,
+    "WRONG_UNCHANGED": 2.9285714285714284
+  }
+}

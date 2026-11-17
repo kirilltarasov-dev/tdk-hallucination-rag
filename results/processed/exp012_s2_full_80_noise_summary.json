@@ -1,0 +1,28 @@
+{
+  "experiment_id": "EXP-012",
+  "system": "S2_universal_verification",
+  "dataset": "RGB_en_refine",
+  "noise_rate": 0.8,
+  "num_examples": 300,
+  "passage_num": 5,
+  "max_tokens": 256,
+  "draft_correct": 269,
+  "draft_accuracy": 0.8966666666666666,
+  "final_correct": 269,
+  "final_accuracy": 0.8966666666666666,
+  "corrected_errors": 3,
+  "damaged_answers": 3,
+  "net_correct_change": 0,
+  "parse_errors": 0,
+  "verdict_counts": {
+    "SUPPORTED": 263,
+    "INSUFFICIENT": 27,
+    "UNSUPPORTED": 10
+  },
+  "average_generation_latency_seconds": 1.4254513100138866,
+  "average_verification_latency_seconds": 1.6131051268001708,
+  "average_total_latency_seconds": 3.0385564368140576,
+  "verification_overhead_relative_to_generation": 1.1316451957832612,
+  "total_runtime_seconds": 911.7003469162155,
+  "raw_results": "results/raw/exp012_s2_full_80_noise.jsonl"
+}

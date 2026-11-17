@@ -1,0 +1,57 @@
+{
+  "experiment_id": "EXP-026",
+  "design": "Post-hoc paired analysis on the same RGB 80%-noise condition used for development; no new inference",
+  "dataset": "RGB en_refine",
+  "noise_rate": 0.8,
+  "paired_examples": 300,
+  "source_sha256": {
+    "results/raw/exp005_s1_full_noise_0.8.jsonl": "c0913fcb65faaadb957c924935430019823d25936a34ca8f25e285a1c1481a42",
+    "results/raw/exp012_s2_full_80_noise.jsonl": "08f0d41dc19ec516dee02b12a07ea257b5d57fd1c0a23a528a616b45fd21949e",
+    "results/raw/exp021_s3_safe_fallback_80_noise.jsonl": "2095b4392dc91fa9246c09220c7a41e316335e2737c84e1f0c140e0749eff3c7",
+    "results/processed/exp025_offline_selective_verification_cases.json": "b560565bb0e9d6e0385ac8f009ce3155fddcbec668276988ded8fc2ee6603b2c"
+  },
+  "method": "Exact two-sided McNemar test on discordant pairs; percentile paired bootstrap with 50,000 resamples and seed 2333",
+  "comparisons": {
+    "S1_to_S2": {
+      "reference_correct": 268,
+      "candidate_correct": 269,
+      "fixed": 3,
+      "damaged": 2,
+      "paired_difference_percentage_points": 0.3333333333333333,
+      "exact_two_sided_mcnemar_p_value": 1.0,
+      "paired_bootstrap_95_percent_interval_percentage_points": [
+        -1.0,
+        1.6666666666666667
+      ]
+    },
+    "S1_to_S3_safe_fallback": {
+      "reference_correct": 268,
+      "candidate_correct": 276,
+      "fixed": 18,
+      "damaged": 10,
+      "paired_difference_percentage_points": 2.6666666666666665,
+      "exact_two_sided_mcnemar_p_value": 0.1849333420395851,
+      "paired_bootstrap_95_percent_interval_percentage_points": [
+        -0.6666666666666667,
+        6.0
+      ]
+    },
+    "S1_to_simulated_S4": {
+      "reference_correct": 268,
+      "candidate_correct": 269,
+      "fixed": 2,
+      "damaged": 1,
+      "paired_difference_percentage_points": 0.3333333333333333,
+      "exact_two_sided_mcnemar_p_value": 1.0,
+      "paired_bootstrap_95_percent_interval_percentage_points": [
+        -0.6666666666666667,
+        1.3333333333333335
+      ]
+    }
+  },
+  "limitations": [
+    "These tests are descriptive post-hoc analyses of a development condition, not independent validation.",
+    "Intervals describe uncertainty under question-level resampling of these paired outcomes; benchmark label and parser errors are not modeled.",
+    "McNemar tests compare the fixed saved outputs only; no multiple-comparison correction is applied."
+  ]
+}

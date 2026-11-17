@@ -1,0 +1,77 @@
+{
+  "experiment_id": "EXP-006",
+  "source_experiment": "EXP-005",
+  "description": "Exact RGB re-scoring of saved EXP-005 predictions",
+  "results": [
+    {
+      "noise_rate": 0.0,
+      "old_correct": 299,
+      "new_correct": 299,
+      "total": 300,
+      "score": 0.9966666666666667,
+      "changed_predictions": 0,
+      "changed_examples": []
+    },
+    {
+      "noise_rate": 0.2,
+      "old_correct": 298,
+      "new_correct": 298,
+      "total": 300,
+      "score": 0.9933333333333333,
+      "changed_predictions": 0,
+      "changed_examples": []
+    },
+    {
+      "noise_rate": 0.4,
+      "old_correct": 300,
+      "new_correct": 300,
+      "total": 300,
+      "score": 1.0,
+      "changed_predictions": 0,
+      "changed_examples": []
+    },
+    {
+      "noise_rate": 0.6,
+      "old_correct": 295,
+      "new_correct": 294,
+      "total": 300,
+      "score": 0.98,
+      "changed_predictions": 1,
+      "changed_examples": [
+        {
+          "example_id": 137,
+          "question": "when did king charles iii get crowned?",
+          "prediction": "The document provided mentions that King Charles III's Coronation will take place on May 6, 2023. However, it does not provide information about when King Charles III was previously crowned. Therefore, I can not answer the question because of the insufficient information in documents.",
+          "old_passed": true,
+          "new_passed": false
+        }
+      ]
+    },
+    {
+      "noise_rate": 0.8,
+      "old_correct": 269,
+      "new_correct": 268,
+      "total": 300,
+      "score": 0.8933333333333333,
+      "changed_predictions": 1,
+      "changed_examples": [
+        {
+          "example_id": 157,
+          "question": "What is the starting price for Virginia Tech 2023 football season tickets?",
+          "prediction": "The document does not provide information about the starting price for Virginia Tech 2023 football season tickets. However, it mentions that season tickets are currently on sale and start at $350 for another team, not Virginia Tech. Therefore, I can not answer the question because of the insufficient information in documents.",
+          "old_passed": true,
+          "new_passed": false
+        }
+      ]
+    },
+    {
+      "noise_rate": 1.0,
+      "old_correct": 88,
+      "new_correct": 88,
+      "total": 300,
+      "score": 0.29333333333333333,
+      "changed_predictions": 0,
+      "changed_examples": []
+    }
+  ]
+}

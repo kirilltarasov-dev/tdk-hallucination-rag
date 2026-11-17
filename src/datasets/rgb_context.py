@@ -1,4 +1,5 @@
 import math
+import random
 
 from src.datasets.rgb_loader import RGBExample, load_rgb
 
@@ -33,7 +34,12 @@ def build_rgb_context(
     positive = example.positive_documents[:pos_num]
     negative = example.negative_documents[:neg_num]
 
-    return positive + negative
+    docs = positive + negative
+
+    rng = random.Random(2333)
+    rng.shuffle(docs)
+
+    return docs
 
 
 if __name__ == "__main__":
@@ -54,3 +60,11 @@ if __name__ == "__main__":
             f"documents={len(context)} | "
             f"expected_noise={expected_noise}"
         )
+
+    # Reproducibility check
+    context_a = build_rgb_context(example, noise_rate=0.6)
+    context_b = build_rgb_context(example, noise_rate=0.6)
+
+    assert context_a == context_b
+
+    print("\nReproducibility check: PASSED")

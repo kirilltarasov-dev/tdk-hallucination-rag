@@ -1,0 +1,59 @@
+{
+  "experiment_id": "EXP-005",
+  "system": "S1_standard_rag",
+  "dataset": "RGB_en_refine",
+  "num_examples": 300,
+  "passage_num": 5,
+  "max_tokens": 256,
+  "total_runtime_seconds": 2587.8003440409666,
+  "results": [
+    {
+      "noise_rate": 0.0,
+      "correct": 299,
+      "total": 300,
+      "score": 0.9966666666666667,
+      "average_latency_seconds": 1.2635322638701958,
+      "output_file": "results/raw/exp005_s1_full_noise_0.0.jsonl"
+    },
+    {
+      "noise_rate": 0.2,
+      "correct": 298,
+      "total": 300,
+      "score": 0.9933333333333333,
+      "average_latency_seconds": 1.2882785340146317,
+      "output_file": "results/raw/exp005_s1_full_noise_0.2.jsonl"
+    },
+    {
+      "noise_rate": 0.4,
+      "correct": 300,
+      "total": 300,
+      "score": 1.0,
+      "average_latency_seconds": 1.302509851245753,
+      "output_file": "results/raw/exp005_s1_full_noise_0.4.jsonl"
+    },
+    {
+      "noise_rate": 0.6,
+      "correct": 295,
+      "total": 300,
+      "score": 0.9833333333333333,
+      "average_latency_seconds": 1.2809474297255898,
+      "output_file": "results/raw/exp005_s1_full_noise_0.6.jsonl"
+    },
+    {
+      "noise_rate": 0.8,
+      "correct": 269,
+      "total": 300,
+      "score": 0.8966666666666666,
+      "average_latency_seconds": 1.7988964749942533,
+      "output_file": "results/raw/exp005_s1_full_noise_0.8.jsonl"
+    },
+    {
+      "noise_rate": 1.0,
+      "correct": 88,
+      "total": 300,
+      "score": 0.29333333333333333,
+      "average_latency_seconds": 1.6892883776318437,
+      "output_file": "results/raw/exp005_s1_full_noise_1.0.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "experiment": "EXP-023",
+  "name": "Selective Verification Routing Probe",
+  "condition": "RGB en_refine, 80% noise",
+  "development_probe": true,
+  "seed": 2333,
+  "target_per_group": {
+    "FIXED": 3,
+    "DAMAGED": 2,
+    "WRONG_UNCHANGED": 10,
+    "CORRECT_UNCHANGED": 10
+  },
+  "num_cases": 25,
+  "decision_counts": {
+    "VERIFY": 8,
+    "SKIP": 17,
+    "PARSE_ERROR": 0
+  },
+  "verification_rate": 0.32,
+  "transition_decisions": {
+    "CORRECT_UNCHANGED__SKIP": 9,
+    "WRONG_UNCHANGED__VERIFY": 4,
+    "DAMAGED__SKIP": 1,
+    "CORRECT_UNCHANGED__VERIFY": 1,
+    "FIXED__SKIP": 1,
+    "WRONG_UNCHANGED__SKIP": 6,
+    "FIXED__VERIFY": 2,
+    "DAMAGED__VERIFY": 1
+  },
+  "average_routing_latency_seconds": 2.119056253340095,
+  "total_runtime_seconds": 52.977362958015874
+}

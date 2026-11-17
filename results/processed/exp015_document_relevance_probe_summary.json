@@ -1,0 +1,18 @@
+{
+  "experiment_id": "EXP-015",
+  "dataset": "RGB_en_refine",
+  "num_questions": 10,
+  "total_cases": 100,
+  "true_positive": 40,
+  "true_negative": 45,
+  "false_positive": 5,
+  "false_negative": 10,
+  "parse_errors": 0,
+  "accuracy": 0.85,
+  "precision_relevant": 0.8888888888888888,
+  "recall_relevant": 0.8,
+  "f1_relevant": 0.8421052631578948,
+  "specificity_irrelevant": 0.9,
+  "average_latency_seconds": 0.8945166796306148,
+  "total_runtime_seconds": 89.46360112493858
+}

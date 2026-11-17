@@ -1,0 +1,48 @@
+{
+  "experiment": "EXP-024",
+  "name": "Full Verification Routing at 80% Noise",
+  "dataset": "RGB en_refine",
+  "noise_rate": 0.8,
+  "num_cases": 300,
+  "canonical_s2_transitions": {
+    "CORRECT_UNCHANGED": 266,
+    "WRONG_UNCHANGED": 29,
+    "FIXED": 3,
+    "DAMAGED": 2
+  },
+  "router_decisions": {
+    "SKIP": 253,
+    "VERIFY": 47
+  },
+  "verification_rate": 0.15666666666666668,
+  "transition_x_decision": {
+    "CORRECT_UNCHANGED": {
+      "SKIP": 237,
+      "VERIFY": 29
+    },
+    "WRONG_UNCHANGED": {
+      "SKIP": 14,
+      "VERIFY": 15
+    },
+    "FIXED": {
+      "SKIP": 1,
+      "VERIFY": 2
+    },
+    "DAMAGED": {
+      "SKIP": 1,
+      "VERIFY": 1
+    }
+  },
+  "routing_diagnostics": {
+    "fixed_routed_to_verify": 2,
+    "fixed_total": 3,
+    "damaged_routed_to_skip": 1,
+    "damaged_total": 2,
+    "correct_unchanged_routed_to_skip": 237,
+    "correct_unchanged_total": 266,
+    "wrong_unchanged_routed_to_verify": 15,
+    "wrong_unchanged_total": 29
+  },
+  "average_routing_latency_seconds": 2.07316653824877,
+  "total_runtime_seconds": 621.9608368331101
+}

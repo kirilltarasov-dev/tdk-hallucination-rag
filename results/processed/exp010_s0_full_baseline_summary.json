@@ -1,0 +1,15 @@
+{
+  "experiment_id": "EXP010",
+  "system": "S0",
+  "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+  "dataset": "RGB",
+  "subset": "en_refine",
+  "num_examples": 300,
+  "retrieval": false,
+  "max_tokens": 256,
+  "passed": 81,
+  "failed": 219,
+  "accuracy_percent": 27.0,
+  "average_latency_seconds": 0.8676,
+  "total_runtime_seconds": 260.33
+}

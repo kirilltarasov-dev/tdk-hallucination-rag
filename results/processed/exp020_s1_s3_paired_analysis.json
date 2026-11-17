@@ -1,0 +1,52 @@
+{
+  "experiment_id": "EXP-020",
+  "comparison": "S1 Standard RAG vs S3 Hard Filtered RAG @ 80% noise",
+  "paired_examples": 300,
+  "s1_correct": 268,
+  "s1_accuracy": 0.8933333333333333,
+  "s3_correct": 251,
+  "s3_accuracy": 0.8366666666666667,
+  "transitions": {
+    "CORRECT_UNCHANGED": 233,
+    "FIXED": 18,
+    "DAMAGED": 35,
+    "WRONG_UNCHANGED": 14
+  },
+  "net_change": -17,
+  "average_kept_documents_by_transition": {
+    "CORRECT_UNCHANGED": 1.5751072961373391,
+    "FIXED": 1.5555555555555556,
+    "DAMAGED": 0.4,
+    "WRONG_UNCHANGED": 0.7857142857142857
+  },
+  "empty_contexts_by_transition": {
+    "DAMAGED": 25,
+    "WRONG_UNCHANGED": 6
+  },
+  "support_class_counts_by_transition": {
+    "CORRECT_UNCHANGED": {
+      "TOPICAL": 592,
+      "INFERENTIAL": 67,
+      "DIRECT": 300,
+      "NO_SUPPORT": 206
+    },
+    "FIXED": {
+      "TOPICAL": 46,
+      "DIRECT": 17,
+      "NO_SUPPORT": 16,
+      "INFERENTIAL": 11
+    },
+    "DAMAGED": {
+      "TOPICAL": 125,
+      "INFERENTIAL": 8,
+      "NO_SUPPORT": 36,
+      "DIRECT": 6
+    },
+    "WRONG_UNCHANGED": {
+      "NO_SUPPORT": 15,
+      "DIRECT": 8,
+      "TOPICAL": 44,
+      "INFERENTIAL": 3
+    }
+  }
+}

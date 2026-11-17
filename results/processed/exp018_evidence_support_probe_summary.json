@@ -1,0 +1,38 @@
+{
+  "experiment_id": "EXP-018",
+  "dataset": "RGB_en_refine",
+  "dataset_slice": {
+    "start_position": 11,
+    "end_position": 30
+  },
+  "num_questions": 20,
+  "total_cases": 200,
+  "true_positive": 75,
+  "true_negative": 83,
+  "false_positive": 17,
+  "false_negative": 25,
+  "parse_errors": 0,
+  "accuracy": 0.79,
+  "precision_support": 0.8152173913043478,
+  "recall_support": 0.75,
+  "f1_support": 0.7812500000000001,
+  "specificity_no_support": 0.83,
+  "predicted_class_distribution": {
+    "DIRECT": 85,
+    "TOPICAL": 84,
+    "NO_SUPPORT": 24,
+    "INFERENTIAL": 7
+  },
+  "gold_by_predicted_class": {
+    "SUPPORT__DIRECT": 72,
+    "SUPPORT__TOPICAL": 17,
+    "NO_SUPPORT__TOPICAL": 67,
+    "NO_SUPPORT__DIRECT": 13,
+    "NO_SUPPORT__NO_SUPPORT": 16,
+    "NO_SUPPORT__INFERENTIAL": 4,
+    "SUPPORT__NO_SUPPORT": 8,
+    "SUPPORT__INFERENTIAL": 3
+  },
+  "average_latency_seconds": 1.0983137118560262,
+  "total_runtime_seconds": 219.69756183307618
+}

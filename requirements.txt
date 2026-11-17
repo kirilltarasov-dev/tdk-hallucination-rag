@@ -1,0 +1,3 @@
+# Reproduces the observed Python 3.12 Apple Silicon MLX environment.
+# Linux test-only users can run unittest with the Python standard library.
+-r requirements-mlx-macos.lock

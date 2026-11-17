@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "question": "...",
+    "documents": ["..."],
+    "answer": "...",
+    "expected_type": "FACTUAL"
+  },
+  {
+    "id": 2,
+    "question": "...",
+    "documents": ["..."],
+    "answer": "...",
+    "expected_type": "LOGICAL"
+  }
+]
