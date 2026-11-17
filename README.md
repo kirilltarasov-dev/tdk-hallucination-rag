@@ -13,6 +13,11 @@ counterfactual stress test. Its answer/fake-answer substring counts are
 custom diagnostics, not human-validated error rates or official ED*.
 EXP-030 is an offline supplemental EM/F1 analysis.
 
+EXP-031 annotation materials are prepared for all 100 EXP-029 pairs in
+`deliverables/EXP031_Blinded_Annotation_Template.xlsx`; no human labels or
+semantic effectiveness result exist yet. The codebook is
+`docs/exp031_semantic_annotation_protocol.md`.
+
 ## Evaluated systems
 
 | System | Implemented behavior | Evidence status |

@@ -9,7 +9,7 @@ separate research scope.
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
 | Align title with measured work | Open | Current title still promises neuro-symbolic verification and hallucination reduction. A deterministic oracle-fact rule prototype exists, but neural extraction and end-to-end evaluation do not. Implement and evaluate those claims or agree a narrower title with the supervisor. |
-| Use a hallucination-specific metric for the title claim | Open | RGB-compatible lexical score is not a hallucination rate. Human-validated semantic outcomes are needed. |
+| Use a hallucination-specific metric for the title claim | Annotation prepared | RGB-compatible lexical score is not a hallucination rate. EXP-031 has a blinded 100-pair worksheet and a frozen codebook, but no independent human labels or semantic result yet. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
 | Correct Section 4.3 evidence-miss logic | Done | The draft states that every 80%-noise question had relevant evidence and 27/29 semantic errors failed to use it. |

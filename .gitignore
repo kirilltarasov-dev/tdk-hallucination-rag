@@ -6,3 +6,5 @@ __pycache__/
 .mypy_cache/
 .coverage
 htmlcov/
+results/annotation/exp031_blind_key.json
+*.xlsx.inspect.ndjson
