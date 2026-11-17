@@ -1,0 +1,4757 @@
+{
+  "experiment_id": "EXP-041",
+  "status": "completed_development_ablation",
+  "extraction": {
+    "V2": {
+      "valid": 13,
+      "exact_typed_match": 8
+    },
+    "V3": {
+      "valid": 16,
+      "exact_typed_match": 12
+    }
+  },
+  "arm_metrics": {
+    "V2_G1": {
+      "n": 16,
+      "verdict_agreement": 13,
+      "correct_decisive": 6,
+      "unknown": 10,
+      "false_VERIFIED": 0
+    },
+    "V2_G2": {
+      "n": 16,
+      "verdict_agreement": 14,
+      "correct_decisive": 7,
+      "unknown": 9,
+      "false_VERIFIED": 0
+    },
+    "V3_G1": {
+      "n": 16,
+      "verdict_agreement": 13,
+      "correct_decisive": 6,
+      "unknown": 9,
+      "false_VERIFIED": 1
+    },
+    "V3_G2": {
+      "n": 16,
+      "verdict_agreement": 15,
+      "correct_decisive": 8,
+      "unknown": 8,
+      "false_VERIFIED": 0
+    }
+  },
+  "candidate_gate": "NOT_ELIGIBLE",
+  "correct_decisive_gains": [
+    "D041-01",
+    "D041-03",
+    "D041-05"
+  ],
+  "correct_decisive_losses": [
+    "D041-14"
+  ],
+  "new_false_VERIFIED": [],
+  "positive_negative_conflict_falsely_confirmed": false,
+  "resources": {
+    "V2": {
+      "mean_seconds": 4.71994778401131,
+      "p50_seconds": 4.620538333547302,
+      "p95_seconds": 6.426988833001815,
+      "input_tokens": 17506,
+      "output_tokens": 3937
+    },
+    "V3": {
+      "mean_seconds": 4.859034671928384,
+      "p50_seconds": 4.797265604021959,
+      "p95_seconds": 6.446672874968499,
+      "input_tokens": 24498,
+      "output_tokens": 3826
+    }
+  },
+  "case_results": [
+    {
+      "case_id": "D041-00",
+      "family": "clean",
+      "expected_source_verdict": "VERIFIED",
+      "arms": {
+        "V2_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V2_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                    "relation": "won",
+                    "event": "Cedar Shield",
+                    "value": "Amber Cranes",
+                    "year": 2061,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2061 Cedar Shield?",
+                    "event": "Cedar Shield",
+                    "year": 2061
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2061 Cedar Shield.",
+                    "quoted_span": "Amber Cranes won the 2061 Cedar Shield.",
+                    "event": "Cedar Shield",
+                    "year": 2061,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                    "relation": "won",
+                    "event": "Cedar Shield",
+                    "value": "Amber Cranes",
+                    "year": 2061,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2061 Cedar Shield.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "event": "Cedar Shield",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                    "relation": "won",
+                    "event": "Cedar Shield",
+                    "value": "Amber Cranes",
+                    "year": 2061,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2061 Cedar Shield?",
+                    "event": "Cedar Shield",
+                    "year": 2061
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2061 Cedar Shield.",
+                    "quoted_span": "Amber Cranes won the 2061 Cedar Shield.",
+                    "event": "Cedar Shield",
+                    "year": 2061,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                    "relation": "won",
+                    "event": "Cedar Shield",
+                    "value": "Amber Cranes",
+                    "year": 2061,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2061 Cedar Shield.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "event": "Cedar Shield",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2061 Cedar Shield.",
+                      "relation": "won",
+                      "event": "Cedar Shield",
+                      "value": "Amber Cranes",
+                      "year": 2061,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-01",
+      "family": "paraphrase",
+      "expected_source_verdict": "VERIFIED",
+      "arms": {
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V3_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V2_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2062 Maple Trophy?",
+                    "event": "Maple Trophy",
+                    "year": 2062
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "quoted_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "event": "Maple Trophy",
+                    "year": 2062,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "relation": "won",
+                    "event": "Maple Trophy",
+                    "value": "Amber Cranes",
+                    "year": 2062,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2062,
+                      "event": "Maple Trophy",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                      "relation": "won",
+                      "event": "Maple Trophy",
+                      "value": "Amber Cranes",
+                      "year": 2062,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                      "relation": "won",
+                      "event": "Maple Trophy",
+                      "value": "Amber Cranes",
+                      "year": 2062,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2062 Maple Trophy?",
+                    "event": "Maple Trophy",
+                    "year": 2062
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "quoted_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "event": "Maple Trophy",
+                    "year": 2062,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "relation": "won",
+                    "event": "Maple Trophy",
+                    "value": "Amber Cranes",
+                    "year": 2062,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2062,
+                      "event": "Maple Trophy",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                      "relation": "won",
+                      "event": "Maple Trophy",
+                      "value": "Amber Cranes",
+                      "year": 2062,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes took first place in the 2062 Maple Trophy.",
+                      "relation": "won",
+                      "event": "Maple Trophy",
+                      "value": "Amber Cranes",
+                      "year": 2062,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-02",
+      "family": "wrong_year",
+      "expected_source_verdict": "UNKNOWN",
+      "arms": {
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "R3_NO_MATCH"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "document:D1",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "document:D1",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "document:D1",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "document:D1",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "source_checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "document:D1",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "document:D1",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2063 Birch Cup?",
+                    "event": "Birch Cup",
+                    "year": 2063
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "Amber Cranes took first place in the 2062 Birch Cup.",
+                    "quoted_span": "Amber Cranes took first place in the 2062 Birch Cup.",
+                    "event": "Birch Cup",
+                    "year": 2062,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "R3_NO_MATCH",
+                "explanation": "No structured fact satisfies all question constraints.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes took first place in the 2062 Birch Cup.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2062,
+                      "event": "Birch Cup",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-03",
+      "family": "negative_distractor",
+      "expected_source_verdict": "VERIFIED",
+      "arms": {
+        "V3_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_INVALID"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_INVALID"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2064 Elm Medal.",
+                    "relation": "won",
+                    "event": "Elm Medal",
+                    "value": "Amber Cranes",
+                    "year": 2064,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2064 Elm Medal?",
+                    "event": "Elm Medal",
+                    "year": 2064
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2064 Elm Medal.",
+                    "quoted_span": "Amber Cranes won the 2064 Elm Medal.",
+                    "event": "Elm Medal",
+                    "year": 2064,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2064 Elm Medal.",
+                      "relation": "won",
+                      "event": "Elm Medal",
+                      "value": "Amber Cranes",
+                      "year": 2064,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2064 Elm Medal.",
+                      "relation": "won",
+                      "event": "Elm Medal",
+                      "value": "Amber Cranes",
+                      "year": 2064,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2064 Elm Medal.",
+                    "relation": "won",
+                    "event": "Elm Medal",
+                    "value": "Amber Cranes",
+                    "year": 2064,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2064 Elm Medal.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2064,
+                      "event": "Elm Medal",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  },
+                  {
+                    "source_id": "D2",
+                    "full_source_text": "Indigo Lynxes did not win the 2064 Elm Medal.",
+                    "statement": {
+                      "value": "Indigo Lynxes",
+                      "year": 2064,
+                      "event": "Elm Medal",
+                      "polarity": -1
+                    },
+                    "neural_fact_count": 0,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2064 Elm Medal.",
+                      "relation": "won",
+                      "event": "Elm Medal",
+                      "value": "Amber Cranes",
+                      "year": 2064,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2064 Elm Medal.",
+                      "relation": "won",
+                      "event": "Elm Medal",
+                      "value": "Amber Cranes",
+                      "year": 2064,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": "D2.event: quotation must occur verbatim in its source",
+        "exact_typed_match": false,
+        "trace": {
+          "valid": false,
+          "validation_error": "D2.event: quotation must occur verbatim in its source",
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_INVALID",
+                "explanation": "D2.event: quotation must occur verbatim in its source",
+                "matching_facts": []
+              },
+              "source_trace": null,
+              "answer_trace": null
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_INVALID",
+                "explanation": "D2.event: quotation must occur verbatim in its source",
+                "matching_facts": []
+              },
+              "source_trace": null,
+              "answer_trace": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-04",
+      "family": "negative_first",
+      "expected_source_verdict": "VERIFIED",
+      "arms": {
+        "V2_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V2_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D2",
+                    "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                    "relation": "won",
+                    "event": "Laurel Prize",
+                    "value": "Amber Cranes",
+                    "year": 2065,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2065 Laurel Prize?",
+                    "event": "Laurel Prize",
+                    "year": 2065
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D2",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2065 Laurel Prize.",
+                    "quoted_span": "Amber Cranes won the 2065 Laurel Prize.",
+                    "event": "Laurel Prize",
+                    "year": 2065,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D2",
+                    "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                    "relation": "won",
+                    "event": "Laurel Prize",
+                    "value": "Amber Cranes",
+                    "year": 2065,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Indigo Lynxes did not win the 2065 Laurel Prize.",
+                    "statement": {
+                      "value": "Indigo Lynxes",
+                      "year": 2065,
+                      "event": "Laurel Prize",
+                      "polarity": -1
+                    },
+                    "neural_fact_count": 0,
+                    "matched": true
+                  },
+                  {
+                    "source_id": "D2",
+                    "full_source_text": "Amber Cranes won the 2065 Laurel Prize.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "event": "Laurel Prize",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D2",
+                    "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                    "relation": "won",
+                    "event": "Laurel Prize",
+                    "value": "Amber Cranes",
+                    "year": 2065,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2065 Laurel Prize?",
+                    "event": "Laurel Prize",
+                    "year": 2065
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D2",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2065 Laurel Prize.",
+                    "quoted_span": "Amber Cranes won the 2065 Laurel Prize.",
+                    "event": "Laurel Prize",
+                    "year": 2065,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D2",
+                    "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                    "relation": "won",
+                    "event": "Laurel Prize",
+                    "value": "Amber Cranes",
+                    "year": 2065,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Indigo Lynxes did not win the 2065 Laurel Prize.",
+                    "statement": {
+                      "value": "Indigo Lynxes",
+                      "year": 2065,
+                      "event": "Laurel Prize",
+                      "polarity": -1
+                    },
+                    "neural_fact_count": 0,
+                    "matched": true
+                  },
+                  {
+                    "source_id": "D2",
+                    "full_source_text": "Amber Cranes won the 2065 Laurel Prize.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "event": "Laurel Prize",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D2",
+                      "source_span": "Amber Cranes won the 2065 Laurel Prize.",
+                      "relation": "won",
+                      "event": "Laurel Prize",
+                      "value": "Amber Cranes",
+                      "year": 2065,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-05",
+      "family": "positive_negative_conflict",
+      "expected_source_verdict": "CONFLICT",
+      "arms": {
+        "V3_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G2": {
+          "verdict": "CONFLICT",
+          "rule_id": "G4_POSITIVE_NEGATIVE_CONFLICT"
+        },
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_INVALID"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_INVALID"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2066 Willow Shield.",
+                    "relation": "won",
+                    "event": "Willow Shield",
+                    "value": "Amber Cranes",
+                    "year": 2066,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2066 Willow Shield?",
+                    "event": "Willow Shield",
+                    "year": 2066
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2066 Willow Shield.",
+                    "quoted_span": "Amber Cranes won the 2066 Willow Shield.",
+                    "event": "Willow Shield",
+                    "year": 2066,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2066 Willow Shield.",
+                      "relation": "won",
+                      "event": "Willow Shield",
+                      "value": "Amber Cranes",
+                      "year": 2066,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2066 Willow Shield.",
+                      "relation": "won",
+                      "event": "Willow Shield",
+                      "value": "Amber Cranes",
+                      "year": 2066,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "CONFLICT",
+                "rule_id": "G4_POSITIVE_NEGATIVE_CONFLICT",
+                "explanation": "The same target win is affirmed and denied by the supplied sources.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "CONFLICT",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2066 Willow Shield.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2066,
+                      "event": "Willow Shield",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  },
+                  {
+                    "source_id": "D2",
+                    "full_source_text": "Amber Cranes did not win the 2066 Willow Shield.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2066,
+                      "event": "Willow Shield",
+                      "polarity": -1
+                    },
+                    "neural_fact_count": 0,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "G4_POSITIVE_NEGATIVE_CONFLICT",
+                  "explanation": "The same target win is affirmed and denied by the supplied sources.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "G4_POSITIVE_NEGATIVE_CONFLICT",
+                  "explanation": "The same target win is affirmed and denied by the supplied sources.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": "D2.value: quotation must occur verbatim in its source",
+        "exact_typed_match": false,
+        "trace": {
+          "valid": false,
+          "validation_error": "D2.value: quotation must occur verbatim in its source",
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_INVALID",
+                "explanation": "D2.value: quotation must occur verbatim in its source",
+                "matching_facts": []
+              },
+              "source_trace": null,
+              "answer_trace": null
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_INVALID",
+                "explanation": "D2.value: quotation must occur verbatim in its source",
+                "matching_facts": []
+              },
+              "source_trace": null,
+              "answer_trace": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-06",
+      "family": "negative_only",
+      "expected_source_verdict": "UNKNOWN",
+      "arms": {
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "R3_NO_MATCH"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "R3_NO_MATCH"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "source_checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "R3_NO_MATCH",
+                "explanation": "No structured fact satisfies all question constraints.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2067 Cypress Trophy?",
+                    "event": "Cypress Trophy",
+                    "year": 2067
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "R3_NO_MATCH",
+                "explanation": "No structured fact satisfies all question constraints.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes did not win the 2067 Cypress Trophy.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2067,
+                      "event": "Cypress Trophy",
+                      "polarity": -1
+                    },
+                    "neural_fact_count": 0,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-07",
+      "family": "negative_paraphrase",
+      "expected_source_verdict": "UNKNOWN",
+      "arms": {
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "R3_NO_MATCH"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "R3_NO_MATCH"
+        },
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "R3_NO_MATCH",
+                "explanation": "No structured fact satisfies all question constraints.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2068 Alder Cup?",
+                    "event": "Alder Cup",
+                    "year": 2068
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "R3_NO_MATCH",
+                "explanation": "No structured fact satisfies all question constraints.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes did not take first place in the 2068 Alder Cup.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2068,
+                      "event": "Alder Cup",
+                      "polarity": -1
+                    },
+                    "neural_fact_count": 0,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "R3_NO_MATCH",
+                  "explanation": "No structured fact satisfies all question constraints.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "source_checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-08",
+      "family": "reported_paraphrase",
+      "expected_source_verdict": "UNKNOWN",
+      "arms": {
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G4_UNSUPPORTED_SOURCE"
+        },
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G4_UNSUPPORTED_SOURCE"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2069 Hazel Medal?",
+                    "event": "Hazel Medal",
+                    "year": 2069
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "A report claimed Amber Cranes took first place in the 2069 Hazel Medal.",
+                    "quoted_span": "A report claimed Amber Cranes took first place in the 2069 Hazel Medal.",
+                    "event": "Hazel Medal",
+                    "year": 2069,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G4_UNSUPPORTED_SOURCE",
+                "explanation": "A full source is outside the declared statement grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "BLOCKED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "A report claimed Amber Cranes took first place in the 2069 Hazel Medal.",
+                    "statement": null,
+                    "neural_fact_count": 1,
+                    "matched": false
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2069 Hazel Medal?",
+                    "event": "Hazel Medal",
+                    "year": 2069
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "A report claimed Amber Cranes took first place in the 2069 Hazel Medal.",
+                    "quoted_span": "A report claimed Amber Cranes took first place in the 2069 Hazel Medal.",
+                    "event": "Hazel Medal",
+                    "year": 2069,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G4_UNSUPPORTED_SOURCE",
+                "explanation": "A full source is outside the declared statement grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "BLOCKED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "A report claimed Amber Cranes took first place in the 2069 Hazel Medal.",
+                    "statement": null,
+                    "neural_fact_count": 1,
+                    "matched": false
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-09",
+      "family": "hypothetical_paraphrase",
+      "expected_source_verdict": "UNKNOWN",
+      "arms": {
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G4_UNSUPPORTED_SOURCE"
+        },
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_INVALID"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_INVALID"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2070 Aspen Prize?",
+                    "event": "Aspen Prize",
+                    "year": 2070
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "If Amber Cranes took first place in the 2070 Aspen Prize, they would celebrate.",
+                    "quoted_span": "If Amber Cranes took first place in the 2070 Aspen Prize, they would celebrate.",
+                    "event": "Aspen Prize",
+                    "year": 2070,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G4_UNSUPPORTED_SOURCE",
+                "explanation": "A full source is outside the declared statement grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "BLOCKED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "If Amber Cranes took first place in the 2070 Aspen Prize, they would celebrate.",
+                    "statement": null,
+                    "neural_fact_count": 1,
+                    "matched": false
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": "D1.value: quotation must occur verbatim in its source",
+        "exact_typed_match": false,
+        "trace": {
+          "valid": false,
+          "validation_error": "D1.value: quotation must occur verbatim in its source",
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_INVALID",
+                "explanation": "D1.value: quotation must occur verbatim in its source",
+                "matching_facts": []
+              },
+              "source_trace": null,
+              "answer_trace": null
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_INVALID",
+                "explanation": "D1.value: quotation must occur verbatim in its source",
+                "matching_facts": []
+              },
+              "source_trace": null,
+              "answer_trace": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-10",
+      "family": "not_only_phrase",
+      "expected_source_verdict": "UNKNOWN",
+      "arms": {
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G4_UNSUPPORTED_SOURCE"
+        },
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G2_FACT_RELATION"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "G4_UNSUPPORTED_SOURCE"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2071 Rowan Shield?",
+                    "event": "Rowan Shield",
+                    "year": 2071
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "Amber Cranes not only won the 2071 Rowan Shield, they set a record.",
+                    "quoted_span": "Amber Cranes not only won the 2071 Rowan Shield, they set a record.",
+                    "event": "Rowan Shield",
+                    "year": 2071,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G4_UNSUPPORTED_SOURCE",
+                "explanation": "A full source is outside the declared statement grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "BLOCKED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes not only won the 2071 Rowan Shield, they set a record.",
+                    "statement": null,
+                    "neural_fact_count": 1,
+                    "matched": false
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G2_FACT_RELATION",
+                "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "BLOCKED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2071 Rowan Shield?",
+                    "event": "Rowan Shield",
+                    "year": 2071
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": false,
+                    "full_source_text": "Amber Cranes not only won the 2071 Rowan Shield, they set a record.",
+                    "quoted_span": "Amber Cranes not only won the 2071 Rowan Shield, they set a record.",
+                    "event": "Rowan Shield",
+                    "year": 2071,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G2_FACT_RELATION",
+                  "explanation": "The question or a full fact source is outside the declared affirmative-win grammar.",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "G4_UNSUPPORTED_SOURCE",
+                "explanation": "A full source is outside the declared statement grammar.",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "BLOCKED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes not only won the 2071 Rowan Shield, they set a record.",
+                    "statement": null,
+                    "neural_fact_count": 1,
+                    "matched": false
+                  }
+                ],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "G4_UNSUPPORTED_SOURCE",
+                  "explanation": "A full source is outside the declared statement grammar.",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-11",
+      "family": "denied_quote",
+      "expected_source_verdict": "UNKNOWN",
+      "arms": {
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V2_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V2_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "source_checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "source_checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-12",
+      "family": "false_source",
+      "expected_source_verdict": "VERIFIED",
+      "arms": {
+        "V2_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V2_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G1": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        },
+        "V3_G2": {
+          "verdict": "VERIFIED",
+          "rule_id": "R3_R6_SUPPORTED"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "relation": "won",
+                    "event": "Larch Cup",
+                    "value": "Indigo Lynxes",
+                    "year": 2073,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2073 Larch Cup?",
+                    "event": "Larch Cup",
+                    "year": 2073
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "quoted_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "event": "Larch Cup",
+                    "year": 2073,
+                    "value": "Indigo Lynxes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 18,
+                      "text": "Indigo Lynxes won.",
+                      "asserted": "Indigo Lynxes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Indigo Lynxes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "relation": "won",
+                    "event": "Larch Cup",
+                    "value": "Indigo Lynxes",
+                    "year": 2073,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "statement": {
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "event": "Larch Cup",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 18,
+                      "text": "Indigo Lynxes won.",
+                      "asserted": "Indigo Lynxes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Indigo Lynxes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "relation": "won",
+                    "event": "Larch Cup",
+                    "value": "Indigo Lynxes",
+                    "year": 2073,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2073 Larch Cup?",
+                    "event": "Larch Cup",
+                    "year": 2073
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "quoted_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "event": "Larch Cup",
+                    "year": 2073,
+                    "value": "Indigo Lynxes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 18,
+                      "text": "Indigo Lynxes won.",
+                      "asserted": "Indigo Lynxes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Indigo Lynxes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "VERIFIED",
+                "rule_id": "R3_R6_SUPPORTED",
+                "explanation": "The answer equals the value in matching structured evidence.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "relation": "won",
+                    "event": "Larch Cup",
+                    "value": "Indigo Lynxes",
+                    "year": 2073,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Indigo Lynxes won the 2073 Larch Cup.",
+                    "statement": {
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "event": "Larch Cup",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 18,
+                      "text": "Indigo Lynxes won.",
+                      "asserted": "Indigo Lynxes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Indigo Lynxes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "VERIFIED",
+                  "rule_id": "R3_R6_SUPPORTED",
+                  "explanation": "The answer equals the value in matching structured evidence.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Indigo Lynxes won the 2073 Larch Cup.",
+                      "relation": "won",
+                      "event": "Larch Cup",
+                      "value": "Indigo Lynxes",
+                      "year": 2073,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-13",
+      "family": "two_positive_conflict",
+      "expected_source_verdict": "CONFLICT",
+      "arms": {
+        "V3_G1": {
+          "verdict": "CONFLICT",
+          "rule_id": "R5_CONFLICT"
+        },
+        "V3_G2": {
+          "verdict": "CONFLICT",
+          "rule_id": "R5_CONFLICT"
+        },
+        "V2_G1": {
+          "verdict": "CONFLICT",
+          "rule_id": "R5_CONFLICT"
+        },
+        "V2_G2": {
+          "verdict": "CONFLICT",
+          "rule_id": "R5_CONFLICT"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "CONFLICT",
+                "rule_id": "R5_CONFLICT",
+                "explanation": "Matching sources assert different answer values.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Amber Cranes",
+                    "year": 2074,
+                    "subject": null
+                  },
+                  {
+                    "source_id": "D2",
+                    "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Indigo Lynxes",
+                    "year": 2074,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2074 Beech Medal?",
+                    "event": "Beech Medal",
+                    "year": 2074
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2074 Beech Medal.",
+                    "quoted_span": "Amber Cranes won the 2074 Beech Medal.",
+                    "event": "Beech Medal",
+                    "year": 2074,
+                    "value": "Amber Cranes"
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 1,
+                    "source_id": "D2",
+                    "passed": true,
+                    "full_source_text": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "quoted_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "event": "Beech Medal",
+                    "year": 2074,
+                    "value": "Indigo Lynxes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "CONFLICT",
+                "rule_id": "R5_CONFLICT",
+                "explanation": "Matching sources assert different answer values.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Amber Cranes",
+                    "year": 2074,
+                    "subject": null
+                  },
+                  {
+                    "source_id": "D2",
+                    "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Indigo Lynxes",
+                    "year": 2074,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2074 Beech Medal.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "event": "Beech Medal",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  },
+                  {
+                    "source_id": "D2",
+                    "full_source_text": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "statement": {
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "event": "Beech Medal",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "CONFLICT",
+                "rule_id": "R5_CONFLICT",
+                "explanation": "Matching sources assert different answer values.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Amber Cranes",
+                    "year": 2074,
+                    "subject": null
+                  },
+                  {
+                    "source_id": "D2",
+                    "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Indigo Lynxes",
+                    "year": 2074,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2074 Beech Medal?",
+                    "event": "Beech Medal",
+                    "year": 2074
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2074 Beech Medal.",
+                    "quoted_span": "Amber Cranes won the 2074 Beech Medal.",
+                    "event": "Beech Medal",
+                    "year": 2074,
+                    "value": "Amber Cranes"
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 1,
+                    "source_id": "D2",
+                    "passed": true,
+                    "full_source_text": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "quoted_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "event": "Beech Medal",
+                    "year": 2074,
+                    "value": "Indigo Lynxes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "CONFLICT",
+                "rule_id": "R5_CONFLICT",
+                "explanation": "Matching sources assert different answer values.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Amber Cranes",
+                    "year": 2074,
+                    "subject": null
+                  },
+                  {
+                    "source_id": "D2",
+                    "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "relation": "won",
+                    "event": "Beech Medal",
+                    "value": "Indigo Lynxes",
+                    "year": 2074,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2074 Beech Medal.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "event": "Beech Medal",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  },
+                  {
+                    "source_id": "D2",
+                    "full_source_text": "Indigo Lynxes won the 2074 Beech Medal.",
+                    "statement": {
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "event": "Beech Medal",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 17,
+                      "text": "Amber Cranes won.",
+                      "asserted": "Amber Cranes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Amber Cranes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "CONFLICT",
+                  "rule_id": "R5_CONFLICT",
+                  "explanation": "Matching sources assert different answer values.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Amber Cranes",
+                      "year": 2074,
+                      "subject": null
+                    },
+                    {
+                      "source_id": "D2",
+                      "source_span": "Indigo Lynxes won the 2074 Beech Medal.",
+                      "relation": "won",
+                      "event": "Beech Medal",
+                      "value": "Indigo Lynxes",
+                      "year": 2074,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-14",
+      "family": "wrong_answer",
+      "expected_source_verdict": "REFUTED",
+      "arms": {
+        "V2_G1": {
+          "verdict": "REFUTED",
+          "rule_id": "R6_ANSWER_MISMATCH"
+        },
+        "V2_G2": {
+          "verdict": "REFUTED",
+          "rule_id": "R6_ANSWER_MISMATCH"
+        },
+        "V3_G1": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        },
+        "V3_G2": {
+          "verdict": "UNKNOWN",
+          "rule_id": "EXTRACTION_UNRESOLVED"
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "REFUTED",
+                "rule_id": "R6_ANSWER_MISMATCH",
+                "explanation": "The asserted answer differs from the supported value 'Amber Cranes'.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2075 Oak Prize.",
+                    "relation": "won",
+                    "event": "Oak Prize",
+                    "value": "Amber Cranes",
+                    "year": 2075,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2075 Oak Prize?",
+                    "event": "Oak Prize",
+                    "year": 2075
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2075 Oak Prize.",
+                    "quoted_span": "Amber Cranes won the 2075 Oak Prize.",
+                    "event": "Oak Prize",
+                    "year": 2075,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_ANSWER_MISMATCH",
+                  "explanation": "The asserted answer differs from the supported value 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2075 Oak Prize.",
+                      "relation": "won",
+                      "event": "Oak Prize",
+                      "value": "Amber Cranes",
+                      "year": 2075,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 18,
+                      "text": "Indigo Lynxes won.",
+                      "asserted": "Indigo Lynxes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Indigo Lynxes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_ANSWER_MISMATCH",
+                  "explanation": "The asserted answer differs from the supported value 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2075 Oak Prize.",
+                      "relation": "won",
+                      "event": "Oak Prize",
+                      "value": "Amber Cranes",
+                      "year": 2075,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "REFUTED",
+                "rule_id": "R6_ANSWER_MISMATCH",
+                "explanation": "The asserted answer differs from the supported value 'Amber Cranes'.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2075 Oak Prize.",
+                    "relation": "won",
+                    "event": "Oak Prize",
+                    "value": "Amber Cranes",
+                    "year": 2075,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2075 Oak Prize.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2075,
+                      "event": "Oak Prize",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_ANSWER_MISMATCH",
+                  "explanation": "The asserted answer differs from the supported value 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2075 Oak Prize.",
+                      "relation": "won",
+                      "event": "Oak Prize",
+                      "value": "Amber Cranes",
+                      "year": 2075,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "assertion",
+                      "start": 0,
+                      "end": 18,
+                      "text": "Indigo Lynxes won.",
+                      "asserted": "Indigo Lynxes"
+                    }
+                  ],
+                  "asserted_values": [
+                    "Indigo Lynxes"
+                  ],
+                  "rejected_values": [],
+                  "abstention_detected": false,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_ANSWER_MISMATCH",
+                  "explanation": "The asserted answer differs from the supported value 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2075 Oak Prize.",
+                      "relation": "won",
+                      "event": "Oak Prize",
+                      "value": "Amber Cranes",
+                      "year": 2075,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": false,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "UNKNOWN",
+                "rule_id": "EXTRACTION_UNRESOLVED",
+                "explanation": "answer:UNRESOLVED",
+                "matching_facts": []
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "NOT_EVALUATED_UNRESOLVED",
+                "source_checks": [],
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "NOT_EVALUATED_PRIOR_UNKNOWN",
+                "inventory": null,
+                "decision": {
+                  "verdict": "UNKNOWN",
+                  "rule_id": "EXTRACTION_UNRESOLVED",
+                  "explanation": "answer:UNRESOLVED",
+                  "matching_facts": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "D041-15",
+      "family": "false_abstention",
+      "expected_source_verdict": "REFUTED",
+      "arms": {
+        "V3_G1": {
+          "verdict": "REFUTED",
+          "rule_id": "R6_FALSE_ABSTENTION"
+        },
+        "V3_G2": {
+          "verdict": "REFUTED",
+          "rule_id": "R6_FALSE_ABSTENTION"
+        },
+        "V2_G1": {
+          "verdict": "REFUTED",
+          "rule_id": "R6_FALSE_ABSTENTION"
+        },
+        "V2_G2": {
+          "verdict": "REFUTED",
+          "rule_id": "R6_FALSE_ABSTENTION"
+        }
+      },
+      "V3": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "REFUTED",
+                "rule_id": "R6_FALSE_ABSTENTION",
+                "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                    "relation": "won",
+                    "event": "Fir Shield",
+                    "value": "Amber Cranes",
+                    "year": 2076,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2076 Fir Shield?",
+                    "event": "Fir Shield",
+                    "year": 2076
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2076 Fir Shield.",
+                    "quoted_span": "Amber Cranes won the 2076 Fir Shield.",
+                    "event": "Fir Shield",
+                    "year": 2076,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "abstention",
+                      "start": 0,
+                      "end": 30,
+                      "text": "I cannot determine the winner."
+                    }
+                  ],
+                  "asserted_values": [],
+                  "rejected_values": [],
+                  "abstention_detected": true,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "REFUTED",
+                "rule_id": "R6_FALSE_ABSTENTION",
+                "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                    "relation": "won",
+                    "event": "Fir Shield",
+                    "value": "Amber Cranes",
+                    "year": 2076,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2076 Fir Shield.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "event": "Fir Shield",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "abstention",
+                      "start": 0,
+                      "end": 30,
+                      "text": "I cannot determine the winner."
+                    }
+                  ],
+                  "asserted_values": [],
+                  "rejected_values": [],
+                  "abstention_detected": true,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "V2": {
+        "validation_error": null,
+        "exact_typed_match": true,
+        "trace": {
+          "valid": true,
+          "validation_error": null,
+          "arms": {
+            "G1": {
+              "decision": {
+                "verdict": "REFUTED",
+                "rule_id": "R6_FALSE_ABSTENTION",
+                "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                    "relation": "won",
+                    "event": "Fir Shield",
+                    "value": "Amber Cranes",
+                    "year": 2076,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_relation_guard_v1",
+                "status": "PASSED",
+                "checks": [
+                  {
+                    "kind": "question_relation",
+                    "passed": true,
+                    "text": "Who won the 2076 Fir Shield?",
+                    "event": "Fir Shield",
+                    "year": 2076
+                  },
+                  {
+                    "kind": "document_relation",
+                    "fact_index": 0,
+                    "source_id": "D1",
+                    "passed": true,
+                    "full_source_text": "Amber Cranes won the 2076 Fir Shield.",
+                    "quoted_span": "Amber Cranes won the 2076 Fir Shield.",
+                    "event": "Fir Shield",
+                    "year": 2076,
+                    "value": "Amber Cranes"
+                  }
+                ],
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "abstention",
+                      "start": 0,
+                      "end": 30,
+                      "text": "I cannot determine the winner."
+                    }
+                  ],
+                  "asserted_values": [],
+                  "rejected_values": [],
+                  "abstention_detected": true,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            },
+            "G2": {
+              "decision": {
+                "verdict": "REFUTED",
+                "rule_id": "R6_FALSE_ABSTENTION",
+                "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                "matching_facts": [
+                  {
+                    "source_id": "D1",
+                    "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                    "relation": "won",
+                    "event": "Fir Shield",
+                    "value": "Amber Cranes",
+                    "year": 2076,
+                    "subject": null
+                  }
+                ]
+              },
+              "source_trace": {
+                "guard_version": "event_winner_polarity_and_coverage_v2",
+                "status": "PASSED",
+                "source_checks": [
+                  {
+                    "source_id": "D1",
+                    "full_source_text": "Amber Cranes won the 2076 Fir Shield.",
+                    "statement": {
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "event": "Fir Shield",
+                      "polarity": 1
+                    },
+                    "neural_fact_count": 1,
+                    "matched": true
+                  }
+                ],
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              },
+              "answer_trace": {
+                "guard_version": "answer_claim_inventory_v1",
+                "status": "PASSED",
+                "inventory": {
+                  "status": "COMPLETE",
+                  "units": [
+                    {
+                      "kind": "abstention",
+                      "start": 0,
+                      "end": 30,
+                      "text": "I cannot determine the winner."
+                    }
+                  ],
+                  "asserted_values": [],
+                  "rejected_values": [],
+                  "abstention_detected": true,
+                  "unsupported_offset": null,
+                  "unconsumed_text": ""
+                },
+                "decision": {
+                  "verdict": "REFUTED",
+                  "rule_id": "R6_FALSE_ABSTENTION",
+                  "explanation": "The answer abstains although matching evidence supports 'Amber Cranes'.",
+                  "matching_facts": [
+                    {
+                      "source_id": "D1",
+                      "source_span": "Amber Cranes won the 2076 Fir Shield.",
+                      "relation": "won",
+                      "event": "Fir Shield",
+                      "value": "Amber Cranes",
+                      "year": 2076,
+                      "subject": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "limitations": "Authored responses and development fixtures; no generated-answer efficacy, independent labels, or generalization claim.",
+  "raw_sha256": "1ff0c89b46a6f97e7b2acb4f9a031371d8e33daf7429514c7f8ce1fd9c5156bd",
+  "manifest_sha256": "7a884d4633ad65630e39e5c8a2c9abafd957eec017640c7bf3e22d9619bc6641"
+}

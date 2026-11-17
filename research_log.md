@@ -873,3 +873,43 @@ output tokens, greedy, no downloads/paid calls/retries. Source/data/protocol
 freeze precedes inference. Default preflight makes no model calls. Nine new
 boundary/accounting tests pass; the historical EXP-040 replay also passes.
 This entry is preparation, not a result. See the frozen EXP-041 protocol.
+
+## 2026-11-17 — EXP-041: Development Improvements With a Diagnostic Regression
+
+Executed once after source/protocol/data freeze b60c118, tag
+exp041-freeze-2026-11-17: 16 authored cases, 32 local calls, no retries or
+replacement. All calls stopped normally. V2/V3 schema validity was 13/16 and
+16/16; exact typed extraction match was 8/16 and 12/16.
+
+Arm metrics (source-verdict agreement / correct decisive / UNKNOWN / false
+VERIFIED): V2/G1 13/6/10/0; V2/G2 14/7/9/0; V3/G1 13/6/9/1; V3/G2 15/8/8/0.
+Seven fixtures expect UNKNOWN, so oracle agreement is not useful coverage.
+The false-source control remains VERIFIED in every arm; source consistency
+still does not establish factual truth.
+
+Combined V3/G2 gains D041-01 (paraphrase), D041-03 (negative distractor) and
+D041-05 (positive/negative conflict), but loses D041-14: a clear wrong answer
+is transcribed as UNRESOLVED instead of SINGLE_CLAIM, changing correct REFUTED
+to UNKNOWN. Both verdicts would abstain under the release policy, but the
+declared gate forbids losing a correct decisive verdict. Gate: NOT_ELIGIBLE.
+No retrospective relaxation or adoption of the combined candidate occurred.
+
+The prompt-only V3/G1 arm falsely confirms D041-05 because its valid positive
+fact schema does not represent the negative source constraint. The G2 audit
+retains that constraint and returns CONFLICT. This is direct evidence that
+improved extraction validity alone need not improve the final decision. V3
+also retains semantic defects on reported/hypothetical text and misclassifies
+the answer after a denied quotation. All raw strings and traces are preserved.
+
+Actual totals: 42,004 input tokens, 7,763 output tokens, 153.264 seconds summed
+extraction-call time; peak process MLX allocation 5.069 GB. V2/V3 mean extraction
+times 4.720/4.859 seconds. No cost or population effectiveness claim follows.
+Full EXP-041 replay and historical EXP-040 replay passed; 92 Python tests passed.
+Raw SHA-256: 1ff0c89b46a6f97e7b2acb4f9a031371d8e33daf7429514c7f8ce1fd9c5156bd.
+Interpretation and all four arms: docs/exp041_results.md.
+
+Next, isolate answer transcription from evidence-based judgment using a fixed
+answer under varied evidence before revising another prompt. The guard-only
+variant is separately promising on development data (one gain, no loss), but
+that exploratory observation does not satisfy the combined candidate gate or
+constitute independent transfer. Historical negative outcomes remain canonical.

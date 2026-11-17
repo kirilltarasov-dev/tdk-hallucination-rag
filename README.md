@@ -28,8 +28,8 @@ These are AI-only exploratory assessments, not human-validated error rates.
 The [full supervisor checklist audit](docs/supervisor_plan_completion_audit_2026-11-17.md)
 distinguishes completed items from partial work and remaining experiments.
 
-[EXP-040](docs/exp040_results.md) is the latest completed local inference run
-and generated-answer integration comparison: 40 fictional questions, 120 calls.
+[EXP-040](docs/exp040_results.md) is the latest generated-answer integration
+comparison: 40 fictional questions, 120 calls.
 S1-style scored 25 correct / 11 wrong / 4 abstentions; same-model review scored
 25 / 15 / 0; NS-release scored 17 / 4 / 19. Correct-answer retention was 68%,
 below 80%, and mean utility decreased from 0.350 to 0.325. The joint screen
@@ -37,6 +37,16 @@ failed. Two baseline WRONG labels reflect omitted numeric entity suffixes,
 not verified factual hallucinations. All four false-only-source answers remained
 wrong and VERIFIED. This is synthetic integration, not natural QA or real
 retrieval. Replay: `python3 -B -m experiments.exp040_generated_answers --check`.
+
+The latest local inference experiment, [EXP-041](docs/exp041_results.md), is a
+32-call development ablation on 16 authored response/context cases. The new
+prompt improved valid extractions from 13 to 16 and exact typed matches from
+8 to 12. Combined with the new polarity/coverage guard, it gained three correct
+decisive verdicts but lost one (REFUTED became UNKNOWN). The predeclared
+no-regression gate failed. A prompt-only change also caused one false VERIFIED
+on an affirmed-and-denied win; the new guard caught that conflict. This is not
+independent transfer and does not replace EXP-040. Replay:
+`python3 -B -m experiments.exp041_polarity_development --check`.
 
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all

@@ -1,6 +1,6 @@
 # Research Hypotheses and Evidence Boundaries
 
-**Updated:** 2026-11-17. EXP-036 and EXP-040 have completed; measurements are linked below.
+**Updated:** 2026-11-17. EXP-036, EXP-040 and the EXP-041 development ablation have completed.
 
 ## Current defensible finding
 
@@ -63,6 +63,14 @@ about those systems but cannot retroactively evaluate a verifier absent from
 those runs. A new full-system evaluation is needed for the new symbolic layer.
 
 ## What a credible thesis can conclude
+
+EXP-041 is subsequent development, not transfer validation. A polarity-aware
+prompt improved exact extraction from 8/16 to 12/16, but its combination with a
+new source audit lost one correct REFUTED verdict while gaining three decisive
+verdicts. The predeclared no-regression gate failed. The prompt-only arm also
+introduced a false confirmation that the new symbolic audit blocked. Preserve
+these findings together: valid JSON and improved extraction averages do not
+guarantee decision-level reliability. See `docs/exp041_results.md`.
 
 Report a result according to its evidence level: development diagnosis,
 prospective synthetic transfer, or independently labeled end-to-end evaluation.
