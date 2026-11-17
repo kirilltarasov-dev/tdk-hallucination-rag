@@ -11,7 +11,7 @@ it is not replaced by any license chosen for project code.
 | Local file | Records | Bytes | SHA-256 | Role in this project |
 |---|---:|---:|---|---|
 | `data/rgb/en_refine.json` | 300 | 7,229,738 | `1be6ec4b85364b5590c7683ed4df8d47535ae21bc021bbcd3f44a71579f64bcb` | Development at 80% noise; a frozen 60%-noise condition-transfer test used the same questions. Not an independent-question test. |
-| `data/rgb/en_fact.json` | 100 | 241,320 | `92f4b2330ee407f74fbd923197028ef5140cfbc1f4b4092efec2d4d10ae6c9e5` | New-question counterfactual set for prepared EXP-029. Input schema and contexts have been inspected; no model inference result exists yet. |
+| `data/rgb/en_fact.json` | 100 | 241,320 | `92f4b2330ee407f74fbd923197028ef5140cfbc1f4b4092efec2d4d10ae6c9e5` | New-question counterfactual set used in frozen EXP-029. Custom lexical diagnostics exist; no human-validated semantic-error rate is claimed. |
 | `data/rgb/en_int.json` | 100 | 5,138,444 | `ab824393a15bb3e0a6b2c9037c8b50f2865874fc7984091ffdec1961f9b37bdf` | Information-integration subset. No project model result claimed. |
 
 The upstream files and license can be retrieved from

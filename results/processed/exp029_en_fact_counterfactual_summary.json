@@ -1,0 +1,161 @@
+{
+  "experiment_id": "EXP-029",
+  "status": "completed",
+  "dataset": "RGB en_fact",
+  "examples": 100,
+  "passage_num": 5,
+  "noise_rate": 0.0,
+  "correct_rate": 0.6,
+  "random_seed_per_example": 2333,
+  "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+  "model_revision": "a4b8f870474b0eb527f466a03fbc187830d271f5",
+  "assessor_max_tokens": 64,
+  "generation_max_tokens": 256,
+  "keep_labels": [
+    "DIRECT",
+    "INFERENTIAL"
+  ],
+  "empty_context_policy": "restore original ordered context",
+  "strata": {
+    "MIXED": 67,
+    "WRONG_ONLY": 33
+  },
+  "context_sizes": {
+    "3": 17,
+    "4": 12,
+    "5": 38,
+    "1": 14,
+    "2": 19
+  },
+  "normalized_duplicate_fact_queries": 1,
+  "normalized_overlap_with_en_refine": 0,
+  "metrics": "Custom lexical proxies and literal prompt-marker checks; not official RGB ED* or hallucination rate",
+  "source_sha256": {
+    "data/rgb/en_fact.json": "92f4b2330ee407f74fbd923197028ef5140cfbc1f4b4092efec2d4d10ae6c9e5",
+    "data/rgb/en_refine.json": "1be6ec4b85364b5590c7683ed4df8d47535ae21bc021bbcd3f44a71579f64bcb",
+    "src/diagnosis/evidence_support_assessor.py": "31b75e06cab4a6873acae18c79718aa4408584af6d1077a5a233e6b048c8bbcb",
+    "src/evaluation/rgb_prompt.py": "1b2d1cc5d6e687193678f73c56cacc9be628fda6b6278f2e8245f4c5c695e4b6",
+    "src/models/mistral.py": "ac31d86ab3419103ab1ccf57180ee65680264bd0dba178b67016b2ad3a7c1207",
+    "src/models/pinned_mistral.py": "b4d964142d1c4fad4c4e1566c68c9ac2e1b874ad41fd4283c859a57d7b4f4d25",
+    "/Users/QXZ6WEJ/Documents/tdk-hallucination-rag/experiments/exp029_en_fact_counterfactual.py": "85f64e3410d1c8fc5f48a5564c7d9dfdfbfa35b9a9f9d1961250c8fb1929480f"
+  },
+  "raw_output": "results/raw/exp029_en_fact_counterfactual.jsonl",
+  "raw_sha256": "181e424a99ddefaee94b708717ae907dcedfe063356f3dbec9799b58085650ac",
+  "by_stratum": {
+    "ALL": {
+      "n": 100,
+      "metrics": {
+        "true_answer_lexical_proxy": {
+          "s1_count": 68,
+          "s3_count": 69,
+          "s3_gain": 3,
+          "s3_loss": 2,
+          "exact_two_sided_mcnemar_p": 1.0
+        },
+        "fake_answer_lexical_proxy": {
+          "s1_count": 53,
+          "s3_count": 48,
+          "s3_gain": 3,
+          "s3_loss": 8,
+          "exact_two_sided_mcnemar_p": 0.2265625
+        },
+        "factual_error_phrase": {
+          "s1_count": 17,
+          "s3_count": 18,
+          "s3_gain": 6,
+          "s3_loss": 5,
+          "exact_two_sided_mcnemar_p": 1.0
+        },
+        "insufficient_information_phrase": {
+          "s1_count": 6,
+          "s3_count": 6,
+          "s3_gain": 2,
+          "s3_loss": 2,
+          "exact_two_sided_mcnemar_p": 1.0
+        }
+      }
+    },
+    "MIXED": {
+      "n": 67,
+      "metrics": {
+        "true_answer_lexical_proxy": {
+          "s1_count": 61,
+          "s3_count": 61,
+          "s3_gain": 1,
+          "s3_loss": 1,
+          "exact_two_sided_mcnemar_p": 1.0
+        },
+        "fake_answer_lexical_proxy": {
+          "s1_count": 27,
+          "s3_count": 22,
+          "s3_gain": 2,
+          "s3_loss": 7,
+          "exact_two_sided_mcnemar_p": 0.1796875
+        },
+        "factual_error_phrase": {
+          "s1_count": 14,
+          "s3_count": 13,
+          "s3_gain": 4,
+          "s3_loss": 5,
+          "exact_two_sided_mcnemar_p": 1.0
+        },
+        "insufficient_information_phrase": {
+          "s1_count": 2,
+          "s3_count": 3,
+          "s3_gain": 2,
+          "s3_loss": 1,
+          "exact_two_sided_mcnemar_p": 1.0
+        }
+      }
+    },
+    "WRONG_ONLY": {
+      "n": 33,
+      "metrics": {
+        "true_answer_lexical_proxy": {
+          "s1_count": 7,
+          "s3_count": 8,
+          "s3_gain": 2,
+          "s3_loss": 1,
+          "exact_two_sided_mcnemar_p": 1.0
+        },
+        "fake_answer_lexical_proxy": {
+          "s1_count": 26,
+          "s3_count": 26,
+          "s3_gain": 1,
+          "s3_loss": 1,
+          "exact_two_sided_mcnemar_p": 1.0
+        },
+        "factual_error_phrase": {
+          "s1_count": 3,
+          "s3_count": 5,
+          "s3_gain": 2,
+          "s3_loss": 0,
+          "exact_two_sided_mcnemar_p": 0.5
+        },
+        "insufficient_information_phrase": {
+          "s1_count": 4,
+          "s3_count": 3,
+          "s3_gain": 0,
+          "s3_loss": 1,
+          "exact_two_sided_mcnemar_p": 1.0
+        }
+      }
+    }
+  },
+  "s3_policy_counts": {
+    "FILTERED": 84,
+    "FALLBACK_ORIGINAL": 16
+  },
+  "assessor_class_counts": {
+    "DIRECT": 214,
+    "TOPICAL": 22,
+    "NO_SUPPORT": 101,
+    "INFERENTIAL": 4
+  },
+  "mean_latency_seconds": {
+    "s1_generation": 0.9047898891707882,
+    "s3_assessment": 3.0595930458558724,
+    "s3_generation": 0.7957997425075155
+  },
+  "interpretation_limit": "Lexical proxies can count incidental mentions; semantic error detection and supportedness require manual review. The 33 wrong-only cases contain no benchmark-correct document."
+}

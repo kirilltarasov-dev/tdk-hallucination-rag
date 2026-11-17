@@ -8,8 +8,10 @@ Retrieval-Augmented Generation and Neuro-Symbolic Verification*.
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
 hallucination reduction or a neuro-symbolic verification result. The latest
-completed model experiment is EXP-028. EXP-029 has passed input preflight but
-has not run model inference. EXP-030 is an offline supplemental EM/F1 analysis.
+completed model experiment is EXP-029, a frozen 100-question RGB `en_fact`
+counterfactual stress test. Its answer/fake-answer substring counts are
+custom diagnostics, not human-validated error rates or official ED*.
+EXP-030 is an offline supplemental EM/F1 analysis.
 
 ## Evaluated systems
 
@@ -76,24 +78,28 @@ historical runs store the model name; they do not prove the exact downloaded
 revision at run time. The observed local cache revision and hardware are
 documented in the dataset manifest.
 
-## Next frozen evaluation
+## Counterfactual evaluation
 
-`docs/exp029_frozen_protocol.md` defines the planned S1/S3 comparison on
-RGB `en_fact` counterfactual documents. The default command performs schema,
-context, and provenance checks only:
+`docs/exp029_frozen_protocol.md` is the protocol frozen before the EXP-029
+S1/S3 run. The source state was tagged `exp029-freeze-2026-11-17` at commit
+`77829b1`, with the model pinned to revision
+`a4b8f870474b0eb527f466a03fbc187830d271f5`. The default command still
+performs schema, context, and provenance checks without model inference:
 
 ```bash
 python3 -B -m experiments.exp029_en_fact_counterfactual
 ```
 
-The `--execute` flag performs 541 model generations across 100 examples and
-must be used only after the separately documented purpose and run cost have
-been approved. Its outputs will be new EXP-029 raw and processed files.
+The completed `--execute` run made 541 model generations across 100 examples.
+Its raw and processed outputs are preserved under EXP-029-specific paths;
+the script refuses to overwrite them. See `research_log.md` and
+`docs/exp029_disagreement_inspection.md` for results and interpretation limits.
 
 ## Current limitations
 
 - RGB passages are benchmark-provided; a real retriever has not been measured.
-- No independent-question outcome is available for the frozen S3 policy.
+- The independent-question EXP-029 output has only custom lexical indicators;
+  its semantic factual-error and faithfulness outcomes lack human validation.
 - S2 and the routing study do not implement genuine symbolic verification.
 - The historical verifier parser can preserve a draft when `FINAL_ANSWER` is
   absent. EXP-027 measures this sensitivity without rewriting old results.

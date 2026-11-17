@@ -18,7 +18,7 @@ separate research scope.
 | Put unbuilt components in Future Work | Done | v6 distinguishes completed S0–S3, offline S4 routing, and planned symbolic layer and Arena. |
 | Own Contribution in first person, supervisor role, repository URL | Partial | First-person contribution and supervisor role are in v6; no public repository URL exists. |
 | Label 80%-noise RGB as development | Done | v6 and README label all intervention results at 80% noise as development evidence. |
-| Freeze method with tagged commit before new test | Open | Working tree is not release-ready; no freeze tag exists. EXP-029 has not run inference. |
+| Freeze method with tagged commit before new test | Done for EXP-029 | Local commit `77829b1` and annotated tag `exp029-freeze-2026-11-17` precede inference. Future final tests need their own freeze; this is not a public release. |
 | Dataset versions, sizes, licences, hashes in paper table | Partial | `docs/dataset_manifest.md` verifies all three local files against one upstream commit and records CC BY-NC-SA 4.0; the manuscript table is pending. |
 | State S3 assessor model and use distinct verifier model | Open | Existing S3 assessor uses the generator model. A distinct verifier requires a new design and controlled evaluation. The new symbolic rule prototype does not replace the neural assessor. |
 | JSON-schema-constrained outputs and parse-failure reporting | Open | EXP-028 recorded zero parse errors, but historical parsers use text prefixes and are not schema constrained. |
@@ -41,8 +41,9 @@ separate research scope.
 
 1. Freeze the evaluation protocol and repository state before any new model
    result; do not tune on new questions.
-2. Obtain the separately required approval for EXP-029 inference. Preserve
-   all raw outputs and report negative outcomes.
+2. EXP-029 inference is complete and its raw outputs preserved. Obtain
+   independent semantic annotation before using its lexical diagnostics as
+   factual-error evidence.
 3. Resolve the title/method choice with the supervisor: either implement and
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.

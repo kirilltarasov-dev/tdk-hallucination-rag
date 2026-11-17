@@ -214,3 +214,70 @@ not establish semantic support, contradiction handling, or hallucination
 reduction. The 80%-noise data are development observations, and the
 60%-noise condition reuses the same questions. No new generalization claim
 is made from these supplemental metrics.
+
+## 2026-11-17 — EXP-029: Frozen Counterfactual RGB en_fact Test
+
+### Objective and design
+Test the unchanged S3 document-assessment and safe-fallback policy against
+S1 on 100 new RGB `en_fact` questions containing benchmark-wrong factual
+passages. This is a counterfactual robustness stress test, not a direct
+hallucination-rate or neuro-symbolic verification test. The protocol was
+fixed in `docs/exp029_frozen_protocol.md` and source state frozen at local
+commit `77829b1`, tag `exp029-freeze-2026-11-17`, before inference.
+
+### Configuration and outputs
+Both systems saw exactly the same ordered documents, built to match the
+official RGB `processdata` fact branch with five requested passages,
+noise rate 0.0, correct rate 0.6, and per-item seed 2333. The actual
+contexts ranged from one to five passages: 67 MIXED cases had both correct
+and wrong passages, while 33 WRONG_ONLY cases had no correct passage. The
+model was `mlx-community/Mistral-7B-Instruct-v0.3-4bit` pinned to revision
+`a4b8f870474b0eb527f466a03fbc187830d271f5`; generation used at most
+256 tokens. S3 assessed each of 341 passages (at most 64 tokens each),
+kept `DIRECT` and `INFERENTIAL`, and restored the original context if none
+remained. The executable is
+`experiments/exp029_en_fact_counterfactual.py`, raw output is
+`results/raw/exp029_en_fact_counterfactual.jsonl`, and the processed summary
+is `results/processed/exp029_en_fact_counterfactual_summary.json`. The raw
+file SHA-256 is
+`181e424a99ddefaee94b708717ae907dcedfe063356f3dbec9799b58085650ac`.
+All 100 unique rows, source hashes, questions, ordered context provenance,
+policy decisions, diagnostics, and summary counts were independently
+recomputed from the raw file.
+
+### Results
+Across all 100 questions, the custom true-answer substring proxy was
+68/100 for S1 and 69/100 for S3 (3 S3 gains, 2 losses; exact two-sided
+McNemar p=1.000). The custom fake-answer substring proxy was 53/100 for
+S1 and 48/100 for S3 (3 gains, 8 losses; p=0.2266). The literal `factual
+errors` phrase appeared in 17 versus 18 responses; the literal
+`insufficient information` phrase appeared in 6 versus 6. These are four
+separate, descriptive indicators, not a combined accuracy or ED* score.
+
+On the 67 MIXED cases, true-answer presence was 61/67 for both and
+fake-answer presence was 27/67 for S1 versus 22/67 for S3 (p=0.1797).
+On the 33 WRONG_ONLY cases, true-answer presence was 7/33 versus 8/33,
+and fake-answer presence was 26/33 for both. No tested indicator provides
+a statistically established S3 advantage.
+
+S3 filtered in 84 cases and restored the original context in 16. The
+assessor retained 121/155 benchmark-correct passages and 97/186
+benchmark-wrong passages. It produced 214 DIRECT, 4 INFERENTIAL, 22 TOPICAL,
+101 NO_SUPPORT, and zero PARSE_ERROR labels. Mean measured latency per
+question was 0.905 s for S1 generation and 3.060 s assessment plus 0.796 s
+generation for S3; this run required 541 model generations in total.
+
+### Interpretation and limitations
+The document assessor frequently retained passages that directly answered
+the question with a false fact. A question-and-passage relevance judgement
+cannot by itself establish factual truth. String matching is especially
+fragile here: an answer can quote a fake answer while rejecting it, mention
+the true answer but ultimately assert a wrong one, or abstain while also
+stating an answer. The official RGB ED* metric was not computed; these
+custom diagnostics must not be called an official score or hallucination
+rate. The 100-case test has limited power for small paired effects and one
+normalized query occurs twice. The 17 cases with at least one diagnostic
+disagreement were inspected qualitatively, but no independent human
+annotation or adjudicated semantic outcome exists yet. The system still
+uses benchmark-provided contexts rather than a real retriever and does not
+contain a neural-to-symbolic verification pipeline.
