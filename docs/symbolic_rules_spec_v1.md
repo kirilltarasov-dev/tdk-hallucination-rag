@@ -18,8 +18,12 @@ EXP-035 adds `src/verification/answer_claim_guard.py` after that guard. Its
 finite complete-response inventory blocks P09's omitted incompatible assertion.
 All 12 reused development verdicts now match the authored source-consistency
 oracle, with 6 UNKNOWN and the false-source case still VERIFIED. Exact neural
-extraction remains 7/12. The combined variant needs new-formulation evaluation;
-these diagnostic replays do not establish general effectiveness.
+extraction remains 7/12. EXP-036 subsequently tested the frozen combined variant on 48 new authored
+cases. On 45 primary cases, false confirmations fell 7 to 0, while retention
+of correct decisive core verdicts was 18/24 (75%), failing the 80% target.
+The six lost verdicts had correct typed extractions but unsupported paraphrases.
+The three separate false-source controls remained VERIFIED. Neither the
+replays nor this synthetic transfer establishes broad factual effectiveness.
 
 `src/verification/symbolic_rules.py` accepts a typed question frame, a list
 of structured facts with source IDs and source spans, and an answer claim or

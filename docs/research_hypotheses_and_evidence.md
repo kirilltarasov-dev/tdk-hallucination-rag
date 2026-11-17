@@ -1,6 +1,6 @@
 # Research Hypotheses and Evidence Boundaries
 
-**Updated:** 2026-11-17. No new performance result is asserted by this document.
+**Updated:** 2026-11-17. EXP-036 has completed; measurements are linked below.
 
 ## Current defensible finding
 
@@ -27,9 +27,12 @@ failure interpretation. These numerical thresholds are proposed engineering
 feasibility targets, not evidence-derived universal standards.
 
 A successful descriptive screen gives preliminary synthetic evidence only.
-An unsuccessful or inconclusive screen must be reported. No result has yet
-been measured for EXP-036. The method is frozen and inference is not authorized
-merely by the existence of a script or protocol.
+An unsuccessful or inconclusive screen must be reported. EXP-036 completed after source freeze: false confirmations fell 7 to 0 on
+45 primary cases, but correct-decision retention was 18/24 (75%), below 80%.
+The joint screen did not pass. All three false-source controls still passed
+verification. See `docs/exp036_results.md` for paired arms, extraction errors,
+clustered sensitivity intervals, and limitations. Keep this negative joint
+outcome visible; do not redefine H1 around only its successful component.
 
 ## Broad thesis hypothesis H2: fewer factual errors in a usable RAG system
 

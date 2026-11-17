@@ -558,3 +558,52 @@ Before inference, historical hashes and summaries reproduced, all 48 authored
 oracles passed unchanged parser/core checks, and all 57 software tests passed.
 Stub-based analysis tests are not model outcomes. Method, dataset, protocol,
 and analysis will be committed and tagged before the first new model output.
+
+### EXP-036 completed — hypothesis did not pass its joint feasibility screen
+
+Freeze commit `96cc9e9`, tag `exp036-freeze-2026-11-17`, preceded the single
+48-call local run. All outputs were written once without retries or repairs.
+
+- Raw: `results/raw/exp036_prospective_transfer.jsonl`.
+- Manifest: `results/raw/exp036_prospective_transfer_manifest.json`.
+- Processed: `results/processed/exp036_prospective_transfer_summary.json`.
+- Interpretation: `docs/exp036_results.md`.
+- Figure: `results/figures/exp036_verification_tradeoff.png`.
+
+On the 45 primary cases, core / predicate guard / combined counts were:
+false confirmations 7 / 4 / 0; correct decisive verdicts 24 / 21 / 18;
+all decisive verdicts 31 / 25 / 18; UNKNOWN 14 / 20 / 27;
+oracle verdict agreement 38 / 38 / 39. The combined arm removed seven false
+confirmations but lost six correct ones. Retention 18/24 = 75% failed the
+predeclared 80% requirement despite meeting the error-reduction target.
+
+Trace review attributed the seven prevented errors to location-as-winner (3),
+incompatible answer claims (2), self-negation (1), and mixed refusal/assertion
+(1). The six correct-decision losses were valid document paraphrases (3) and
+valid answer paraphrases (3), all with correct typed extraction. These losses
+come from the finite guard grammar, not extraction errors. The three separately
+reported false-source controls all remained VERIFIED, so zero primary false
+confirmations must not be described as zero factual errors.
+
+Across 48 calls, 46 extractions passed validation and 33 matched the exact
+semantic oracle. Two null-value errors and 13 schema-valid semantic/state
+mismatches remain documented, including wrong extractions that coincidentally
+produce the expected UNKNOWN. Mean extraction latency was 4.768 s, median
+4.752 s, nearest-rank p95 6.223 s; this excludes loading and full-system cost.
+
+Predeclared family bootstrap (15 clusters, 2,000 resamples, seed 36017) gave
+exploratory ranges: false-confirmation rate reduction 2.22 to 31.11 percentage
+points; correct-decision retention 40% to 100%; correct-decisive rate change
+-33.33 to 0.00 percentage points. These are authored-family sensitivity ranges,
+not population confidence guarantees or independent-row significance tests.
+
+Post-run replay reproduced all 48 saved records and the summary exactly, with
+unchanged frozen source hashes. Raw SHA-256:
+`c29626c08e9a8c2dad8b8096db5403e6ec0d44160c62bfbd960e9d042012f253`.
+The post-run plot reads measured summary counts; it was visually inspected.
+
+Preserve the failed joint hypothesis and unchanged thresholds. Do not add
+observed paraphrases and claim another independent test on EXP-036. Before more
+grammar tuning, prioritize independent semantic annotation of EXP-029 via
+EXP-031 and define an explicit answer/abstention policy for the demonstrator.
+A new adapted method would require a new EXP and new fixed evaluation data.
