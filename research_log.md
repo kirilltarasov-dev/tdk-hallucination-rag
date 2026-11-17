@@ -607,3 +607,40 @@ observed paraphrases and claim another independent test on EXP-036. Before more
 grammar tuning, prioritize independent semantic annotation of EXP-029 via
 EXP-031 and define an explicit answer/abstention policy for the demonstrator.
 A new adapted method would require a new EXP and new fixed evaluation data.
+
+## 2026-11-17 — EXP-031 annotation operations prepared (no human results)
+
+Following the instruction to proceed with independent semantic evaluation,
+audited all 100 blinded EXP-029 pairs against the original responses, exact
+delivered contexts, reference fields, and private mapping. Compared all 200
+Excel source rows against the blinded JSONL. The unchanged original template
+contains zero human label cells. Its SHA-256 is
+`28e7f8acccc9257680ed5ecf7d0723aab25e7e1f8994a4a15b114b8df7a25157`.
+
+Prepared `deliverables/EXP031_Reviewer_Packet.zip` with the original blank
+workbook, an offline full-text HTML reader, companion reviewer instructions,
+and the original codebook. The packet excludes the mapping and outcome reports.
+Verified exact archive membership and bytes. The codebook's one-pair-per-row
+wording was clarified in the companion guide: actual Excel layout is 200
+response rows, two per pair. No original codebook or workbook was overwritten.
+
+Added `experiments/exp031_annotation_intake.py` to validate completed copies
+without opening the mapping. It checks immutable input cells, all case/arm IDs,
+allowed labels, required rationales, reviewer ID and dates; blanks remain
+missing. A complete review may be explicitly locked with immutable output and
+hashes, plus declared reviewer role and prior-result exposure. Software does
+not certify human provenance, semantic correctness, or independence.
+
+Artifacts and operating instructions:
+`docs/exp031_reviewer_guide.md`, `docs/exp031_annotation_operations.md`,
+`results/annotation/exp031_materials_audit.json`.
+
+65 tests passed, including eight new intake/reader controls. Synthetic test
+labels exist only as software fixtures, not research results. Source material
+and old experiments remain intact. The audit also records the existing
+normalized duplicate question EXP031-022/046; keep both and explicitly resolve
+its treatment before inferential claims, rather than asserting 100 independent
+questions. Reviewer availability was requested from the user and remains
+pending. No actual first pass, adjudication, kappa, p-value, or semantic
+hallucination metric was produced. EXP-031 remains incomplete until human
+judgments are obtained and the declared annotation design is fulfilled.

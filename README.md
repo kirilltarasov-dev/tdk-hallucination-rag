@@ -31,6 +31,11 @@ EXP-031 annotation materials are prepared for all 100 EXP-029 pairs in
 `deliverables/EXP031_Blinded_Annotation_Template.xlsx`; no human labels or
 semantic effectiveness result exist yet. The codebook is
 `docs/exp031_semantic_annotation_protocol.md`.
+The audited [reviewer packet](deliverables/EXP031_Reviewer_Packet.zip) includes
+the unchanged workbook and an offline full-text reader.
+[Annotation operations](docs/exp031_annotation_operations.md) documents the
+read-only intake checks and label-locking procedure. Reviewer assignment and
+human annotation remain pending; no semantic results are implied by preparation.
 
 ## Evaluated systems
 

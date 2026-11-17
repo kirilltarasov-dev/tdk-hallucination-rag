@@ -1,0 +1,26 @@
+{
+  "experiment_id": "EXP-031",
+  "status": "materials_verified_no_human_labels",
+  "pairs": 100,
+  "responses": 200,
+  "human_label_cells_filled": 0,
+  "original_responses_and_delivered_contexts_verified": true,
+  "workbook_source_cells_verified": true,
+  "normalized_duplicate_question_groups": [
+    [
+      "EXP031-022",
+      "EXP031-046"
+    ]
+  ],
+  "system_key_in_reviewer_packet": false,
+  "source_sha256": {
+    "results/raw/exp029_en_fact_counterfactual.jsonl": "181e424a99ddefaee94b708717ae907dcedfe063356f3dbec9799b58085650ac",
+    "results/annotation/exp031_blinded_pairs.jsonl": "3e907a7ce184c1807d4942fd8b93a8003a94cb3bb0150af884e0b7e4991eb130",
+    "deliverables/EXP031_Blinded_Annotation_Template.xlsx": "28e7f8acccc9257680ed5ecf7d0723aab25e7e1f8994a4a15b114b8df7a25157",
+    "docs/exp031_semantic_annotation_protocol.md": "ea0f3535dd8958fc89254d47f80c65e622356f9f15168da4e02038c648a7fc69",
+    "docs/exp031_reviewer_guide.md": "98c0523cadb398cf235b25b11ac522d5f828ad171d5a9a5f42995fe089474150"
+  },
+  "scope": "Material integrity only; no semantic labels, agreement, p-values, or effectiveness estimates.",
+  "packet_sha256": "11a14ca7f2d90b223a83c8e8d18cd94a4aa63a4897d036ba72dd0d7705939d7d",
+  "viewer_sha256": "42506ef9d6e8867655730087c3df2d2155145545006def16120b5ec2e47f8cc5"
+}

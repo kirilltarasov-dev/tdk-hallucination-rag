@@ -9,7 +9,7 @@ separate research scope.
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
 | Align title with measured work | Open | A rule core and neural extraction adapter are implemented. EXP-036 prospectively tested 48 authored cases with 33/48 exact typed matches. Primary false confirmations fell 7 to 0, but correct-decision retention was 75%, failing the 80% target. All three false-source controls still pass; real-world validation is open. General effectiveness remains unestablished. |
-| Use a hallucination-specific metric for the title claim | Annotation prepared | RGB-compatible lexical score is not a hallucination rate. EXP-031 has a blinded 100-pair worksheet and a frozen codebook, but no independent human labels or semantic result yet. |
+| Use a hallucination-specific metric for the title claim | Annotation prepared | RGB-compatible lexical score is not a hallucination rate. EXP-031 has an audited 100-pair reviewer packet, offline reader, codebook, and source-preserving intake/locking tools. Reviewer assignment, independent human labels, and semantic results remain pending. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
 | Correct Section 4.3 evidence-miss logic | Done | The draft states that every 80%-noise question had relevant evidence and 27/29 semantic errors failed to use it. |
