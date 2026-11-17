@@ -1,0 +1,1959 @@
+{
+  "experiment_id": "EXP-036",
+  "provenance": "Authored after method freeze; not independent human labels or natural data.",
+  "cases": [
+    {
+      "case_id": "T01_1",
+      "family": "supported_active",
+      "question": "Which team won the Juniper Trophy East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Juniper Trophy East."
+      },
+      "response": "Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Juniper Trophy East",
+          "year": 2041,
+          "source_span": "Which team won the Juniper Trophy East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Juniper Trophy East.",
+                "event": "Juniper Trophy East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T01_2",
+      "family": "supported_active",
+      "question": "Who was the winner of the 2042 Juniper Trophy West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Juniper Trophy West."
+      },
+      "response": "Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Juniper Trophy West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Juniper Trophy West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Juniper Trophy West.",
+                "event": "Juniper Trophy West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T01_3",
+      "family": "supported_active",
+      "question": "Which competitor won 2043 Juniper Trophy Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Juniper Trophy Central."
+      },
+      "response": "Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Juniper Trophy Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Juniper Trophy Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Juniper Trophy Central.",
+                "event": "Juniper Trophy Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T02_1",
+      "family": "supported_passive",
+      "question": "Which team won the Harbor Medal East in 2041?",
+      "documents": {
+        "D1": "The 2041 Harbor Medal East was won by Copper Badgers."
+      },
+      "response": "Copper Badgers won Harbor Medal East in 2041.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Harbor Medal East",
+          "year": 2041,
+          "source_span": "Which team won the Harbor Medal East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "The 2041 Harbor Medal East was won by Copper Badgers.",
+                "event": "Harbor Medal East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won Harbor Medal East in 2041."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T02_2",
+      "family": "supported_passive",
+      "question": "Who was the winner of the 2042 Harbor Medal West?",
+      "documents": {
+        "D1": "The 2042 Harbor Medal West was won by Jade Panthers."
+      },
+      "response": "Jade Panthers won Harbor Medal West in 2042.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Harbor Medal West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Harbor Medal West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "The 2042 Harbor Medal West was won by Jade Panthers.",
+                "event": "Harbor Medal West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won Harbor Medal West in 2042."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T02_3",
+      "family": "supported_passive",
+      "question": "Which competitor won 2043 Harbor Medal Central?",
+      "documents": {
+        "D1": "The 2043 Harbor Medal Central was won by Bronze Lynxes."
+      },
+      "response": "Bronze Lynxes won Harbor Medal Central in 2043.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Harbor Medal Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Harbor Medal Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "The 2043 Harbor Medal Central was won by Bronze Lynxes.",
+                "event": "Harbor Medal Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won Harbor Medal Central in 2043."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T03_1",
+      "family": "rejected_quote",
+      "question": "Which team won the Canyon Challenge East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Canyon Challenge East."
+      },
+      "response": "The claim \"Silver Cranes won.\" is false. Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Canyon Challenge East",
+          "year": 2041,
+          "source_span": "Which team won the Canyon Challenge East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Canyon Challenge East.",
+                "event": "Canyon Challenge East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "The claim \"Silver Cranes won.\" is false. Copper Badgers won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T03_2",
+      "family": "rejected_quote",
+      "question": "Who was the winner of the 2042 Canyon Challenge West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Canyon Challenge West."
+      },
+      "response": "Jade Panthers won. The claim \"Ivory Swans won\" is false.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Canyon Challenge West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Canyon Challenge West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Canyon Challenge West.",
+                "event": "Canyon Challenge West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won. The claim \"Ivory Swans won\" is false."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T03_3",
+      "family": "rejected_quote",
+      "question": "Which competitor won 2043 Canyon Challenge Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Canyon Challenge Central."
+      },
+      "response": "Bronze Lynxes won, not Pearl Ravens.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Canyon Challenge Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Canyon Challenge Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Canyon Challenge Central.",
+                "event": "Canyon Challenge Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won, not Pearl Ravens."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T04_1",
+      "family": "answer_paraphrase",
+      "question": "Which team won the Orchard Prize East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Orchard Prize East."
+      },
+      "response": "The winner was Copper Badgers.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Orchard Prize East",
+          "year": 2041,
+          "source_span": "Which team won the Orchard Prize East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Orchard Prize East.",
+                "event": "Orchard Prize East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "The winner was Copper Badgers."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T04_2",
+      "family": "answer_paraphrase",
+      "question": "Who was the winner of the 2042 Orchard Prize West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Orchard Prize West."
+      },
+      "response": "Jade Panthers took first place.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Orchard Prize West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Orchard Prize West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Orchard Prize West.",
+                "event": "Orchard Prize West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers took first place."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T04_3",
+      "family": "answer_paraphrase",
+      "question": "Which competitor won 2043 Orchard Prize Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Orchard Prize Central."
+      },
+      "response": "Bronze Lynxes finished as the sole champion.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Orchard Prize Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Orchard Prize Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Orchard Prize Central.",
+                "event": "Orchard Prize Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes finished as the sole champion."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T05_1",
+      "family": "document_paraphrase",
+      "question": "Which team won the Riverstone Shield East in 2041?",
+      "documents": {
+        "D1": "The sole champion of the 2041 Riverstone Shield East was Copper Badgers."
+      },
+      "response": "Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Riverstone Shield East",
+          "year": 2041,
+          "source_span": "Which team won the Riverstone Shield East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "The sole champion of the 2041 Riverstone Shield East was Copper Badgers.",
+                "event": "Riverstone Shield East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T05_2",
+      "family": "document_paraphrase",
+      "question": "Who was the winner of the 2042 Riverstone Shield West?",
+      "documents": {
+        "D1": "Jade Panthers took first place in the 2042 Riverstone Shield West."
+      },
+      "response": "Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Riverstone Shield West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Riverstone Shield West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers took first place in the 2042 Riverstone Shield West.",
+                "event": "Riverstone Shield West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T05_3",
+      "family": "document_paraphrase",
+      "question": "Which competitor won 2043 Riverstone Shield Central?",
+      "documents": {
+        "D1": "The Riverstone Shield Central title in 2043 went to Bronze Lynxes."
+      },
+      "response": "Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Riverstone Shield Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Riverstone Shield Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "The Riverstone Shield Central title in 2043 went to Bronze Lynxes.",
+                "event": "Riverstone Shield Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T06_1",
+      "family": "incompatible_answers",
+      "question": "Which team won the Meadow Tournament East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Meadow Tournament East."
+      },
+      "response": "Copper Badgers won. Silver Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Meadow Tournament East",
+          "year": 2041,
+          "source_span": "Which team won the Meadow Tournament East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Meadow Tournament East.",
+                "event": "Meadow Tournament East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Copper Badgers won. Silver Cranes won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T06_2",
+      "family": "incompatible_answers",
+      "question": "Who was the winner of the 2042 Meadow Tournament West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Meadow Tournament West."
+      },
+      "response": "Ivory Swans won. Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Meadow Tournament West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Meadow Tournament West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Meadow Tournament West.",
+                "event": "Meadow Tournament West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Ivory Swans won. Jade Panthers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T06_3",
+      "family": "incompatible_answers",
+      "question": "Which competitor won 2043 Meadow Tournament Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Meadow Tournament Central."
+      },
+      "response": "Bronze Lynxes won the 2043 Meadow Tournament Central. Pearl Ravens won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Meadow Tournament Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Meadow Tournament Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Meadow Tournament Central.",
+                "event": "Meadow Tournament Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Bronze Lynxes won the 2043 Meadow Tournament Central. Pearl Ravens won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T07_1",
+      "family": "self_negation",
+      "question": "Which team won the Summit Trophy East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Summit Trophy East."
+      },
+      "response": "Copper Badgers won. Copper Badgers did not win.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Summit Trophy East",
+          "year": 2041,
+          "source_span": "Which team won the Summit Trophy East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Summit Trophy East.",
+                "event": "Summit Trophy East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Copper Badgers won. Copper Badgers did not win."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T07_2",
+      "family": "self_negation",
+      "question": "Who was the winner of the 2042 Summit Trophy West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Summit Trophy West."
+      },
+      "response": "The claim \"Jade Panthers won.\" is false. Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Summit Trophy West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Summit Trophy West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Summit Trophy West.",
+                "event": "Summit Trophy West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "The claim \"Jade Panthers won.\" is false. Jade Panthers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T07_3",
+      "family": "self_negation",
+      "question": "Which competitor won 2043 Summit Trophy Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Summit Trophy Central."
+      },
+      "response": "Bronze Lynxes did not win. Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Summit Trophy Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Summit Trophy Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Summit Trophy Central.",
+                "event": "Summit Trophy Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Bronze Lynxes did not win. Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T08_1",
+      "family": "mixed_refusal",
+      "question": "Which team won the Coastal Medal East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Coastal Medal East."
+      },
+      "response": "I cannot determine the winner. Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Coastal Medal East",
+          "year": 2041,
+          "source_span": "Which team won the Coastal Medal East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Coastal Medal East.",
+                "event": "Coastal Medal East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "I cannot determine the winner. Copper Badgers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T08_2",
+      "family": "mixed_refusal",
+      "question": "Who was the winner of the 2042 Coastal Medal West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Coastal Medal West."
+      },
+      "response": "Jade Panthers won. I do not know who won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Coastal Medal West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Coastal Medal West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Coastal Medal West.",
+                "event": "Coastal Medal West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Jade Panthers won. I do not know who won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T08_3",
+      "family": "mixed_refusal",
+      "question": "Which competitor won 2043 Coastal Medal Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Coastal Medal Central."
+      },
+      "response": "Insufficient information. Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Coastal Medal Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Coastal Medal Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Coastal Medal Central.",
+                "event": "Coastal Medal Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Insufficient information. Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T09_1",
+      "family": "negated_source",
+      "question": "Which team won the Willow Challenge East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers did not win the 2041 Willow Challenge East."
+      },
+      "response": "Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Willow Challenge East",
+          "year": 2041,
+          "source_span": "Which team won the Willow Challenge East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T09_2",
+      "family": "negated_source",
+      "question": "Who was the winner of the 2042 Willow Challenge West?",
+      "documents": {
+        "D1": "Jade Panthers was not the winner of the 2042 Willow Challenge West."
+      },
+      "response": "Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Willow Challenge West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Willow Challenge West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T09_3",
+      "family": "negated_source",
+      "question": "Which competitor won 2043 Willow Challenge Central?",
+      "documents": {
+        "D1": "The 2043 Willow Challenge Central was not won by Bronze Lynxes."
+      },
+      "response": "Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Willow Challenge Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Willow Challenge Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T10_1",
+      "family": "denied_source_quote",
+      "question": "Which team won the Lakeside Prize East in 2041?",
+      "documents": {
+        "D1": "The statement \"Copper Badgers won the 2041 Lakeside Prize East\" is false."
+      },
+      "response": "Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Lakeside Prize East",
+          "year": 2041,
+          "source_span": "Which team won the Lakeside Prize East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T10_2",
+      "family": "denied_source_quote",
+      "question": "Who was the winner of the 2042 Lakeside Prize West?",
+      "documents": {
+        "D1": "It is false that Jade Panthers won the 2042 Lakeside Prize West."
+      },
+      "response": "Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Lakeside Prize West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Lakeside Prize West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T10_3",
+      "family": "denied_source_quote",
+      "question": "Which competitor won 2043 Lakeside Prize Central?",
+      "documents": {
+        "D1": "The claim that Bronze Lynxes won Lakeside Prize Central in 2043 was denied."
+      },
+      "response": "Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Lakeside Prize Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Lakeside Prize Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T11_1",
+      "family": "location_question",
+      "question": "Where was the 2041 Highland Shield East held?",
+      "documents": {
+        "D1": "The 2041 Highland Shield East was held at Birch Hall."
+      },
+      "response": "Birch Hall.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "OUT_OF_SCOPE",
+          "event": null,
+          "year": null,
+          "source_span": null
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Birch Hall."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T11_2",
+      "family": "location_question",
+      "question": "Where was the 2042 Highland Shield West held?",
+      "documents": {
+        "D1": "The 2042 Highland Shield West was held at Elm Arena."
+      },
+      "response": "Elm Arena.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "OUT_OF_SCOPE",
+          "event": null,
+          "year": null,
+          "source_span": null
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Elm Arena."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T11_3",
+      "family": "location_question",
+      "question": "Where was the 2043 Highland Shield Central held?",
+      "documents": {
+        "D1": "The 2043 Highland Shield Central was held at Pine Stadium."
+      },
+      "response": "Pine Stadium.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "OUT_OF_SCOPE",
+          "event": null,
+          "year": null,
+          "source_span": null
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Pine Stadium."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T12_1",
+      "family": "wrong_answer",
+      "question": "Which team won the Valley Tournament East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Valley Tournament East."
+      },
+      "response": "Silver Cranes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Valley Tournament East",
+          "year": 2041,
+          "source_span": "Which team won the Valley Tournament East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Valley Tournament East.",
+                "event": "Valley Tournament East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Silver Cranes",
+          "source_span": "Silver Cranes won."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_ANSWER_MISMATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T12_2",
+      "family": "wrong_answer",
+      "question": "Who was the winner of the 2042 Valley Tournament West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Valley Tournament West."
+      },
+      "response": "Ivory Swans won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Valley Tournament West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Valley Tournament West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Valley Tournament West.",
+                "event": "Valley Tournament West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Ivory Swans",
+          "source_span": "Ivory Swans won."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_ANSWER_MISMATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T12_3",
+      "family": "wrong_answer",
+      "question": "Which competitor won 2043 Valley Tournament Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Valley Tournament Central."
+      },
+      "response": "Pearl Ravens won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Valley Tournament Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Valley Tournament Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Valley Tournament Central.",
+                "event": "Valley Tournament Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Pearl Ravens",
+          "source_span": "Pearl Ravens won."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_ANSWER_MISMATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T13_1",
+      "family": "false_abstention",
+      "question": "Which team won the Maple Trophy East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Maple Trophy East."
+      },
+      "response": "I cannot determine the winner.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Maple Trophy East",
+          "year": 2041,
+          "source_span": "Which team won the Maple Trophy East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Maple Trophy East.",
+                "event": "Maple Trophy East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "ABSTENTION",
+          "value": null,
+          "source_span": "I cannot determine the winner."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_FALSE_ABSTENTION",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T13_2",
+      "family": "false_abstention",
+      "question": "Who was the winner of the 2042 Maple Trophy West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Maple Trophy West."
+      },
+      "response": "I do not know who won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Maple Trophy West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Maple Trophy West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Maple Trophy West.",
+                "event": "Maple Trophy West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "ABSTENTION",
+          "value": null,
+          "source_span": "I do not know who won."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_FALSE_ABSTENTION",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T13_3",
+      "family": "false_abstention",
+      "question": "Which competitor won 2043 Maple Trophy Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Maple Trophy Central."
+      },
+      "response": "There is insufficient information to answer.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Maple Trophy Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Maple Trophy Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Maple Trophy Central.",
+                "event": "Maple Trophy Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "ABSTENTION",
+          "value": null,
+          "source_span": "There is insufficient information to answer."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_FALSE_ABSTENTION",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T14_1",
+      "family": "source_conflict",
+      "question": "Which team won the Granite Medal East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Granite Medal East.",
+        "D2": "Silver Cranes won the 2041 Granite Medal East."
+      },
+      "response": "Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Granite Medal East",
+          "year": 2041,
+          "source_span": "Which team won the Granite Medal East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Granite Medal East.",
+                "event": "Granite Medal East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Silver Cranes won the 2041 Granite Medal East.",
+                "event": "Granite Medal East",
+                "year": 2041,
+                "value": "Silver Cranes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won."
+        }
+      },
+      "expected_verdict": "CONFLICT",
+      "expected_rule_id": "R5_CONFLICT",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T14_2",
+      "family": "source_conflict",
+      "question": "Who was the winner of the 2042 Granite Medal West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Granite Medal West.",
+        "D2": "Ivory Swans won the 2042 Granite Medal West."
+      },
+      "response": "Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Granite Medal West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Granite Medal West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Granite Medal West.",
+                "event": "Granite Medal West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Ivory Swans won the 2042 Granite Medal West.",
+                "event": "Granite Medal West",
+                "year": 2042,
+                "value": "Ivory Swans"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won."
+        }
+      },
+      "expected_verdict": "CONFLICT",
+      "expected_rule_id": "R5_CONFLICT",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T14_3",
+      "family": "source_conflict",
+      "question": "Which competitor won 2043 Granite Medal Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Granite Medal Central.",
+        "D2": "Pearl Ravens won the 2043 Granite Medal Central."
+      },
+      "response": "Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Granite Medal Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Granite Medal Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Granite Medal Central.",
+                "event": "Granite Medal Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Pearl Ravens won the 2043 Granite Medal Central.",
+                "event": "Granite Medal Central",
+                "year": 2043,
+                "value": "Pearl Ravens"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "CONFLICT",
+      "expected_rule_id": "R5_CONFLICT",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T15_1",
+      "family": "wrong_year",
+      "question": "Which team won the Cedar Challenge East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2040 Cedar Challenge East."
+      },
+      "response": "Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Cedar Challenge East",
+          "year": 2041,
+          "source_span": "Which team won the Cedar Challenge East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2040 Cedar Challenge East.",
+                "event": "Cedar Challenge East",
+                "year": 2040,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T15_2",
+      "family": "wrong_year",
+      "question": "Who was the winner of the 2042 Cedar Challenge West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2041 Cedar Challenge West."
+      },
+      "response": "Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Cedar Challenge West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Cedar Challenge West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2041 Cedar Challenge West.",
+                "event": "Cedar Challenge West",
+                "year": 2041,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T15_3",
+      "family": "wrong_year",
+      "question": "Which competitor won 2043 Cedar Challenge Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2042 Cedar Challenge Central."
+      },
+      "response": "Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Cedar Challenge Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Cedar Challenge Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2042 Cedar Challenge Central.",
+                "event": "Cedar Challenge Central",
+                "year": 2042,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "primary_eligible": true,
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "T16_1",
+      "family": "false_consistent_source",
+      "question": "Which team won the Brookside Prize East in 2041?",
+      "documents": {
+        "D1": "Copper Badgers won the 2041 Brookside Prize East."
+      },
+      "response": "Copper Badgers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Brookside Prize East",
+          "year": 2041,
+          "source_span": "Which team won the Brookside Prize East in 2041?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Copper Badgers won the 2041 Brookside Prize East.",
+                "event": "Brookside Prize East",
+                "year": 2041,
+                "value": "Copper Badgers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Copper Badgers",
+          "source_span": "Copper Badgers won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": false,
+      "authored_ground_truth": {
+        "winner": "Silver Cranes",
+        "note": "Fictional truth withheld from inference; source and answer are false."
+      }
+    },
+    {
+      "case_id": "T16_2",
+      "family": "false_consistent_source",
+      "question": "Who was the winner of the 2042 Brookside Prize West?",
+      "documents": {
+        "D1": "Jade Panthers won the 2042 Brookside Prize West."
+      },
+      "response": "Jade Panthers won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Brookside Prize West",
+          "year": 2042,
+          "source_span": "Who was the winner of the 2042 Brookside Prize West?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Jade Panthers won the 2042 Brookside Prize West.",
+                "event": "Brookside Prize West",
+                "year": 2042,
+                "value": "Jade Panthers"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Jade Panthers",
+          "source_span": "Jade Panthers won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": false,
+      "authored_ground_truth": {
+        "winner": "Ivory Swans",
+        "note": "Fictional truth withheld from inference; source and answer are false."
+      }
+    },
+    {
+      "case_id": "T16_3",
+      "family": "false_consistent_source",
+      "question": "Which competitor won 2043 Brookside Prize Central?",
+      "documents": {
+        "D1": "Bronze Lynxes won the 2043 Brookside Prize Central."
+      },
+      "response": "Bronze Lynxes won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Brookside Prize Central",
+          "year": 2043,
+          "source_span": "Which competitor won 2043 Brookside Prize Central?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Bronze Lynxes won the 2043 Brookside Prize Central.",
+                "event": "Brookside Prize Central",
+                "year": 2043,
+                "value": "Bronze Lynxes"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Bronze Lynxes",
+          "source_span": "Bronze Lynxes won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "primary_eligible": false,
+      "authored_ground_truth": {
+        "winner": "Pearl Ravens",
+        "note": "Fictional truth withheld from inference; source and answer are false."
+      }
+    }
+  ]
+}

@@ -527,3 +527,34 @@ false confirmations and coverage loss; do not keep tuning against these 12
 cases as evidence of general effectiveness. EXP-031 human annotation and a
 real end-to-end effectiveness comparison remain open. No significance,
 hallucination reduction, or computational saving is claimed here.
+
+## 2026-11-17 — EXP-036: Prospective Synthetic Transfer (Prepared)
+
+Following the user's instruction to proceed beyond EXP-035 and obtain evidence,
+prepared a bounded 48-call local test of the frozen combined verifier. The
+purpose and budget were explained before execution. Three arms share each new
+extraction: unchanged core, predicate guard, and combined guards. No paid API,
+new model download, retries, or answer repair is planned.
+
+The prospective joint feasibility target is at least 50% fewer oracle-relative
+false confirmations while retaining at least 80% of correct decisive baseline
+verdicts. Fewer than three baseline false confirmations or no correct baseline
+decisions makes the screen inconclusive. This is a descriptive engineering
+screen, not a powered confirmation of broad hallucination reduction.
+
+Artifacts: `docs/exp036_prospective_transfer_protocol.md`,
+`docs/research_hypotheses_and_evidence.md`,
+`data/synthetic/exp036_prospective_transfer.json`,
+`experiments/exp036_build_transfer_cases.py`, and
+`experiments/exp036_prospective_transfer.py`.
+
+There are 16 authored language families with three variants each, including
+valid out-of-grammar paraphrases. The three false-source controls are separately
+reported; all other 45 cases enter primary metrics. New exact questions do not
+make the templates independent or constitute natural held-out factual QA.
+Exploratory paired bootstrap resamples whole families, not individual variants.
+
+Before inference, historical hashes and summaries reproduced, all 48 authored
+oracles passed unchanged parser/core checks, and all 57 software tests passed.
+Stub-based analysis tests are not model outcomes. Method, dataset, protocol,
+and analysis will be committed and tagged before the first new model output.
