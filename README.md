@@ -8,7 +8,7 @@ Retrieval-Augmented Generation and Neuro-Symbolic Verification*.
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
 hallucination reduction or neuro-symbolic effectiveness. The latest
-completed model experiment is EXP-036, a prospectively frozen 48-case synthetic
+completed verifier-effectiveness comparison is EXP-036, a prospectively frozen 48-case synthetic
 transfer run. On 45 primary cases, the combined guards reduced oracle-relative
 false confirmations from 7 to 0, but correct-decision retention was 18/24 (75%),
 below the predeclared 80% target. The joint feasibility hypothesis did not pass.
@@ -34,8 +34,19 @@ semantic effectiveness result exist yet. The codebook is
 The audited [reviewer packet](deliverables/EXP031_Reviewer_Packet.zip) includes
 the unchanged workbook and an offline full-text reader.
 [Annotation operations](docs/exp031_annotation_operations.md) documents the
-read-only intake checks and label-locking procedure. Reviewer assignment and
-human annotation remain pending; no semantic results are implied by preparation.
+read-only intake checks and label-locking procedure. Only the project author
+is available for review; independent double annotation remains unavailable.
+
+The latest local inference run, [EXP-037](docs/exp037_machine_draft_results.md),
+generated 200 machine proposals in 100 paired calls. Only 112 passed structural
+and verbatim-quote checks, and inspected valid outputs had semantic errors.
+These drafts are not semantic ground truth. The separate
+[EXP-038 assistant drafting stage](docs/exp038_assisted_review_status.md) read
+all 100 blinded pairs and prepared 200 assistant assessments with rationales.
+The current [author-review page](deliverables/EXP038_Assisted_Author_Review.html)
+and [instructions](deliverables/EXP038_Review_Instructions.md) support explicit
+per-response review and JSON backup/restore. Human-reviewed labels remain zero;
+no inter-rater agreement, semantic S1/S3 effect, or new thesis proof is claimed.
 
 ## Evaluated systems
 

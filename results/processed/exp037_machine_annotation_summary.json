@@ -1,0 +1,49 @@
+{
+  "experiment_id": "EXP-037",
+  "status": "completed_machine_proposals_human_review_pending",
+  "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+  "model_revision": "a4b8f870474b0eb527f466a03fbc187830d271f5",
+  "temperature": 0.0,
+  "calls": 100,
+  "responses": 200,
+  "max_tokens_per_call": 1024,
+  "max_output_tokens": 102400,
+  "retries": 0,
+  "external_fact_checks_performed": false,
+  "same_model_as_answer_generator": true,
+  "system_mapping_accessed": false,
+  "truth_basis": "provisional benchmark reference only",
+  "independent_human_labels": 0,
+  "source_sha256": {
+    "results/annotation/exp031_blinded_pairs.jsonl": "3e907a7ce184c1807d4942fd8b93a8003a94cb3bb0150af884e0b7e4991eb130",
+    "experiments/exp037_assisted_annotation.py": "93051937b35d50f9554cc5b9242c107bd27cfa99861e5cbd1be8d9e7355659a4",
+    "docs/exp037_assisted_annotation_protocol.md": "9fe9cb9db278d50079a097989b85704cdbc7574ee661ac9ec10d12db564c229b",
+    "docs/exp031_semantic_annotation_protocol.md": "ea0f3535dd8958fc89254d47f80c65e622356f9f15168da4e02038c648a7fc69",
+    "src/models/pinned_mistral.py": "b4d964142d1c4fad4c4e1566c68c9ac2e1b874ad41fd4283c859a57d7b4f4d25",
+    "src/models/mistral.py": "ac31d86ab3419103ab1ccf57180ee65680264bd0dba178b67016b2ad3a7c1207",
+    "experiments/exp032_event_winner_pilot.py": "e303eac4a903e4730dd38f15d41f30de149e83ea5aef93a16a1506486224325a"
+  },
+  "git_commit": "e455f899c1d5db3704572cab126a2eacade84565",
+  "started_at_utc": "2026-11-17T10:29:47.598379+00:00",
+  "python": "3.12.14",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "mlx_version": "0.32.2",
+  "mlx_lm_version": "0.31.3",
+  "valid_response_proposals": 112,
+  "invalid_response_proposals": 88,
+  "validation_errors": {
+    "Context quotation is not verbatim": 65,
+    "Unknown context document ID": 5,
+    "Expected 1 to 3 response spans": 7,
+    "Unexpected proposal fields": 7,
+    "Response quotation is not verbatim": 2,
+    "Duplicate JSON key: doc_id": 2
+  },
+  "raw_sha256": "faa641ff95dd806b783d98b36d147773eb2ffb3303e2aa1da22b73dafd0ad962",
+  "latency_seconds": {
+    "mean": 7.057112269935897,
+    "p50": 6.936227958532982,
+    "p95_nearest_rank": 9.240939916926436
+  },
+  "interpretation": "Technical draft production only; no human agreement or system efficacy metrics."
+}

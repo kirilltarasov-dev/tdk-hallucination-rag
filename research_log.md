@@ -644,3 +644,86 @@ questions. Reviewer availability was requested from the user and remains
 pending. No actual first pass, adjudication, kappa, p-value, or semantic
 hallucination metric was produced. EXP-031 remains incomplete until human
 judgments are obtained and the declared annotation design is fulfilled.
+
+## 2026-11-17 — EXP-037: Machine Proposals for Assisted Author Review
+
+The user stated that only they can review and requested full assistance. The
+assistant explained that automatic labels remain machine drafts and subsequent
+confirmation is assisted project-author review, not independent human labels.
+Prepared and froze the prompt/parser/protocol at `e455f89`, annotated tag
+`exp037-freeze-2026-11-17`, after 70 passing software tests.
+
+Executed one local greedy pass of 100 paired prompts (200 response proposals)
+with the pinned Mistral checkpoint, 1,024 output-token cap per call, no retries,
+no paid API, no new model download, and no system-mapping access. Exact questions,
+provisional references, responses and delivered contexts were used. External
+factual verification was not performed. The judge is the same checkpoint as the
+answer generator, with explicit correlated-error and self-preference limitations.
+
+Only 112/200 proposals passed strict shape/enums/verbatim-span checks; 88 failed:
+65 non-verbatim context quotations, 5 unknown source IDs, 7 response-span count
+errors, 7 unexpected field sets, 2 non-verbatim response quotations, and 2
+records affected by a duplicated JSON key. Assistant inspection also found
+semantic failures in structurally valid records, including missed source
+conflict, contradictory answers labeled correct, and invented question scope.
+These examples are diagnostic, not a measured judge-accuracy estimate.
+
+All raw outputs and failures are preserved without repair or rerun:
+`results/raw/exp037_machine_annotation_drafts.jsonl`, its manifest,
+`results/processed/exp037_machine_annotation_summary.json`, and
+`results/annotation/exp037_machine_proposals.json`.
+Raw SHA-256: `faa641ff95dd806b783d98b36d147773eb2ffb3303e2aa1da22b73dafd0ad962`.
+Mean call time 7.057 s, median 6.936 s, nearest-rank p95 9.241 s. These paired
+call timings do not measure human time saved or end-to-end annotation cost.
+
+Every stored prompt and parsed proposal/error reproduced from the original
+strings, processed outputs matched exactly, and source hashes were unchanged.
+Interpretation: `docs/exp037_machine_draft_results.md`. No semantic S1/S3 effect,
+p-value, human agreement, or hallucination rate was computed from the drafts.
+
+## 2026-11-17 — EXP-038: Assistant Semantic Drafts (Author Review Pending)
+
+Because EXP-037 proposals were unreliable, conducted a separately recorded
+retrospective assistant drafting stage. Read all 100 blinded pairs and exact
+contexts, then authored five labels and a case-specific rationale for each of
+200 responses. Some EXP-037 outputs were already visible, so this is not an
+independent second judge or a prospective accuracy test. The interactive
+assistant backend is not a pinned/replayable local inference model; the authored
+table and source hashes preserve the assessment record, not deterministic
+reproduction of the reasoning. No external fact checks were performed.
+
+Saved `results/annotation/exp038_assistant_authored_table.json` and expanded
+`results/annotation/exp038_assistant_proposals.json`. All records have
+assistant_semantic_draft provenance, human_reviewed=false and no completed
+external check. Sixteen response drafts across eleven pairs have UNCLEAR in
+factual-assertion or answer-status judgments. Other UNCLEAR fields often reflect
+unresolved source conflict, not missing drafting. No label frequency is treated
+as measured human error prevalence.
+
+Flagged source/reference ambiguities including region-specific release dates,
+role/credit distinctions, date-dependent CEO questions, and EXP031-097: the
+question asks about the 2020 British Open, its passage says the event was
+cancelled, but the reference names a winner. This is an observed inconsistency
+requiring primary-source adjudication, not an externally verified correction.
+Original EXP-029/031 data and EXP-037 outputs were preserved unchanged.
+
+Delivered `deliverables/EXP038_Assisted_Author_Review.html` and English use
+instructions. The offline page contains all 200 prefilled assistant drafts,
+complete source text, editing, per-response confirmation, actual optional
+fact-check citations, local save, JSON backup/restore, and input/draft hashes.
+Changing labels clears confirmation. Reviewer role, assistance, and prior
+result exposure are disclosed. No bulk action confirms all responses.
+
+74 Python tests passed. Disposable fictional browser tests verified review
+prerequisites, edits clearing confirmation, partial export, import/restore,
+wrong-source rejection, local storage, mobile width, and no JavaScript errors.
+The actual final page was visually inspected and verified to contain all 200
+unreviewed drafts. Its anonymous zero-review smoke export was correctly rejected
+by intake for missing reviewer identity, rather than accepted as completed work.
+No test confirmations were written into research annotations.
+
+Status: assistant drafting and review tooling complete; human review is still
+zero, independent double annotation unavailable, and no kappa, paired semantic
+comparison or thesis-effectiveness claim produced. A real completed author
+export is required before subsequent assisted single-author analysis. Details:
+`docs/exp038_assistant_draft_protocol.md`, `docs/exp038_assisted_review_status.md`.

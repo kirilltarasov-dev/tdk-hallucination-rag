@@ -1,0 +1,602 @@
+{
+  "0": [
+    "YIMUY",
+    "Selects Glendale and rejects the reference Tampa. D1/D2 support Glendale but D3 supports Tampa; source conflict is explicitly discussed.",
+    "NCMUY",
+    "Selects the reference Tampa and rejects Glendale. Its D1 and D2 disagree, and the response explicitly contrasts them."
+  ],
+  "1": [
+    "NCMUN",
+    "Selects Norway, matching the reference, but the delivered passages also assert a US win. The response does not acknowledge that source conflict.",
+    "NCMUY",
+    "Selects Norway and explicitly rejects the incompatible US claim; the context still contains both alternatives."
+  ],
+  "2": [
+    "NCSYA",
+    "Selects Facebook, matching the reference and acquisition passages. An Apple bid in D1 does not by itself assert a completed acquisition.",
+    "NCMUN",
+    "Selects Facebook, matching the reference, but D3 explicitly says Apple bought Instagram. That conflicting source claim is not acknowledged."
+  ],
+  "3": [
+    "NCMUN",
+    "Selects Facebook, matching the reference. D1 says Apple purchased WhatsApp, while other passages say Facebook; the response ignores the conflict.",
+    "NCMUN",
+    "Selects Facebook, matching the reference. D1 asserts an Apple purchase and D2 supports Facebook; the conflict is not acknowledged."
+  ],
+  "4": [
+    "YCMUY",
+    "The final winner Halep matches the reference, but the response falsely says the documents described a Kerber-versus-Halep final. They describe Kerber-versus-Williams. Winner evidence is conflicting.",
+    "YCMUY",
+    "The final winner Halep matches the reference, but the response invents an attribution about a Kerber-versus-Halep final. Source texts also disagree about the winner."
+  ],
+  "5": [
+    "YMMUY",
+    "First asserts Kerber won, then denies her win and asserts Barty won. This is a contradictory answer with a reference-inconsistent affirmative winner claim, not a harmless rejected quote.",
+    "YMMUY",
+    "First asserts Kerber won, then denies her win and asserts Barty won. Both incompatible alternatives occur in the delivered context, and the response mentions document error."
+  ],
+  "6": [
+    "YIMUY",
+    "Affirmatively selects Halep and rejects reference winner Barty. Delivered passages support both; the response contrasts their claims.",
+    "YIMUY",
+    "Affirmatively selects Halep and says Barty did not win, contradicting the reference. Both alternatives occur in the sources; the stated document error refers to that discrepancy."
+  ],
+  "7": [
+    "NCMUY",
+    "Selects reference winner Murray and explicitly rejects the incompatible Thiem source claim. Supporting and contradicting passages coexist.",
+    "NCMUY",
+    "Selects Murray and identifies the conflicting Thiem attribution, referring to the supporting last two documents."
+  ],
+  "8": [
+    "NCMUN",
+    "Selects reference winner Raducanu. Other passages assert Andreescu, so the context is conflicting and the short response does not acknowledge it.",
+    "NCMUN",
+    "Selects reference winner Raducanu without acknowledging the incompatible Andreescu claims in the delivered context."
+  ],
+  "9": [
+    "YCMUN",
+    "The winner Thiem matches the reference, but the response falsely attributes a Zverev victory to the sources. Their competing winner is Murray; that actual conflict is not correctly identified.",
+    "NCMUN",
+    "Selects reference winner Thiem. Sources also name Murray, but the response does not acknowledge that conflict."
+  ],
+  "10": [
+    "NCMUY",
+    "Rejects Raducanu as a wrong source alternative and selects reference winner Andreescu. The quoted/rejected wrong name is not an affirmative false answer.",
+    "NCMUY",
+    "Selects Andreescu and explicitly identifies the conflicting Raducanu source attribution."
+  ],
+  "11": [
+    "NCMUN",
+    "Selects reference winner Medvedev, but the delivered Nadal claim is not acknowledged.",
+    "NCMUN",
+    "Selects reference winner Medvedev without acknowledging the incompatible Nadal source claims."
+  ],
+  "12": [
+    "YISYA",
+    "Affirmatively gives $1.39 billion rather than reference $10.4 billion. The sole delivered passage supports the wrong amount, illustrating false but source-supported content.",
+    "YISYA",
+    "Affirmatively gives $1.39 billion rather than reference $10.4 billion. It faithfully repeats the sole counterfactual passage."
+  ],
+  "13": [
+    "UISYA",
+    "Supplies $1.04 billion, inconsistent with the $6.04 billion reference, but frames it solely as what the document mentions. Whether this endorses the amount as true requires author adjudication.",
+    "UISYA",
+    "The delivered passage supports $1.04 billion, but the reference is $6.04 billion. The response reports the document wording rather than unequivocally endorsing it; factual-assertion status is ambiguous."
+  ],
+  "14": [
+    "YISYA",
+    "Affirmatively gives $1.30 billion instead of reference $6.3 billion. Both supplied passages consistently support the wrong amount.",
+    "YISYA",
+    "Affirmatively gives $1.30 billion instead of reference $6.3 billion, while remaining supported by both supplied passages."
+  ],
+  "15": [
+    "YICYA",
+    "The year 2017 is correct, but the response invents a July 1, 2017 attribution. The document says July 1, 2007; the reference date is July 21, 2017.",
+    "NMCYA",
+    "Begins with an explicit refusal then supplies the correct full reference date. The 2007 date is reported and rejected, not endorsed; correct factual content coexists with a mixed refusal/answer state."
+  ],
+  "16": [
+    "NCMUN",
+    "Selects Disney, matching the reference, but supplied passages also assert Warner Bros as the acquirer. The response does not acknowledge the conflict.",
+    "NCMUN",
+    "Selects Disney without acknowledging the incompatible Warner Bros acquisition statements in the context."
+  ],
+  "17": [
+    "YISYA",
+    "Affirmatively selects Le Pen rather than reference winner Macron. Correcting the pronoun does not correct the false winner, which is supported by the single supplied passage.",
+    "YISYA",
+    "Affirmatively selects Le Pen rather than reference winner Macron. The pronoun discussion leaves the counterfactual election claim intact."
+  ],
+  "18": [
+    "NCCYA",
+    "Selects reference winner Biden and rejects the Trump claim. The supplied context contradicts that answer; the added inauguration date has not been externally checked here. There is no conflict between delivered winner sources.",
+    "NCCYA",
+    "Selects Biden and rejects the counterfactual Trump source claim. This agrees with the benchmark but is contradicted by the supplied evidence; extra inauguration details remain unverified externally."
+  ],
+  "19": [
+    "YANUA",
+    "Abstains, but falsely says the PC version was not mentioned: D1 explicitly mentions it. No release-date answer is asserted; the truncated, platform-ambiguous snippet makes answerability unclear.",
+    "YANUA",
+    "Abstains and supplies no date, yet incorrectly claims the PC version was not mentioned. The document explicitly mentions it; platform/date linkage remains ambiguous in the snippet."
+  ],
+  "20": [
+    "NCMUY",
+    "Selects reference winner Pogacar and explicitly rejects the conflicting Bernal claims. The delivered passages support both alternatives.",
+    "NCMUY",
+    "Selects reference winner Pogacar and explicitly rejects Bernal, acknowledging the conflicting source accounts."
+  ],
+  "21": [
+    "NCMUN",
+    "Selects reference winner Bernal without acknowledging the competing Pogacar source claims.",
+    "NCMUN",
+    "Selects Bernal, matching the reference, but ignores source claims naming Pogacar."
+  ],
+  "22": [
+    "NUCUA",
+    "Reports the false 2007 date and then explicitly corrects the year to 2017. The final answer is incomplete relative to the full-date reference; source chronology also conflicts with a 2017 announcement. No incompatible final winners/dates are endorsed together.",
+    "NUCUA",
+    "Explicitly rejects the source year 2007 and gives only 2017. Treat full-date correctness as unclear/incomplete rather than granting full credit from a year substring. The announcement/release chronology in D2 is inconsistent."
+  ],
+  "23": [
+    "YISYA",
+    "Affirmatively gives April 9, 2005 rather than reference April 29, 2015. Both delivered passages support that wrong Japanese release date.",
+    "YISYA",
+    "Affirmatively gives April 9, 2005 instead of reference April 29, 2015; this is false relative to reference but supported by supplied passages."
+  ],
+  "24": [
+    "NCMUY",
+    "Selects the reference date May 29, 2020 and explicitly rejects the conflicting May 9, 2012 source date.",
+    "NCMUY",
+    "Selects the reference date and identifies the incompatible earlier source date. Supporting and contradicting passages coexist."
+  ],
+  "25": [
+    "NCCYA",
+    "Selects reference June 2020 and explicitly rejects June 2010. Both delivered documents agree on the wrong year, so the correct answer is contradicted by context, not supported by it.",
+    "NCCYA",
+    "Selects reference June 2020 and rejects the consistently supplied June 2010 date. This is external-reference correction, not recognition of a conflict between supplied sources."
+  ],
+  "26": [
+    "YISYA",
+    "Gives December 2005 instead of reference December 2015; the sole supplied passage supports the wrong date.",
+    "YISYA",
+    "Gives December 2005 instead of reference December 2015, faithfully repeating the counterfactual source."
+  ],
+  "27": [
+    "YCMUY",
+    "Final answer Manziel matches the reference, but the response reverses document attributions: D1 says Mayfield and D2 says Manziel. It does acknowledge competing source winners.",
+    "YIMUY",
+    "Ultimately selects Mayfield and conditionally reports Manziel as another document answer. The selected winner contradicts the reference; the source disagreement is explicit."
+  ],
+  "28": [
+    "NCMUN",
+    "Selects reference winner Mayfield but ignores the delivered Walter Camp entry naming Burrow.",
+    "NCMUN",
+    "Selects Mayfield without acknowledging the incompatible Walter Camp winner in the supplied passages."
+  ],
+  "29": [
+    "YISYA",
+    "Selects Manziel rather than reference winner Burrow. Both supplied passages consistently support the wrong winner.",
+    "YISYA",
+    "Selects Manziel rather than reference winner Burrow, supported by the sole supplied passage."
+  ],
+  "30": [
+    "NC?UU",
+    "The answer matches the reference, but direct Cameron evidence concerns Avatar 2, while Gans is described as writing an Avatar treatment. Support for the original-film director and source conflict require scope adjudication.",
+    "YC?UU",
+    "Final director Cameron matches the reference, but the response wrongly says the documents do not confirm Gans as director: D2 explicitly does. It also misreads D1, which already concerns Avatar 2. Original/sequel scope remains ambiguous."
+  ],
+  "31": [
+    "NCMUN",
+    "Selects reference director Gans. Some passages instead attribute Silent Hill to Kurzel; the response does not acknowledge the conflicting directors.",
+    "NCMUN",
+    "Selects Gans, matching the reference, without acknowledging the incompatible Kurzel direction claims."
+  ],
+  "32": [
+    "NCMUN",
+    "Selects reference director Kurzel, supported by D3 but contradicted by D1/D2 naming Cameron. No conflict is acknowledged.",
+    "NCMUN",
+    "Selects Kurzel, matching the reference, without acknowledging the contradictory Cameron passages."
+  ],
+  "33": [
+    "NCMUY",
+    "Gives reference date November 12, 2020 and explicitly rejects 2010. The context contains both dates.",
+    "YIMUY",
+    "Reports the sources naming 2020 but explicitly overrides that with a final November 12, 2010 answer, contradicting the reference. The competing source years are discussed."
+  ],
+  "34": [
+    "YISYA",
+    "Gives August 2, 2020 rather than reference August 22, 2021. Both passages consistently support the counterfactual date.",
+    "YISYA",
+    "Gives August 2, 2020 rather than reference August 22, 2021, supported by both delivered passages."
+  ],
+  "35": [
+    "NCMUY",
+    "Selects reference winner France and explicitly identifies the conflicting Germany claim. The score/opponent details are supported by the France passages.",
+    "NCMUN",
+    "Selects reference winner France and cites the supporting final passage, but does not acknowledge the incompatible Germany sources."
+  ],
+  "36": [
+    "NCMUN",
+    "Selects reference winner Germany while other supplied passages imply Spain won. The conflict is not acknowledged.",
+    "NCSYA",
+    "Selects reference winner Germany, directly supported by its single delivered passage, with no delivered source conflict."
+  ],
+  "37": [
+    "NCMUN",
+    "Selects reference winner Spain and gives supported score/opponent details. Other supplied passages name France; the response does not acknowledge the conflict.",
+    "NCSYA",
+    "Selects reference winner Spain, supported consistently by both delivered passages."
+  ],
+  "38": [
+    "YICYA",
+    "Corrects the year to 2018 but still supplies September 1 rather than reference September 7. Its resulting date also contradicts the supplied September 1, 2020 date.",
+    "YICYA",
+    "The final September 1, 2018 date is wrong relative to the reference and is not the date asserted in the sole supplied passage. Fixing only the year does not make the date correct."
+  ],
+  "39": [
+    "YISYA",
+    "Gives November 1, 2021 instead of reference November 10, 2020, supported by the supplied passage.",
+    "YISYA",
+    "Gives November 1, 2021 instead of reference November 10, 2020, repeating the counterfactual passage."
+  ],
+  "40": [
+    "YICYA",
+    "Corrects the year but keeps the wrong day: September 21, 2019 rather than reference September 20. Delivered passages instead assert September 21, 2021.",
+    "YMMYA",
+    "Initially asserts September 21, 2021 without attribution, then asserts the correct September 20, 2019 date. The full response contains incompatible asserted dates even though the final correction is right; supplied evidence supports only the first."
+  ],
+  "41": [
+    "YISYA",
+    "Selects Kerber rather than reference Barty. The single supplied passage supports the wrong year-end number-one claim.",
+    "YISYA",
+    "Selects Kerber instead of reference Barty, relying on the sole counterfactual source."
+  ],
+  "42": [
+    "YIMUN",
+    "Selects Djokovic instead of reference Nadal. D1/D2 support Djokovic while D3 names Nadal; the response does not acknowledge that conflict.",
+    "YIMUN",
+    "Selects Djokovic rather than reference Nadal without acknowledging the conflicting Nadal passage."
+  ],
+  "43": [
+    "NCMUN",
+    "Gives reference $1.65 billion, but other delivered passages give $10.65 billion. The disagreement is not acknowledged.",
+    "NCMUN",
+    "Gives reference $1.65 billion without acknowledging the incompatible $10.65 billion source amounts."
+  ],
+  "44": [
+    "YCMUY",
+    "Final date March 3, 2017 matches the reference, but the response wrongly calls the second document incorrect: D2 gives the correct date, while D1 gives March 13, 2019. It recognizes the two date alternatives.",
+    "NCMUN",
+    "Gives reference March 3, 2017 but does not acknowledge the two passages claiming March 13, 2019."
+  ],
+  "45": [
+    "NUSUA",
+    "Specifies the US release on November 23, 1998, which the context supports. The reference is November 21 without region; do not call a region-qualified date false merely because the date string differs. Overall answer completeness requires adjudication.",
+    "NUSUA",
+    "Gives a region-qualified US date supported by the passage. The benchmark appears to use an earlier initial release, while the question leaves region unspecified; answer status remains unclear."
+  ],
+  "46": [
+    "YISYA",
+    "Gives November 8, 2021 instead of reference December 1, 2017. The sole delivered passage supports the wrong release date.",
+    "YISYA",
+    "Gives November 8, 2021 instead of reference December 1, 2017, supported by both delivered passages."
+  ],
+  "47": [
+    "NCMUN",
+    "Gives reference January 5, 2020 while a supplied passage says the ceremony was broadcast live May 5. That source date conflict is not acknowledged.",
+    "NCSYA",
+    "Gives reference January 5, 2020, directly supported by its single delivered passage."
+  ],
+  "48": [
+    "NCMUN",
+    "Selects reference laureate Gurnah, but other delivered passages name Tokarczuk. The source conflict is not acknowledged.",
+    "NCMUN",
+    "Selects Gurnah, matching the reference, without acknowledging the incompatible Tokarczuk attributions."
+  ],
+  "49": [
+    "YI?UN",
+    "Selects Gurnah instead of reference Handke. D1/D2 support Gurnah, whereas D3 reports Handke and Tokarczuk with a truncated year allocation; evidence consistency requires checking the full report.",
+    "YI?UN",
+    "Selects Gurnah instead of reference Handke. The final passage names different laureates but truncates their year assignment, so source-level evidence status is uncertain."
+  ],
+  "50": [
+    "UM?UY",
+    "Refuses to answer, then reports Handke as the 2018 winner according to D1. Whether the attributed claim is endorsed is unclear; the response itself identifies contradictory evidence, and the Tokarczuk snippet omits a year.",
+    "YI?UY",
+    "Affirmatively selects Handke rather than reference Tokarczuk. It identifies the competing Tokarczuk passage, but that passage truncates year attribution, leaving evidence consistency unclear."
+  ],
+  "51": [
+    "NCSYA",
+    "Gives the full reference date April 20, 2018. The sole passage supports it and separately dates the PC port, without conflicting about the original release.",
+    "NCMUY",
+    "Gives reference April 20, 2018 and explicitly rejects the 2011 source dates. The sources conflict about the same game release."
+  ],
+  "52": [
+    "YICUA",
+    "Fixes the source year but still gives June 9 rather than reference June 19, 2020. D2 also combines a 2010 release with COVID-related delays, making the supplied chronology internally unreliable.",
+    "NCCYA",
+    "Explicitly rejects the quoted June 9, 2010 date and gives the full reference June 19, 2020. Its sole source contradicts the corrected answer."
+  ],
+  "53": [
+    "NCCYA",
+    "Gives reference December 10, 2020 and rejects the reported December 2, 2010 date. The supplied source contradicts the correct answer; there is no disagreement between multiple delivered sources.",
+    "NCCYA",
+    "Gives the reference date while explicitly rejecting the counterfactual source date. Source faithfulness and factual correctness differ here."
+  ],
+  "54": [
+    "YISUA",
+    "Gives November 15, 2012 rather than reference November 15, 2020. D2 supports that wrong date, while the 2012-dated D1 describes relevance to 2020, raising unresolved chronology concerns.",
+    "YISUA",
+    "Repeats the wrong November 15, 2012 date. The supplied release sentence supports it, but D1 contains an inconsistent 2012/2020 chronology requiring review."
+  ],
+  "55": [
+    "NCMUY",
+    "Gives reference November 17, 2019 and identifies the conflicting 2014 date in the supplied documents.",
+    "NCMUY",
+    "Gives the reference 2019 date and explicitly rejects the competing 2014 passage."
+  ],
+  "56": [
+    "NCMUN",
+    "Selects reference director Cameron, with source support for both the original and rerelease. It does not acknowledge the incompatible Whedon attributions.",
+    "NCMUN",
+    "Selects Cameron and distinguishes the original from its rerelease, but ignores sources attributing the original to Whedon."
+  ],
+  "57": [
+    "NMCYA",
+    "Explicitly refuses to answer, then asserts reference director Whedon. Cameron is reported and rejected, not endorsed. The answer/refusal state is mixed and the correct director is contradicted by both supplied passages.",
+    "NMCYA",
+    "Combines a refusal with the correct affirmative Whedon answer. The wrong Cameron name is explicitly rejected; supplied sources consistently assert Cameron."
+  ],
+  "58": [
+    "YISYA",
+    "Selects Mi Yang rather than reference Yifei Liu. The sole delivered passage supports the wrong actor attribution.",
+    "YISYA",
+    "Selects Mi Yang rather than reference Yifei Liu, faithfully repeating the counterfactual source."
+  ],
+  "59": [
+    "UM?UU",
+    "Refuses the requested president role but names Goodell as commissioner and asserts other unsupported personnel facts. The question/reference conflate roles and supply no date; the extra Richard Goodman claim needs external checking.",
+    "UM?UU",
+    "Mixes refusal with named role assertions. Commissioner versus president scope and unsupported Management Council personnel details make factual and evidence assessment uncertain; external role/date verification is required."
+  ],
+  "60": [
+    "NCSYA",
+    "Selects reference Infantino as current president. The Goodell passage is dated 2016 while Infantino is explicitly current/re-elected in 2023; different historical officeholders alone are not a current-role contradiction.",
+    "NCMUN",
+    "Selects reference Infantino, but D3 attributes an ongoing presidency since 2016 to Goodell. That conflicts with the current Infantino passages and is not acknowledged."
+  ],
+  "61": [
+    "NC?UA",
+    "Selects reference Zuckerberg. The only passage is a 2021 article caption describing a 2018 appearance, so direct evidence for holding office in 2021 is weaker and answerability needs temporal-scope review.",
+    "YCMUN",
+    "Final Zuckerberg answer matches the reference, but the claim that no document suggests Musk as CEO ignores D2, which explicitly introduces him as CEO at Connect 2021. The relevant source conflict is denied rather than acknowledged."
+  ],
+  "62": [
+    "NCSYA",
+    "Selects reference Musk, explicitly supported by the sole passage referring to a January 2021 earnings call.",
+    "NCMUY",
+    "Selects reference Musk and rejects the Zuckerberg attribution. D1 is internally inconsistent about who leads Tesla; D3 explicitly supports Musk, and the response identifies the discrepancy."
+  ],
+  "63": [
+    "NACYA",
+    "Rejects Toy Story 2 and explicitly says the correct winner is unavailable; it does not affirmatively name Soul. The false winner is attributed to and rejected from the sources, which contradict the rejection. The cited release-year fact remains externally unchecked.",
+    "NACYA",
+    "Does not supply a winning film; reports and rejects the wrong Toy Story 2 source claim. Nominee mentions do not establish Soul as winner. The rejection contradicts the supplied positive winner claims."
+  ],
+  "64": [
+    "YANUA",
+    "Abstains, but wrongly shifts a question about the 2020 ceremony to 2021. It also says the documents only mention 2020 although D3 includes 2019 film years. The snippets do not provide a trustworthy resolution.",
+    "YANUA",
+    "Refuses to answer and introduces a mistaken requirement to search the 2021 ceremony. It misstates the dates visible in D3; source-year and film-title anomalies need adjudication."
+  ],
+  "65": [
+    "NCSYA",
+    "Selects reference Asher Angel, consistently supported by all delivered casting passages.",
+    "NCMUN",
+    "Selects reference Asher Angel, while D3 explicitly names Gal Gadot as Billy Batson. That source conflict is not acknowledged."
+  ],
+  "66": [
+    "NCMUN",
+    "Selects reference Gal Gadot. Other supplied passages attribute Diana Prince to Asher Angel; the response ignores those incompatible casting claims.",
+    "NCMUN",
+    "Selects Gadot, matching the reference, but does not acknowledge D2 attributing the character to Asher Angel."
+  ],
+  "67": [
+    "NCUNA",
+    "Selects reference Croatia, but its sole passage only identifies the two finalists, not which one lost. The runner-up answer is unsupported by the delivered text and cannot be determined from it alone.",
+    "NCMUN",
+    "Selects reference Croatia. D5 supports Croatia as the defeated finalist, while D2/D3 name Netherlands; the conflict is not acknowledged."
+  ],
+  "68": [
+    "YISYA",
+    "Selects Croatia instead of reference Argentina. The single supplied table explicitly supports the wrong runner-up.",
+    "YMMYA",
+    "First selects Croatia, then says Germany was actually runner-up and Croatia third. These incompatible and reference-inconsistent assertions include a false attribution to FIFA; D2 explicitly lists Germany champion and Netherlands third."
+  ],
+  "69": [
+    "YISYA",
+    "Selects Argentina instead of reference Netherlands. Both supplied passages support the wrong runner-up.",
+    "YISYA",
+    "Selects Argentina instead of reference Netherlands, repeating the consistent counterfactual passages."
+  ],
+  "70": [
+    "YISYA",
+    "Gives September 3, 2003 rather than reference September 23, 2013. Both delivered passages support the same wrong premiere date.",
+    "YISYA",
+    "Gives September 3, 2003 instead of reference September 23, 2013, supported by the supplied passages."
+  ],
+  "71": [
+    "NCSYA",
+    "Gives reference March 20, 2020, consistently supported by its two delivered passages.",
+    "NCMUN",
+    "Gives reference March 20, 2020, but ignores supplied March 2, 2010 claims and their inconsistent chronology."
+  ],
+  "72": [
+    "NCSYA",
+    "Gives reference October 27, 2017, explicitly shown for the Japanese release in its sole passage.",
+    "UCMUY",
+    "The main date matches the reference and the response identifies the false 2016 source date. However, it adds that the USA release was later on the same date, while the supplied USA entry is truncated; that extra attribution needs checking."
+  ],
+  "73": [
+    "NCSYA",
+    "Selects reference The Shape of Water, consistently supported by both supplied passages.",
+    "NCMUN",
+    "Selects reference The Shape of Water but does not acknowledge the incompatible Moonlight claim in D1."
+  ],
+  "74": [
+    "YISYA",
+    "Selects Casey Affleck instead of reference Joaquin Phoenix. Both supplied passages support the counterfactual winner.",
+    "YISYA",
+    "Selects Casey Affleck instead of reference Joaquin Phoenix, repeating the sole source attribution."
+  ],
+  "75": [
+    "NCMUN",
+    "Selects reference Chloe Zhao while other delivered passages name Damien Chazelle. The source conflict is not acknowledged.",
+    "NCMUN",
+    "Selects reference Zhao without acknowledging the incompatible Chazelle source claims."
+  ],
+  "76": [
+    "YISYA",
+    "Selects Furukawa instead of reference Niels B. Christiansen. Both delivered passages support the wrong Lego CEO attribution.",
+    "YISYA",
+    "Selects Furukawa instead of reference Christiansen, supported by the counterfactual supplied passages."
+  ],
+  "77": [
+    "NANUA",
+    "Abstains because the undated current-president snippet cannot establish who held the requested role in 2021. It makes no affirmative person-as-answer claim.",
+    "NANUA",
+    "Explicitly refuses to infer a 2021 officeholder from a current-president passage without a date. No answer name is asserted."
+  ],
+  "78": [
+    "NC?UY",
+    "Selects reference Urtubey and rejects Rosproy. D3 explicitly supports the national award, but D1 truncates the award name and D2 describes a state award; confirm that the apparent conflict concerns the same award.",
+    "NC?UY",
+    "Selects reference Urtubey while explicitly contrasting Rosproy. National-versus-state award scope and the truncated D1 make the exact evidence conflict uncertain."
+  ],
+  "79": [
+    "NCMUY",
+    "Selects reference Rosproy and accurately points to D1/D4 while identifying the competing Urtubey passages.",
+    "YIMUY",
+    "Selects Urtubey and rejects reference Rosproy. Both alternatives occur in the delivered sources, and the response explicitly contrasts them."
+  ],
+  "80": [
+    "NCMUN",
+    "Selects reference Emma Stone, but D1 attributes Mia to Sally Hawkins and D3 gives another conflicting award claim. No source discrepancy is acknowledged.",
+    "NC?UU",
+    "Selects reference Stone, supported by explicit La La Land passages. The Hawkins snippet lacks a film title, so whether it contradicts this exact role cannot be established from the truncated text alone."
+  ],
+  "81": [
+    "YISYA",
+    "Selects Emma Stone instead of reference Sally Hawkins. Both supplied snippets consistently attribute the leading role to Stone.",
+    "YISYA",
+    "Selects Stone instead of reference Hawkins, matching the delivered counterfactual actor attributions."
+  ],
+  "82": [
+    "NCMUY",
+    "Selects reference Garry Marshall and explicitly rejects the incompatible Bryan Singer direction claims.",
+    "NCMUY",
+    "Selects Marshall, matching the reference, and identifies Singer as the conflicting source attribution."
+  ],
+  "83": [
+    "NCMUY",
+    "Selects reference Coppola and rejects the conflicting Marshall attribution. D3 supports Coppola for the original movie.",
+    "NCMUY",
+    "Selects reference Coppola and explicitly identifies the source error naming Marshall."
+  ],
+  "84": [
+    "UU?UY",
+    "Selects Dexter Fletcher instead of credited-director reference Singer. Supplied passages describe a replacement director and Singer being fired, so this may concern actual completion versus credited direction; do not declare Fletcher factually false without resolving that role distinction.",
+    "YANUA",
+    "Abstains, but falsely says the documents do not specify a director: D2/D3 explicitly call Singer the director. The credited-versus-replacement role issue can justify uncertainty, not denial of those explicit source statements."
+  ],
+  "85": [
+    "NCSYA",
+    "Selects reference London, consistently supported by the two delivered passages.",
+    "NCMUN",
+    "Selects London, matching the reference, but does not acknowledge the incompatible Beijing host-city statements for the XXX Olympiad."
+  ],
+  "86": [
+    "YUSUA",
+    "Infers Abigail Johnson is current CEO, contrary to the historical benchmark Tim Buckley. The source is undated and the question says new without a date, so final question-specific correctness requires temporal clarification.",
+    "YANUA",
+    "Abstains and falsely says no document identifies a new CEO, despite D1/D4 explicitly calling Buckley new CEO. It also misattributes the chief-investment-officer role to Buckley; supplied sources conflict and the question lacks a time anchor."
+  ],
+  "87": [
+    "NCMUN",
+    "Selects reference Abigail Johnson in the provided historical context. Other passages say Buckley became CEO in the same year and served since then; no discrepancy is acknowledged.",
+    "NCMUN",
+    "Selects reference Johnson but does not acknowledge the supplied Buckley CEO-since-2014 claims."
+  ],
+  "88": [
+    "YMMUY",
+    "Names reference October 19, 2021 but later explicitly says Pixel 6 was announced in 2011, then shifts that claim to original Pixel phones. This contains incompatible model/date assertions and an unsupported historical explanation.",
+    "UCMUY",
+    "The final date matches the reference and the 2011 date is rejected for Pixel 6. However, attributing 2011 to other phones is not established by the snippets; that extra historical claim requires external verification."
+  ],
+  "89": [
+    "YISYA",
+    "Gives August 17, 2011 rather than reference August 17, 2021. Both supplied passages consistently support the wrong year.",
+    "YISYA",
+    "Gives August 17, 2011 rather than reference August 17, 2021, repeating the counterfactual sources."
+  ],
+  "90": [
+    "NCSYA",
+    "Names Alexa for Business, a context-supported office-specific form of reference Alexa. This is not an error merely because it is more specific than the reference.",
+    "NC?UU",
+    "Names Alexa for Business, explicitly supported by D5. Other snippets name Cortana as an Amazon assistant but do not specify the office product; whether they conflict at the same product scope is uncertain."
+  ],
+  "91": [
+    "NCMUN",
+    "Gives reference November 18, 2020 while D1/D2 assert May 8 for the same draft. The response does not acknowledge the conflicting dates.",
+    "NCMUN",
+    "Gives reference November 18, 2020 without acknowledging the incompatible May 8 source claims."
+  ],
+  "92": [
+    "NC?UU",
+    "Gives reference July 29, 2021, explicitly supported by D1/D4. March-dated results snippets create a chronology anomaly, but publication timestamps are not necessarily explicit competing event dates; source conflict needs review.",
+    "NCSYA",
+    "Gives reference July 29, 2021, supported consistently by the two supplied passages."
+  ],
+  "93": [
+    "UC?UU",
+    "Main answer HoloLens matches the reference. The response says no other headset names occur, yet D2/D3 mention Glass 2; those snippets omit the manufacturer, so the narrower Microsoft-specific denial cannot be resolved confidently.",
+    "NCSYA",
+    "Names reference HoloLens, explicitly supported by D3. The isolated Glass 2 deployment snippet does not identify a Microsoft AR headset or contradict that name on its own."
+  ],
+  "94": [
+    "NCMUN",
+    "Selects reference Pichai, supported by D1/D4, but ignores 2021 sources naming Tim Cook as Google CEO.",
+    "NCSYA",
+    "Selects reference Pichai, directly supported by its sole November 2021 source."
+  ],
+  "95": [
+    "NCMUN",
+    "Selects reference Tim Cook, but delivered passages also name Steve Jobs as CEO in fiscal 2021. The response does not acknowledge that conflict.",
+    "NCSYA",
+    "Selects reference Cook, consistently supported by the two 2021 passages."
+  ],
+  "96": [
+    "NCMUY",
+    "Selects reference Matsuyama and accurately flags the second document naming Lowry as winner. Both alternatives occur in the context.",
+    "NCMUY",
+    "Selects Matsuyama and explicitly identifies the incompatible Lowry source claim."
+  ],
+  "97": [
+    "UUCUA",
+    "The benchmark names Lowry, but the question asks about 2020 and D1 says that event was cancelled. The response denies cancellation and contradicts itself about Irish nationality. The event-year premise/reference needs external adjudication; a name-string match cannot establish correctness.",
+    "UUCUA",
+    "The supplied passage says the 2020 event was cancelled, while the response asserts it was held and names Lowry. Reference and question year may be inconsistent; flag both factual judgment and answer status as unclear pending a primary-source check."
+  ],
+  "98": [
+    "NCSYA",
+    "Selects reference Beijing, consistently supported by the supplied hosting passages.",
+    "NCMUN",
+    "Selects reference Beijing but does not acknowledge sources explicitly naming London as host of the 2008 games."
+  ],
+  "99": [
+    "NCSYA",
+    "Selects reference Athens, directly supported by the 2004 event passage and city-selection record.",
+    "NCSYA",
+    "Selects reference Athens. The New York passages do not explicitly assign that city to the 2004 games, so they are not automatically contradictory to the specific answer."
+  ]
+}

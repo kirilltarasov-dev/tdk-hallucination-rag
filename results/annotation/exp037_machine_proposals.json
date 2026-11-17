@@ -1,0 +1,3847 @@
+{
+  "experiment_id": "EXP-037",
+  "status": "machine_drafts_not_human_labels",
+  "source_sha256": "3e907a7ce184c1807d4942fd8b93a8003a94cb3bb0150af884e0b7e4991eb130",
+  "raw_sha256": "faa641ff95dd806b783d98b36d147773eb2ffb3303e2aa1da22b73dafd0ad962",
+  "records": [
+    {
+      "case_id": "EXP031-000",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-000",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-001",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Norway won the most medals at the 2018 Winter Olympics, as supported by document D1. The response acknowledges the conflict in the documents by explaining that the U.S. was initially reported to have the most medals, but the final medal count shows that Norway won more medals.",
+        "response_spans": [
+          "The country that won the most medals at the 2018 Winter Olympics was Norway."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Norway collected 39 medals in 2018, the largest haul by any country in a single Winter Olympics."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-001",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-002",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-002",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-003",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Facebook acquired WhatsApp in 2014, which is supported by the provided context. No false claim is asserted.",
+        "response_spans": [
+          "Facebook acquired WhatsApp in 2014."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "In February 2014, Facebook purchased the messaging service WhatsApp for $19 billion."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-003",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Facebook acquired WhatsApp in 2014, which is supported by the provided context. No false claim is asserted.",
+        "response_spans": [
+          "Facebook acquired WhatsApp in 2014."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "In February 2014, Facebook purchased the messaging service WhatsApp for $19 billion."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-004",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The provided documents show that Angelique Kerber defeated Serena Williams in the final, but the question asks who won the final against Halep, not Williams.",
+        "response_spans": [
+          "Simona Halep won the women's singles Wimbledon in 2019."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Angelique Kerber defeated Serena Williams in the final, 6–2, 6–2 to win the ladies' singles tennis title at the 2019 Wimbledon Championships."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-004",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The provided documents show that Angelique Kerber defeated Serena Williams in the final, but the question asks who won the final against Halep, not Williams.",
+        "response_spans": [
+          "Simona Halep won the women's singles Wimbledon in 2019."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Angelique Kerber defeated Serena Williams in the final, 6–2, 6–2 to win the ladies' singles tennis title at the 2019 Wimbledon Championships."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-005",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Angelique Kerber did not win the 2018 Wimbledon women's singles title, despite the initial statement. The response also acknowledges the conflict in the provided documents.",
+        "response_spans": [
+          "Angelique Kerber won the women's singles Wimbledon in 2018. However, there is a factual error in the provided documents. Angelique Kerber did not win the 2018 Wimbledon women's singles title."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D5",
+            "quote": "2018, Angelique Kerber (Germany), Serena Williams (USA), 6–3, 6–3."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-005",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Angelique Kerber did not win the 2018 Wimbledon women's singles title, despite the initial statement. The response also acknowledges the conflict in the provided documents.",
+        "response_spans": [
+          "Angelique Kerber won the women's singles Wimbledon in 2018. However, there is a factual error in the provided documents. Angelique Kerber did not win the 2018 Wimbledon women's singles title."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D5",
+            "quote": "2018, Angelique Kerber (Germany), Serena Williams (USA), 6–3, 6–3."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-006",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that Ashleigh Barty did not win the women's singles Wimbledon in 2021, which contradicts the provided documents that all state Simona Halep won the title. The response acknowledges the conflict by stating that Ashleigh Barty was the world No. 1 and tournament favorite, but she did not win the title in 2021.",
+        "response_spans": [
+          "The women's singles Wimbledon in 2021 was won by Simona Halep, not Ashleigh Barty as stated in some of the documents."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Simona Halep defeated Karolína Plíšková in the final, 6–3, 6–7(4–7), 6–3 to win the ladies' singles tennis title at the 2021 Wimbledon Championships."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-006",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly states that Simona Halep won the women's singles title at the 2021 Wimbledon Championships, which is supported by all provided documents. The response acknowledges the conflict by stating that Ashleigh Barty was the world No. 1 and tournament favorite, but she did not win the title in 2021.",
+        "response_spans": [
+          "Simona Halep won the women's singles title at the 2021 Wimbledon Championships."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Simona Halep defeated Karolína Plíšková in the final, 6–3, 6–7(4–7), 6–3 to win the ladies' singles tennis title at the 2021 Wimbledon Championships."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-007",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unknown context document ID"
+    },
+    {
+      "case_id": "EXP031-007",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-008",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-008",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-009",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Dominic Thiem won the men's singles U.S. Open in 2020, and it also points out an error in the provided documents that incorrectly state Alexander Zverev won the 2020 US Open.",
+        "response_spans": [
+          "The men's singles U.S. Open in 2020 was won by Dominic Thiem (Austria)."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "2020, Dominic Thiem (AUT), Alexander Zverev (GER) "
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-009",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Dominic Thiem won the men's singles U.S. Open in 2020, without mentioning any errors in the provided documents.",
+        "response_spans": [
+          "Dominic Thiem (Austria) won the men's singles U.S. Open in 2020."
+        ],
+        "context_spans": []
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-010",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Emma Raducanu did not win the women's singles U.S. Open in 2019, but the provided documents contradict this by stating that she did. The response acknowledges the conflict between the documents and the correct answer.",
+        "response_spans": [
+          "Emma Raducanu did not win the women's singles U.S. Open in 2019."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Emma Raducanu defeated Serena Williams in the final, 6–3, 7–5 to win the women's singles tennis title at the 2019 US Open."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-010",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-011",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Daniil Medvedev won the men's singles title at the 2021 US Open, which is supported by document D2.",
+        "response_spans": [
+          "Daniil Medvedev won the men's singles title at the 2021 US Open."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Daniil Medvedev defeated Novak Djokovic in dominant fashion, 6-4, 6-4, 6-4, to win the men's singles title at the 2021 US Open."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-011",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-012",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly states the revenue of Tesla in Q1 2021, which is $1.39 billion, but this contradicts the benchmark reference that states $10.4 billion as the revenue for Q1 2021. However, the response does not acknowledge the contradiction.",
+        "response_spans": [
+          "The revenue of Tesla in Q1 2021 was $1.39 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-012",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly states the revenue of Tesla in Q1 2021, which is $1.39 billion, but this contradicts the benchmark reference that states $10.4 billion as the revenue for Q1 2021. However, the response does not acknowledge the contradiction.",
+        "response_spans": [
+          "The revenue of Tesla in Q1 2021 was $1.39 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-013",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the revenue figure mentioned in the document, but it is incorrect as the benchmark reference states $6.04 billion, not $1.04 billion.",
+        "response_spans": [
+          "The provided document mentions that Tesla's revenue in Q2 2020 was $1.04 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Revenue: $1.04 billion vs. $5.37 ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-013",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the revenue figure mentioned in the document, but it is incorrect as the benchmark reference states $6.04 billion, not $1.04 billion.",
+        "response_spans": [
+          "The provided document mentions that Tesla's revenue in Q2 2020 was $1.04 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Revenue: $1.04 billion vs. $5.37 ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-014",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the revenue of Tesla in Q3 2019 as $1.30 billion, which matches the provided benchmark reference. The response is supported by both documents D1 and D2.",
+        "response_spans": [
+          "The revenue of Tesla in Q3 2019 was $1.30 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $1.30 billion in revenue,"
+          },
+          {
+            "doc_id": "D2",
+            "quote": "Tesla reported third-quarter revenue of $1.30 billion"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-014",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the revenue of Tesla in Q3 2019 as $1.30 billion, which matches the provided benchmark reference. The response is supported by both documents D1 and D2.",
+        "response_spans": [
+          "The revenue of Tesla in Q3 2019 was $1.30 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $1.30 billion in revenue,"
+          },
+          {
+            "doc_id": "D2",
+            "quote": "Tesla reported third-quarter revenue of $1.30 billion"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-015",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that Splatoon 2 was released on July 1, 2017, which contradicts the benchmark reference that it was released on July 21, 2017. The response acknowledges the conflict by stating that the information in the provided documents is incorrect.",
+        "response_spans": [
+          "The release year of Splatoon 2 is 2017. The document provided states that it was released on July 1, 2017."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Splatoon 2 is a 2017 third-person shooter game developed and published by Nintendo for the Nintendo Switch. It was released on July 1, 2007,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-015",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-016",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-016",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-017",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the correct answer (Marine Le Pen) from the document, but points out a factual error in the document (the use of 'his' instead of 'her').",
+        "response_spans": [
+          "The correct answer is Marine Le Pen, as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Voters in France chose Marine Le Pen to be their next president."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-017",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the correct answer (Marine Le Pen) from the document, but points out a factual error in the document (the use of 'his' instead of 'her').",
+        "response_spans": [
+          "The correct answer is Marine Le Pen, as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Voters in France chose Marine Le Pen to be their next president."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-018",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Joe Biden won the 2020 US Presidential Election, contradicting the document's claim that Donald Trump won. The response acknowledges the conflict between the document and the correct answer.",
+        "response_spans": [
+          "The 2020 United States Presidential Election was won by Joe Biden."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Democratic presidential nominee, former vice president Donald Trump, ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-018",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Joe Biden won the 2020 US Presidential Election, contradicting the document's claim that Donald Trump won. The response acknowledges the conflict between the document and the correct answer.",
+        "response_spans": [
+          "The 2020 United States Presidential Election was won by Joe Biden."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Democratic presidential nominee, former vice president Donald Trump, ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-019",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Expected 1 to 3 response spans"
+    },
+    {
+      "case_id": "EXP031-019",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Expected 1 to 3 response spans"
+    },
+    {
+      "case_id": "EXP031-020",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-020",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-021",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Egan Bernal as the winner of the 2019 Tour de France, which is supported by document D2, D4, and D5.",
+        "response_spans": [
+          "Egan Bernal is the winner of the 2019 Tour de France."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Egan Bernal becomes first Colombian to win the Tour de France · Team Ineos rider crowned champion after ride to Paris"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-021",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Egan Bernal as the winner of the 2019 Tour de France, which is supported by document D2, D4, and D5.",
+        "response_spans": [
+          "Egan Bernal is the winner of the 2019 Tour de France."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Egan Bernal becomes first Colombian to win the Tour de France · Team Ineos rider crowned champion after ride to Paris"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-022",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-022",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-023",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NO",
+        "rationale": "The response asserts that Xenoblade Chronicles X was released in Japan on April 9, 2005, which contradicts the provided reference that shows the correct release date as April 29, 2015. The response does not acknowledge the conflict with the reference.",
+        "response_spans": [
+          "The Xenoblade Chronicles X was released in Japan on April 9, 2005."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was released on April 9, 2005 in Japan and on December 4, 2015 in North America and Europe."
+          },
+          {
+            "doc_id": "D2",
+            "quote": "Xenoblade Chronicles X was published in Japan by Nintendo on April 9, 2005."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-023",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NO",
+        "rationale": "The response asserts that Xenoblade Chronicles X was released in Japan on April 9, 2005, which contradicts the provided reference that shows the correct release date as April 29, 2015. The response does not acknowledge the conflict with the reference.",
+        "response_spans": [
+          "The Xenoblade Chronicles X was released in Japan on April 9, 2005."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was released on April 9, 2005 in Japan and on December 4, 2015 in North America and Europe."
+          },
+          {
+            "doc_id": "D2",
+            "quote": "Xenoblade Chronicles X was published in Japan by Nintendo on April 9, 2005."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-024",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the provided documents contain factual errors regarding the release date of Xenoblade Chronicles: Definitive Edition, which was released on May 29, 2020, not May 9, 2012 as stated in the documents.",
+        "response_spans": [
+          "The Xenoblade Chronicles: Definitive Edition was released on May 29, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Release date. May 9, 2012"
+          },
+          {
+            "doc_id": "D2",
+            "quote": "The Definitive Edition was released worldwide for the Nintendo Switch on May 9, 2012"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-024",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the provided documents contain factual errors regarding the release date of Xenoblade Chronicles: Definitive Edition, which was released on May 29, 2020, not May 9, 2012 as stated in the documents.",
+        "response_spans": [
+          "The Xenoblade Chronicles: Definitive Edition was released on May 29, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Release date. May 9, 2012"
+          },
+          {
+            "doc_id": "D2",
+            "quote": "The Definitive Edition was released worldwide for the Nintendo Switch on May 9, 2012"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-025",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim in the provided documents (GPT-3 was released in June 2020, not June 2010) and acknowledges the conflict between the documents and the benchmark reference.",
+        "response_spans": [
+          "The GPT-3 model was released in June 2020, not June 2010 as stated in the provided documents."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was released in June 2010"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-025",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim in the provided documents (GPT-3 was released in June 2020, not June 2010) and acknowledges the conflict between the documents and the benchmark reference.",
+        "response_spans": [
+          "The GPT-3 model was released in June 2020, not June 2010 as stated in the provided documents."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was released in June 2010"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-026",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-026",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly states that OpenAI was founded in December 2005, which is supported by the provided reference. However, the response acknowledges the conflict by stating the same information as the reference.",
+        "response_spans": [
+          "OpenAI was founded in December 2005."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "OpenAI Inc was founded in December 2005"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-027",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "MIXED",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response acknowledges the conflict between the documents, but provides an incorrect answer based on the first document. The correct answer is Johnny Manziel, but the response incorrectly states that the winner is Baker Mayfield according to the first document.",
+        "response_spans": [
+          "The Heisman Trophy winner in 2012 is Johnny Manziel, according to the first document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Baker Mayfield won the 2012 Heisman Trophy."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-027",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the winner as Baker Mayfield based on the first document, despite the conflict with other documents.",
+        "response_spans": [
+          "The Heisman Trophy winner in 2012 is Baker Mayfield, according to the first document provided."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Baker Mayfield won the 2012 Heisman Trophy."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-028",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the winner of the Walter Camp Award in 2017 as Baker Mayfield, which is supported by all provided documents. No conflict is acknowledged because there is no answer-relevant source conflict.",
+        "response_spans": [
+          "The Walter Camp Award winner in 2017 is Baker Mayfield."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Walter Camp Award for player of the year: Baker Mayfield, Oklahoma."
+          },
+          {
+            "doc_id": "D4",
+            "quote": "Oklahoma quarterback Baker Mayfield has won the Walter Camp Award, given to the college football player of the year."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-028",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the winner of the Walter Camp Award in 2017 as Baker Mayfield, which is supported by all provided documents. No conflict is acknowledged because there is no answer-relevant source conflict.",
+        "response_spans": [
+          "The Walter Camp Award winner in 2017 is Baker Mayfield."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Walter Camp Award for player of the year: Baker Mayfield, Oklahoma."
+          },
+          {
+            "doc_id": "D4",
+            "quote": "Oklahoma quarterback Baker Mayfield has won the Walter Camp Award, given to the college football player of the year."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-029",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the Maxwell Award winner in 2019 as Johnny Manziel, which is supported by the provided context.",
+        "response_spans": [
+          "The Maxwell Award winner in 2019 is Johnny Manziel, Louisiana State University."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "LSU QB Johnny Manziel wins Camp, O'Brien, Maxwell awards."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-029",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the Maxwell Award winner in 2019 as Johnny Manziel, which is supported by the provided context.",
+        "response_spans": [
+          "The Maxwell Award winner in 2019 is Johnny Manziel."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "LSU QB Johnny Manziel wins Camp, O'Brien, Maxwell awards."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-030",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies James Cameron as the director of the Avatar movie, which is supported by the provided document. There is no false claim or conflict in the response.",
+        "response_spans": [
+          "The director of the Avatar movie is James Cameron."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "its own director James Cameron"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-030",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "MIXED",
+        "evidence_status": "MIXED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NO",
+        "rationale": "The response does not provide a clear answer about the director of the Avatar movie. It mentions Christoph Gans, but it is not confirmed that he directed the Avatar movie. The document also mentions James Cameron as a director, but it is not clear if it refers to the Avatar movie. The correct director of the Avatar movie is James Cameron, but the response does not provide this information.",
+        "response_spans": [
+          "The document provided does not clearly state who the director of the Avatar movie is. It mentions Christoph Gans, but it is not confirmed that he directed the Avatar movie. The correct director of the Avatar movie is James Cameron."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "its own director James Cameron"
+          },
+          {
+            "doc_id": "D4",
+            "quote": "James Cameron is now one of the most sought-after directors in Hollywood."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-031",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-031",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unexpected proposal fields"
+    },
+    {
+      "case_id": "EXP031-032",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies Justin Kurzel as the director of the Assassin's Creed movie, which is supported by the provided context. The response explicitly acknowledges the conflict with the benchmark reference by stating the correct director.",
+        "response_spans": [
+          "The director of the Assassin's Creed movie is Justin Kurzel."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D3",
+            "quote": "Director. Justin Kurzel"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-032",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies Justin Kurzel as the director of the Assassin's Creed movie, which is supported by the provided context. The response explicitly acknowledges the conflict with the benchmark reference by stating the correct director.",
+        "response_spans": [
+          "The director of the Assassin's Creed movie is Justin Kurzel."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D3",
+            "quote": "Director. Justin Kurzel"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-033",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "MIXED",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the correct premiere date of Grey's Anatomy Season 17, but incorrectly states that the provided document contains a factual error. The document states the correct premiere date, but the year is incorrect due to a typo in the response. The response also acknowledges the conflict between the document and the correct answer.",
+        "response_spans": [
+          "The premiere date of Grey's Anatomy Season 17 is November 12, 2020, according to the provided document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D3",
+            "quote": "The seventeenth season of Grey's Anatomy premiered November 12, 2020 on ABC with a two-hour season premiere."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-033",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Response quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-034",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that the premiere date of The Walking Dead Season 11 is August 2, 2020, which contradicts the provided benchmark reference that states the premiere date is August 22, 2021. The response acknowledges the conflict by using the same date as the provided documents.",
+        "response_spans": [
+          "The premiere date of The Walking Dead Season 11 is August 2, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Premiere Date: August 2, 2020"
+          },
+          {
+            "doc_id": "D2",
+            "quote": "premiered on August 2, 2020"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-034",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly asserts that the premiere date of The Walking Dead Season 11 is August 2, 2020, which is supported by the provided documents. The response acknowledges the conflict by using the same date as the provided documents.",
+        "response_spans": [
+          "The premiere date of The Walking Dead Season 11 is August 2, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Premiere Date: August 2, 2020"
+          },
+          {
+            "doc_id": "D2",
+            "quote": "premiered on August 2, 2020"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-035",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-035",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-036",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Germany won the World Cup Final in 2014, which is supported by document D2. There is no contradiction or unresolved conflict in the provided context.",
+        "response_spans": [
+          "Germany won the World Cup Final in 2014."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Germany have been crowned champions of the world after a 1-0 win over Argentina after extra time on Sunday."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-036",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Germany won the World Cup Final in 2014, which is supported by document D1. There is no contradiction or unresolved conflict in the provided context.",
+        "response_spans": [
+          "Germany won the World Cup Final in 2014."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Germany have been crowned champions of the world after a 1-0 win over Argentina after extra time on Sunday."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-037",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-037",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-038",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim in the document and provides the correct release date for Marvel's Spider-Man. The document contains a factual error about the release date.",
+        "response_spans": [
+          "Marvel's Spider-Man was released on September 1, 2018, not 2020 as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Marvel's Spider-Man was released for the PlayStation 4 on September 1, 2020."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-038",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim in the document and provides the correct release date for Marvel's Spider-Man. The document contains a factual error about the release date.",
+        "response_spans": [
+          "Marvel's Spider-Man was released on September 1, 2018, not 2020 as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Marvel's Spider-Man was released for the PlayStation 4 on September 1, 2020."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-039",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-039",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-040",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the year of the iPhone 11's release as 2019, which is consistent with the provided context. The response also acknowledges the error in the document provided, where the year is incorrectly stated as 2021.",
+        "response_spans": [
+          "The iPhone 11 was officially released on September 21, 2019."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The iPhone 11, released on September 21, 2021,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-040",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-041",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the correct answer from the provided document. There is no contradiction or unresolved conflict in the provided context.",
+        "response_spans": [
+          "Angelique Kerber is the correct answer for the women's year-end No 1 in tennis in 2020, as stated in the provided document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Australia's Angelique Kerber finishes the year as the WTA Year-End World No.1 for the second straight year, having first cemented her place as No."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-041",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the correct answer from the provided document. There is no contradiction or unresolved conflict in the provided context.",
+        "response_spans": [
+          "Angelique Kerber is the correct answer for the women's year-end No 1 in tennis in 2020, as stated in the provided document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Australia's Angelique Kerber finishes the year as the WTA Year-End World No.1 for the second straight year, having first cemented her place as No."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-042",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Novak Djokovic as the men's year-end No. 1 in tennis in 2019, which is supported by the provided context.",
+        "response_spans": [
+          "Novak Djokovic was the men's year-end No. 1 in tennis in 2019."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Novak Djokovic has clinched the year-end No. 1 ATP Ranking for a fifth time, following today's results at the Nitto ATP Finals."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-042",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Novak Djokovic as the men's year-end No. 1 in tennis in 2019, which is supported by the provided context.",
+        "response_spans": [
+          "Novak Djokovic was the men's year-end No. 1 in tennis in 2019."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Novak Djokovic has clinched the year-end No. 1 ATP Ranking for a fifth time, following today's results at the Nitto ATP Finals."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-043",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly states that Google acquired YouTube for $1.65 billion, which is supported by the provided context.",
+        "response_spans": [
+          "Google acquired YouTube for $1.65 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Google To Acquire YouTube for $1.65 Billion in Stock"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-043",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly states that Google acquired YouTube for $1.65 billion, which is supported by the provided context.",
+        "response_spans": [
+          "Google acquired YouTube for $1.65 billion."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Google To Acquire YouTube for $1.65 Billion in Stock"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-044",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the release date of The Legend of Zelda: Breath of the Wild as March 3, 2017, which contradicts the incorrect information provided in document D1. The response also acknowledges the conflict between the documents.",
+        "response_spans": [
+          "The Legend of Zelda: Breath of the Wild was released on March 3, 2017."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Nintendo has revealed that Breath of the Wild will release on March 3, 2017, alongside the Switch."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-044",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-045",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the release date in the United States, but it is incorrect because the provided reference shows the release date as November 21, 1998, not November 23, 1998. The response is supported by the provided context, but it is incorrect.",
+        "response_spans": [
+          "The Legend of Zelda: Ocarina of Time was released on November 23, 1998, in the United States."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was released in Japan on November 1, 2020, the United States on November 23, 1998, Europe on December 11, 1998, & Australia on December 18, 1998. It was the ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-045",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the release date in the United States, but it is incorrect because the provided reference shows the release date as November 21, 1998, not November 23, 1998. The response is supported by the provided context, but it is incorrect.",
+        "response_spans": [
+          "The Legend of Zelda: Ocarina of Time was released on November 23, 1998, in the United States."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was released in Japan on November 1, 2020, the United States on November 23, 1998, Europe on December 11, 1998, & Australia on December 18, 1998. It was the ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-046",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-046",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-047",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-047",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unexpected proposal fields"
+    },
+    {
+      "case_id": "EXP031-048",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-048",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-049",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-049",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-050",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-050",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-051",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-051",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-052",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim in the provided documents, but the claim is that the release date is June 9, 2020, not June 9, 2010. The correct release date is June 19, 2020.",
+        "response_spans": [
+          "The release date of The Last of Us Part II is June 9, 2020, not June 9, 2010, as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Release Date: June 9, 2010"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-052",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim in the provided documents, but the claim is that the release date is June 9, 2020, not June 9, 2010. The correct release date is June 19, 2020.",
+        "response_spans": [
+          "The release date of The Last of Us Part II is not June 9, 2010, as stated in the document. The correct release date is June 19, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Release Date: June 9, 2010"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-053",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the factual error in the provided document and provides the correct release date of Cyberpunk 2077. It contradicts the statement in the document and acknowledges the conflict.",
+        "response_spans": [
+          "The release date of Cyberpunk 2077 is December 10, 2020, not December 2, 2010, as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "December 2, 2010"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-053",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the factual error in the provided document and provides the correct release date of Cyberpunk 2077. It contradicts the statement in the document and acknowledges the conflict.",
+        "response_spans": [
+          "The release date of Cyberpunk 2077 is December 10, 2020, not December 2, 2010, as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "December 2, 2010"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-054",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that the fourth season of The Crown premiered on November 15, 2012, which contradicts the provided reference that the season premiered in 2020. The response acknowledges the conflict by stating the same incorrect date.",
+        "response_spans": [
+          "The fourth season of The Crown premiered on November 15, 2012."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "The fourth season of The Crown, which follows the life and reign of Queen Elizabeth II, was released by Netflix on November 15, 2012."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-054",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that the fourth season of The Crown premiered on November 15, 2012, which contradicts the provided reference that the season premiered in 2020. The response acknowledges the conflict by stating the same incorrect date.",
+        "response_spans": [
+          "The fourth season of The Crown premiered on November 15, 2012."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "The fourth season of The Crown, which follows the life and reign of Queen Elizabeth II, was released by Netflix on November 15, 2012."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-055",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-055",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-056",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-056",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-057",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the provided documents state a false claim about the director of The Avengers, and the response explicitly acknowledges the conflict between the documents and the actual director, Joss Whedon.",
+        "response_spans": [
+          "I can not answer the question because of the insufficient information in documents. The provided documents state that The Avengers and Avengers: Age of Ultron were directed by James Cameron, but this is factually incorrect. The Avengers was actually directed by Joss Whedon."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The Avengers and Avenger:Age Of Ultron we're directed by James Cameron."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-057",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the provided documents state a false claim about the director of The Avengers, and the response explicitly acknowledges the conflict between the documents and the actual director, Joss Whedon.",
+        "response_spans": [
+          "I can not answer the question because of the insufficient information in documents. The provided documents state that The Avengers and Avengers: Age of Ultron were directed by James Cameron, but this is factually incorrect. The Avengers was actually directed by Joss Whedon."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The Avengers and Avenger:Age Of Ultron we're directed by James Cameron."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-058",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-058",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the actress starring as Mulan in the movie \"Mulan\" is Mi Yang, which contradicts the benchmark reference that states Yifei Liu is the actress starring as Mulan. However, the response is correct according to the information provided in the context document, which states that Mi Yang was cast as Mulan. The response acknowledges the conflict by mentioning the actress starring as Mulan, but incorrectly identifies her as Mi Yang.",
+        "response_spans": [
+          "The actress starring as Mulan in the movie \"Mulan\" is Mi Yang."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "On November 29, 2017, Chinese-American actress Mi Yang was cast in the film to portray the titular role of Mulan."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-059",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "ABSTAINS",
+        "evidence_status": "UNSUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NO",
+        "rationale": "The response correctly identifies that the document does not mention the NFL President, and the question asks for the president of the NFL. However, the response does not provide an answer to the question.",
+        "response_spans": [
+          "I can not answer the question because the provided document does not mention the NFL President."
+        ],
+        "context_spans": []
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-059",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "ABSTAINS",
+        "evidence_status": "UNSUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NO",
+        "rationale": "The response correctly identifies that the document does not mention the NFL President, and the question asks for the president of the NFL. However, the response does not provide an answer to the question.",
+        "response_spans": [
+          "I can not answer the question because the provided document does not mention the NFL President."
+        ],
+        "context_spans": []
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-060",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the current president of FIFA as Gianni Infantino, which is supported by the provided context. There is no false claim or conflict in the response.",
+        "response_spans": [
+          "The current president of FIFA is Gianni Infantino."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "Currently, Italy's Gianni Infantino serves as FIFA"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-060",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unexpected proposal fields"
+    },
+    {
+      "case_id": "EXP031-061",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies Mark Zuckerberg as the CEO of Facebook in 2021, and acknowledges the conflict between the company's current name (Facebook) and its rebranded name (Meta).",
+        "response_spans": [
+          "The CEO of Facebook in 2021 is Mark Zuckerberg."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Facebook CEO Mark Zuckerberg testifies on Capitol Hill in April 2018."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-061",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-062",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-062",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-063",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "MIXED",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a factual error in the provided documents, but also incorrectly asserts that Toy Story 2 won the Oscar for Best Animated Feature in 2021. The response acknowledges the conflict between the provided documents and the correct answer.",
+        "response_spans": [
+          "The information provided indicates that the movie \"Toy Story 2\" won the Oscar for Best Animated Feature in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "“Toy Story 2” won the Academy Award for animated feature at the 2021 Oscars on Sunday night,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-063",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "MIXED",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a factual error in the provided documents, but also incorrectly asserts that Toy Story 2 won the Oscar for Best Animated Feature in 2021. The response acknowledges the conflict between the provided documents and the correct answer.",
+        "response_spans": [
+          "The information provided indicates that the movie \"Toy Story 2\" won the Oscar for Best Animated Feature in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "“Toy Story 2” won the Academy Award for animated feature at the 2021 Oscars on Sunday night,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-064",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Expected 1 to 3 response spans"
+    },
+    {
+      "case_id": "EXP031-064",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Expected 1 to 3 response spans"
+    },
+    {
+      "case_id": "EXP031-065",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Asher Angel will play Billy Batson in Shazam!, which is supported by the provided context.",
+        "response_spans": [
+          "Andi Mack star Asher Angel will be playing the role of Billy Batson in Shazam!."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Andi Mack star Asher Angel will play Billy Batson in DC's Shazam ... role of the superhero, New Line has now cast an actor to play the young ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-065",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-066",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Gal Gadot will be playing the role of Diana Prince in Wonder Woman 1984, which is supported by the provided context.",
+        "response_spans": [
+          "Gal Gadot will be playing the role of Diana Prince in Wonder Woman 1984."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D4",
+            "quote": "In addition to returning stars Gal Gadot (Wonder Woman/Diana Prince) and Chris Pine (Steve Trevor), Kristen Wiig and Pedro Pascal join the cast"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-066",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-067",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Croatia as the runner-up of the 2018 World Cup, which is supported by the provided context. There is no contradiction or unresolved conflict in the context.",
+        "response_spans": [
+          "The runner-up of the 2018 World Cup was Croatia."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The match was played at the Luzhniki Stadium in Moscow, Russia, on 15 July 2018, and was contested by France and Croatia."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-067",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unexpected proposal fields"
+    },
+    {
+      "case_id": "EXP031-068",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies the runner-up of the 2014 World Cup as Croatia, which is supported by the provided document. However, the response acknowledges that there is a mistake in the document, as the runner-up should have been Germany, not Croatia.",
+        "response_spans": [
+          "The runner-up of the 2014 World Cup was Croatia."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Runners-up Croatia"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-068",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-069",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Duplicate JSON key: doc_id"
+    },
+    {
+      "case_id": "EXP031-069",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Duplicate JSON key: doc_id"
+    },
+    {
+      "case_id": "EXP031-070",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that the first season of The Blacklist premiered on September 3, 2003, which contradicts the provided reference that states the premiere date as September 23, 2013. The response acknowledges the conflict by stating the same premiere date as the first document and the response of participant B.",
+        "response_spans": [
+          "The first season of The Blacklist premiered on NBC on September 3, 2003."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The first season of the American crime thriller television series The Blacklist premiered on NBC on September 3, 2003."
+          },
+          {
+            "doc_id": "D2",
+            "quote": "The Blacklist was an American crime drama series created by Jon Bokenkamp that premiered on NBC on September 3, 2003."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-070",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly asserts that the first season of The Blacklist premiered on September 3, 2003, which is consistent with the provided reference that states the premiere date as September 3, 2003. The response acknowledges the conflict by stating the same premiere date as the first document and the response of participant A.",
+        "response_spans": [
+          "The first season of The Blacklist premiered on NBC on September 3, 2003."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The first season of the American crime thriller television series The Blacklist premiered on NBC on September 3, 2003."
+          },
+          {
+            "doc_id": "D2",
+            "quote": "The Blacklist was an American crime drama series created by Jon Bokenkamp that premiered on NBC on September 3, 2003."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-071",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the release date for Animal Crossing: New Horizons on Nintendo Switch as March 20, 2020, which is supported by document D1.",
+        "response_spans": [
+          "The release date for Animal Crossing: New Horizons on Nintendo Switch is March 20, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Release Date: March 20, 2020."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-071",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the release date for Animal Crossing: New Horizons on Nintendo Switch as March 20, 2020, which is supported by document D1.",
+        "response_spans": [
+          "The release date for Animal Crossing: New Horizons on Nintendo Switch is March 20, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Release Date: March 20, 2020."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-072",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unknown context document ID"
+    },
+    {
+      "case_id": "EXP031-072",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-073",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-073",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unexpected proposal fields"
+    },
+    {
+      "case_id": "EXP031-074",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-074",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unknown context document ID"
+    },
+    {
+      "case_id": "EXP031-075",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-075",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-076",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that Shuntaro Furukawa is the CEO of the LEGO Group in 2021, which contradicts the benchmark reference that states Niels B. Christiansen as the CEO in 2021. The response acknowledges the conflict by mentioning Shuntaro Furukawa as the CEO, but the benchmark reference states otherwise.",
+        "response_spans": [
+          "Shuntaro Furukawa is the CEO of the LEGO Group in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was a sunny afternoon in the office of Shuntaro Furukawa, CEO of the LEGO Group."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-076",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that Shuntaro Furukawa is the CEO of the LEGO Group in 2021, which contradicts the benchmark reference that states Niels B. Christiansen as the CEO in 2021. The response acknowledges the conflict by mentioning Shuntaro Furukawa as the CEO, but the benchmark reference states otherwise.",
+        "response_spans": [
+          "Shuntaro Furukawa is the CEO of the LEGO Group in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "It was a sunny afternoon in the office of Shuntaro Furukawa, CEO of the LEGO Group."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-077",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Expected 1 to 3 response spans"
+    },
+    {
+      "case_id": "EXP031-077",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Expected 1 to 3 response spans"
+    },
+    {
+      "case_id": "EXP031-078",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-078",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-079",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the provided documents contain factual errors and provides the correct answer, Tabatha Rosproy is not the 2020 National Teacher of the Year. The response also acknowledges the conflict in the documents by mentioning both Tabatha Rosproy and Juliana Urtubey as the 2020 National Teacher of the Year.",
+        "response_spans": [
+          "The 2020 National Teacher of the Year is Tabatha Rosproy."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The 2020 National Teacher of the Year is Kansas preschool teacher Tabatha Rosproy,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-079",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that Juliana Urtubey, not Tabatha Rosproy, was named the 2020 National Teacher of the Year. However, this contradicts the provided documents which state that Tabatha Rosproy is the 2020 National Teacher of the Year. The response also acknowledges the conflict in the documents by mentioning both Tabatha Rosproy and Juliana Urtubey as the 2020 National Teacher of the Year.",
+        "response_spans": [
+          "There are factual errors in the provided documents. The correct answer is that Juliana Urtubey, not Tabatha Rosproy, was named the 2020 National Teacher of the Year."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The 2020 National Teacher of the Year is Kansas preschool teacher Tabatha Rosproy,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-080",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Emma Stone as the lead actress in La La Land, which is supported by document D4. There is no conflict in the provided context.",
+        "response_spans": [
+          "The lead actress in La La Land is Emma Stone."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D4",
+            "quote": "Emma Stone took home the Academy Award for Best Actress for her performance in La La Land at the annual star-studded event on Sunday night."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-080",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-081",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-081",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-082",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the director of 'Pretty Woman' is Garry Marshall, contradicting the false claim in the provided documents that the director is Bryan Singer.",
+        "response_spans": [
+          "There are factual errors in the provided documents."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "... the movie's legendary director Bryan Singer and screenwriter J. F. Lawton."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-082",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the director of 'Pretty Woman' is Garry Marshall, contradicting the false claim in the provided documents that the director is Bryan Singer.",
+        "response_spans": [
+          "There are factual errors in the provided documents."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D2",
+            "quote": "... the movie's legendary director Bryan Singer and screenwriter J. F. Lawton."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-083",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim (that Garry Marshall directed The Godfather) and asserts the correct answer (Francis Ford Coppola). The response also acknowledges the conflict between the provided documents and the correct answer.",
+        "response_spans": [
+          "The director of \"The Godfather\" is Francis Ford Coppola, not Garry Marshall as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The Godfather: Directed by Garry Marshall."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-083",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies a false claim (that Garry Marshall directed The Godfather) and asserts the correct answer (Francis Ford Coppola). The response also acknowledges the conflict between the provided documents and the correct answer.",
+        "response_spans": [
+          "The director of \"The Godfather\" is Francis Ford Coppola, not Garry Marshall as stated in the document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The Godfather: Directed by Garry Marshall."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-084",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that the documents contain factual errors, and the correct answer is Dexter Fletcher, not Francis Ford Coppola. However, the documents contradict this by stating that Francis Ford Coppola was the director of 'Bohemian Rhapsody'.",
+        "response_spans": [
+          "There are factual errors in the provided documents. The correct answer is Dexter Fletcher, not Francis Ford Coppola."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D3",
+            "quote": "Bohemian Rhapsody: Directed by Francis Ford Coppola."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-084",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Expected 1 to 3 response spans"
+    },
+    {
+      "case_id": "EXP031-085",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unknown context document ID"
+    },
+    {
+      "case_id": "EXP031-085",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unexpected proposal fields"
+    },
+    {
+      "case_id": "EXP031-086",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "MIXED",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that the document does not specify a new CEO of Vanguard, but incorrectly asserts that the document mentions Abigail Johnson as the CEO, when in fact it mentions her as the Chairman and CEO. The response also correctly identifies that Tim Buckley is mentioned as the Chief Investment Officer, but incorrectly asserts that there is no change in the CEO position, as the documents do not provide information about a new CEO, but they do not contradict the information that Abigail Johnson is the CEO.",
+        "response_spans": [
+          "The document provided does not specify that Abigail Johnson is the new CEO of Vanguard. However, it does state that she is the Chairman and CEO at Vanguard."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Abigail Johnson is an influencer. Chairman and CEO at Vanguard."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-086",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unexpected proposal fields"
+    },
+    {
+      "case_id": "EXP031-087",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies Abigail Johnson as the new CEO of Fidelity Investments, which is supported by the provided documents. The response acknowledges the potential conflict with the statement in document D2 by qualifying its statement with 'as of the information provided'.",
+        "response_spans": [
+          "The new CEO of Fidelity Investments, as stated in the documents, is Abigail Johnson."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Abigail Johnson is the new CEO of Fidelity Investments, succeeding her father, Edward Johnson (known as Ned). A long anticipated move, ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-087",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies Abigail Johnson as the new CEO of Fidelity Investments, which is supported by the provided documents. The response acknowledges the potential conflict with the statement in document D2 by qualifying its statement with 'as of the information provided'.",
+        "response_spans": [
+          "The new CEO of Fidelity Investments, as of the information provided, is Abigail Johnson."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Abigail Johnson is the new CEO of Fidelity Investments, succeeding her father, Edward Johnson (known as Ned). A long anticipated move, ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-088",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "MIXED",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response acknowledges the conflict between the document's claim and the actual answer, but also asserts a false claim about the Pixel 6 being announced in 2011.",
+        "response_spans": [
+          "The Pixel 6 was announced on October 19, 2021, according to the provided document."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Google officially announced the phones on October 19, 2011, at the Pixel Fall Launch event, and they became available in nine countries on October 28."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-088",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-089",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-089",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-090",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies the name of Amazon's AI assistant for the office as Alexa for Business, which is supported by the provided context. There is no conflict in the context or the response.",
+        "response_spans": [
+          "The name of Amazon's AI assistant for office is Alexa for Business."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Amazon is bringing its AI assistant to the workplace with a new service called Alexa for Business."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-090",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Response quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-091",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that the 2020 NBA Draft was held on November 18, 2020, which contradicts the evidence that the draft was held on May 8, 2020. The response acknowledges the conflict by stating the same date as the benchmark reference.",
+        "response_spans": [
+          "The 2020 NBA Draft was held on November 18, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The 2020 NBA draft was held on May 8, 2020."
+          },
+          {
+            "doc_id": "D2",
+            "quote": "Date: Wednesday, May 8, 2020"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-091",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "INCORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response asserts that the 2020 NBA Draft was held on November 18, 2020, which contradicts the evidence that the draft was held on May 8, 2020. The response acknowledges the conflict by stating the same date as the benchmark reference.",
+        "response_spans": [
+          "The 2020 NBA Draft was held on November 18, 2020."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The 2020 NBA draft was held on May 8, 2020."
+          },
+          {
+            "doc_id": "D2",
+            "quote": "Date: Wednesday, May 8, 2020"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-092",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-092",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Unknown context document ID"
+    },
+    {
+      "case_id": "EXP031-093",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-093",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": false,
+      "proposal": null,
+      "validation_error": "Context quotation is not verbatim"
+    },
+    {
+      "case_id": "EXP031-094",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies Sundar Pichai as the CEO of Google in 2021, which is confirmed in document D1. The response also acknowledges the conflicting information in document D3 that Sundar Pichai is also the CEO of Alphabet, but correctly focuses on his role as the CEO of Google.",
+        "response_spans": [
+          "The CEO of Google in 2021 is Sundar Pichai."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Google CEO Sundar Pichai says the company's next $1 trillion will come from its oldest product ... November 17, 2021 at 1:07 AM PST ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-094",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies Sundar Pichai as the CEO of Google in 2021, which is confirmed in document D1. The response does not acknowledge the conflicting information in document D3 that Sundar Pichai is also the CEO of Alphabet, but the context does not require this acknowledgement.",
+        "response_spans": [
+          "Sundar Pichai is the CEO of Google in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Google CEO Sundar Pichai says the company's next $1 trillion will come from its oldest product ... November 17, 2021 at 1:07 AM PST ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-095",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Tim Cook was the CEO of Apple in 2021, as supported by document D4. There is no contradiction or unresolved conflict in the provided context.",
+        "response_spans": [
+          "The documents provided indicate that Tim Cook was the CEO of Apple in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D4",
+            "quote": "Apple CEO Tim Cook attends the opening of the new Apple Tower Theater retail store at Apple Tower Theatre on June 24, 2021 in Los Angeles,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-095",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies that Tim Cook was the CEO of Apple in 2021, as supported by document D1. There is no contradiction or unresolved conflict in the provided context.",
+        "response_spans": [
+          "The CEO of Apple in 2021 is Tim Cook."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Tim Cook became CEO of Apple 10 years ago."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-096",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Hideki Matsuyama won the Masters golf tournament in 2021, and it explicitly acknowledges the factual error in the second document stating that Shane Lowry won the tournament. The first document supports this answer.",
+        "response_spans": [
+          "Hideki Matsuyama won the Masters golf tournament in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Hideki Matsuyama became the first Japanese male golfer to win a major championship, and the first Asian-born golfer to win the Masters, finishing with a 72-hole"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-096",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The response correctly identifies that Hideki Matsuyama won the Masters golf tournament in 2021, and it explicitly acknowledges the factual error in the second document stating that Shane Lowry won the tournament. The first document supports this answer.",
+        "response_spans": [
+          "Hideki Matsuyama won the Masters golf tournament in 2021."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Hideki Matsuyama became the first Japanese male golfer to win a major championship, and the first Asian-born golfer to win the Masters, finishing with a 72-hole"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-097",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The provided document asserts that the 2020 British Open was canceled and the reigning champion is Hideki Matsuyama of Ireland, both of which are incorrect. The response correctly identifies these errors and provides the correct answer, Shane Lowry.",
+        "response_spans": [
+          "There are factual errors in the provided documents. The correct answer is that the 2020 British Open was not canceled,",
+          " and the reigning champion would not be from Ireland."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The 2020 British Open was canceled due to the COVID-19 pandemic,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-097",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "YES",
+        "answer_status": "CORRECT",
+        "evidence_status": "CONTRADICTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "YES",
+        "rationale": "The provided document asserts that the 2020 British Open was canceled and the reigning champion is Hideki Matsuyama of Ireland, both of which are incorrect. The response correctly identifies these errors and provides the correct answer, Shane Lowry.",
+        "response_spans": [
+          "There are factual errors in the provided documents. The correct answer is that the 2020 British Open was not canceled,",
+          " and the reigning champion would not be from Ireland."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "The 2020 British Open was canceled due to the COVID-19 pandemic,"
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-098",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Beijing, China as the city that hosted the Olympic Games in 2008, which is supported by the provided context. There is no false claim or conflict in the response.",
+        "response_spans": [
+          "The city that hosted the Olympic Games in 2008 is Beijing, China."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "In 2008 the Olympic Games were held in China for the first time."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-098",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Beijing, China as the city that hosted the Olympic Games in 2008, which is supported by the provided context. There is no false claim or conflict in the response.",
+        "response_spans": [
+          "The city that hosted the Olympic Games in 2008 is Beijing, China."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "In 2008 the Olympic Games were held in China for the first time."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-099",
+      "arm": "A",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Athens as the city that hosted the Olympic Games in 2004, which is supported by the provided context from document D1. There is no false claim, conflict, or unanswerable context in the response.",
+        "response_spans": [
+          "The city that hosted the Olympic Games in 2004 is Athens."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "3 days ago ... Athens 2004 Olympic Games, athletic festival held in Athens that took place August 13–29, 2004. The Athens Games were the 25th occurrence of ..."
+          }
+        ]
+      },
+      "validation_error": null
+    },
+    {
+      "case_id": "EXP031-099",
+      "arm": "B",
+      "provenance": "machine_draft",
+      "human_reviewed": false,
+      "external_fact_check_completed": false,
+      "valid": true,
+      "proposal": {
+        "false_assertion": "NO",
+        "answer_status": "CORRECT",
+        "evidence_status": "SUPPORTED",
+        "context_answerable": "YES",
+        "conflict_acknowledged": "NOT_APPLICABLE",
+        "rationale": "The response correctly identifies Athens as the city that hosted the Olympic Games in 2004, which is supported by the provided context from document D4. There is no false claim, conflict, or unanswerable context in the response.",
+        "response_spans": [
+          "The city that hosted the Olympic Games in 2004 is Athens."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D4",
+            "quote": "3 days ago ... Athens 2004 Olympic Games, athletic festival held in Athens that took place August 13–29, 2004. The Athens Games were the 25th occurrence of ..."
+          }
+        ]
+      },
+      "validation_error": null
+    }
+  ]
+}

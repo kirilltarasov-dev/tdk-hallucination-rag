@@ -1,7 +1,9 @@
 # EXP-031 Annotation Operations
 
 **Status (2026-11-17):** Materials audited and reviewer packet prepared. Zero
-human labels exist. Reviewer availability and first-pass collection are pending.
+human labels exist. The user subsequently confirmed that only the project author
+is available. EXP-037/038 provide separate assisted drafting and review tools;
+actual author confirmations remain pending and are not independent annotation.
 This is preparation within EXP-031, not a newly completed experiment.
 
 ## Material integrity
