@@ -12,9 +12,15 @@ percentage estimates: P0 has 10 Done, 14 Partial and 4 Open. With an explicit
 Done=1 / Partial=0.5 / Open=0 convention, P0 planning progress is 60.7%; strict
 completion is 35.7%. Neither is a measured percentage of remaining effort.
 
+That checklist snapshot predates EXP-040. The generated-answer pilot is now
+complete but failed its utility/retention screen; it does not close broad
+effectiveness, independent evaluation, distinct-verifier or demonstrator items.
+The v7 manuscript also needs EXP-040. Do not increase completion percentages
+merely because another experiment finished.
+
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
-| Align title with measured work | Open | A rule core and neural extraction adapter are implemented. EXP-036 prospectively tested 48 authored cases with 33/48 exact typed matches. Primary false confirmations fell 7 to 0, but correct-decision retention was 75%, failing the 80% target. All three false-source controls still pass; real-world validation is open. General effectiveness remains unestablished. |
+| Align title with measured work | Open | EXP-036 failed its 80% correct-decision retention target. The subsequent EXP-040 generated-answer pilot retained 68% of correct drafts and reduced utility from 0.350 to 0.325; all four false-source-only controls remained wrong and VERIFIED. A restricted prototype is measured, but general effectiveness and real-world validation remain unestablished. |
 | Use a hallucination-specific metric for the title claim | Partial | EXP-039 reports an AI-only analysis of all 200 EXP-038 drafts: false-assertion YES 37/100 for S1 and 35/100 for S3; no established advantage. This is unvalidated assistant assessment, not a human-validated hallucination rate. Human confirmation remains zero. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
@@ -29,7 +35,7 @@ completion is 35.7%. Neither is a measured percentage of remaining effort.
 | State S3 assessor model and use distinct verifier model | Open | Existing S3 assessor uses the generator model. A distinct verifier requires a new design and controlled evaluation. The new symbolic rule prototype does not replace the neural assessor. |
 | JSON-schema-constrained outputs and parse-failure reporting | Partial | EXP-032 implements strict post-generation JSON/type/provenance checks and visible UNKNOWN/error records. Decoding is not schema constrained; historical text-prefix parsers are unchanged. |
 | RGB-compatible score plus EM and token F1 | Partial | EXP-030 computed supplemental EM/F1 on the 288 single-answer-group questions per condition; EM is 0/288 for both systems because responses are verbose. The manuscript table and multi-group treatment remain open. |
-| Hardware, p50/p95 latency, calls, tokens, peak memory | Partial | Mac hardware and mean stage latencies are documented; distributional latency, token counts, and memory are missing. |
+| Hardware, p50/p95 latency, calls, tokens, peak memory | Partial | EXP-040 now records named hardware, per-stage calls, actual tokens, p50/p95 latency and peak process MLX allocation. Historical runs lack full measurements, per-system memory is not isolated, and the manuscript cost table remains incomplete. |
 | Paired exact McNemar, bootstrap interval, effect sizes | Done for existing paired score comparisons | EXP-026 and EXP-028 report paired transitions, percentage-point effects, exact p-values, and bootstrap intervals. |
 | Keep development p-values separate from test claims | Done | v6 labels the 80%-noise tests as development evidence; EXP-028 is explicitly condition transfer on the same questions. |
 | Public GitHub repository under code license | Open | No Git remote or project code license exists. Upstream RGB data retain their separate CC BY-NC-SA 4.0 license. |

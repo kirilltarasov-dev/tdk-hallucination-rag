@@ -1,6 +1,6 @@
 # Research Hypotheses and Evidence Boundaries
 
-**Updated:** 2026-11-17. EXP-036 has completed; measurements are linked below.
+**Updated:** 2026-11-17. EXP-036 and EXP-040 have completed; measurements are linked below.
 
 ## Current defensible finding
 
@@ -35,6 +35,16 @@ clustered sensitivity intervals, and limitations. Keep this negative joint
 outcome visible; do not redefine H1 around only its successful component.
 
 ## Broad thesis hypothesis H2: fewer factual errors in a usable RAG system
+
+EXP-040 now measures a generated-answer integration pilot on 40 authored
+fictional questions. NS-release retained 17/25 correct S1-style answers (68%),
+below the 80% target, and decreased mean utility from 0.350 to 0.325. It removed
+seven scored errors but withheld eight scored correct answers; all four
+false-source-only answers remained wrong and VERIFIED. The engineering screen
+failed. This is not the independent factual-QA evaluation described below.
+See `docs/exp040_results.md`, including exact-name scoring ambiguities, source
+conflicts, extraction failures and measured cost. The broad hypothesis remains
+unestablished; fewer released errors alone is insufficient.
 
 A separately frozen answer policy incorporating evidence-aware retrieval and
 symbolic verification reduces independently judged factual/faithfulness errors

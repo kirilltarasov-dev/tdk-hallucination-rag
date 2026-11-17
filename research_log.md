@@ -796,3 +796,56 @@ stub outputs. Preflight verified historical source hashes, all 40 new fixture
 questions, and zero EXP-040 inference artifacts. Stub tests are not experiment
 results. All measured EXP-036/039 findings remain unchanged. New inference is
 pending review of the concrete experiment and authorization to execute it.
+
+## 2026-11-17 — EXP-040: Generated-Answer Pilot Completed, Screen Failed
+
+Following the author's explicit approval, executed the frozen protocol at
+commit d5b7c85 / tag exp040-freeze-2026-11-17. The conversation was interrupted
+while the same process continued in the background; it was polled and completed,
+not restarted. All 40 unique cases and 120 calls completed with no retries,
+replacements, downloads or paid services. All calls ended with stop.
+
+Frozen scorer counts (correct / wrong / abstain / unscorable): S1-style
+25/11/4/0; S2-style 25/15/0/0; NS-release 17/4/19/0. NS-release removed seven
+scored errors but withheld eight scored correct answers. Correct-answer
+retention was 17/25 = 68%, below 80%; utility decreased from 0.350 to 0.325.
+Both conditions failed. Whole-family bootstrap intervals were [-0.275,+0.300]
+for utility difference and [-0.400,0.000] for correct-answer-rate difference.
+These are authored-family sensitivity intervals, not population significance.
+
+All eight lost correct answers were inspected: two document paraphrases outside
+the frozen grammar, three negation-related extraction problems (two invalid
+null-valued facts and one affirmative extraction of a negated win), and three
+source-conflict abstentions. Those last three drafts matched hidden truth but
+their source contexts did not justify selecting a winner. Do not describe all
+eight losses as implementation bugs. Seven of 24 unambiguous true-evidence cases
+ended in abstention. Two removed WRONG labels were shortened entity names
+without the numeric suffix, not independently established hallucinations.
+Original labels remain unchanged and the scoring limitation is explicit.
+
+All four false-source-only controls remained wrong and VERIFIED. S2-style review
+turned all four no-target-evidence abstentions into wrong-year answers. These
+are scoped observations on fictional cases, not general method rankings.
+38/40 extractions passed schema/provenance validation; validity is not semantic
+accuracy. No extraction gold accuracy is claimed for this experiment.
+
+Mean/median/p95 reconstructed answer latency: S1 0.314/0.307/0.330 seconds;
+S2 0.633/0.625/0.715; NS-release 6.640/6.911/9.563. Unique workload: 58,025 input
+tokens, 14,202 output tokens and 278.372 seconds summed model-call time;
+loading 1.717 seconds separately. Peak process MLX allocation 5.065 GB on an
+Apple M5 Pro with 24 GB RAM. Shared S1 calls are included in each method's cost
+but counted once in unique workload. No efficiency advantage is demonstrated.
+
+Full source/call/case/summary replay passed; all 83 Python tests passed. Saved
+raw cases, raw per-call trace, runtime manifest, frozen summary, post-run case
+diagnostics, English interpretation and SVG/PNG outcome figure. The figure was
+visually inspected. Raw cases SHA-256:
+a844f72dc19617bbb246761837d822e52d6ad887ca386b3a1c8d38004447d2b5.
+Raw calls SHA-256:
+cef9e404079033eb48a27750d549c4f59c13b9aa2f9ea941855e0dac82340de7.
+See docs/exp040_results.md. No frozen source or earlier raw result was modified.
+
+Next: isolate extraction/valid-language coverage on development material before
+any revised method or fresh test. Preserve false-source limitations. A limited
+demonstrator can show the current measured behavior, but natural-data efficacy,
+independent semantic validation and the full supervisor scope remain open.

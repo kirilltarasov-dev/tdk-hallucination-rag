@@ -1,0 +1,1179 @@
+{
+  "experiment_id": "EXP-040",
+  "analysis": "post-run descriptive trace inspection; original scores unchanged",
+  "source_sha256": {
+    "data/synthetic/exp040_generated_answer_cases.json": "7c30dce9ef68c73ac6dd93fcd19c0dfc8de02f73d8c1cdbe2cf34ec1a7dead1c",
+    "results/raw/exp040_generated_answers.jsonl": "a844f72dc19617bbb246761837d822e52d6ad887ca386b3a1c8d38004447d2b5",
+    "results/raw/exp040_model_calls.jsonl": "cef9e404079033eb48a27750d549c4f59c13b9aa2f9ea941855e0dac82340de7",
+    "results/processed/exp040_generated_answers_summary.json": "e7a397aadc6306d0e3bde7d05a335e9900cce9fadc47b7b042b3617389b5ea7a"
+  },
+  "lost_correct_answers_by_family": {
+    "document_paraphrase": 2,
+    "negated_distractor": 3,
+    "conflict": 3
+  },
+  "removed_wrong_answers_by_family": {
+    "document_paraphrase": 2,
+    "conflict": 1,
+    "false_source_majority": 4
+  },
+  "lost_correct_answers": [
+    {
+      "case_id": "E040-016",
+      "family": "document_paraphrase",
+      "question": "Who won the 2117 Aster Circuit 17?",
+      "authored_truth": "Velvet Otters 17",
+      "answers": {
+        "S1": "Velvet Otters 17 won.",
+        "S2": "Velvet Otters 17 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-017",
+      "family": "document_paraphrase",
+      "question": "Who won the 2118 Aster Circuit 18?",
+      "authored_truth": "Velvet Otters 18",
+      "answers": {
+        "S1": "Velvet Otters 18 won.",
+        "S2": "Velvet Otters 18 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-020",
+      "family": "negated_distractor",
+      "question": "Who won the 2121 Aster Circuit 21?",
+      "authored_truth": "Velvet Otters 21",
+      "answers": {
+        "S1": "Velvet Otters 21 won.",
+        "S2": "Velvet Otters 21 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "EXTRACTION_INVALID",
+      "validation_error": "D2.event: quotation must occur verbatim in its source"
+    },
+    {
+      "case_id": "E040-022",
+      "family": "negated_distractor",
+      "question": "Who won the 2123 Aster Circuit 23?",
+      "authored_truth": "Velvet Otters 23",
+      "answers": {
+        "S1": "Velvet Otters 23 won.",
+        "S2": "Velvet Otters 23 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "EXTRACTION_INVALID",
+      "validation_error": "D2.event: quotation must occur verbatim in its source"
+    },
+    {
+      "case_id": "E040-023",
+      "family": "negated_distractor",
+      "question": "Who won the 2124 Aster Circuit 24?",
+      "authored_truth": "Velvet Otters 24",
+      "answers": {
+        "S1": "Velvet Otters 24 won.",
+        "S2": "Velvet Otters 24 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-024",
+      "family": "conflict",
+      "question": "Who won the 2125 Aster Circuit 25?",
+      "authored_truth": "Velvet Otters 25",
+      "answers": {
+        "S1": "Velvet Otters 25 won.",
+        "S2": "Velvet Otters 25 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-025",
+      "family": "conflict",
+      "question": "Who won the 2126 Aster Circuit 26?",
+      "authored_truth": "Velvet Otters 26",
+      "answers": {
+        "S1": "Velvet Otters 26 won.",
+        "S2": "Velvet Otters 26 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-026",
+      "family": "conflict",
+      "question": "Who won the 2127 Aster Circuit 27?",
+      "authored_truth": "Velvet Otters 27",
+      "answers": {
+        "S1": "Velvet Otters 27 won.",
+        "S2": "Velvet Otters 27 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    }
+  ],
+  "removed_wrong_answers": [
+    {
+      "case_id": "E040-018",
+      "family": "document_paraphrase",
+      "question": "Who won the 2119 Aster Circuit 19?",
+      "authored_truth": "Velvet Otters 19",
+      "answers": {
+        "S1": "Velvet Otters won.",
+        "S2": "Velvet Otters won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-019",
+      "family": "document_paraphrase",
+      "question": "Who won the 2120 Aster Circuit 20?",
+      "authored_truth": "Velvet Otters 20",
+      "answers": {
+        "S1": "Velvet Otters won.",
+        "S2": "Velvet Otters won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-027",
+      "family": "conflict",
+      "question": "Who won the 2128 Aster Circuit 28?",
+      "authored_truth": "Velvet Otters 28",
+      "answers": {
+        "S1": "Silver Ibises 28 won.",
+        "S2": "Silver Ibises 28 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-036",
+      "family": "false_source_majority",
+      "question": "Who won the 2137 Aster Circuit 37?",
+      "authored_truth": "Velvet Otters 37",
+      "answers": {
+        "S1": "Silver Ibises 37 won.",
+        "S2": "Silver Ibises 37 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-037",
+      "family": "false_source_majority",
+      "question": "Who won the 2138 Aster Circuit 38?",
+      "authored_truth": "Velvet Otters 38",
+      "answers": {
+        "S1": "Silver Ibises 38 won.",
+        "S2": "Silver Ibises 38 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-038",
+      "family": "false_source_majority",
+      "question": "Who won the 2139 Aster Circuit 39?",
+      "authored_truth": "Velvet Otters 39",
+      "answers": {
+        "S1": "Silver Ibises 39 won.",
+        "S2": "Silver Ibises 39 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-039",
+      "family": "false_source_majority",
+      "question": "Who won the 2140 Aster Circuit 40?",
+      "authored_truth": "Velvet Otters 40",
+      "answers": {
+        "S1": "Silver Ibises 40 won.",
+        "S2": "Silver Ibises 40 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    }
+  ],
+  "self_review_abstention_to_wrong": [
+    {
+      "case_id": "E040-028",
+      "family": "no_target_evidence",
+      "question": "Who won the 2129 Aster Circuit 29?",
+      "authored_truth": "Velvet Otters 29",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 29 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-029",
+      "family": "no_target_evidence",
+      "question": "Who won the 2130 Aster Circuit 30?",
+      "authored_truth": "Velvet Otters 30",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 30 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-030",
+      "family": "no_target_evidence",
+      "question": "Who won the 2131 Aster Circuit 31?",
+      "authored_truth": "Velvet Otters 31",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 31 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-031",
+      "family": "no_target_evidence",
+      "question": "Who won the 2132 Aster Circuit 32?",
+      "authored_truth": "Velvet Otters 32",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 32 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    }
+  ],
+  "false_answers_released": [
+    {
+      "case_id": "E040-032",
+      "family": "false_source_only",
+      "question": "Who won the 2133 Aster Circuit 33?",
+      "authored_truth": "Velvet Otters 33",
+      "answers": {
+        "S1": "Silver Ibises 33 won.",
+        "S2": "Silver Ibises 33 won.",
+        "NS": "Silver Ibises 33 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-033",
+      "family": "false_source_only",
+      "question": "Who won the 2134 Aster Circuit 34?",
+      "authored_truth": "Velvet Otters 34",
+      "answers": {
+        "S1": "Silver Ibises 34 won.",
+        "S2": "Silver Ibises 34 won.",
+        "NS": "Silver Ibises 34 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-034",
+      "family": "false_source_only",
+      "question": "Who won the 2135 Aster Circuit 35?",
+      "authored_truth": "Velvet Otters 35",
+      "answers": {
+        "S1": "Silver Ibises 35 won.",
+        "S2": "Silver Ibises 35 won.",
+        "NS": "Silver Ibises 35 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-035",
+      "family": "false_source_only",
+      "question": "Who won the 2136 Aster Circuit 36?",
+      "authored_truth": "Velvet Otters 36",
+      "answers": {
+        "S1": "Silver Ibises 36 won.",
+        "S2": "Silver Ibises 36 won.",
+        "NS": "Silver Ibises 36 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    }
+  ],
+  "strict_name_match_caveat_ids": [
+    "E040-018",
+    "E040-019"
+  ],
+  "strict_name_match_caveat": "Velvet Otters omits the numeric suffix of the authored entity; these are protocol mismatches, not externally established factual hallucinations.",
+  "unique_call_totals": {
+    "calls": 120,
+    "input_tokens": 58025,
+    "output_tokens": 14202,
+    "summed_model_call_seconds": 278.3715249210363,
+    "model_load_seconds": 1.7168683749623597,
+    "finish_reasons": {
+      "stop": 120
+    }
+  },
+  "case_results": [
+    {
+      "case_id": "E040-000",
+      "family": "clean",
+      "question": "Who won the 2101 Aster Circuit 1?",
+      "authored_truth": "Velvet Otters 1",
+      "answers": {
+        "S1": "Velvet Otters 1 won.",
+        "S2": "Velvet Otters 1 won.",
+        "NS": "Velvet Otters 1 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-001",
+      "family": "clean",
+      "question": "Who won the 2102 Aster Circuit 2?",
+      "authored_truth": "Velvet Otters 2",
+      "answers": {
+        "S1": "Velvet Otters 2 won.",
+        "S2": "Velvet Otters 2 won.",
+        "NS": "Velvet Otters 2 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-002",
+      "family": "clean",
+      "question": "Who won the 2103 Aster Circuit 3?",
+      "authored_truth": "Velvet Otters 3",
+      "answers": {
+        "S1": "Velvet Otters 3 won.",
+        "S2": "Velvet Otters 3 won.",
+        "NS": "Velvet Otters 3 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-003",
+      "family": "clean",
+      "question": "Who won the 2104 Aster Circuit 4?",
+      "authored_truth": "Velvet Otters 4",
+      "answers": {
+        "S1": "Velvet Otters 4 won.",
+        "S2": "Velvet Otters 4 won.",
+        "NS": "Velvet Otters 4 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-004",
+      "family": "duplicate_support",
+      "question": "Who won the 2105 Aster Circuit 5?",
+      "authored_truth": "Velvet Otters 5",
+      "answers": {
+        "S1": "Velvet Otters 5 won.",
+        "S2": "Velvet Otters 5 won.",
+        "NS": "Velvet Otters 5 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-005",
+      "family": "duplicate_support",
+      "question": "Who won the 2106 Aster Circuit 6?",
+      "authored_truth": "Velvet Otters 6",
+      "answers": {
+        "S1": "Velvet Otters 6 won.",
+        "S2": "Velvet Otters 6 won.",
+        "NS": "Velvet Otters 6 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-006",
+      "family": "duplicate_support",
+      "question": "Who won the 2107 Aster Circuit 7?",
+      "authored_truth": "Velvet Otters 7",
+      "answers": {
+        "S1": "Velvet Otters 7 won.",
+        "S2": "Velvet Otters 7 won.",
+        "NS": "Velvet Otters 7 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-007",
+      "family": "duplicate_support",
+      "question": "Who won the 2108 Aster Circuit 8?",
+      "authored_truth": "Velvet Otters 8",
+      "answers": {
+        "S1": "Velvet Otters 8 won.",
+        "S2": "Velvet Otters 8 won.",
+        "NS": "Velvet Otters 8 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-008",
+      "family": "wrong_year",
+      "question": "Who won the 2109 Aster Circuit 9?",
+      "authored_truth": "Velvet Otters 9",
+      "answers": {
+        "S1": "Velvet Otters 9 won.",
+        "S2": "Velvet Otters 9 won.",
+        "NS": "Velvet Otters 9 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-009",
+      "family": "wrong_year",
+      "question": "Who won the 2110 Aster Circuit 10?",
+      "authored_truth": "Velvet Otters 10",
+      "answers": {
+        "S1": "Velvet Otters 10 won.",
+        "S2": "Velvet Otters 10 won.",
+        "NS": "Velvet Otters 10 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-010",
+      "family": "wrong_year",
+      "question": "Who won the 2111 Aster Circuit 11?",
+      "authored_truth": "Velvet Otters 11",
+      "answers": {
+        "S1": "Velvet Otters 11 won.",
+        "S2": "Velvet Otters 11 won.",
+        "NS": "Velvet Otters 11 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-011",
+      "family": "wrong_year",
+      "question": "Who won the 2112 Aster Circuit 12?",
+      "authored_truth": "Velvet Otters 12",
+      "answers": {
+        "S1": "Velvet Otters 12 won.",
+        "S2": "Velvet Otters 12 won.",
+        "NS": "Velvet Otters 12 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-012",
+      "family": "wrong_event",
+      "question": "Who won the 2113 Aster Circuit 13?",
+      "authored_truth": "Velvet Otters 13",
+      "answers": {
+        "S1": "Velvet Otters 13 won.",
+        "S2": "Velvet Otters 13 won.",
+        "NS": "Velvet Otters 13 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-013",
+      "family": "wrong_event",
+      "question": "Who won the 2114 Aster Circuit 14?",
+      "authored_truth": "Velvet Otters 14",
+      "answers": {
+        "S1": "Velvet Otters 14 won.",
+        "S2": "Velvet Otters 14 won.",
+        "NS": "Velvet Otters 14 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-014",
+      "family": "wrong_event",
+      "question": "Who won the 2115 Aster Circuit 15?",
+      "authored_truth": "Velvet Otters 15",
+      "answers": {
+        "S1": "Velvet Otters 15 won.",
+        "S2": "Velvet Otters 15 won.",
+        "NS": "Velvet Otters 15 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-015",
+      "family": "wrong_event",
+      "question": "Who won the 2116 Aster Circuit 16?",
+      "authored_truth": "Velvet Otters 16",
+      "answers": {
+        "S1": "Velvet Otters 16 won.",
+        "S2": "Velvet Otters 16 won.",
+        "NS": "Velvet Otters 16 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-016",
+      "family": "document_paraphrase",
+      "question": "Who won the 2117 Aster Circuit 17?",
+      "authored_truth": "Velvet Otters 17",
+      "answers": {
+        "S1": "Velvet Otters 17 won.",
+        "S2": "Velvet Otters 17 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-017",
+      "family": "document_paraphrase",
+      "question": "Who won the 2118 Aster Circuit 18?",
+      "authored_truth": "Velvet Otters 18",
+      "answers": {
+        "S1": "Velvet Otters 18 won.",
+        "S2": "Velvet Otters 18 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-018",
+      "family": "document_paraphrase",
+      "question": "Who won the 2119 Aster Circuit 19?",
+      "authored_truth": "Velvet Otters 19",
+      "answers": {
+        "S1": "Velvet Otters won.",
+        "S2": "Velvet Otters won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-019",
+      "family": "document_paraphrase",
+      "question": "Who won the 2120 Aster Circuit 20?",
+      "authored_truth": "Velvet Otters 20",
+      "answers": {
+        "S1": "Velvet Otters won.",
+        "S2": "Velvet Otters won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-020",
+      "family": "negated_distractor",
+      "question": "Who won the 2121 Aster Circuit 21?",
+      "authored_truth": "Velvet Otters 21",
+      "answers": {
+        "S1": "Velvet Otters 21 won.",
+        "S2": "Velvet Otters 21 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "EXTRACTION_INVALID",
+      "validation_error": "D2.event: quotation must occur verbatim in its source"
+    },
+    {
+      "case_id": "E040-021",
+      "family": "negated_distractor",
+      "question": "Who won the 2122 Aster Circuit 22?",
+      "authored_truth": "Velvet Otters 22",
+      "answers": {
+        "S1": "Velvet Otters 22 won.",
+        "S2": "Velvet Otters 22 won.",
+        "NS": "Velvet Otters 22 won."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "CORRECT"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-022",
+      "family": "negated_distractor",
+      "question": "Who won the 2123 Aster Circuit 23?",
+      "authored_truth": "Velvet Otters 23",
+      "answers": {
+        "S1": "Velvet Otters 23 won.",
+        "S2": "Velvet Otters 23 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "EXTRACTION_INVALID",
+      "validation_error": "D2.event: quotation must occur verbatim in its source"
+    },
+    {
+      "case_id": "E040-023",
+      "family": "negated_distractor",
+      "question": "Who won the 2124 Aster Circuit 24?",
+      "authored_truth": "Velvet Otters 24",
+      "answers": {
+        "S1": "Velvet Otters 24 won.",
+        "S2": "Velvet Otters 24 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "G2_FACT_RELATION",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-024",
+      "family": "conflict",
+      "question": "Who won the 2125 Aster Circuit 25?",
+      "authored_truth": "Velvet Otters 25",
+      "answers": {
+        "S1": "Velvet Otters 25 won.",
+        "S2": "Velvet Otters 25 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-025",
+      "family": "conflict",
+      "question": "Who won the 2126 Aster Circuit 26?",
+      "authored_truth": "Velvet Otters 26",
+      "answers": {
+        "S1": "Velvet Otters 26 won.",
+        "S2": "Velvet Otters 26 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-026",
+      "family": "conflict",
+      "question": "Who won the 2127 Aster Circuit 27?",
+      "authored_truth": "Velvet Otters 27",
+      "answers": {
+        "S1": "Velvet Otters 27 won.",
+        "S2": "Velvet Otters 27 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "CORRECT",
+        "S2": "CORRECT",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-027",
+      "family": "conflict",
+      "question": "Who won the 2128 Aster Circuit 28?",
+      "authored_truth": "Velvet Otters 28",
+      "answers": {
+        "S1": "Silver Ibises 28 won.",
+        "S2": "Silver Ibises 28 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-028",
+      "family": "no_target_evidence",
+      "question": "Who won the 2129 Aster Circuit 29?",
+      "authored_truth": "Velvet Otters 29",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 29 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-029",
+      "family": "no_target_evidence",
+      "question": "Who won the 2130 Aster Circuit 30?",
+      "authored_truth": "Velvet Otters 30",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 30 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-030",
+      "family": "no_target_evidence",
+      "question": "Who won the 2131 Aster Circuit 31?",
+      "authored_truth": "Velvet Otters 31",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 31 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-031",
+      "family": "no_target_evidence",
+      "question": "Who won the 2132 Aster Circuit 32?",
+      "authored_truth": "Velvet Otters 32",
+      "answers": {
+        "S1": "I cannot determine the winner.",
+        "S2": "Silver Ibises 32 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "ABSTAIN",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R3_NO_MATCH",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-032",
+      "family": "false_source_only",
+      "question": "Who won the 2133 Aster Circuit 33?",
+      "authored_truth": "Velvet Otters 33",
+      "answers": {
+        "S1": "Silver Ibises 33 won.",
+        "S2": "Silver Ibises 33 won.",
+        "NS": "Silver Ibises 33 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-033",
+      "family": "false_source_only",
+      "question": "Who won the 2134 Aster Circuit 34?",
+      "authored_truth": "Velvet Otters 34",
+      "answers": {
+        "S1": "Silver Ibises 34 won.",
+        "S2": "Silver Ibises 34 won.",
+        "NS": "Silver Ibises 34 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-034",
+      "family": "false_source_only",
+      "question": "Who won the 2135 Aster Circuit 35?",
+      "authored_truth": "Velvet Otters 35",
+      "answers": {
+        "S1": "Silver Ibises 35 won.",
+        "S2": "Silver Ibises 35 won.",
+        "NS": "Silver Ibises 35 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-035",
+      "family": "false_source_only",
+      "question": "Who won the 2136 Aster Circuit 36?",
+      "authored_truth": "Velvet Otters 36",
+      "answers": {
+        "S1": "Silver Ibises 36 won.",
+        "S2": "Silver Ibises 36 won.",
+        "NS": "Silver Ibises 36 won."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "WRONG"
+      },
+      "final_rule": "R3_R6_SUPPORTED",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-036",
+      "family": "false_source_majority",
+      "question": "Who won the 2137 Aster Circuit 37?",
+      "authored_truth": "Velvet Otters 37",
+      "answers": {
+        "S1": "Silver Ibises 37 won.",
+        "S2": "Silver Ibises 37 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-037",
+      "family": "false_source_majority",
+      "question": "Who won the 2138 Aster Circuit 38?",
+      "authored_truth": "Velvet Otters 38",
+      "answers": {
+        "S1": "Silver Ibises 38 won.",
+        "S2": "Silver Ibises 38 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-038",
+      "family": "false_source_majority",
+      "question": "Who won the 2139 Aster Circuit 39?",
+      "authored_truth": "Velvet Otters 39",
+      "answers": {
+        "S1": "Silver Ibises 39 won.",
+        "S2": "Silver Ibises 39 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    },
+    {
+      "case_id": "E040-039",
+      "family": "false_source_majority",
+      "question": "Who won the 2140 Aster Circuit 40?",
+      "authored_truth": "Velvet Otters 40",
+      "answers": {
+        "S1": "Silver Ibises 40 won.",
+        "S2": "Silver Ibises 40 won.",
+        "NS": "I cannot determine the winner."
+      },
+      "categories": {
+        "S1": "WRONG",
+        "S2": "WRONG",
+        "NS": "ABSTAIN"
+      },
+      "final_rule": "R5_CONFLICT",
+      "validation_error": null
+    }
+  ]
+}

@@ -7,9 +7,9 @@ Retrieval-Augmented Generation and Neuro-Symbolic Verification*.
 **Research status (2026-11-17):** The current experiments support a
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
-hallucination reduction or neuro-symbolic effectiveness. The latest
-completed verifier-effectiveness comparison is EXP-036, a prospectively frozen 48-case synthetic
-transfer run. On 45 primary cases, the combined guards reduced oracle-relative
+hallucination reduction or neuro-symbolic effectiveness. EXP-036 is a
+prospectively frozen 48-case synthetic verifier comparison with authored answers;
+on 45 primary cases, the combined guards reduced oracle-relative
 false confirmations from 7 to 0, but correct-decision retention was 18/24 (75%),
 below the predeclared 80% target. The joint feasibility hypothesis did not pass.
 All three separately reported false-source controls remained VERIFIED.
@@ -19,7 +19,7 @@ test. Its answer/fake-answer substring counts are custom diagnostics, not
 human-validated error rates or official ED*.
 EXP-030 is an offline supplemental EM/F1 analysis.
 
-The latest offline analysis, [EXP-039](docs/exp039_results.md), pairs the frozen
+The AI-only semantic analysis, [EXP-039](docs/exp039_results.md), pairs the frozen
 EXP-038 assistant assessments with these original outputs. Assistant labels
 indicate false assertions in 37/100 S1 and 35/100 S3 responses, with 7 and 4
 unclear judgments respectively. The 92 complete pairs show no established S3
@@ -28,12 +28,15 @@ These are AI-only exploratory assessments, not human-validated error rates.
 The [full supervisor checklist audit](docs/supervisor_plan_completion_audit_2026-11-17.md)
 distinguishes completed items from partial work and remaining experiments.
 
-[EXP-040](docs/exp040_generated_answer_protocol.md) is prepared, not executed:
-40 new fictional questions compare generated drafts, same-model self-review,
-and a release-only policy using the unchanged combined symbolic verifier.
-The planned budget is 120 local calls. This is a synthetic integration pilot,
-not natural held-out QA or a real-retriever evaluation. Default preflight makes
-no model calls: `python3 -B -m experiments.exp040_generated_answers`.
+[EXP-040](docs/exp040_results.md) is the latest completed local inference run
+and generated-answer integration comparison: 40 fictional questions, 120 calls.
+S1-style scored 25 correct / 11 wrong / 4 abstentions; same-model review scored
+25 / 15 / 0; NS-release scored 17 / 4 / 19. Correct-answer retention was 68%,
+below 80%, and mean utility decreased from 0.350 to 0.325. The joint screen
+failed. Two baseline WRONG labels reflect omitted numeric entity suffixes,
+not verified factual hallucinations. All four false-only-source answers remained
+wrong and VERIFIED. This is synthetic integration, not natural QA or real
+retrieval. Replay: `python3 -B -m experiments.exp040_generated_answers --check`.
 
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all
@@ -53,7 +56,7 @@ the unchanged workbook and an offline full-text reader.
 read-only intake checks and label-locking procedure. Only the project author
 is available for review; independent double annotation remains unavailable.
 
-The latest local inference run, [EXP-037](docs/exp037_machine_draft_results.md),
+The annotation-drafting inference run, [EXP-037](docs/exp037_machine_draft_results.md),
 generated 200 machine proposals in 100 paired calls. Only 112 passed structural
 and verbatim-quote checks, and inspected valid outputs had semantic errors.
 These drafts are not semantic ground truth. The separate
