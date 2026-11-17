@@ -2,8 +2,9 @@
 
 **Status:** Deterministic core implemented and tested on oracle facts. A narrow
 neural extraction adapter is now implemented in `src/verification/neuro_symbolic.py`,
-with an unexecuted EXP-032 pilot protocol. No neural extraction or end-to-end
-model result has been measured. This is a development artifact, not evidence
+and was evaluated in the initial EXP-032 pilot. All 12 model outputs failed
+extraction validation and yielded UNKNOWN; the oracle rule checks passed.
+This is a development artifact and a negative feasibility result, not evidence
 that the thesis's neuro-symbolic effectiveness claim has been demonstrated.
 
 `src/verification/symbolic_rules.py` accepts a typed question frame, a list

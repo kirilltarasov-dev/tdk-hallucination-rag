@@ -8,7 +8,7 @@ separate research scope.
 
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
-| Align title with measured work | Open | Current title still promises neuro-symbolic verification and hallucination reduction. A rule core and narrow neural extraction adapter are implemented; EXP-032 is prepared but has no model result. Effectiveness remains unmeasured. |
+| Align title with measured work | Open | A rule core and narrow neural extraction adapter are implemented. EXP-032 produced 12/12 invalid extractions and UNKNOWN outputs; effectiveness remains unestablished. |
 | Use a hallucination-specific metric for the title claim | Annotation prepared | RGB-compatible lexical score is not a hallucination rate. EXP-031 has a blinded 100-pair worksheet and a frozen codebook, but no independent human labels or semantic result yet. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |

@@ -1,0 +1,32 @@
+{
+  "experiment_id": "EXP-032",
+  "status": "run_started",
+  "purpose": "synthetic development check of neural extraction and deterministic rules",
+  "cases": 12,
+  "model_generations": 12,
+  "max_tokens_per_generation": 1024,
+  "max_generated_tokens": 12288,
+  "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+  "model_revision": "a4b8f870474b0eb527f466a03fbc187830d271f5",
+  "temperature": 0.0,
+  "decoding": "greedy, unconstrained JSON generation; strict validation after generation",
+  "retries": 0,
+  "answer_repair": false,
+  "source_sha256": {
+    "data/synthetic/exp032_event_winner_pilot.json": "dc22f41c525e1012de9eed1c16584ee80092b2d6e61b29a7247c3d9546250813",
+    "src/verification/neuro_symbolic.py": "451dc9fcac0bc1f5f3164446a894ff62433d716ecabeb289f48122e7236ea860",
+    "src/verification/symbolic_rules.py": "0708070eaf51191948b2132fb94f1b70ebeafee689ee39a8e605b570da07470c",
+    "src/models/pinned_mistral.py": "b4d964142d1c4fad4c4e1566c68c9ac2e1b874ad41fd4283c859a57d7b4f4d25",
+    "src/models/mistral.py": "ac31d86ab3419103ab1ccf57180ee65680264bd0dba178b67016b2ad3a7c1207",
+    "experiments/exp032_event_winner_pilot.py": "e303eac4a903e4730dd38f15d41f30de149e83ea5aef93a16a1506486224325a",
+    "docs/exp032_event_winner_protocol.md": "88bd011cf981b62fce2de68e8ca904865a3302d4cb8a644dfff7612cd1134194"
+  },
+  "oracle_rule_checks_passed": 12,
+  "limitation": "Authored fixtures are not an effectiveness or hallucination benchmark.",
+  "git_commit": "8aba5bf19524320185e0b50db48480494e61a129",
+  "python": "3.12.14",
+  "started_at_utc": "2026-11-17T09:00:26.979721+00:00",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "mlx_version": "0.32.2",
+  "mlx_lm_version": "0.31.3"
+}

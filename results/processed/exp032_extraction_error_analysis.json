@@ -1,0 +1,207 @@
+{
+  "experiment_id": "EXP-032",
+  "analysis": "retrospective raw-field failure diagnosis",
+  "source_raw_sha256": "cba7b2dcb4757ebc7f9542c28e961d7ebced0eae842019549b3955e748635f80",
+  "cases": 12,
+  "counts": {
+    "syntactically_valid_json": 12,
+    "null_question_span": 12,
+    "null_answer_span": 11,
+    "question_content_mismatch_cases": 1,
+    "answer_content_mismatch_cases": 5,
+    "document_fact_mismatch_cases": 3,
+    "document_status_mismatch_cases": 1
+  },
+  "case_details": [
+    {
+      "case_id": "P01",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": []
+    },
+    {
+      "case_id": "P02",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": [
+        {
+          "path": "answer.status",
+          "expected": "SINGLE_CLAIM",
+          "observed": "ABSTENTION"
+        },
+        {
+          "path": "answer.value",
+          "expected": "Team Cobalt",
+          "observed": null
+        }
+      ]
+    },
+    {
+      "case_id": "P03",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": [
+        {
+          "path": "answer.status",
+          "expected": "ABSTENTION",
+          "observed": "UNRESOLVED"
+        }
+      ]
+    },
+    {
+      "case_id": "P04",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": []
+    },
+    {
+      "case_id": "P05",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": false,
+      "content_differences_from_authored_oracle": [
+        {
+          "path": "documents.D1.status",
+          "expected": "COMPLETE",
+          "observed": "UNRESOLVED"
+        }
+      ]
+    },
+    {
+      "case_id": "P06",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": []
+    },
+    {
+      "case_id": "P07",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": []
+    },
+    {
+      "case_id": "P08",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": [
+        {
+          "path": "documents.D1.facts",
+          "expected": [],
+          "observed": [
+            {
+              "event": "Aurora Cup",
+              "year": 2024,
+              "value": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P09",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": [
+        {
+          "path": "answer.status",
+          "expected": "UNRESOLVED",
+          "observed": "SINGLE_CLAIM"
+        },
+        {
+          "path": "answer.value",
+          "expected": null,
+          "observed": "Team Amber"
+        }
+      ]
+    },
+    {
+      "case_id": "P10",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": [
+        {
+          "path": "question.status",
+          "expected": "OUT_OF_SCOPE",
+          "observed": "IN_SCOPE"
+        },
+        {
+          "path": "question.event",
+          "expected": null,
+          "observed": "Aurora Cup"
+        },
+        {
+          "path": "question.year",
+          "expected": null,
+          "observed": 2024
+        },
+        {
+          "path": "answer.status",
+          "expected": "UNRESOLVED",
+          "observed": "SINGLE_CLAIM"
+        },
+        {
+          "path": "answer.value",
+          "expected": null,
+          "observed": "North Hall"
+        },
+        {
+          "path": "documents.D1.facts",
+          "expected": [],
+          "observed": [
+            {
+              "event": "Aurora Cup",
+              "year": 2024,
+              "value": "North Hall"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P11",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": [
+        {
+          "path": "answer.status",
+          "expected": "SINGLE_CLAIM",
+          "observed": "UNRESOLVED"
+        },
+        {
+          "path": "answer.value",
+          "expected": "Team Amber",
+          "observed": null
+        },
+        {
+          "path": "documents.D1.facts",
+          "expected": [],
+          "observed": [
+            {
+              "event": "Aurora Cup",
+              "year": 2024,
+              "value": "Team Amber"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P12",
+      "first_validation_error": "question.source_span: quotation must occur verbatim in its source",
+      "null_question_span": true,
+      "null_answer_span": true,
+      "content_differences_from_authored_oracle": []
+    }
+  ],
+  "limitations": "Raw JSON inspection only; all 12 extractions remain invalid under the frozen validator. No repaired predictions, relaxed scores, independent human labels, or additional model calls are introduced."
+}

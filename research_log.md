@@ -309,3 +309,49 @@ The planned small local run uses 12 greedy Mistral extraction calls, at most
 model revision, source hashes, prompts, raw extraction, errors, rule traces,
 and latency will be retained. Broader effectiveness evaluation and EXP-031
 independent human annotation remain outstanding.
+
+## 2026-11-17 — EXP-032: Initial Neural Extraction Pilot Completed
+
+### Objective and frozen configuration
+Run the prepared 12-case fictional event/winner pilot once to test the neural
+extraction prerequisite for deterministic verification. Source commit
+`8aba5bf19524320185e0b50db48480494e61a129` and annotated tag
+`exp032-freeze-2026-11-17` preceded inference. The pinned Mistral revision,
+explicit greedy sampler, 1,024-token cap, same 12 authored fixtures, strict
+post-generation validator, and unchanged rule core were used as specified.
+The model was loaded from the local cache with `HF_HUB_OFFLINE=1`. There were
+12 model calls, no retries, and no answer generation or repair.
+
+### Outputs and measured results
+- Run manifest: `results/raw/exp032_event_winner_manifest.json`.
+- Raw predictions and full traces: `results/raw/exp032_event_winner_pilot.jsonl`.
+- Summary: `results/processed/exp032_event_winner_pilot_summary.json`.
+- Retrospective field diagnostics: `results/processed/exp032_extraction_error_analysis.json`.
+- Raw SHA-256: `cba7b2dcb4757ebc7f9542c28e961d7ebced0eae842019549b3955e748635f80`.
+
+All 12 outputs were syntactically valid JSON, but all 12 failed extraction
+validation at `question.source_span`, which was null. Eleven also had a null
+answer quotation. Valid extraction and typed-oracle agreement were 0/12;
+all 12 results were UNKNOWN with `EXTRACTION_INVALID`. Six final labels
+coincide with an expected UNKNOWN, but all six have the wrong cause and
+rule-ID agreement is 0/12. This coincidence is not useful verification
+accuracy. Mean model-call latency was 4.433 s, median 4.180 s, nearest-rank
+p95 5.973 s, excluding loading and prompt construction.
+
+### Failure diagnosis and limits
+Raw-field inspection against authored oracles found question-content mismatch
+in 1 case, answer-state/value mismatch in 5, document-fact mismatch in 3,
+and document-status mismatch in 1; categories overlap. In particular, the
+model treated a location as a winner, extracted a negated win as affirmative,
+and reduced incompatible answer claims to one value. Fixing missing quotations
+alone would not repair these semantic errors. The analysis preserves invalid
+status for every case and does not substitute repaired outputs.
+
+The negative result localizes the current failure to neural extraction before
+the deterministic rules can operate on validated input. It does not invalidate
+the oracle-tested rule code or establish its practical utility. Literal source
+spans cannot prove semantic extraction correctness or source truth. A controlled
+prompt-only correction is the next proposed development experiment; details
+and case-level observations are in `docs/exp032_failure_analysis.md`. No general
+hallucination reduction, independent human validation, or successful integrated
+neuro-symbolic effectiveness result is claimed.

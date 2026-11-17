@@ -8,9 +8,11 @@ Retrieval-Augmented Generation and Neuro-Symbolic Verification*.
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
 hallucination reduction or a neuro-symbolic verification result. The latest
-completed model experiment is EXP-029, a frozen 100-question RGB `en_fact`
-counterfactual stress test. Its answer/fake-answer substring counts are
-custom diagnostics, not human-validated error rates or official ED*.
+completed model experiment is EXP-032, a 12-case synthetic extraction pilot:
+all 12 model outputs failed validation and yielded UNKNOWN. The latest S1/S3
+comparison is EXP-029, a frozen 100-question RGB `en_fact` counterfactual stress
+test. Its answer/fake-answer substring counts are custom diagnostics, not
+human-validated error rates or official ED*.
 EXP-030 is an offline supplemental EM/F1 analysis.
 
 EXP-031 annotation materials are prepared for all 100 EXP-029 pairs in
@@ -32,7 +34,8 @@ All 80%-noise intervention results are development evidence. RGB answer
 matching is a lexical benchmark score, not a direct hallucination rate. See
 [`research_log.md`](research_log.md) for experiment objectives, raw/processed
 paths, paired comparisons, and limitations. The current supervisor-review
-manuscript is in `deliverables/TDK_Research_Paper_v7_Kirill_Tarasov.docx`.
+manuscript is in `deliverables/TDK_Research_Paper_v7_Kirill_Tarasov.docx`; it
+includes EXP-029 and predates the EXP-032 development pilot documented in the log.
 
 ## Data and provenance
 
@@ -67,8 +70,8 @@ see [`docs/symbolic_rules_spec_v1.md`](docs/symbolic_rules_spec_v1.md).
 
 `src/verification/neuro_symbolic.py` now connects a prompted neural extraction
 interface to those rules, with strict validation of source IDs and literal
-spans. The adapter is implemented but has no measured neural extraction result.
-EXP-032 prepares 12 fictional event/winner development cases, including a case
+spans. Its first model pilot, EXP-032, failed validation on all 12 fictional
+event/winner development cases. The fixtures include a case
 where consistent false evidence must still receive an evidence-relative
 `VERIFIED` verdict. This status must never be read as independent factual truth.
 
@@ -77,8 +80,10 @@ where consistent false evidence must still receive an evidence-relative
 python3 -B -m experiments.exp032_event_winner_pilot
 ```
 
-The [EXP-032 protocol](docs/exp032_event_winner_protocol.md) defines the scope,
-12-call local inference budget, raw outputs, analysis, and limits. A larger
+The [EXP-032 protocol](docs/exp032_event_winner_protocol.md) is the immutable
+pre-inference protocol. The [failure analysis](docs/exp032_failure_analysis.md)
+records both missing quotations and semantic extraction errors. The completed
+12-call run cannot be overwritten or repeated under the same ID. A larger
 inference comparison needs separate approval. EXP-031 human annotation remains
 incomplete.
 
