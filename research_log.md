@@ -281,3 +281,31 @@ disagreement were inspected qualitatively, but no independent human
 annotation or adjudicated semantic outcome exists yet. The system still
 uses benchmark-provided contexts rather than a real retriever and does not
 contain a neural-to-symbolic verification pipeline.
+
+## 2026-11-17 — EXP-032 Preparation: Event/Winner Verification Pilot
+
+**Status at this entry:** Implementation and oracle preflight complete;
+no EXP-032 model result yet. This entry reserves the ID and records the
+pre-inference scope, not an effectiveness result.
+
+Implemented `src/verification/neuro_symbolic.py`, connecting one prompted
+extraction call to the existing R3/R5/R6 rule core. Strict post-generation
+checks require source IDs, exact quoted spans, explicit event/year/value
+provenance, and representation of every source. Invalid or unresolved
+extraction produces UNKNOWN. Decoding is not schema constrained, semantic
+extraction correctness is not guaranteed by literal spans, and no answer
+repair is implemented. The existing S0–S4 variants are unchanged.
+
+Prepared 12 fictional controls in `data/synthetic/exp032_event_winner_pilot.json`
+and the fixed protocol in `docs/exp032_event_winner_protocol.md`. All 12
+authored oracle extractions pass their expected rule outcomes; 27 unit tests
+pass, including extraction-boundary and offline replay checks. These are
+software checks, not neural extraction accuracy measurements. P12 deliberately
+expects VERIFIED for an answer supported by false evidence, exposing the
+difference between source agreement and external factual truth.
+
+The planned small local run uses 12 greedy Mistral extraction calls, at most
+1,024 output tokens each, with no retries or tuning under the same ID. The
+model revision, source hashes, prompts, raw extraction, errors, rule traces,
+and latency will be retained. Broader effectiveness evaluation and EXP-031
+independent human annotation remain outstanding.

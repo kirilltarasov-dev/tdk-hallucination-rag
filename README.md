@@ -32,7 +32,7 @@ All 80%-noise intervention results are development evidence. RGB answer
 matching is a lexical benchmark score, not a direct hallucination rate. See
 [`research_log.md`](research_log.md) for experiment objectives, raw/processed
 paths, paired comparisons, and limitations. The current supervisor-review
-manuscript is in `deliverables/TDK_Research_Paper_v6_Kirill_Tarasov.docx`.
+manuscript is in `deliverables/TDK_Research_Paper_v7_Kirill_Tarasov.docx`.
 
 ## Data and provenance
 
@@ -64,6 +64,23 @@ Linux CI after the repository is published.
 `src/verification/symbolic_rules.py` is only a deterministic rule prototype
 over already structured facts. It is not an evaluated neuro-symbolic system;
 see [`docs/symbolic_rules_spec_v1.md`](docs/symbolic_rules_spec_v1.md).
+
+`src/verification/neuro_symbolic.py` now connects a prompted neural extraction
+interface to those rules, with strict validation of source IDs and literal
+spans. The adapter is implemented but has no measured neural extraction result.
+EXP-032 prepares 12 fictional event/winner development cases, including a case
+where consistent false evidence must still receive an evidence-relative
+`VERIFIED` verdict. This status must never be read as independent factual truth.
+
+```bash
+# Oracle and input preflight only; no model inference.
+python3 -B -m experiments.exp032_event_winner_pilot
+```
+
+The [EXP-032 protocol](docs/exp032_event_winner_protocol.md) defines the scope,
+12-call local inference budget, raw outputs, analysis, and limits. A larger
+inference comparison needs separate approval. EXP-031 human annotation remains
+incomplete.
 
 ## Mac inference environment
 

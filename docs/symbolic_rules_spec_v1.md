@@ -1,9 +1,10 @@
 # Symbolic Rule Layer v1: Oracle-Fact Prototype
 
-**Status:** Deterministic implementation and unit tests only. No neural
-extraction and no end-to-end model evaluation have been completed. This is a
-development artifact, not evidence that the thesis's neuro-symbolic claim has
-been demonstrated.
+**Status:** Deterministic core implemented and tested on oracle facts. A narrow
+neural extraction adapter is now implemented in `src/verification/neuro_symbolic.py`,
+with an unexecuted EXP-032 pilot protocol. No neural extraction or end-to-end
+model result has been measured. This is a development artifact, not evidence
+that the thesis's neuro-symbolic effectiveness claim has been demonstrated.
 
 `src/verification/symbolic_rules.py` accepts a typed question frame, a list
 of structured facts with source IDs and source spans, and an answer claim or

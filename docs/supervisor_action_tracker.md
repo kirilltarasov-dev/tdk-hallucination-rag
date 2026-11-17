@@ -8,7 +8,7 @@ separate research scope.
 
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
-| Align title with measured work | Open | Current title still promises neuro-symbolic verification and hallucination reduction. A deterministic oracle-fact rule prototype exists, but neural extraction and end-to-end evaluation do not. Implement and evaluate those claims or agree a narrower title with the supervisor. |
+| Align title with measured work | Open | Current title still promises neuro-symbolic verification and hallucination reduction. A rule core and narrow neural extraction adapter are implemented; EXP-032 is prepared but has no model result. Effectiveness remains unmeasured. |
 | Use a hallucination-specific metric for the title claim | Annotation prepared | RGB-compatible lexical score is not a hallucination rate. EXP-031 has a blinded 100-pair worksheet and a frozen codebook, but no independent human labels or semantic result yet. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
@@ -21,7 +21,7 @@ separate research scope.
 | Freeze method with tagged commit before new test | Done for EXP-029 | Local commit `77829b1` and annotated tag `exp029-freeze-2026-11-17` precede inference. Future final tests need their own freeze; this is not a public release. |
 | Dataset versions, sizes, licences, hashes in paper table | Partial | `docs/dataset_manifest.md` verifies all three local files against one upstream commit and records CC BY-NC-SA 4.0; the manuscript table is pending. |
 | State S3 assessor model and use distinct verifier model | Open | Existing S3 assessor uses the generator model. A distinct verifier requires a new design and controlled evaluation. The new symbolic rule prototype does not replace the neural assessor. |
-| JSON-schema-constrained outputs and parse-failure reporting | Open | EXP-028 recorded zero parse errors, but historical parsers use text prefixes and are not schema constrained. |
+| JSON-schema-constrained outputs and parse-failure reporting | Partial | EXP-032 implements strict post-generation JSON/type/provenance checks and visible UNKNOWN/error records. Decoding is not schema constrained; historical text-prefix parsers are unchanged. |
 | RGB-compatible score plus EM and token F1 | Partial | EXP-030 computed supplemental EM/F1 on the 288 single-answer-group questions per condition; EM is 0/288 for both systems because responses are verbose. The manuscript table and multi-group treatment remain open. |
 | Hardware, p50/p95 latency, calls, tokens, peak memory | Partial | Mac hardware and mean stage latencies are documented; distributional latency, token counts, and memory are missing. |
 | Paired exact McNemar, bootstrap interval, effect sizes | Done for existing paired score comparisons | EXP-026 and EXP-028 report paired transitions, percentage-point effects, exact p-values, and bootstrap intervals. |
@@ -29,7 +29,7 @@ separate research scope.
 | Public GitHub repository under code license | Open | No Git remote or project code license exists. Upstream RGB data retain their separate CC BY-NC-SA 4.0 license. |
 | Locked dependencies and Docker image | Partial | `requirements-mlx-macos.lock` is a 43-package version snapshot; no Docker/Linux inference environment exists. |
 | Complete question-level trace in JSONL | Partial | Historical raw rows are preserved and EXP-028 stores questions, contexts, assessments, answers, and stage timings; not every run stores full prompts, tokens, or memory. |
-| Unit tests for scorer and parsers with CI | Partial | Seventeen tests, including eight oracle-fact symbolic rule checks, pass locally; Linux GitHub Actions workflow is configured but has not run remotely. |
+| Unit tests for scorer and parsers with CI | Partial | Local tests cover scoring, historical parsers, symbolic rules, and extraction boundaries. Linux GitHub Actions workflow is configured but has not run remotely. These tests do not measure neural extraction accuracy. |
 | Publish prompts in repository and appendix | Partial | Prompts are in source files; the manuscript appendix does not reproduce them verbatim. |
 | Architecture figure | Open | No current architecture figure maps failures to interventions. |
 | Remove duplicated noise table/figure; add comparative uncertainty plot | Partial | Duplicate figure was removed from v6; a multi-model uncertainty plot depends on additional model runs. |

@@ -1,0 +1,494 @@
+{
+  "dataset_id": "exp032_synthetic_event_winner_v1",
+  "provenance": "Hand-authored fictional development fixtures; not RGB, not independent human annotation, not a held-out effectiveness benchmark.",
+  "cases": [
+    {
+      "case_id": "P01",
+      "condition": "matching evidence",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2024 Aurora Cup."
+      },
+      "response": "Team Amber won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Amber",
+          "source_span": "Team Amber won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P02",
+      "condition": "answer mismatch",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2024 Aurora Cup."
+      },
+      "response": "Team Cobalt won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Cobalt",
+          "source_span": "Team Cobalt won."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_ANSWER_MISMATCH",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P03",
+      "condition": "abstention despite evidence",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2024 Aurora Cup."
+      },
+      "response": "I cannot determine the winner.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "ABSTENTION",
+          "value": null,
+          "source_span": "I cannot determine the winner."
+        }
+      },
+      "expected_verdict": "REFUTED",
+      "expected_rule_id": "R6_FALSE_ABSTENTION",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P04",
+      "condition": "wrong year only",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2023 Aurora Cup."
+      },
+      "response": "Team Amber won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2023 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2023,
+                "value": "Team Amber"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Amber",
+          "source_span": "Team Amber won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P05",
+      "condition": "wrong event only",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2024 Boreal Cup."
+      },
+      "response": "Team Amber won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2024 Boreal Cup.",
+                "event": "Boreal Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Amber",
+          "source_span": "Team Amber won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P06",
+      "condition": "conflicting sources",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2024 Aurora Cup.",
+        "D2": "Team Cobalt won the 2024 Aurora Cup."
+      },
+      "response": "Team Amber won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Cobalt won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Cobalt"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Amber",
+          "source_span": "Team Amber won."
+        }
+      },
+      "expected_verdict": "CONFLICT",
+      "expected_rule_id": "R5_CONFLICT",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P07",
+      "condition": "agreeing sources",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2024 Aurora Cup.",
+        "D2": "The 2024 Aurora Cup was won by Team Amber."
+      },
+      "response": "Team Amber won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          },
+          {
+            "source_id": "D2",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "The 2024 Aurora Cup was won by Team Amber.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Amber",
+          "source_span": "Team Amber won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P08",
+      "condition": "no explicit winner",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "The 2024 Aurora Cup had Team Amber and Team Cobalt as finalists."
+      },
+      "response": "Team Amber won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Amber",
+          "source_span": "Team Amber won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P09",
+      "condition": "incompatible answer claims",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber won the 2024 Aurora Cup."
+      },
+      "response": "Team Amber won. Team Cobalt won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Amber won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Amber"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "Team Amber won. Team Cobalt won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P10",
+      "condition": "unsupported relation",
+      "question": "Where was the 2024 Aurora Cup held?",
+      "documents": {
+        "D1": "The 2024 Aurora Cup was held at North Hall."
+      },
+      "response": "North Hall.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "OUT_OF_SCOPE",
+          "event": null,
+          "year": null,
+          "source_span": null
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "UNRESOLVED",
+          "value": null,
+          "source_span": "North Hall."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "EXTRACTION_UNRESOLVED",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P11",
+      "condition": "negated win only",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Amber did not win the 2024 Aurora Cup."
+      },
+      "response": "Team Amber won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": []
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Amber",
+          "source_span": "Team Amber won."
+        }
+      },
+      "expected_verdict": "UNKNOWN",
+      "expected_rule_id": "R3_NO_MATCH",
+      "authored_ground_truth": null
+    },
+    {
+      "case_id": "P12",
+      "condition": "consistent false evidence",
+      "question": "Who won the 2024 Aurora Cup?",
+      "documents": {
+        "D1": "Team Cobalt won the 2024 Aurora Cup."
+      },
+      "response": "Team Cobalt won.",
+      "oracle_extraction": {
+        "schema_version": "event_winner_v1",
+        "question": {
+          "status": "IN_SCOPE",
+          "event": "Aurora Cup",
+          "year": 2024,
+          "source_span": "Who won the 2024 Aurora Cup?"
+        },
+        "documents": [
+          {
+            "source_id": "D1",
+            "status": "COMPLETE",
+            "facts": [
+              {
+                "source_span": "Team Cobalt won the 2024 Aurora Cup.",
+                "event": "Aurora Cup",
+                "year": 2024,
+                "value": "Team Cobalt"
+              }
+            ]
+          }
+        ],
+        "answer": {
+          "status": "SINGLE_CLAIM",
+          "value": "Team Cobalt",
+          "source_span": "Team Cobalt won."
+        }
+      },
+      "expected_verdict": "VERIFIED",
+      "expected_rule_id": "R3_R6_SUPPORTED",
+      "authored_ground_truth": {
+        "winner": "Team Amber",
+        "note": "Fictional author-defined truth, deliberately withheld from the extractor; the provided document and response are false relative to this reference."
+      }
+    }
+  ]
+}
