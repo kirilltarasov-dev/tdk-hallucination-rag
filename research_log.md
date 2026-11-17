@@ -913,3 +913,26 @@ answer under varied evidence before revising another prompt. The guard-only
 variant is separately promising on development data (one gain, no loss), but
 that exploratory observation does not satisfy the combined candidate gate or
 constitute independent transfer. Historical negative outcomes remain canonical.
+
+## 2026-11-17 — EXP-042: Matched Context Diagnostic Prepared
+
+Following the author's instruction to test the EXP-041 answer-transcription
+regression, prepared four fixed question/response identities under four source
+conditions: support, another winner, wrong year and explicit denial. Within
+each identity only the source text changes. Frozen V2/V3 prompts are compared
+without any method change, 32 cached local calls at most 32,768 output tokens.
+The purpose and budget were explained before execution; no paid services,
+downloads, automatic retries or overwritten outputs are involved.
+
+Primary diagnostic inspects the answer block independently with the existing
+strict shape/type/quote checks, while separately reporting full extraction
+validity. Status/value drift between valid blocks demonstrates an observed
+context-dependent transcription, not model-internal reasoning or population
+frequency. Invalid blocks remain missing diagnostic information, not UNRESOLVED.
+Constant-but-wrong extraction is distinguished from correct invariance.
+
+Eight new tests check controlled-input preservation, malformed outputs, partial
+diagnostic visibility, quote/semantic separation, invariance accounting and
+summary integrity. Test stubs are not experimental results. Freeze all inputs
+and analysis before inference. EXP-041 remains NOT_ELIGIBLE regardless of this
+diagnostic outcome. See docs/exp042_answer_context_protocol.md.

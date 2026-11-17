@@ -1,0 +1,246 @@
+{
+  "experiment_id": "EXP-042",
+  "status": "authored_development_probe",
+  "cases": [
+    {
+      "case_id": "I042-1-supports",
+      "identity": "I1",
+      "condition": "supports",
+      "question": "Who won the 2081 Aurora Cup?",
+      "response": "Dawn Herons won.",
+      "documents": {
+        "D1": "Dawn Herons won the 2081 Aurora Cup."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      }
+    },
+    {
+      "case_id": "I042-1-other_winner",
+      "identity": "I1",
+      "condition": "other_winner",
+      "question": "Who won the 2081 Aurora Cup?",
+      "response": "Dawn Herons won.",
+      "documents": {
+        "D1": "Copper Foxes won the 2081 Aurora Cup."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      }
+    },
+    {
+      "case_id": "I042-1-wrong_year",
+      "identity": "I1",
+      "condition": "wrong_year",
+      "question": "Who won the 2081 Aurora Cup?",
+      "response": "Dawn Herons won.",
+      "documents": {
+        "D1": "Dawn Herons won the 2080 Aurora Cup."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      }
+    },
+    {
+      "case_id": "I042-1-explicit_denial",
+      "identity": "I1",
+      "condition": "explicit_denial",
+      "question": "Who won the 2081 Aurora Cup?",
+      "response": "Dawn Herons won.",
+      "documents": {
+        "D1": "Dawn Herons did not win the 2081 Aurora Cup."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won."
+      }
+    },
+    {
+      "case_id": "I042-2-other_winner",
+      "identity": "I2",
+      "condition": "other_winner",
+      "question": "Who won the 2082 Horizon Shield?",
+      "response": "Violet Otters won.",
+      "documents": {
+        "D1": "Slate Ravens won the 2082 Horizon Shield."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      }
+    },
+    {
+      "case_id": "I042-2-wrong_year",
+      "identity": "I2",
+      "condition": "wrong_year",
+      "question": "Who won the 2082 Horizon Shield?",
+      "response": "Violet Otters won.",
+      "documents": {
+        "D1": "Violet Otters won the 2081 Horizon Shield."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      }
+    },
+    {
+      "case_id": "I042-2-explicit_denial",
+      "identity": "I2",
+      "condition": "explicit_denial",
+      "question": "Who won the 2082 Horizon Shield?",
+      "response": "Violet Otters won.",
+      "documents": {
+        "D1": "Violet Otters did not win the 2082 Horizon Shield."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      }
+    },
+    {
+      "case_id": "I042-2-supports",
+      "identity": "I2",
+      "condition": "supports",
+      "question": "Who won the 2082 Horizon Shield?",
+      "response": "Violet Otters won.",
+      "documents": {
+        "D1": "Violet Otters won the 2082 Horizon Shield."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won."
+      }
+    },
+    {
+      "case_id": "I042-3-wrong_year",
+      "identity": "I3",
+      "condition": "wrong_year",
+      "question": "Who won the 2083 Meadow Trophy?",
+      "response": "Golden Badgers won.",
+      "documents": {
+        "D1": "Golden Badgers won the 2082 Meadow Trophy."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      }
+    },
+    {
+      "case_id": "I042-3-explicit_denial",
+      "identity": "I3",
+      "condition": "explicit_denial",
+      "question": "Who won the 2083 Meadow Trophy?",
+      "response": "Golden Badgers won.",
+      "documents": {
+        "D1": "Golden Badgers did not win the 2083 Meadow Trophy."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      }
+    },
+    {
+      "case_id": "I042-3-supports",
+      "identity": "I3",
+      "condition": "supports",
+      "question": "Who won the 2083 Meadow Trophy?",
+      "response": "Golden Badgers won.",
+      "documents": {
+        "D1": "Golden Badgers won the 2083 Meadow Trophy."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      }
+    },
+    {
+      "case_id": "I042-3-other_winner",
+      "identity": "I3",
+      "condition": "other_winner",
+      "question": "Who won the 2083 Meadow Trophy?",
+      "response": "Golden Badgers won.",
+      "documents": {
+        "D1": "Jade Falcons won the 2083 Meadow Trophy."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won."
+      }
+    },
+    {
+      "case_id": "I042-4-explicit_denial",
+      "identity": "I4",
+      "condition": "explicit_denial",
+      "question": "Who won the 2084 Estuary Medal?",
+      "response": "Scarlet Swans won.",
+      "documents": {
+        "D1": "Scarlet Swans did not win the 2084 Estuary Medal."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      }
+    },
+    {
+      "case_id": "I042-4-supports",
+      "identity": "I4",
+      "condition": "supports",
+      "question": "Who won the 2084 Estuary Medal?",
+      "response": "Scarlet Swans won.",
+      "documents": {
+        "D1": "Scarlet Swans won the 2084 Estuary Medal."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      }
+    },
+    {
+      "case_id": "I042-4-other_winner",
+      "identity": "I4",
+      "condition": "other_winner",
+      "question": "Who won the 2084 Estuary Medal?",
+      "response": "Scarlet Swans won.",
+      "documents": {
+        "D1": "Ivory Lynxes won the 2084 Estuary Medal."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      }
+    },
+    {
+      "case_id": "I042-4-wrong_year",
+      "identity": "I4",
+      "condition": "wrong_year",
+      "question": "Who won the 2084 Estuary Medal?",
+      "response": "Scarlet Swans won.",
+      "documents": {
+        "D1": "Scarlet Swans won the 2083 Estuary Medal."
+      },
+      "expected_answer": {
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won."
+      }
+    }
+  ]
+}
