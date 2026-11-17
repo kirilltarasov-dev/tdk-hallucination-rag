@@ -1,6 +1,6 @@
 # Research Hypotheses and Evidence Boundaries
 
-**Updated:** 2026-11-17. Completed through the EXP-042 development diagnostic.
+**Updated:** 2026-11-17. Completed through the EXP-043 offline component study.
 
 ## Current defensible finding
 
@@ -63,6 +63,15 @@ about those systems but cannot retroactively evaluate a verifier absent from
 those runs. A new full-system evaluation is needed for the new symbolic layer.
 
 ## What a credible thesis can conclude
+
+EXP-043 explicitly substitutes a source-independent finite-grammar claim for
+the context-dependent neural answer, preserving validated neural question/facts.
+It restores the known EXP-041 D041-14 REFUTED verdict without losing another
+correct decisive V3/G2 outcome. Its development gate passes only for subsequent
+fresh transfer. The 16/16 EXP-042 claim match is structurally induced by removing
+context from this component; it is not independent accuracy evidence. Both old
+and new verdicts in the restored case withhold the answer, so no improvement in
+released-answer utility has yet been demonstrated. See `docs/exp043_results.md`.
 
 EXP-042 isolates a transcription defect: changing only the source text altered
 the extracted status/value of a fixed answer in all four authored identities

@@ -1004,3 +1004,42 @@ Ten new tests pass for substitution boundaries, full-response consumption,
 unresolved-source preservation and a stubbed live adapter. Model stubs are not
 research results. Freeze source, controls and analysis before aggregate replay.
 Protocol: docs/exp043_independent_answer_protocol.md.
+
+## 2026-11-17 — EXP-043: Offline Composition Passes the Development Gate
+
+Executed the zero-inference analysis after freeze 2a502a3, tag
+exp043-freeze-2026-11-17. All historical raw outputs remain unchanged. Primary
+EXP-041 V3/G2 comparison: source-verdict agreement 15→16/16, correct decisive
+8→9, UNKNOWN 8→7, false VERIFIED 0→0. D041-14 changes from UNKNOWN to the
+correct REFUTED; there are no lost correct decisive verdicts or newly false
+confirmations relative to the authored source oracle. The secondary V2/G2
+comparison is unchanged (14/16 agreement, seven correct decisive).
+
+The independent answer representation matches all 16 EXP-042 context inputs
+(only four distinct question/response pairs). This invariance is structural,
+not an independently measured generalization property. Downstream, the V3
+I042-1-other_winner case changes UNKNOWN→REFUTED. Both transitions still
+abstain under the current release policy; no final-answer utility improvement
+is established by these diagnostic gains.
+
+All 24 authored grammar controls match the specification: seven single-claim,
+four abstention and thirteen unresolved outcomes. Valid out-of-grammar language
+still remains UNKNOWN. Of 64 historical extractions replayed, 59 receive the
+explicit answer-field composition; four invalid and one unresolved non-answer
+record remain blocked. The same neural facts/question are retained, not
+corrected or filled in. The false-source control remains VERIFIED for V2/V3.
+
+Gate: ELIGIBLE_FOR_FRESH_TRANSFER_ONLY. This result does not revise EXP-041's
+failed combined-candidate gate or EXP-040's failed generated-answer screen.
+The new live adapter retains the joint V3 neural call and logs its unused answer
+field; evidence-independent answer transcription is not yet a facts-only neural
+prompt or a broad semantic parser. No new model calls or cost benefit measured.
+
+All 110 Python tests passed; EXP-043 derived rows/summary replay and historical
+EXP-040/041/042 replays passed. Derived-row SHA-256:
+5030983504b887183a000e313f8735397dd128098b9a73f574d400f112dddb5a.
+Saved the explicit component, authored controls, source manifest, 64 derived
+case records, processed summary and interpretation in docs/exp043_results.md.
+Next evidence boundary: frozen candidate on fresh generated answers, retaining
+valid out-of-grammar inputs, conflict, false-source controls and coverage/utility
+criteria. No independent transfer result exists for this component yet.

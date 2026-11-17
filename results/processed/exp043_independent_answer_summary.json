@@ -1,0 +1,1583 @@
+{
+  "experiment_id": "EXP-043",
+  "status": "completed_offline_development_replay",
+  "new_model_calls": 0,
+  "exp041_comparisons": {
+    "V2": {
+      "before": {
+        "n": 16,
+        "verdict_agreement": 14,
+        "correct_decisive": 7,
+        "unknown": 9,
+        "false_VERIFIED": 0
+      },
+      "after": {
+        "n": 16,
+        "verdict_agreement": 14,
+        "correct_decisive": 7,
+        "unknown": 9,
+        "false_VERIFIED": 0
+      },
+      "correct_decisive_gains": [],
+      "correct_decisive_losses": [],
+      "new_false_VERIFIED": []
+    },
+    "V3": {
+      "before": {
+        "n": 16,
+        "verdict_agreement": 15,
+        "correct_decisive": 8,
+        "unknown": 8,
+        "false_VERIFIED": 0
+      },
+      "after": {
+        "n": 16,
+        "verdict_agreement": 16,
+        "correct_decisive": 9,
+        "unknown": 7,
+        "false_VERIFIED": 0
+      },
+      "correct_decisive_gains": [
+        "D041-14"
+      ],
+      "correct_decisive_losses": [],
+      "new_false_VERIFIED": []
+    }
+  },
+  "regained_D041_14_REFUTED": true,
+  "exp042_independent_claim_matches": 16,
+  "exp042_unique_context_inputs": 16,
+  "exp042_distinct_question_response_pairs": 4,
+  "grammar_control_matches": 24,
+  "grammar_controls": 24,
+  "exp042_downstream_verdict_changes": [
+    {
+      "case_id": "I042-1-other_winner",
+      "prompt_variant": "V3",
+      "before": "UNKNOWN",
+      "after": "REFUTED"
+    }
+  ],
+  "original_invalid_records_still_blocked": 4,
+  "candidate_gate": "ELIGIBLE_FOR_FRESH_TRANSFER_ONLY",
+  "independent_claim_results": [
+    {
+      "case_id": "I042-1-supports",
+      "identity": "I1",
+      "condition": "supports",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Aurora Cup",
+          "year": 2081,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 16,
+              "text": "Dawn Herons won.",
+              "asserted": "Dawn Herons"
+            }
+          ],
+          "asserted_values": [
+            "Dawn Herons"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-1-other_winner",
+      "identity": "I1",
+      "condition": "other_winner",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Aurora Cup",
+          "year": 2081,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 16,
+              "text": "Dawn Herons won.",
+              "asserted": "Dawn Herons"
+            }
+          ],
+          "asserted_values": [
+            "Dawn Herons"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-1-wrong_year",
+      "identity": "I1",
+      "condition": "wrong_year",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Aurora Cup",
+          "year": 2081,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 16,
+              "text": "Dawn Herons won.",
+              "asserted": "Dawn Herons"
+            }
+          ],
+          "asserted_values": [
+            "Dawn Herons"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-1-explicit_denial",
+      "identity": "I1",
+      "condition": "explicit_denial",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Dawn Herons",
+        "source_span": "Dawn Herons won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Aurora Cup",
+          "year": 2081,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 16,
+              "text": "Dawn Herons won.",
+              "asserted": "Dawn Herons"
+            }
+          ],
+          "asserted_values": [
+            "Dawn Herons"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-2-other_winner",
+      "identity": "I2",
+      "condition": "other_winner",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Horizon Shield",
+          "year": 2082,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Violet Otters won.",
+              "asserted": "Violet Otters"
+            }
+          ],
+          "asserted_values": [
+            "Violet Otters"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-2-wrong_year",
+      "identity": "I2",
+      "condition": "wrong_year",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Horizon Shield",
+          "year": 2082,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Violet Otters won.",
+              "asserted": "Violet Otters"
+            }
+          ],
+          "asserted_values": [
+            "Violet Otters"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-2-explicit_denial",
+      "identity": "I2",
+      "condition": "explicit_denial",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Horizon Shield",
+          "year": 2082,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Violet Otters won.",
+              "asserted": "Violet Otters"
+            }
+          ],
+          "asserted_values": [
+            "Violet Otters"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-2-supports",
+      "identity": "I2",
+      "condition": "supports",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Violet Otters",
+        "source_span": "Violet Otters won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Horizon Shield",
+          "year": 2082,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Violet Otters won.",
+              "asserted": "Violet Otters"
+            }
+          ],
+          "asserted_values": [
+            "Violet Otters"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-3-wrong_year",
+      "identity": "I3",
+      "condition": "wrong_year",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Meadow Trophy",
+          "year": 2083,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 19,
+              "text": "Golden Badgers won.",
+              "asserted": "Golden Badgers"
+            }
+          ],
+          "asserted_values": [
+            "Golden Badgers"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-3-explicit_denial",
+      "identity": "I3",
+      "condition": "explicit_denial",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Meadow Trophy",
+          "year": 2083,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 19,
+              "text": "Golden Badgers won.",
+              "asserted": "Golden Badgers"
+            }
+          ],
+          "asserted_values": [
+            "Golden Badgers"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-3-supports",
+      "identity": "I3",
+      "condition": "supports",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Meadow Trophy",
+          "year": 2083,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 19,
+              "text": "Golden Badgers won.",
+              "asserted": "Golden Badgers"
+            }
+          ],
+          "asserted_values": [
+            "Golden Badgers"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-3-other_winner",
+      "identity": "I3",
+      "condition": "other_winner",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Golden Badgers",
+        "source_span": "Golden Badgers won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Meadow Trophy",
+          "year": 2083,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 19,
+              "text": "Golden Badgers won.",
+              "asserted": "Golden Badgers"
+            }
+          ],
+          "asserted_values": [
+            "Golden Badgers"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-4-explicit_denial",
+      "identity": "I4",
+      "condition": "explicit_denial",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Estuary Medal",
+          "year": 2084,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Scarlet Swans won.",
+              "asserted": "Scarlet Swans"
+            }
+          ],
+          "asserted_values": [
+            "Scarlet Swans"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-4-supports",
+      "identity": "I4",
+      "condition": "supports",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Estuary Medal",
+          "year": 2084,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Scarlet Swans won.",
+              "asserted": "Scarlet Swans"
+            }
+          ],
+          "asserted_values": [
+            "Scarlet Swans"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-4-other_winner",
+      "identity": "I4",
+      "condition": "other_winner",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Estuary Medal",
+          "year": 2084,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Scarlet Swans won.",
+              "asserted": "Scarlet Swans"
+            }
+          ],
+          "asserted_values": [
+            "Scarlet Swans"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "I042-4-wrong_year",
+      "identity": "I4",
+      "condition": "wrong_year",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Scarlet Swans",
+        "source_span": "Scarlet Swans won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Estuary Medal",
+          "year": 2084,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Scarlet Swans won.",
+              "asserted": "Scarlet Swans"
+            }
+          ],
+          "asserted_values": [
+            "Scarlet Swans"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    }
+  ],
+  "grammar_control_results": [
+    {
+      "case_id": "C043-00",
+      "condition": "short",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Saffron Larks",
+        "source_span": "Saffron Larks won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-01",
+      "condition": "year_first",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Saffron Larks",
+        "source_span": "Saffron Larks won the 2091 Opal Cup.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 36,
+              "text": "Saffron Larks won the 2091 Opal Cup.",
+              "asserted": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-02",
+      "condition": "year_last",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Saffron Larks",
+        "source_span": "Saffron Larks won the Opal Cup in 2091.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 39,
+              "text": "Saffron Larks won the Opal Cup in 2091.",
+              "asserted": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-03",
+      "condition": "repeated_same",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Saffron Larks",
+        "source_span": "Saffron Larks won. Saffron Larks won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            },
+            {
+              "kind": "assertion",
+              "start": 19,
+              "end": 37,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks",
+            "Saffron Larks"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-04",
+      "condition": "rejected_quote",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Saffron Larks",
+        "source_span": "The claim \"Cobalt Pumas won.\" is false. Saffron Larks won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "rejected_quote",
+              "start": 0,
+              "end": 39,
+              "text": "The claim \"Cobalt Pumas won.\" is false.",
+              "rejected": "Cobalt Pumas"
+            },
+            {
+              "kind": "assertion",
+              "start": 40,
+              "end": 58,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [
+            "Cobalt Pumas"
+          ],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-05",
+      "condition": "contrast",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Saffron Larks",
+        "source_span": "Saffron Larks won, not Cobalt Pumas.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "contrast",
+              "start": 0,
+              "end": 36,
+              "text": "Saffron Larks won, not Cobalt Pumas.",
+              "asserted": "Saffron Larks",
+              "rejected": "Cobalt Pumas"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [
+            "Cobalt Pumas"
+          ],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-06",
+      "condition": "other_claim",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "SINGLE_CLAIM",
+        "value": "Cobalt Pumas",
+        "source_span": "Cobalt Pumas won.",
+        "reason": "COMPLETE_SINGLE_ASSERTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 17,
+              "text": "Cobalt Pumas won.",
+              "asserted": "Cobalt Pumas"
+            }
+          ],
+          "asserted_values": [
+            "Cobalt Pumas"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-07",
+      "condition": "refusal_one",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "I cannot determine the winner.",
+        "reason": "COMPLETE_ABSTENTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "abstention",
+              "start": 0,
+              "end": 30,
+              "text": "I cannot determine the winner."
+            }
+          ],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": true,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-08",
+      "condition": "refusal_two",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "I do not know who won.",
+        "reason": "COMPLETE_ABSTENTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "abstention",
+              "start": 0,
+              "end": 22,
+              "text": "I do not know who won."
+            }
+          ],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": true,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-09",
+      "condition": "refusal_three",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "There is insufficient information to answer.",
+        "reason": "COMPLETE_ABSTENTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "abstention",
+              "start": 0,
+              "end": 44,
+              "text": "There is insufficient information to answer."
+            }
+          ],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": true,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-10",
+      "condition": "refusal_four",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "ABSTENTION",
+        "value": null,
+        "source_span": "Insufficient information.",
+        "reason": "COMPLETE_ABSTENTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "abstention",
+              "start": 0,
+              "end": 25,
+              "text": "Insufficient information."
+            }
+          ],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": true,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-11",
+      "condition": "two_winners",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks won. Cobalt Pumas won.",
+        "reason": "INCOMPATIBLE_ASSERTIONS",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            },
+            {
+              "kind": "assertion",
+              "start": 19,
+              "end": 36,
+              "text": "Cobalt Pumas won.",
+              "asserted": "Cobalt Pumas"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks",
+            "Cobalt Pumas"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-12",
+      "condition": "self_negation",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks won. Saffron Larks did not win.",
+        "reason": "ASSERTION_AND_NEGATION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            },
+            {
+              "kind": "rejection",
+              "start": 19,
+              "end": 45,
+              "text": "Saffron Larks did not win.",
+              "rejected": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [
+            "Saffron Larks"
+          ],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-13",
+      "condition": "mixed_refusal",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "I cannot determine the winner. Saffron Larks won.",
+        "reason": "MIXED_ASSERTION_AND_ABSTENTION",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "abstention",
+              "start": 0,
+              "end": 30,
+              "text": "I cannot determine the winner."
+            },
+            {
+              "kind": "assertion",
+              "start": 31,
+              "end": 49,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [],
+          "abstention_detected": true,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-14",
+      "condition": "negative_only",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Cobalt Pumas did not win.",
+        "reason": "NO_SUPPORTED_POSITIVE_CLAIM",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "rejection",
+              "start": 0,
+              "end": 25,
+              "text": "Cobalt Pumas did not win.",
+              "rejected": "Cobalt Pumas"
+            }
+          ],
+          "asserted_values": [],
+          "rejected_values": [
+            "Cobalt Pumas"
+          ],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-15",
+      "condition": "quote_only",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "The claim \"Cobalt Pumas won.\" is false.",
+        "reason": "NO_SUPPORTED_POSITIVE_CLAIM",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "rejected_quote",
+              "start": 0,
+              "end": 39,
+              "text": "The claim \"Cobalt Pumas won.\" is false.",
+              "rejected": "Cobalt Pumas"
+            }
+          ],
+          "asserted_values": [],
+          "rejected_values": [
+            "Cobalt Pumas"
+          ],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-16",
+      "condition": "wrong_year",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks won the 2090 Opal Cup.",
+        "reason": "UNCONSUMED_RESPONSE_TEXT",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "UNSUPPORTED",
+          "units": [],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": 0,
+          "unconsumed_text": "Saffron Larks won the 2090 Opal Cup."
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-17",
+      "condition": "wrong_event",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks won the 2091 Quartz Cup.",
+        "reason": "UNCONSUMED_RESPONSE_TEXT",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "UNSUPPORTED",
+          "units": [],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": 0,
+          "unconsumed_text": "Saffron Larks won the 2091 Quartz Cup."
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-18",
+      "condition": "answer_paraphrase",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks took first place.",
+        "reason": "UNCONSUMED_RESPONSE_TEXT",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "UNSUPPORTED",
+          "units": [],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": 0,
+          "unconsumed_text": "Saffron Larks took first place."
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-19",
+      "condition": "auxiliary_claim",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks won. The venue was large.",
+        "reason": "UNCONSUMED_RESPONSE_TEXT",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "UNSUPPORTED",
+          "units": [
+            {
+              "kind": "assertion",
+              "start": 0,
+              "end": 18,
+              "text": "Saffron Larks won.",
+              "asserted": "Saffron Larks"
+            }
+          ],
+          "asserted_values": [
+            "Saffron Larks"
+          ],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": 19,
+          "unconsumed_text": "The venue was large."
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-20",
+      "condition": "bare_name",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks",
+        "reason": "UNCONSUMED_RESPONSE_TEXT",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "UNSUPPORTED",
+          "units": [],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": 0,
+          "unconsumed_text": "Saffron Larks"
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-21",
+      "condition": "hedged",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Saffron Larks probably won.",
+        "reason": "UNCONSUMED_RESPONSE_TEXT",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "UNSUPPORTED",
+          "units": [],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": 0,
+          "unconsumed_text": "Saffron Larks probably won."
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-22",
+      "condition": "empty",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "",
+        "reason": "NO_SUPPORTED_POSITIVE_CLAIM",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [],
+          "asserted_values": [],
+          "rejected_values": [],
+          "abstention_detected": false,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    },
+    {
+      "case_id": "C043-23",
+      "condition": "refusal_and_denial",
+      "claim": {
+        "component_version": "independent_finite_answer_v1",
+        "status": "UNRESOLVED",
+        "value": null,
+        "source_span": "Cobalt Pumas did not win. I cannot determine the winner.",
+        "reason": "NO_SUPPORTED_POSITIVE_CLAIM",
+        "question_frame": {
+          "relation": "won",
+          "event": "Opal Cup",
+          "year": 2091,
+          "subject": null
+        },
+        "inventory": {
+          "status": "COMPLETE",
+          "units": [
+            {
+              "kind": "rejection",
+              "start": 0,
+              "end": 25,
+              "text": "Cobalt Pumas did not win.",
+              "rejected": "Cobalt Pumas"
+            },
+            {
+              "kind": "abstention",
+              "start": 26,
+              "end": 56,
+              "text": "I cannot determine the winner."
+            }
+          ],
+          "asserted_values": [],
+          "rejected_values": [
+            "Cobalt Pumas"
+          ],
+          "abstention_detected": true,
+          "unsupported_offset": null,
+          "unconsumed_text": ""
+        },
+        "uses_source_documents": false
+      },
+      "matches_expected": true
+    }
+  ],
+  "limitations": "Retrospective component substitution on known traces, not new inference or independent efficacy. Context invariance is structural; false sources remain unresolved.",
+  "derived_rows_sha256": "5030983504b887183a000e313f8735397dd128098b9a73f574d400f112dddb5a",
+  "manifest_sha256": "08598dbe5fd589eeb71e80544aab38ef5bf816a1ad5e18b6e607a6fbdcb1d743"
+}

@@ -59,6 +59,17 @@ a development counterexample to context invariance, not a repair result or a
 population error rate. Replay:
 `python3 -B -m experiments.exp042_answer_context_invariance --check`.
 
+The latest offline component study, [EXP-043](docs/exp043_results.md), parses
+the answer without sources and composes it with the unchanged, validated neural
+question/facts. On reused EXP-041 V3 traces it restores one correct REFUTED
+decision, loses none, and adds no false VERIFIED against the source oracle;
+the development gate passes for fresh transfer only. The EXP-042 claim probe
+matches 16/16 and all 24 authored grammar controls pass. This is structural
+context invariance and known-trace replay, not independent effectiveness. Four
+invalid extractions and one unresolved non-answer record remain blocked. The
+false-source control remains VERIFIED. No new model calls were made.
+Replay: `python3 -B -m experiments.exp043_independent_answer_replay --check`.
+
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all
 three paired arms, extraction defects, uncertainty, and coverage losses.
