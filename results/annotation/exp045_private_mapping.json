@@ -1,0 +1,312 @@
+{
+  "experiment_id": "EXP-045",
+  "artifact_type": "private_system_mapping",
+  "seed": 45018,
+  "source_sha256": {
+    "results/raw/exp044_fresh_transfer.jsonl": "1cee1a96ddedbebf31fc2c770efba608d8c28df4f37ee703121ce18852ce999c",
+    "data/synthetic/exp044_generated_transfer_cases.json": "7a6a57c08bb868610eeb948dae50965796e6f3f473545c127cb2648b73cf67e3",
+    "results/processed/exp044_fresh_transfer_summary.json": "9e94ebd1ffd447aab0be8e0728defc70654f185fe81940eb19ff4e6963c875b6"
+  },
+  "mapping": [
+    {
+      "record_id": "R045-001",
+      "case_id": "E044-005",
+      "arms": [
+        "S1",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-002",
+      "case_id": "E044-022",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-003",
+      "case_id": "E044-001",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-004",
+      "case_id": "E044-016",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-005",
+      "case_id": "E044-005",
+      "arms": [
+        "Original_NS"
+      ]
+    },
+    {
+      "record_id": "R045-006",
+      "case_id": "E044-019",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-007",
+      "case_id": "E044-018",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-008",
+      "case_id": "E044-014",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-009",
+      "case_id": "E044-006",
+      "arms": [
+        "S1",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-010",
+      "case_id": "E044-003",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-011",
+      "case_id": "E044-009",
+      "arms": [
+        "S1",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-012",
+      "case_id": "E044-015",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-013",
+      "case_id": "E044-007",
+      "arms": [
+        "Original_NS"
+      ]
+    },
+    {
+      "record_id": "R045-014",
+      "case_id": "E044-020",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-015",
+      "case_id": "E044-004",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-016",
+      "case_id": "E044-024",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-017",
+      "case_id": "E044-008",
+      "arms": [
+        "S1",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-018",
+      "case_id": "E044-011",
+      "arms": [
+        "S1",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-019",
+      "case_id": "E044-015",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-020",
+      "case_id": "E044-014",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-021",
+      "case_id": "E044-013",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-022",
+      "case_id": "E044-023",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-023",
+      "case_id": "E044-020",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-024",
+      "case_id": "E044-008",
+      "arms": [
+        "Original_NS"
+      ]
+    },
+    {
+      "record_id": "R045-025",
+      "case_id": "E044-012",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-026",
+      "case_id": "E044-013",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-027",
+      "case_id": "E044-018",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-028",
+      "case_id": "E044-019",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-029",
+      "case_id": "E044-007",
+      "arms": [
+        "S1",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-030",
+      "case_id": "E044-002",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-031",
+      "case_id": "E044-010",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-032",
+      "case_id": "E044-021",
+      "arms": [
+        "S1",
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-033",
+      "case_id": "E044-006",
+      "arms": [
+        "Original_NS"
+      ]
+    },
+    {
+      "record_id": "R045-034",
+      "case_id": "E044-011",
+      "arms": [
+        "Original_NS"
+      ]
+    },
+    {
+      "record_id": "R045-035",
+      "case_id": "E044-009",
+      "arms": [
+        "Original_NS"
+      ]
+    },
+    {
+      "record_id": "R045-036",
+      "case_id": "E044-017",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    },
+    {
+      "record_id": "R045-037",
+      "case_id": "E044-017",
+      "arms": [
+        "S1"
+      ]
+    },
+    {
+      "record_id": "R045-038",
+      "case_id": "E044-016",
+      "arms": [
+        "Original_NS",
+        "Candidate_NS"
+      ]
+    }
+  ]
+}

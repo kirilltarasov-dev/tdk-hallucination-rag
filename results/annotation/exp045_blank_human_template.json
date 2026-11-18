@@ -1,0 +1,351 @@
+{
+  "experiment_id": "EXP-045",
+  "artifact_type": "blank_human_review_template",
+  "status": "NOT_COMPLETED",
+  "reviewer_id": null,
+  "prior_exposure_to_systems_or_AI_labels": null,
+  "records": [
+    {
+      "record_id": "R045-001",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-002",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-003",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-004",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-005",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-006",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-007",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-008",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-009",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-010",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-011",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-012",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-013",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-014",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-015",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-016",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-017",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-018",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-019",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-020",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-021",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-022",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-023",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-024",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-025",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-026",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-027",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-028",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-029",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-030",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-031",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-032",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-033",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-034",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-035",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-036",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-037",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-038",
+      "answer_status": null,
+      "false_target_claim": null,
+      "target_evidence": null,
+      "rationale": "",
+      "response_spans": [],
+      "context_spans": []
+    }
+  ]
+}

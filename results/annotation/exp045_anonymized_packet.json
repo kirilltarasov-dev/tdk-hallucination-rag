@@ -1,0 +1,363 @@
+{
+  "experiment_id": "EXP-045",
+  "artifact_type": "system_anonymized_review_packet",
+  "reference_scope": "Authored fictional unique winner; no external truth validation.",
+  "records": [
+    {
+      "record_id": "R045-001",
+      "question": "Who won the 2135 Willow Cup?",
+      "fictional_unique_winner": "Crimson Swans",
+      "documents": {
+        "D1": "Crimson Swans took first place in the 2135 Willow Cup."
+      },
+      "response": "Crimson Swans won."
+    },
+    {
+      "record_id": "R045-002",
+      "question": "Who won the 2152 Onyx Shield?",
+      "fictional_unique_winner": "Plum Jackals",
+      "documents": {
+        "D1": "Black Pumas won the 2152 Onyx Shield."
+      },
+      "response": "Black Pumas won."
+    },
+    {
+      "record_id": "R045-003",
+      "question": "Who won the 2131 Cedar Cup?",
+      "fictional_unique_winner": "Copper Ravens",
+      "documents": {
+        "D1": "Copper Ravens won the 2131 Cedar Cup."
+      },
+      "response": "Copper Ravens won."
+    },
+    {
+      "record_id": "R045-004",
+      "question": "Who won the 2146 Coral Challenge?",
+      "fictional_unique_winner": "Coral Ibises",
+      "documents": {
+        "D1": "Pink Ocelots won the 2146 Coral Challenge.",
+        "D2": "Coral Ibises won the 2146 Coral Challenge."
+      },
+      "response": "Pink Ocelots won."
+    },
+    {
+      "record_id": "R045-005",
+      "question": "Who won the 2135 Willow Cup?",
+      "fictional_unique_winner": "Crimson Swans",
+      "documents": {
+        "D1": "Crimson Swans took first place in the 2135 Willow Cup."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-006",
+      "question": "Who won the 2149 Dune Trophy?",
+      "fictional_unique_winner": "Olive Martens",
+      "documents": {
+        "D1": "Brown Gulls won the 2148 Dune Trophy."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-007",
+      "question": "Who won the 2148 Ivory Shield?",
+      "fictional_unique_winner": "Cerulean Hares",
+      "documents": {
+        "D1": "Black Pumas won the 2147 Ivory Shield."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-008",
+      "question": "Who won the 2144 Amber Shield?",
+      "fictional_unique_winner": "Indigo Seals",
+      "documents": {
+        "D1": "Black Pumas won the 2144 Amber Shield.",
+        "D2": "Indigo Seals won the 2144 Amber Shield."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-009",
+      "question": "Who won the 2136 Marble Shield?",
+      "fictional_unique_winner": "Navy Foxes",
+      "documents": {
+        "D1": "Navy Foxes took first place in the 2136 Marble Shield."
+      },
+      "response": "Navy Foxes won."
+    },
+    {
+      "record_id": "R045-010",
+      "question": "Who won the 2133 Quartz Trophy?",
+      "fictional_unique_winner": "Golden Herons",
+      "documents": {
+        "D1": "Golden Herons won the 2133 Quartz Trophy."
+      },
+      "response": "Golden Herons won."
+    },
+    {
+      "record_id": "R045-011",
+      "question": "Who won the 2139 Maple Cup?",
+      "fictional_unique_winner": "Bronze Cranes",
+      "documents": {
+        "D1": "Bronze Cranes won the 2139 Maple Cup.",
+        "D2": "White Terns did not win the 2139 Maple Cup."
+      },
+      "response": "Bronze Cranes won."
+    },
+    {
+      "record_id": "R045-012",
+      "question": "Who won the 2145 Reed Trophy?",
+      "fictional_unique_winner": "Umber Stags",
+      "documents": {
+        "D1": "Umber Stags won the 2145 Reed Trophy.",
+        "D2": "Brown Gulls won the 2145 Reed Trophy."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-013",
+      "question": "Who won the 2137 Elm Trophy?",
+      "fictional_unique_winner": "Jade Falcons",
+      "documents": {
+        "D1": "Jade Falcons took first place in the 2137 Elm Trophy."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-014",
+      "question": "Who won the 2150 Olive Challenge?",
+      "fictional_unique_winner": "Russet Whales",
+      "documents": {
+        "D1": "Pink Ocelots won the 2149 Olive Challenge."
+      },
+      "response": "Pink Ocelots did not win the 2150 Olive Challenge."
+    },
+    {
+      "record_id": "R045-015",
+      "question": "Who won the 2134 Orchid Challenge?",
+      "fictional_unique_winner": "Lilac Bears",
+      "documents": {
+        "D1": "Lilac Bears won the 2134 Orchid Challenge."
+      },
+      "response": "Lilac Bears won."
+    },
+    {
+      "record_id": "R045-016",
+      "question": "Who won the 2154 Pearl Challenge?",
+      "fictional_unique_winner": "Slate Finches",
+      "documents": {
+        "D1": "Pink Ocelots won the 2154 Pearl Challenge."
+      },
+      "response": "Pink Ocelots won."
+    },
+    {
+      "record_id": "R045-017",
+      "question": "Who won the 2138 Lagoon Challenge?",
+      "fictional_unique_winner": "Sable Lynxes",
+      "documents": {
+        "D1": "Sable Lynxes took first place in the 2138 Lagoon Challenge."
+      },
+      "response": "Sable Lynxes won."
+    },
+    {
+      "record_id": "R045-018",
+      "question": "Who won the 2141 Birch Trophy?",
+      "fictional_unique_winner": "Scarlet Owls",
+      "documents": {
+        "D1": "Scarlet Owls won the 2141 Birch Trophy.",
+        "D2": "Brown Gulls did not win the 2141 Birch Trophy."
+      },
+      "response": "Scarlet Owls won."
+    },
+    {
+      "record_id": "R045-019",
+      "question": "Who won the 2145 Reed Trophy?",
+      "fictional_unique_winner": "Umber Stags",
+      "documents": {
+        "D1": "Umber Stags won the 2145 Reed Trophy.",
+        "D2": "Brown Gulls won the 2145 Reed Trophy."
+      },
+      "response": "Umber Stags won."
+    },
+    {
+      "record_id": "R045-020",
+      "question": "Who won the 2144 Amber Shield?",
+      "fictional_unique_winner": "Indigo Seals",
+      "documents": {
+        "D1": "Black Pumas won the 2144 Amber Shield.",
+        "D2": "Indigo Seals won the 2144 Amber Shield."
+      },
+      "response": "Black Pumas won."
+    },
+    {
+      "record_id": "R045-021",
+      "question": "Who won the 2143 Pine Cup?",
+      "fictional_unique_winner": "Silver Kites",
+      "documents": {
+        "D1": "Silver Kites won the 2143 Pine Cup.",
+        "D2": "White Terns won the 2143 Pine Cup."
+      },
+      "response": "Silver Kites won."
+    },
+    {
+      "record_id": "R045-022",
+      "question": "Who won the 2153 Moss Trophy?",
+      "fictional_unique_winner": "Saffron Minks",
+      "documents": {
+        "D1": "Brown Gulls won the 2153 Moss Trophy."
+      },
+      "response": "Brown Gulls won."
+    },
+    {
+      "record_id": "R045-023",
+      "question": "Who won the 2150 Olive Challenge?",
+      "fictional_unique_winner": "Russet Whales",
+      "documents": {
+        "D1": "Pink Ocelots won the 2149 Olive Challenge."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-024",
+      "question": "Who won the 2138 Lagoon Challenge?",
+      "fictional_unique_winner": "Sable Lynxes",
+      "documents": {
+        "D1": "Sable Lynxes took first place in the 2138 Lagoon Challenge."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-025",
+      "question": "Who won the 2142 Cobalt Challenge?",
+      "fictional_unique_winner": "Azure Badgers",
+      "documents": {
+        "D1": "Pink Ocelots did not win the 2142 Cobalt Challenge.",
+        "D2": "Azure Badgers won the 2142 Cobalt Challenge."
+      },
+      "response": "Azure Badgers won."
+    },
+    {
+      "record_id": "R045-026",
+      "question": "Who won the 2143 Pine Cup?",
+      "fictional_unique_winner": "Silver Kites",
+      "documents": {
+        "D1": "Silver Kites won the 2143 Pine Cup.",
+        "D2": "White Terns won the 2143 Pine Cup."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-027",
+      "question": "Who won the 2148 Ivory Shield?",
+      "fictional_unique_winner": "Cerulean Hares",
+      "documents": {
+        "D1": "Black Pumas won the 2147 Ivory Shield."
+      },
+      "response": "Black Pumas did not win the 2148 Ivory Shield. (The given document only mentions the 2147 Ivory Shield winner.)"
+    },
+    {
+      "record_id": "R045-028",
+      "question": "Who won the 2149 Dune Trophy?",
+      "fictional_unique_winner": "Olive Martens",
+      "documents": {
+        "D1": "Brown Gulls won the 2148 Dune Trophy."
+      },
+      "response": "Brown Gulls won. (Answer based on the information provided in document D1, which states that they won the 2148 Dune Trophy, and it is assumed that they also won the 2149 Dune Trophy as no information to the contrary is provided.)"
+    },
+    {
+      "record_id": "R045-029",
+      "question": "Who won the 2137 Elm Trophy?",
+      "fictional_unique_winner": "Jade Falcons",
+      "documents": {
+        "D1": "Jade Falcons took first place in the 2137 Elm Trophy."
+      },
+      "response": "Jade Falcons won."
+    },
+    {
+      "record_id": "R045-030",
+      "question": "Who won the 2132 Harbor Shield?",
+      "fictional_unique_winner": "Teal Wolves",
+      "documents": {
+        "D1": "Teal Wolves won the 2132 Harbor Shield."
+      },
+      "response": "Teal Wolves won."
+    },
+    {
+      "record_id": "R045-031",
+      "question": "Who won the 2140 Topaz Shield?",
+      "fictional_unique_winner": "Violet Otters",
+      "documents": {
+        "D1": "Black Pumas did not win the 2140 Topaz Shield.",
+        "D2": "Violet Otters won the 2140 Topaz Shield."
+      },
+      "response": "Violet Otters won."
+    },
+    {
+      "record_id": "R045-032",
+      "question": "Who won the 2151 Aspen Cup?",
+      "fictional_unique_winner": "Pearl Weasels",
+      "documents": {
+        "D1": "White Terns won the 2151 Aspen Cup."
+      },
+      "response": "White Terns won."
+    },
+    {
+      "record_id": "R045-033",
+      "question": "Who won the 2136 Marble Shield?",
+      "fictional_unique_winner": "Navy Foxes",
+      "documents": {
+        "D1": "Navy Foxes took first place in the 2136 Marble Shield."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-034",
+      "question": "Who won the 2141 Birch Trophy?",
+      "fictional_unique_winner": "Scarlet Owls",
+      "documents": {
+        "D1": "Scarlet Owls won the 2141 Birch Trophy.",
+        "D2": "Brown Gulls did not win the 2141 Birch Trophy."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-035",
+      "question": "Who won the 2139 Maple Cup?",
+      "fictional_unique_winner": "Bronze Cranes",
+      "documents": {
+        "D1": "Bronze Cranes won the 2139 Maple Cup.",
+        "D2": "White Terns did not win the 2139 Maple Cup."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-036",
+      "question": "Who won the 2147 Juniper Cup?",
+      "fictional_unique_winner": "Amber Stoats",
+      "documents": {
+        "D1": "White Terns won the 2146 Juniper Cup."
+      },
+      "response": "I cannot determine the winner."
+    },
+    {
+      "record_id": "R045-037",
+      "question": "Who won the 2147 Juniper Cup?",
+      "fictional_unique_winner": "Amber Stoats",
+      "documents": {
+        "D1": "White Terns won the 2146 Juniper Cup."
+      },
+      "response": "White Terns did not win the 2147 Juniper Cup. (Answer based on the provided data, which states that they won the previous year.)"
+    },
+    {
+      "record_id": "R045-038",
+      "question": "Who won the 2146 Coral Challenge?",
+      "fictional_unique_winner": "Coral Ibises",
+      "documents": {
+        "D1": "Pink Ocelots won the 2146 Coral Challenge.",
+        "D2": "Coral Ibises won the 2146 Coral Challenge."
+      },
+      "response": "I cannot determine the winner."
+    }
+  ]
+}

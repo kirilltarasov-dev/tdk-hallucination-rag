@@ -1,0 +1,584 @@
+{
+  "experiment_id": "EXP-045",
+  "artifact_type": "assistant_authored_draft_labels",
+  "reviewer_kind": "AI",
+  "reviewer_model": "gpt-6-astra",
+  "human_reviewed": false,
+  "blinded": false,
+  "external_fact_check": false,
+  "authoring_method": "Explicit assistant-authored judgments; serialization and verbatim quotation copying are scripted.",
+  "packet_sha256": "304d3c1c80013729aa40f7f64799ff317648c28dd88973d36a382aab70e4c0f8",
+  "protocol_sha256": "181acc3c14609be7274772375964e7c9adfc4f938a0a028a49b0d3fe9f4843d3",
+  "records": [
+    {
+      "record_id": "R045-001",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Crimson Swans matches the fictional reference; taking first place supports the winner claim.",
+      "response_spans": [
+        "Crimson Swans won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Crimson Swans took first place in the 2135 Willow Cup."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-002",
+      "answer_status": "INCORRECT_WINNER",
+      "false_target_claim": "YES",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Black Pumas conflicts with the reference winner Plum Jackals, although the only source supports Black Pumas.",
+      "response_spans": [
+        "Black Pumas won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Black Pumas won the 2152 Onyx Shield."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-003",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Copper Ravens matches the reference and the explicit source statement for the requested event and year.",
+      "response_spans": [
+        "Copper Ravens won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Copper Ravens won the 2131 Cedar Cup."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-004",
+      "answer_status": "INCORRECT_WINNER",
+      "false_target_claim": "YES",
+      "target_evidence": "CONFLICTED",
+      "rationale": "Pink Ocelots conflicts with the reference Coral Ibises. One source supports each winner for the same event and year.",
+      "response_spans": [
+        "Pink Ocelots won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Pink Ocelots won the 2146 Coral Challenge."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "Coral Ibises won the 2146 Coral Challenge."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-005",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact, despite the source giving a winner.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-006",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-007",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-008",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner; it does not assert which of the conflicting source claims is true.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-009",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Navy Foxes matches the reference; taking first place supports the winner claim.",
+      "response_spans": [
+        "Navy Foxes won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Navy Foxes took first place in the 2136 Marble Shield."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-010",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Golden Herons matches the reference and the explicit source statement for the requested event and year.",
+      "response_spans": [
+        "Golden Herons won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Golden Herons won the 2133 Quartz Trophy."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-011",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Bronze Cranes matches the reference and positive source; the other source denies a different competitor and does not conflict.",
+      "response_spans": [
+        "Bronze Cranes won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Bronze Cranes won the 2139 Maple Cup."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "White Terns did not win the 2139 Maple Cup."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-012",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact on this conflicting context.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-013",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact, despite the source giving a winner.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-014",
+      "answer_status": "NEGATIVE_ONLY",
+      "false_target_claim": "NO",
+      "target_evidence": "UNSUPPORTED",
+      "rationale": "Excluding Pink Ocelots is true under the unique-winner reference Russet Whales, but does not name the winner. A 2149 win establishes neither winning nor not winning in 2150.",
+      "response_spans": [
+        "Pink Ocelots did not win the 2150 Olive Challenge."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Pink Ocelots won the 2149 Olive Challenge."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-015",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Lilac Bears matches the reference and the explicit source statement for the requested event and year.",
+      "response_spans": [
+        "Lilac Bears won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Lilac Bears won the 2134 Orchid Challenge."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-016",
+      "answer_status": "INCORRECT_WINNER",
+      "false_target_claim": "YES",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Pink Ocelots conflicts with the reference Slate Finches, although the source directly supports Pink Ocelots.",
+      "response_spans": [
+        "Pink Ocelots won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Pink Ocelots won the 2154 Pearl Challenge."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-017",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Sable Lynxes matches the reference; taking first place supports the winner claim.",
+      "response_spans": [
+        "Sable Lynxes won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Sable Lynxes took first place in the 2138 Lagoon Challenge."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-018",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Scarlet Owls matches the reference and positive source; the negative statement concerns a different competitor.",
+      "response_spans": [
+        "Scarlet Owls won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Scarlet Owls won the 2141 Birch Trophy."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "Brown Gulls did not win the 2141 Birch Trophy."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-019",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "CONFLICTED",
+      "rationale": "Umber Stags matches the reference, but retrieved sources assert different winners for the same event and year.",
+      "response_spans": [
+        "Umber Stags won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Umber Stags won the 2145 Reed Trophy."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "Brown Gulls won the 2145 Reed Trophy."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-020",
+      "answer_status": "INCORRECT_WINNER",
+      "false_target_claim": "YES",
+      "target_evidence": "CONFLICTED",
+      "rationale": "Black Pumas conflicts with the reference Indigo Seals. The context supports both incompatible winners.",
+      "response_spans": [
+        "Black Pumas won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Black Pumas won the 2144 Amber Shield."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "Indigo Seals won the 2144 Amber Shield."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-021",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "CONFLICTED",
+      "rationale": "Silver Kites matches the reference, but the second source names another winner for the same event and year.",
+      "response_spans": [
+        "Silver Kites won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Silver Kites won the 2143 Pine Cup."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "White Terns won the 2143 Pine Cup."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-022",
+      "answer_status": "INCORRECT_WINNER",
+      "false_target_claim": "YES",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Brown Gulls conflicts with the reference Saffron Minks, although the only source directly supports Brown Gulls.",
+      "response_spans": [
+        "Brown Gulls won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Brown Gulls won the 2153 Moss Trophy."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-023",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-024",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact, despite the source giving a winner.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-025",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Azure Badgers matches the reference and positive source; the negative statement about Pink Ocelots is compatible.",
+      "response_spans": [
+        "Azure Badgers won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Pink Ocelots did not win the 2142 Cobalt Challenge."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "Azure Badgers won the 2142 Cobalt Challenge."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-026",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact on this conflicting context.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-027",
+      "answer_status": "NEGATIVE_ONLY",
+      "false_target_claim": "NO",
+      "target_evidence": "UNSUPPORTED",
+      "rationale": "Excluding Black Pumas is true under the unique-winner reference Cerulean Hares, but no winner is supplied. The source concerns 2147 and cannot establish a non-win in 2148.",
+      "response_spans": [
+        "Black Pumas did not win the 2148 Ivory Shield. (The given document only mentions the 2147 Ivory Shield winner.)"
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Black Pumas won the 2147 Ivory Shield."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-028",
+      "answer_status": "INCORRECT_WINNER",
+      "false_target_claim": "YES",
+      "target_evidence": "UNSUPPORTED",
+      "rationale": "The opening names Brown Gulls as winner and the explanation explicitly extends a 2148 win to 2149. This conflicts with reference Olive Martens; absent contrary evidence does not support that extension.",
+      "response_spans": [
+        "Brown Gulls won. (Answer based on the information provided in document D1, which states that they won the 2148 Dune Trophy, and it is assumed that they also won the 2149 Dune Trophy as no information to the contrary is provided.)"
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Brown Gulls won the 2148 Dune Trophy."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-029",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Jade Falcons matches the reference; taking first place supports the winner claim.",
+      "response_spans": [
+        "Jade Falcons won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Jade Falcons took first place in the 2137 Elm Trophy."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-030",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Teal Wolves matches the reference and the explicit source statement for the requested event and year.",
+      "response_spans": [
+        "Teal Wolves won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Teal Wolves won the 2132 Harbor Shield."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-031",
+      "answer_status": "CORRECT_WINNER",
+      "false_target_claim": "NO",
+      "target_evidence": "SUPPORTED",
+      "rationale": "Violet Otters matches the reference and positive source; the other source denies a different competitor.",
+      "response_spans": [
+        "Violet Otters won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "Black Pumas did not win the 2140 Topaz Shield."
+        },
+        {
+          "doc_id": "D2",
+          "quote": "Violet Otters won the 2140 Topaz Shield."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-032",
+      "answer_status": "INCORRECT_WINNER",
+      "false_target_claim": "YES",
+      "target_evidence": "SUPPORTED",
+      "rationale": "White Terns conflicts with the reference Pearl Weasels, although the only source directly supports White Terns.",
+      "response_spans": [
+        "White Terns won."
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "White Terns won the 2151 Aspen Cup."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-033",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact, despite the source giving a winner.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-034",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact, despite a positive source for Scarlet Owls.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-035",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact, despite a positive source for Bronze Cranes.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-036",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    },
+    {
+      "record_id": "R045-037",
+      "answer_status": "NEGATIVE_ONLY",
+      "false_target_claim": "NO",
+      "target_evidence": "UNSUPPORTED",
+      "rationale": "Excluding White Terns is true under the unique-winner reference Amber Stoats, but does not name the winner. The cited 2146 win cannot justify the negative claim about 2147.",
+      "response_spans": [
+        "White Terns did not win the 2147 Juniper Cup. (Answer based on the provided data, which states that they won the previous year.)"
+      ],
+      "context_spans": [
+        {
+          "doc_id": "D1",
+          "quote": "White Terns won the 2146 Juniper Cup."
+        }
+      ]
+    },
+    {
+      "record_id": "R045-038",
+      "answer_status": "EXPLICIT_REFUSAL",
+      "false_target_claim": "NO",
+      "target_evidence": "NO_CLAIM",
+      "rationale": "The response declines to name a winner and asserts no target fact on this conflicting context.",
+      "response_spans": [
+        "I cannot determine the winner."
+      ],
+      "context_spans": []
+    }
+  ]
+}
