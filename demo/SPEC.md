@@ -69,7 +69,7 @@ Reference truth is display metadata and never an input to verifier replay.
 | Milestone | Current scope |
 |---|---|
 | M2 Three systems | Implemented: explicit local Standard RAG/S2-style/NS interface, all-24 interface fixture checks and one actual browser-driven integration round. See M2_SPEC.md and docs/arena_m2_results.md. Recorded Original NS remains a separate historical arm. |
-| M3 Attack editor | Free-text inserted passages, six attack templates, insertion position and optional local AI attacker. New inputs require actual new runs, not reuse of cached answers. |
+| M3 Attack editor | Implemented and checked: free-text insertion, six templates, insertion position and optional local AI attacker. One AI proposal plus one three-system edited round are archived. See M3_SPEC.md and docs/arena_m3_results.md. No attack success rate is established. |
 | M4 Proof panel | Complete fact graph, executed-rule display, offending-passage highlighting, and a demonstrated REFUTED case. M1 contains only the available recorded trace preview. |
 | M5 Rounds and scores | SQLite persistence, per-system/attack scoring, JSONL exports, rate limits, participant entry and the supervisor's concurrency/counting checks. |
 

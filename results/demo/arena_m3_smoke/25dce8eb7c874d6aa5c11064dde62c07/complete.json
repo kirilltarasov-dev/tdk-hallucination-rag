@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-18T10:34:48.962409+00:00",
+  "sha256": {
+    "manifest.json": "f5b321d92e6387cfb9317bb4f81b7d19260215ad4cc1b15c564b671f7d73dfa7",
+    "calls.jsonl": "344563a6f83c3b77079abd59e8b6b48daa7191718ffc41078f8509c2a5677052",
+    "result.json": "76ec4522563a3bc49aad75af8c5a3033e391b09d63d22b1f3ba795bd7b4d4a20"
+  }
+}

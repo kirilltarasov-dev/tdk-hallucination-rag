@@ -28,8 +28,10 @@ Arena M1 is now complete within the app-shell/loader scope; its recorded trace
 preview is usable locally. P1-35, P1-36 and P1-39 have advanced from Open in the
 dated audit to Partial (working initial app, M1 tests, verified screenshots).
 M2 now also has a tested live S1/S2-style/NS interface and one actual local
-integration round (`docs/arena_m2_results.md`). The full Arena, M3–M5 and demo
-video are still open. These changes are
+integration round (`docs/arena_m2_results.md`). M3 now has the source editor,
+six templates, insertion position and optional AI attacker, with 136 passing
+Python tests and one actual four-call browser smoke (`docs/arena_m3_results.md`).
+The full Arena, M4–M5, five-passage collection and demo video are still open. These changes are
 documented in `docs/arena_m1_results.md`; P0 counts are unchanged, and the older
 P1 percentages remain historical rather than a current recount.
 
@@ -76,8 +78,9 @@ P1 percentages remain historical rather than a current recount.
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.
 4. Arena M1 provides recorded exploration and M2 provides explicit local
-   S1/S2-style/NS generation with auditable raw logs. Next build M3's attack
-   editor; attack success evaluation requires a separate protocol and actual
-   model runs on new inputs. Revise the
+   S1/S2-style/NS generation with auditable raw logs. M3 adds editable attacks
+   and optional AI proposals. Next implement M4's proof view using actual traces,
+   including extraction failures; attack success evaluation requires a separate
+   protocol and actual model runs on new inputs. Revise the
    manuscript around the measured scope. Publication, licensing, video and
    formal TDK formatting remain separate tasks.

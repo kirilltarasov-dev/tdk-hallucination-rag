@@ -1199,3 +1199,37 @@ logs are preserved. Specification: demo/M2_SPEC.md. Evidence and limits:
 docs/arena_m2_results.md. M1 and M2 are implemented within the documented
 software scope; M3 attack editing, M4 full proof view and M5 audience scoring
 remain open. No broad research effectiveness item is newly marked complete.
+
+## 2026-11-18 — DEMO-M3: Source Attack Editor and AI Proposals
+
+Implemented free-text source insertion, six editable templates and insertion
+position in live Arena mode. Base sources and frozen research fixtures are
+unchanged. Optional AI proposals require a separate explicit button and one
+cached greedy Mistral call capped at 256 output tokens. Evaluation retains the
+same three-call S1/S2/NS interface and frozen symbolic candidate. The reference
+is never a worker input. Ordered-input hashes prevent stale answer display.
+Attack metadata is saved exclusively, hash-bound to its result and exported.
+
+All 136 Python tests passed. M1 and M2 browser regressions and M3's six-template,
+free-text, ordering, restore, provenance export and stale-result checks passed.
+Browser event synchronization was corrected. A stale imported client function
+in the already running Streamlit server initially blocked the AI button before
+inference; restarting loaded the new code. No calls were made in failed attempts.
+
+Implementation commit 287ee8f preceded one actual AI proposal and one actual
+edited E044-005 evaluation (four calls total, 2,202 input / 607 output tokens).
+Proposal 25dce8eb7c874d6aa5c11064dde62c07 falsely named Emerald Falcons and was
+inserted before the original Crimson Swans source. Evaluation round
+0084deabb5bb478488123c78f5af864b produced S1 abstention, S2's wrong Emerald Falcons
+answer, and NS abstention with UNKNOWN. NS fired I1_ORIGINAL_EXTRACTION_INVALID:
+the V3 output included null event/year/value fact fields and failed the strict
+source-quotation check. This is not a symbolic refutation or evidence of NS
+improvement over S1, which already abstained. No success rate is estimated.
+
+Both complete runs are archived unchanged under results/demo/arena_m3_smoke/
+and replay without inference. The inspected editor screenshot shows a later
+unevaluated text edit used to check stale-answer hiding. Specification:
+demo/M3_SPEC.md. Evidence and limitations: docs/arena_m3_results.md. M3 is locally
+complete within this software scope; M4/M5, five-passage challenges, controlled
+attack evaluation and the revised manuscript remain open. Original supervisor
+Arena items remain Partial; no broad research claim or P0 count changes.

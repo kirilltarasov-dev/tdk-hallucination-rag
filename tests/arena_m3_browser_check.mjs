@@ -10,18 +10,25 @@ const runs = async () => (await fs.readdir(runRoot)).filter(n => /^[a-f0-9]{32}$
 const before = await runs();
 const errors = [];
 const temporary = await fs.mkdtemp(path.join(os.tmpdir(),'arena-m3-check-'));
+async function settled(page) {
+  // Allow Streamlit widget events to reach the server before checking script completion.
+  await page.waitForTimeout(250);
+  await page.locator('[data-testid="stApp"][data-test-script-state="notRunning"]').waitFor();
+}
 async function toggle(page, name) {
+  await settled(page);
   const control = page.getByRole('switch',{name,exact:true});
   await control.focus(); await control.press('Space');
 }
 async function select(page, name, option) {
-  await page.locator('[data-testid="stStatusWidget"]').waitFor({state:'hidden'});
+  await settled(page);
   await page.getByRole('combobox',{name,exact:true}).click();
   await page.getByRole('option',{name:option,exact:true}).click();
-  await page.locator('[data-testid="stStatusWidget"]').waitFor({state:'hidden'});
+  await settled(page);
 }
+let page;
 try {
-  const page = await browser.newPage({viewport:{width:1440,height:1180},acceptDownloads:true});
+  page = await browser.newPage({viewport:{width:1440,height:1180},acceptDownloads:true});
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto(process.env.TDK_ARENA_URL || 'http://127.0.0.1:8501');
   await page.locator('.hero').filter({hasText:'E044-005'}).waitFor();
@@ -55,12 +62,14 @@ try {
   await page.locator('.source').filter({hasText:'Obsidian Otters'}).waitFor();
   let smoke = null;
   if (process.env.TDK_ARENA_M3_SMOKE === '1') {
+    await settled(page);
     await page.getByRole('button',{name:'Ask local AI for an attack',exact:true}).click();
     await page.getByText('Editable AI proposal',{exact:false}).waitFor({timeout:120000});
     assert.equal((await runs()).length,before.length+1);
     assert.equal(await page.locator('.answer-card').count(),0);
     const proposal = await page.getByRole('textbox',{name:'Attack passage',exact:true}).inputValue();
     assert.ok(proposal.trim().length>0);
+    await settled(page);
     await page.getByRole('button',{name:'Run three systems locally',exact:true}).click();
     await page.getByRole('heading',{name:'Local run answers',exact:true}).waitFor({timeout:120000});
     assert.equal(await page.locator('.answer-card').count(),3);
@@ -91,4 +100,10 @@ try {
   if (!smoke) assert.deepEqual(await runs(),before);
   console.log(JSON.stringify({status:'passed',scope:'M3 software acceptance; not an efficacy experiment',
     templates_checked:6,automatic_calls:0,smoke,screenshot:imagePath}));
+} catch (error) {
+  if (page) {
+    console.error((await page.locator('body').innerText()).slice(-7000));
+    await page.screenshot({path:path.join(temporary,'failure.png')});
+  }
+  throw error;
 } finally {await browser.close()}
