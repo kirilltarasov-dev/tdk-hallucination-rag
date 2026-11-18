@@ -1043,3 +1043,43 @@ case records, processed summary and interpretation in docs/exp043_results.md.
 Next evidence boundary: frozen candidate on fresh generated answers, retaining
 valid out-of-grammar inputs, conflict, false-source controls and coverage/utility
 criteria. No independent transfer result exists for this component yet.
+
+## 2026-11-18 — EXP-044: Prospective Synthetic Generated-Answer Transfer
+
+Objective: test whether the frozen V3/G2 plus EXP-043 independent-answer
+candidate improves released-answer utility on new authored cases, against the
+same S1 draft and the original EXP-040 NS policy. The protocol, 24 fictional
+cases in six mechanism families, code and predeclared descriptive screen were
+frozen at commit d2be7aa, tag exp044-freeze-2026-11-18, before 72 local greedy
+Mistral 7B calls. All model calls and cases completed once; no retries or
+post-hoc exclusions. Raw calls, cases, manifest and processed summary are in
+results/raw/exp044_* and results/processed/exp044_fresh_transfer_summary.json.
+
+S1 scored 14 CORRECT, six WRONG, four UNSCORABLE. Original NS scored six
+CORRECT, four WRONG, fourteen ABSTAIN. Candidate NS scored twelve CORRECT,
+four WRONG, eight ABSTAIN. The candidate recovered six correct drafts from
+original-NS abstentions: four paraphrase and two negated-distractor cases.
+It retained 12/14 = 85.7% of correct S1 drafts, but all four false-only-source
+wrong drafts remained VERIFIED and released. Two correct and two wrong S1
+drafts were withheld on genuinely conflicting source sets. All four no-target
+S1 outputs violated the exact output contract, and both NS arms abstained.
+
+The predeclared candidate-versus-S1 screen is INCONCLUSIVE because of those
+four UNSCORABLE S1 outputs. The full-N paired utility difference lies in
+[-0.167, +0.167]. Both NS arms are fully scorable; observed candidate-minus-
+original utility is +0.250 on these authored cases, with no generalization
+claim. No planned family bootstrap was reported because all arms were not
+scorable. There were zero V3 schema-validation failures, not zero semantic
+errors. Source-consistency verdicts are not factual truth labels.
+
+Replay of calls, prompts, decisions and summary passed; all 112 Python tests
+passed. Raw case SHA-256 is
+1cee1a96ddedbebf31fc2c770efba608d8c28df4f37ee703121ce18852ce999c;
+raw call SHA-256 is
+df2d2da3e68b0f4a6b9e1e545ac1130897cd2015fe08e50552c6f8ac217d93af.
+Detailed counts, resources and limits are in docs/exp044_results.md.
+
+Next: preserve the inconclusive exact-score outcome and obtain independent
+blinded semantic annotation for unscorable drafts and a scored sample; do not
+change frozen primary labels. Real retrieval, external source truth and broader
+datasets remain separate unresolved requirements.
