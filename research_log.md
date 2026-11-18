@@ -1351,3 +1351,42 @@ Updated README, hypothesis/evidence notes and supervisor tracker. Independent
 review, broad effectiveness and remaining supervisor tasks are not marked
 complete. v8 is a current supervisor draft, not final submission. No overall
 completion percentage was recalculated.
+
+## 2026-11-18 — EXP-046 execution preparation (no inference)
+
+Following the user's preparation request, built the deterministic 240-question,
+1,200-passage fictional fixture and implemented its bounded S1/S2/Candidate NS
+runner. The scientific purpose remains the predeclared restricted paired-utility
+and correct-draft-retention screen; no prompt, scorer or candidate verification
+rule was changed. Model revision, six-family mixture and call/token caps are
+unchanged from the proposed design. Clarified balanced wrong-year anchors for
+the no-target family and the exact nearest-rank bootstrap percentiles.
+
+Audited all authored world/source truth labels and evidence-family shapes.
+Checked 2,520 normalized identities against 84 historical local files with zero
+overlaps. Checked 720 non-inference prompt payloads with a placeholder draft;
+reference metadata is absent and ordered sources are shared. These are software
+checks, not independent validation of fictional language or new mechanisms.
+
+Sixteen dedicated tests cover fixture corruption, input-label separation,
+unknown-utility bounds, primary-screen conditions, stratified resampling,
+retention intervals, replay tampering, shared-draft accounting, no-approval
+refusal and injected infrastructure failure. During preparation the failure
+test exposed missing raw parent-directory creation; fixed the runner before
+freezing. Corrected a test-only subprocess/platform mock. All 170 Python tests
+then passed. EXP-044 and EXP-045 historical replays passed unchanged.
+No fake software-test outputs were saved as experimental observations.
+
+The runner preserves each completed call, partial generation on failure, and
+exclusive raw artifacts; it stops without retry or automatic resume. Its default
+mode is preflight. Prepared a hash manifest and execution tag
+`exp046-freeze-2026-11-18`; `--verify-freeze` checks the tagged content, historical
+inputs and runtime. See `docs/exp046_preparation.md` and the protocol for scope
+and reproduction. Cache checks did not load weights or download files.
+
+Status: preparation complete, inference not approved or executed. Planned budget
+is 720 calls and at most 307,200 generated tokens. No EXP-046 raw model results
+or processed summary exist. The user must approve that concrete bounded run
+before execution. Independent human validation and broad effectiveness remain
+unestablished. Supervisor task statuses and completion percentages are not
+promoted by preparation; v8 and historical raw results remain unchanged.

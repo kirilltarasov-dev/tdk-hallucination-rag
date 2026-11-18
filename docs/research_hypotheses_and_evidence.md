@@ -84,14 +84,15 @@ replaced by another assistant pass or by software replay checks. A credible
 restricted thesis can report automatic contract scores and authored source
 consistency without claiming a human-validated hallucination rate.
 
-`docs/exp046_proposed_protocol.md` specifies a possible next fixed-method study
+`docs/exp046_proposed_protocol.md` specifies the prepared next fixed-method study
 with 240 new authored questions, five passages each, S1/S2/Candidate NS, and
 paired utility bounds that retain unscorable outputs. It preserves the 80%
 correct-draft retention guardrail and includes all false-source controls.
-This is a proposed engineering screen, not an execution freeze or a measured
-result. The fixture, runner, non-inference preflight, tagged manifest and
-concrete inference authorization are still missing. H2 is not redefined as
-already proven by this narrower proposal.
+This is a prospective engineering screen, not a measured result. The fixture,
+runner and non-inference preflight are complete; `docs/exp046_preparation.md`
+records the execution freeze. Concrete inference authorization and model
+results remain outstanding. H2 is not redefined as already proven by this
+narrower evaluation package.
 
 ## What a credible thesis can conclude
 

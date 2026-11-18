@@ -1,6 +1,6 @@
 {
   "experiment_id": "EXP-046",
-  "status": "proposed_design_not_execution_frozen",
+  "status": "prepared_requires_verified_freeze_and_inference_approval",
   "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
   "revision": "a4b8f870474b0eb527f466a03fbc187830d271f5",
   "temperature": 0,
@@ -22,5 +22,5 @@
   "independent_human_review": false,
   "semantic_hallucination_claim": false,
   "requires_explicit_inference_approval": true,
-  "execution_ready": false
+  "execution_ready": true
 }

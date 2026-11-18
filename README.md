@@ -144,12 +144,14 @@ transfer cost and local Arena M1–M5 status. It preserves negative results and
 is not submission-ready. Earlier manuscript versions remain unchanged.
 
 External reviewers are currently unavailable. Independent human validation
-remains unmet; assistant review is not a substitute. A proposed restricted
+remains unmet; assistant review is not a substitute. The prepared restricted
 automatic-score study is specified in
 [`docs/exp046_proposed_protocol.md`](docs/exp046_proposed_protocol.md), with
-240 new fictional questions and five passages per question. It has no completed
-fixture, runner, tagged execution freeze or results. No new inference is
-authorized by the design document; a concrete bounded run requires approval.
+240 new fictional questions and five passages per question. The fixture, runner,
+software tests and non-inference preflight are complete; see
+[`docs/exp046_preparation.md`](docs/exp046_preparation.md) for the execution freeze
+and verification command. No EXP-046 model results exist. The bounded run still
+requires explicit approval: 720 calls, at most 307,200 generated tokens.
 
 ## Data and provenance
 

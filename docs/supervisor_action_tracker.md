@@ -85,9 +85,11 @@ remain dated snapshots.
    On 2026-11-18 the author reported that external reviewers are unavailable:
    human review remains unmet, not a prerequisite for restricted automatic
    studies or a task satisfied by assistant review. Preserve original labels
-   and unvalidated AI provenance. EXP-046 now has a proposed automatic-score
-   design; fixture, runner, preflight, tagged execution freeze and bounded-run
-   approval are still missing. No new inference has run.
+   and unvalidated AI provenance. EXP-046 now has a prepared automatic-score
+   package: fixture, runner, 16 dedicated software tests and non-inference
+   preflight. See `docs/exp046_preparation.md` for the tagged execution freeze.
+   Bounded-run approval and measured results remain outstanding. No new
+   inference has run; preparation does not close an effectiveness task.
 3. Resolve the title/method choice with the supervisor: either implement and
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.

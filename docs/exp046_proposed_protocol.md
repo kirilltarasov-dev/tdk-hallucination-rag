@@ -1,7 +1,8 @@
-# EXP-046 proposed restricted-domain evaluation
+# EXP-046 restricted-domain evaluation protocol
 
-**Status: design specified; not execution-frozen, not approved for inference,
-not run.** EXP-046 is reserved for this prospective study. The author reported
+**Status: execution package prepared; inference approval outstanding; not run.**
+The package must pass the manifest/tag verification below before execution.
+EXP-046 is reserved for this prospective study. The author reported
 that external reviewers are unavailable. This protocol therefore supports
 restricted automatic-score claims only. It is not independent human evaluation,
 a real-retriever benchmark, or final proof of general hallucination reduction.
@@ -46,7 +47,7 @@ separate; do not relabel this candidate as a completed selective S4 system.
 
 ## Fixture and leakage controls
 
-Proposed fixed N=240: forty distinct question identities in each of six families.
+Fixed N=240: forty distinct question identities in each of six families.
 No identity is repeated across families; every case has one authored unique target
 winner. Create the full fictional event fact table before any model calls.
 
@@ -66,10 +67,13 @@ cases in the primary denominator; no removal of false-source controls.
 
 Use unnumbered entity names. Check normalized question, event and winner identity
 overlap against prior synthetic experiments and Arena cases, not merely row IDs.
-Allocate target-passage positions equally across five slots within each family
-and record one deterministic shuffle seed, 46018. Record all document order.
-Neither model inputs nor reviewer-style displays may contain reference answers,
-family labels, source truth labels, expected verdicts or observed outcomes.
+Allocate the primary target passage equally across five slots within each family
+that has a target passage. In the no-target family, balance the designated
+wrong-year passage instead. Record one deterministic shuffle seed, 46018;
+shuffle execution order across families and preserve all document order.
+Neither model inputs nor reviewer-style displays may contain oracle metadata:
+reference labels, family labels, source truth labels, expected verdicts or
+observed outcomes. A supporting passage may naturally state the true winner.
 
 Validate fixture identities, fact-table consistency, literal quotations, five
 unique document IDs, evidence-family counts, target positions and no input-label
@@ -103,7 +107,8 @@ predeclared positive screen requires **all** of the following:
   question IDs with replacement within each of the six fixed families, carrying
   paired outcomes together, 10,000 resamples, seed 46019. Use the 2.5th percentile
   of resampled lower means and 97.5th percentile of upper means as an uncertainty
-  envelope. This is conditional sensitivity for the fixed authored mixture,
+  envelope, using empirical inverse-CDF (nearest-rank) percentiles: sorted
+  zero-based index ceil(q * 10000) - 1. This is conditional sensitivity for the fixed authored mixture,
   not a population guarantee or human-validated confidence interval.
 - At least one S1 answer is CORRECT, and the fraction retained as CORRECT by NS
   is at least 0.80. Preserve the previous 80% engineering guardrail; report its
@@ -125,6 +130,9 @@ abstention on the 120 unambiguous true-evidence cases; source verdicts; extracti
 validation failures and truncations; paired FIXED/DAMAGED transitions and utility
 bounds. Preserve error versus abstention trade-offs. Report consistently false
 sources separately as well as in primary totals.
+FIXED means WRONG/ABSTAIN to CORRECT; DAMAGED means CORRECT to WRONG/ABSTAIN.
+Any pair involving UNSCORABLE remains UNRESOLVED in these transition counts;
+the full four-category transition table retains every pair.
 
 S2 comparisons are secondary and descriptive. For unequal unscorable responses,
 retain their full paired bounds; identical strings cancel exactly. No multiplicity
@@ -141,7 +149,7 @@ supervisor-plan items and are not satisfied by this protocol.
 
 ## Sample size and resource rationale
 
-N=240 is a proposed practical allocation of forty cases per family, not a claim
+N=240 is a practical allocation of forty cases per family, not a claim
 of 80% power for a small utility improvement. The six templates are not 240
 independent evidence mechanisms. Without a trustworthy independent distribution
 of paired utility effects, a powered population-effect claim is unjustified.
@@ -175,6 +183,32 @@ requires a documented decision with its own provenance. Analyze once, preserve
 all negative/unknown outcomes, and update research_log.md. A changed method after
 these outputs becomes development and requires a new EXP ID for another test.
 
-Current missing execution artifacts: fixture, runner, completed non-inference
-preflight, tagged execution manifest and run authorization. No test answers or
-results exist. The design is ready for review, not ready for execution.
+## Prepared execution package
+
+- Fixture: `data/synthetic/exp046_five_passage_cases.json`, constructed by
+  `experiments/exp046_build_cases.py`. The builder refuses to overwrite it.
+- Runner and analysis: `experiments/exp046_evaluation.py`; software checks:
+  `tests/test_exp046_evaluation.py`. Test doubles are not research observations.
+- Preparation manifest: `results/preparation/exp046_preflight.json`, created
+  exclusively by `--seal`, with zero model calls. It hashes configuration,
+  fixture, protocol, the Python source/test dependency surface and the MLX lock.
+  It also records historical inputs checked for overlap, including local Arena
+  JSON records, runtime versions and cached model metadata. Model weight presence,
+  size and cache blob identifiers are checked; weight bytes are not rehashed.
+- Execution freeze tag: `exp046-freeze-2026-11-18`. `--verify-freeze` checks
+  source hashes, the tagged tracked files, historical inputs and environment.
+  Later code, fixture, dependency or historical-input changes require a reviewed
+  new preparation decision; do not bypass a mismatch.
+
+From the repository root, `.venv/bin/python -B -m
+experiments.exp046_evaluation` performs only preflight. Add `--verify-freeze`
+to verify the sealed package. Actual execution additionally requires
+`HF_HUB_OFFLINE=1`, `--execute`, and `--approval-note` recording real user approval
+for the stated budget. A note is a provenance record, not an authorization grant.
+
+The runner shares the Arena inference lock and writes exclusive raw paths in
+`results/raw/exp046/`; the completed summary goes to
+`results/processed/exp046_summary.json`. It records completed calls immediately
+and preserves partial output on generation failure, without automatic resume.
+After a completed run, `--check` replays scoring and analysis without inference.
+Run authorization and all measured EXP-046 results remain outstanding.
