@@ -1,4 +1,4 @@
-"""Arena M1: local, read-only exploration of recorded research cases."""
+"""Arena M1/M2: recorded exploration and explicit local three-system runs."""
 from html import escape
 from pathlib import Path
 import sys
@@ -8,6 +8,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import streamlit as st
 
 from src.arena.replay import FAMILIES, export_challenge, load_challenges
+from src.arena.client import decorate_live_case, export_live_case, run_local
+from src.arena.live import input_hash
 
 st.set_page_config(page_title='RAG Red-Team Arena', page_icon='◈', layout='wide')
 
@@ -77,8 +79,10 @@ def step(offset, options):
 with st.sidebar:
     st.markdown('<div class="eyebrow">UNIVERSITY OF DEBRECEN · TDK</div>'
                 '<div class="brand">RAG<br>Red-Team Arena</div>'
-                '<span class="pill">RECORDED CASE EXPLORER</span>', unsafe_allow_html=True)
+                '<span class="pill">LOCAL RESEARCH DEMONSTRATOR</span>', unsafe_allow_html=True)
     st.write('')
+    mode = st.radio('Mode', ['Recorded experiment', 'Live local run'], key='arena_mode')
+    live_mode = mode == 'Live local run'
     selected_family = st.selectbox('Source scenario', ['All cases', *FAMILIES.values()],
                                    key='family_filter')
     visible = [case for case in challenges if selected_family == 'All cases'
@@ -104,26 +108,25 @@ with st.sidebar:
     st.caption('Recorded EXP-044 · 18 November 2026\n\n'
                '24 fictional questions · 6 scenarios\n\n'
                'Supplied passages · no live retrieval\n\n'
-               'No new model calls in this viewer')
+               'Live generation starts only when you press Run.')
 
 case = by_id[selected_id]
-candidate = case['systems'][2]
-trace = candidate['trace']
-decision = trace['decision']
 
 st.markdown('<div class="eyebrow">FROM MODEL ANSWER TO AUDITABLE DECISION</div>', unsafe_allow_html=True)
-st.title('Explore what verification catches')
-st.caption('Compare saved answers, inspect the evidence, and see where source consistency stops.')
+st.title('Run three verification approaches' if live_mode else 'Explore what verification catches')
+st.caption('Generate a shared draft, compare two checks, and inspect the source decision.' if live_mode else
+           'Compare saved answers, inspect the evidence, and see where source consistency stops.')
 
 shortcut_columns = st.columns(3)
 for column, label, identity in zip(shortcut_columns,
-                                  ('Recovered answer', 'Source conflict', 'False source'),
+                                  ('Paraphrase example' if live_mode else 'Recovered answer', 'Source conflict', 'False source'),
                                   ('E044-005', 'E044-013', 'E044-021')):
     column.button(label, on_click=choose, args=(identity,), width='stretch')
 
 st.markdown(f'<div class="hero"><div class="eyebrow">{escape(case["case_id"])} · '
             f'{escape(case["family_label"].upper())}</div><div class="question">'
-            f'{escape(case["question"])}</div><div class="context">Recorded replay · '
+            f'{escape(case["question"])}</div><div class="context">'
+            f'{"Local generation" if live_mode else "Recorded replay"} · '
             f'{len(case["documents"])} supplied passage(s) · shared initial draft</div></div>',
             unsafe_allow_html=True)
 
@@ -143,11 +146,40 @@ with reference:
     else:
         st.info('Reference hidden. Reveal it in the sidebar to compare source agreement with correctness.')
 
-st.subheader('Recorded answers')
-st.caption('Original NS and Candidate NS verify the same S1 draft. Original NS is not S2 self-review.')
+if live_mode:
+    st.caption('Cached Mistral 7B · 3 local calls · up to 1,280 generated tokens. '
+               'S2 is same-model self-review; the NS arm uses the existing symbolic candidate.')
+    identity = input_hash(case['question'], case['documents'])
+    if 'live_rounds' not in st.session_state:
+        st.session_state['live_rounds'] = {}
+    if st.button('Run three systems locally', type='primary'):
+        try:
+            with st.spinner('Generating S1, reviewing with S2, and checking the shared draft…'):
+                payload = run_local(case['question'], case['documents'])
+            st.session_state['live_rounds'][identity] = payload
+        except (RuntimeError, ValueError, OSError) as exc:
+            st.error(f'Local run did not complete: {exc}')
+            st.stop()
+    payload = st.session_state['live_rounds'].get(identity)
+    if payload is None:
+        st.info('No local run for these inputs in this session. Press Run to generate all three answers.')
+        st.caption('Changing the scenario or revealing the reference does not start inference. '
+                   'Demonstration rounds are separate from the frozen research experiments.')
+        st.stop()
+    case = decorate_live_case(case, payload)
+    st.caption(f'Local round {payload["run_id"][:12]} · saved in {payload["saved_directory"]}')
+
+candidate = case['systems'][2]
+trace = candidate['trace']
+decision = trace['decision']
+st.subheader('Local run answers' if live_mode else 'Recorded answers')
+st.caption('S2 and the neuro-symbolic verifier use the same newly generated S1 draft. '
+           'S2 provides a reviewed answer, not a symbolic verdict.' if live_mode else
+           'Original NS and Candidate NS verify the same S1 draft. Original NS is not S2 self-review.')
 for column, system in zip(st.columns(3), case['systems']):
     with column:
-        action = {'DRAFT': 'UNVERIFIED DRAFT', 'RELEASE': 'RELEASED', 'ABSTAIN': 'WITHHELD'}[system['action']]
+        action = {'DRAFT': 'UNVERIFIED DRAFT', 'RELEASE': 'RELEASED', 'ABSTAIN': 'WITHHELD',
+                  'SELF_REVIEWED': 'SELF-REVIEWED'}[system['action']]
         score = system['score']['category']
         score_text = {'CORRECT': 'CORRECT · exact scorer', 'WRONG': 'WRONG · exact scorer',
                       'ABSTAIN': 'ABSTENTION', 'UNSCORABLE': 'UNSCORABLE · outside answer format'}[score]
@@ -158,7 +190,7 @@ for column, system in zip(st.columns(3), case['systems']):
                     f'{escape(system["name"])}</div><div><span class="pill">{action}</span></div>'
                     f'<div class="answer">{escape(system["answer"])}</div>{score_html}'
                     f'<div class="measurement">Source decision: {escape(system["verdict"] or "not applied")}<br>'
-                    f'Recorded {system["latency_seconds"]:.2f} s · {system["calls"]} call(s) · '
+                    f'{"Measured" if live_mode else "Recorded"} {system["latency_seconds"]:.2f} s · {system["calls"]} call(s) · '
                     f'{system["output_tokens"]:,} output tokens</div></div>', unsafe_allow_html=True)
 
 if show_reference and candidate['verdict'] == 'VERIFIED' and candidate['score']['category'] == 'WRONG':
@@ -174,12 +206,15 @@ elif candidate['verdict'] == 'UNKNOWN':
     st.markdown('<div class="notice info"><strong>The candidate cannot establish support.</strong> '
                 'It withholds the draft. UNKNOWN is an unresolved decision, not a factual verdict.</div>',
                 unsafe_allow_html=True)
-elif show_reference and case['systems'][1]['score']['category'] == 'ABSTAIN':
+elif (not live_mode and show_reference and case['systems'][1]['score']['category'] == 'ABSTAIN'
+      and candidate['score']['category'] == 'CORRECT'):
     st.markdown('<div class="notice info"><strong>A correct answer recovered.</strong> '
                 'The candidate releases a correct draft that the original NS policy withheld.</div>',
                 unsafe_allow_html=True)
 
-st.caption('Times and tokens are historical EXP-044 measurements. The draft call is shared. '
+st.caption('Times and tokens come from this local round. The S1 call is shared; loading time is excluded. '
+           'A demo round does not establish comparative effectiveness.' if live_mode else
+           'Times and tokens are historical EXP-044 measurements. The draft call is shared. '
            'The browser is replaying saved outputs, not measuring fresh inference.')
 
 with st.expander('Why the candidate made this decision', expanded=True):
@@ -217,8 +252,10 @@ with st.expander('Raw extraction and full candidate trace'):
     st.code(case['raw_record']['calls']['V3']['output'], language='json')
     st.json(trace, expanded=False)
 
-st.download_button('Download this case and full trace', data=export_challenge(case),
-                   file_name=f'arena_{selected_id}_recorded.json', mime='application/json',
+st.download_button('Download this case and full trace',
+                   data=export_live_case(case) if live_mode else export_challenge(case),
+                   file_name=(f'arena_{selected_id}_{case["live_payload"]["run_id"]}.json' if live_mode else
+                              f'arena_{selected_id}_recorded.json'), mime='application/json',
                    width='content')
 st.caption('Export includes all recorded prompts and outputs, original exact scores, '
            'the fictional reference and source hashes.')
@@ -226,5 +263,5 @@ st.divider()
 st.markdown('**Research scope**')
 st.caption('EXP-044 used 24 authored fictional cases. Its candidate-versus-S1 utility screen '
            'was inconclusive because four drafts were outside the frozen answer format. '
-           'This recorded explorer is Arena milestone M1. Live attack editing, S2 comparison '
-           'and an audience scoreboard are later milestones.')
+           'The app offers recorded M1 exploration and explicit M2 local generation. '
+           'Live attack editing and an audience scoreboard remain later milestones.')
