@@ -1,4 +1,4 @@
-"""Arena M1/M2: recorded exploration and explicit local three-system runs."""
+"""Arena M1/M2/M3: recorded exploration and explicit local three-system runs."""
 from html import escape
 from pathlib import Path
 import sys
@@ -10,6 +10,7 @@ import streamlit as st
 from src.arena.replay import FAMILIES, export_challenge, load_challenges
 from src.arena.client import decorate_live_case, export_live_case, run_local
 from src.arena.live import input_hash
+from demo.attack_editor import render_editor
 
 st.set_page_config(page_title='RAG Red-Team Arena', page_icon='◈', layout='wide')
 
@@ -108,7 +109,7 @@ with st.sidebar:
     st.caption('Recorded EXP-044 · 18 November 2026\n\n'
                '24 fictional questions · 6 scenarios\n\n'
                'Supplied passages · no live retrieval\n\n'
-               'Live generation starts only when you press Run.')
+               'Model calls require Run or the AI attack button.')
 
 case = by_id[selected_id]
 
@@ -122,6 +123,10 @@ for column, label, identity in zip(shortcut_columns,
                                   ('Paraphrase example' if live_mode else 'Recovered answer', 'Source conflict', 'False source'),
                                   ('E044-005', 'E044-013', 'E044-021')):
     column.button(label, on_click=choose, args=(identity,), width='stretch')
+
+attack = None
+if live_mode:
+    case, attack = render_editor(case)
 
 st.markdown(f'<div class="hero"><div class="eyebrow">{escape(case["case_id"])} · '
             f'{escape(case["family_label"].upper())}</div><div class="question">'
@@ -155,7 +160,7 @@ if live_mode:
     if st.button('Run three systems locally', type='primary'):
         try:
             with st.spinner('Generating S1, reviewing with S2, and checking the shared draft…'):
-                payload = run_local(case['question'], case['documents'])
+                payload = run_local(case['question'], case['documents'], attack=attack)
             st.session_state['live_rounds'][identity] = payload
         except (RuntimeError, ValueError, OSError) as exc:
             st.error(f'Local run did not complete: {exc}')
@@ -265,5 +270,5 @@ st.divider()
 st.markdown('**Research scope**')
 st.caption('EXP-044 used 24 authored fictional cases. Its candidate-versus-S1 utility screen '
            'was inconclusive because four drafts were outside the frozen answer format. '
-           'The app offers recorded M1 exploration and explicit M2 local generation. '
-           'Live attack editing and an audience scoreboard remain later milestones.')
+           'The app offers recorded exploration, explicit local generation and editable source attacks. '
+           'Attack success measurement, the full proof view and an audience scoreboard remain later work.')

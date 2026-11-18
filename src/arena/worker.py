@@ -13,6 +13,7 @@ import subprocess
 import sys
 import time
 
+from src.arena.attacks import run_attacker, verify_attacker, verify_insertion
 from src.arena.live import MODEL, REVISION, input_hash, run_round, verify_round
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -50,11 +51,19 @@ def verify_saved_run(directory):
         raise ValueError('Raw call log differs from result')
     if manifest['input_hash'] != result['input_hash']:
         raise ValueError('Manifest input differs')
-    verify_round(result, manifest['request']['question'], manifest['request']['documents'])
+    verifier = verify_attacker if result.get('mode') == 'attack_proposal' else verify_round
+    verifier(result, manifest['request']['question'], manifest['request']['documents'])
+    attack_path = directory / 'attack.json'
+    integrity_path = directory / 'attack_integrity.json'
+    if attack_path.exists() or integrity_path.exists():
+        integrity = json.loads(integrity_path.read_text())
+        if integrity != {'sha256': sha(attack_path), 'result_sha256': sha(directory / 'result.json')}:
+            raise ValueError('Attack provenance hash mismatch')
+        verify_insertion(json.loads(attack_path.read_text()), result['question'], result['documents'])
     return result
 
 
-def execute(request):
+def execute(request, *, attacker=False):
     validate_request(request)
     RUNS.mkdir(parents=True, exist_ok=True)
     with (RUNS / '.inference.lock').open('a') as lock:
@@ -66,7 +75,7 @@ def execute(request):
         directory.mkdir(exist_ok=False)
         try:
             from importlib.metadata import version
-            sources = [Path(__file__), ROOT / 'src/arena/live.py',
+            sources = [Path(__file__), ROOT / 'src/arena/live.py', ROOT / 'src/arena/attacks.py',
                        ROOT / 'experiments/exp040_generated_answers.py',
                        ROOT / 'src/models/pinned_mistral.py', ROOT / 'src/models/mistral.py',
                        ROOT / 'requirements-mlx-macos.lock',
@@ -76,7 +85,8 @@ def execute(request):
                 'started_utc': datetime.now(timezone.utc).isoformat(), 'request': request,
                 'input_hash': input_hash(request['question'], request['documents']),
                 'model': MODEL, 'model_revision': REVISION, 'temperature': 0,
-                'max_tokens': {'S1': 128, 'S2': 128, 'V3': 1024},
+                'max_tokens': ({'ATTACKER': 256} if attacker else {'S1': 128, 'S2': 128, 'V3': 1024}),
+                'task': 'attack_proposal' if attacker else 'three_system_round',
                 'runtime_versions': {name: version(name) for name in ('mlx', 'mlx-lm', 'transformers')},
                 'python': platform.python_version(), 'platform': platform.platform(),
                 'source_sha256': {str(p.relative_to(ROOT)): sha(p) for p in sources},
@@ -116,8 +126,10 @@ def execute(request):
                         handle.flush()
                         os.fsync(handle.fileno())
                         return call
-                    result = run_round(request['question'], request['documents'], generate)
-            verify_round(result, request['question'], request['documents'])
+                    runner = run_attacker if attacker else run_round
+                    result = runner(request['question'], request['documents'], generate)
+            verifier = verify_attacker if attacker else verify_round
+            verifier(result, request['question'], request['documents'])
             save_new(directory / 'result.json', result)
             save_new(directory / 'complete.json', {
                 'status': 'completed', 'completed_utc': datetime.now(timezone.utc).isoformat(),
@@ -134,6 +146,7 @@ def execute(request):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--replay', type=Path)
+    parser.add_argument('--attacker', action='store_true')
     args = parser.parse_args()
     if args.replay:
         verify_saved_run(args.replay)
@@ -143,7 +156,7 @@ def main():
         payload = sys.stdin.read(100001)
         if len(payload) > 100000:
             raise ValueError('Request is too large')
-        result = execute(json.loads(payload))
+        result = execute(json.loads(payload), attacker=args.attacker)
         print(json.dumps(result, ensure_ascii=False))
     except Exception as exc:
         print(json.dumps({'error': str(exc)}, ensure_ascii=False))

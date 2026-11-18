@@ -7,12 +7,16 @@ import subprocess
 import uuid
 
 from experiments.exp040_generated_answers import score
+from src.arena.attacks import verify_attacker, verify_insertion
+from src.arena.worker import save_new, sha
 from src.arena.live import input_hash, verify_round
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def run_local(question, documents):
+def run_local(question, documents, *, attacker=False, attack=None):
+    if attack is not None:
+        verify_insertion(attack, question, documents)
     input_hash(question, documents)
     python = ROOT / '.venv/bin/python'
     if not python.exists():
@@ -20,7 +24,10 @@ def run_local(question, documents):
     request = {'question': question, 'documents': documents, 'run_id': uuid.uuid4().hex}
     environment = {**os.environ, 'HF_HUB_OFFLINE': '1', 'HF_HUB_DISABLE_TELEMETRY': '1'}
     try:
-        process = subprocess.run([str(python), '-B', '-u', '-m', 'src.arena.worker'],
+        command = [str(python), '-B', '-u', '-m', 'src.arena.worker']
+        if attacker:
+            command.append('--attacker')
+        process = subprocess.run(command,
                                  input=json.dumps(request, ensure_ascii=False), text=True,
                                  capture_output=True, cwd=ROOT, env=environment, timeout=180)
     except subprocess.TimeoutExpired as exc:
@@ -33,12 +40,27 @@ def run_local(question, documents):
         raise RuntimeError(payload.get('error', 'Local generation failed'))
     if payload['run_id'] != request['run_id']:
         raise ValueError('Worker returned a different run ID')
-    verify_round(payload['result'], question, documents)
+    verifier = verify_attacker if attacker else verify_round
+    verifier(payload['result'], question, documents)
+    if attack is not None:
+        directory = ROOT / 'results/arena_runs' / request['run_id']
+        save_attack_provenance(directory, attack, question, documents)
+        payload['attack'] = attack
     return payload
+
+
+def save_attack_provenance(directory, attack, question, documents):
+    verify_insertion(attack, question, documents)
+    path = Path(directory) / 'attack.json'
+    save_new(path, attack)
+    save_new(Path(directory) / 'attack_integrity.json', {'sha256': sha(path),
+              'result_sha256': sha(Path(directory) / 'result.json')})
 
 
 def decorate_live_case(challenge, payload):
     """Add fictional-reference scores after generation; never pass the oracle to a worker."""
+    if 'attack' in payload:
+        verify_insertion(payload['attack'], challenge['question'], challenge['documents'])
     result = verify_round(payload['result'], challenge['question'], challenge['documents'])
     view = {key: copy.deepcopy(challenge[key]) for key in
             ('case_id', 'question', 'documents', 'family', 'family_label', 'authored_reference')}
