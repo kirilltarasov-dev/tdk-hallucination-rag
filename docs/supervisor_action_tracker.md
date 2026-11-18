@@ -12,25 +12,28 @@ percentage estimates: P0 has 10 Done, 14 Partial and 4 Open. With an explicit
 Done=1 / Partial=0.5 / Open=0 convention, P0 planning progress is 60.7%; strict
 completion is 35.7%. Neither is a measured percentage of remaining effort.
 
-That checklist snapshot predates EXP-040–044. EXP-040 failed its utility and
+That checklist snapshot predates EXP-040–045. EXP-040 failed its utility and
 retention screen. EXP-044's fresh authored transfer recovered six correct
 drafts relative to the original NS policy, but its candidate-versus-S1 screen
 is inconclusive because four S1 drafts are unscorable; all four false-only
-sources still led to wrong released answers. These results do not close broad
+sources still led to wrong released answers. EXP-045's AI-only semantic review
+labels seven S1 drafts and four drafts per NS arm as containing false target
+claims; this is retrospective and not independently human validated.
+These results do not close broad
 effectiveness, independent evaluation, distinct-verifier or demonstrator items.
-The v7 manuscript needs EXP-040–044. Completion percentages do not increase
+The v7 manuscript needs EXP-040–045. Completion percentages do not increase
 merely because another experiment finished.
 
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
 | Align title with measured work | Open | EXP-036 failed its 80% retention target. EXP-040 retained 68% of correct drafts and reduced utility from 0.350 to 0.325. EXP-044 retained 12/14 correct drafts but its S1 comparison is inconclusive because four drafts are unscorable; all four false-source-only controls remain wrong and VERIFIED. General effectiveness and real-world validation remain unestablished. |
-| Use a hallucination-specific metric for the title claim | Partial | EXP-039 reports an AI-only analysis of all 200 EXP-038 drafts: false-assertion YES 37/100 for S1 and 35/100 for S3; no established advantage. This is unvalidated assistant assessment, not a human-validated hallucination rate. Human confirmation remains zero. |
+| Use a hallucination-specific metric for the title claim | Partial | EXP-039's AI-only analysis of 200 drafts found no established S3 advantage. EXP-045 separately labels false target claims in 7/24 S1 outputs versus 4/24 for each NS arm on fictional cases. Both are unvalidated assistant assessments; human confirmation remains zero. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
 | Correct Section 4.3 evidence-miss logic | Done | The draft states that every 80%-noise question had relevant evidence and 27/29 semantic errors failed to use it. |
 | Report hard-filter and fallback-rescue paired tests | Done | Exact p-values were independently recalculated from saved raw rows and included as development results. |
 | Rewrite abstract around key outcomes | Done | v6 draft has a compact abstract with baseline, intervention, and transfer numbers. |
-| Put unbuilt components in Future Work | Partial | v6/v7 separated planned work, but v7 is now stale about the symbolic prototype. It must integrate EXP-032–044 and distinguish the measured restricted prototype from the unbuilt complete pipeline and Arena. |
+| Put unbuilt components in Future Work | Partial | v6/v7 separated planned work, but v7 is now stale about the symbolic prototype. It must integrate EXP-032–045 and distinguish the measured restricted prototype from the unbuilt complete pipeline and Arena. |
 | Own Contribution in first person, supervisor role, repository URL | Partial | First-person contribution and supervisor role are in v6; no public repository URL exists. |
 | Label 80%-noise RGB as development | Done | v6 and README label all intervention results at 80% noise as development evidence. |
 | Freeze method with tagged commit before new test | Done for EXP-029 | Local commit `77829b1` and annotated tag `exp029-freeze-2026-11-17` precede inference. Future final tests need their own freeze; this is not a public release. |
@@ -57,9 +60,9 @@ merely because another experiment finished.
 1. Freeze the evaluation protocol and repository state before any new model
    result; do not tune on new questions.
 2. EXP-044 is complete, but its candidate-versus-S1 screen is inconclusive.
-   Preserve the four unscorable drafts and obtain independent blinded semantic
-   review without changing frozen primary labels. EXP-039's AI-only semantic
-   assessment remains unvalidated; no S3 advantage was established there.
+   EXP-045's assistant review and independent-review materials are complete;
+   human review remains open. Preserve the four original UNSCORABLE labels.
+   EXP-039 and EXP-045 must retain their unvalidated AI provenance.
 3. Resolve the title/method choice with the supervisor: either implement and
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.

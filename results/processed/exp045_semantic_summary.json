@@ -1,0 +1,369 @@
+{
+  "experiment_id": "EXP-045",
+  "status": "completed_exploratory_AI_only_review",
+  "question_count": 24,
+  "distinct_review_records": 38,
+  "arm_outputs": 72,
+  "new_inference_calls": 0,
+  "human_reviewed_records": 0,
+  "AI_reviewer_blinded": false,
+  "source_sha256": {
+    "results/raw/exp044_fresh_transfer.jsonl": "1cee1a96ddedbebf31fc2c770efba608d8c28df4f37ee703121ce18852ce999c",
+    "data/synthetic/exp044_generated_transfer_cases.json": "7a6a57c08bb868610eeb948dae50965796e6f3f473545c127cb2648b73cf67e3",
+    "results/processed/exp044_fresh_transfer_summary.json": "9e94ebd1ffd447aab0be8e0728defc70654f185fe81940eb19ff4e6963c875b6",
+    "docs/exp045_semantic_review_protocol.md": "181acc3c14609be7274772375964e7c9adfc4f938a0a028a49b0d3fe9f4843d3",
+    "results/annotation/exp045_anonymized_packet.json": "304d3c1c80013729aa40f7f64799ff317648c28dd88973d36a382aab70e4c0f8",
+    "results/annotation/exp045_private_mapping.json": "7e8383885b3950e4bafe1264292a6385450f0d7ad24a3ac59b25af2cd25575ee",
+    "results/annotation/exp045_assistant_labels.json": "b5e62a3f200c8f059331ac8ab89c08206cf21a097e60203c7a66b90c8cdca8f1",
+    "experiments/exp045_semantic_review.py": "f11e5aa6d5a4a6ba56de6cfcb83ad3e3c04d56c27ecf98911f5a93ac082e3776"
+  },
+  "counts": {
+    "S1": {
+      "answer_status": {
+        "CORRECT_WINNER": 14,
+        "INCORRECT_WINNER": 7,
+        "NEGATIVE_ONLY": 3,
+        "EXPLICIT_REFUSAL": 0,
+        "MIXED": 0,
+        "UNCLEAR": 0
+      },
+      "false_target_claim": {
+        "YES": 7,
+        "NO": 17,
+        "UNCLEAR": 0
+      },
+      "target_evidence": {
+        "SUPPORTED": 16,
+        "CONTRADICTED": 0,
+        "CONFLICTED": 4,
+        "UNSUPPORTED": 4,
+        "NO_CLAIM": 0,
+        "MIXED": 0,
+        "UNCLEAR": 0
+      }
+    },
+    "Original_NS": {
+      "answer_status": {
+        "CORRECT_WINNER": 6,
+        "INCORRECT_WINNER": 4,
+        "NEGATIVE_ONLY": 0,
+        "EXPLICIT_REFUSAL": 14,
+        "MIXED": 0,
+        "UNCLEAR": 0
+      },
+      "false_target_claim": {
+        "YES": 4,
+        "NO": 20,
+        "UNCLEAR": 0
+      },
+      "target_evidence": {
+        "SUPPORTED": 10,
+        "CONTRADICTED": 0,
+        "CONFLICTED": 0,
+        "UNSUPPORTED": 0,
+        "NO_CLAIM": 14,
+        "MIXED": 0,
+        "UNCLEAR": 0
+      }
+    },
+    "Candidate_NS": {
+      "answer_status": {
+        "CORRECT_WINNER": 12,
+        "INCORRECT_WINNER": 4,
+        "NEGATIVE_ONLY": 0,
+        "EXPLICIT_REFUSAL": 8,
+        "MIXED": 0,
+        "UNCLEAR": 0
+      },
+      "false_target_claim": {
+        "YES": 4,
+        "NO": 20,
+        "UNCLEAR": 0
+      },
+      "target_evidence": {
+        "SUPPORTED": 16,
+        "CONTRADICTED": 0,
+        "CONFLICTED": 0,
+        "UNSUPPORTED": 0,
+        "NO_CLAIM": 8,
+        "MIXED": 0,
+        "UNCLEAR": 0
+      }
+    }
+  },
+  "candidate_paired_comparisons": {
+    "S1": {
+      "complete_pairs": 24,
+      "removed_AI_false_target_claim_labels": [
+        "E044-014",
+        "E044-016",
+        "E044-019"
+      ],
+      "introduced_AI_false_target_claim_labels": [],
+      "answer_status_transitions": {
+        "CORRECT_WINNER -> CORRECT_WINNER": 12,
+        "CORRECT_WINNER -> EXPLICIT_REFUSAL": 2,
+        "INCORRECT_WINNER -> EXPLICIT_REFUSAL": 3,
+        "NEGATIVE_ONLY -> EXPLICIT_REFUSAL": 3,
+        "INCORRECT_WINNER -> INCORRECT_WINNER": 4
+      }
+    },
+    "Original_NS": {
+      "complete_pairs": 24,
+      "removed_AI_false_target_claim_labels": [],
+      "introduced_AI_false_target_claim_labels": [],
+      "answer_status_transitions": {
+        "CORRECT_WINNER -> CORRECT_WINNER": 6,
+        "EXPLICIT_REFUSAL -> CORRECT_WINNER": 6,
+        "EXPLICIT_REFUSAL -> EXPLICIT_REFUSAL": 8,
+        "INCORRECT_WINNER -> INCORRECT_WINNER": 4
+      }
+    }
+  },
+  "originally_unscorable_S1": [
+    {
+      "case_id": "E044-017",
+      "family": "no_target_evidence",
+      "provenance": "unvalidated_nonblinded_AI_assessment",
+      "human_reviewed": false,
+      "original_exact_scores": {
+        "S1": {
+          "category": "UNSCORABLE",
+          "utility": null
+        },
+        "Original_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        },
+        "Candidate_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        }
+      },
+      "S1": {
+        "record_id": "R045-037",
+        "answer_status": "NEGATIVE_ONLY",
+        "false_target_claim": "NO",
+        "target_evidence": "UNSUPPORTED",
+        "rationale": "Excluding White Terns is true under the unique-winner reference Amber Stoats, but does not name the winner. The cited 2146 win cannot justify the negative claim about 2147.",
+        "response_spans": [
+          "White Terns did not win the 2147 Juniper Cup. (Answer based on the provided data, which states that they won the previous year.)"
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "White Terns won the 2146 Juniper Cup."
+          }
+        ]
+      },
+      "Original_NS": {
+        "record_id": "R045-036",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      },
+      "Candidate_NS": {
+        "record_id": "R045-036",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      }
+    },
+    {
+      "case_id": "E044-018",
+      "family": "no_target_evidence",
+      "provenance": "unvalidated_nonblinded_AI_assessment",
+      "human_reviewed": false,
+      "original_exact_scores": {
+        "S1": {
+          "category": "UNSCORABLE",
+          "utility": null
+        },
+        "Original_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        },
+        "Candidate_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        }
+      },
+      "S1": {
+        "record_id": "R045-027",
+        "answer_status": "NEGATIVE_ONLY",
+        "false_target_claim": "NO",
+        "target_evidence": "UNSUPPORTED",
+        "rationale": "Excluding Black Pumas is true under the unique-winner reference Cerulean Hares, but no winner is supplied. The source concerns 2147 and cannot establish a non-win in 2148.",
+        "response_spans": [
+          "Black Pumas did not win the 2148 Ivory Shield. (The given document only mentions the 2147 Ivory Shield winner.)"
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Black Pumas won the 2147 Ivory Shield."
+          }
+        ]
+      },
+      "Original_NS": {
+        "record_id": "R045-007",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      },
+      "Candidate_NS": {
+        "record_id": "R045-007",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      }
+    },
+    {
+      "case_id": "E044-019",
+      "family": "no_target_evidence",
+      "provenance": "unvalidated_nonblinded_AI_assessment",
+      "human_reviewed": false,
+      "original_exact_scores": {
+        "S1": {
+          "category": "UNSCORABLE",
+          "utility": null
+        },
+        "Original_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        },
+        "Candidate_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        }
+      },
+      "S1": {
+        "record_id": "R045-028",
+        "answer_status": "INCORRECT_WINNER",
+        "false_target_claim": "YES",
+        "target_evidence": "UNSUPPORTED",
+        "rationale": "The opening names Brown Gulls as winner and the explanation explicitly extends a 2148 win to 2149. This conflicts with reference Olive Martens; absent contrary evidence does not support that extension.",
+        "response_spans": [
+          "Brown Gulls won. (Answer based on the information provided in document D1, which states that they won the 2148 Dune Trophy, and it is assumed that they also won the 2149 Dune Trophy as no information to the contrary is provided.)"
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Brown Gulls won the 2148 Dune Trophy."
+          }
+        ]
+      },
+      "Original_NS": {
+        "record_id": "R045-006",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      },
+      "Candidate_NS": {
+        "record_id": "R045-006",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      }
+    },
+    {
+      "case_id": "E044-020",
+      "family": "no_target_evidence",
+      "provenance": "unvalidated_nonblinded_AI_assessment",
+      "human_reviewed": false,
+      "original_exact_scores": {
+        "S1": {
+          "category": "UNSCORABLE",
+          "utility": null
+        },
+        "Original_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        },
+        "Candidate_NS": {
+          "category": "ABSTAIN",
+          "utility": 0
+        }
+      },
+      "S1": {
+        "record_id": "R045-014",
+        "answer_status": "NEGATIVE_ONLY",
+        "false_target_claim": "NO",
+        "target_evidence": "UNSUPPORTED",
+        "rationale": "Excluding Pink Ocelots is true under the unique-winner reference Russet Whales, but does not name the winner. A 2149 win establishes neither winning nor not winning in 2150.",
+        "response_spans": [
+          "Pink Ocelots did not win the 2150 Olive Challenge."
+        ],
+        "context_spans": [
+          {
+            "doc_id": "D1",
+            "quote": "Pink Ocelots won the 2149 Olive Challenge."
+          }
+        ]
+      },
+      "Original_NS": {
+        "record_id": "R045-023",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      },
+      "Candidate_NS": {
+        "record_id": "R045-023",
+        "answer_status": "EXPLICIT_REFUSAL",
+        "false_target_claim": "NO",
+        "target_evidence": "NO_CLAIM",
+        "rationale": "The response explicitly declines to determine the winner and makes no target proposition.",
+        "response_spans": [
+          "I cannot determine the winner."
+        ],
+        "context_spans": []
+      }
+    }
+  ],
+  "false_claim_and_supported_source": {
+    "S1": 4,
+    "Original_NS": 4,
+    "Candidate_NS": 4
+  },
+  "limitations": [
+    "Post-hoc labels by the development assistant; no independent human validation.",
+    "Fictional unique-winner reference, not externally checked world facts.",
+    "Target propositions only; not a comprehensive free-text factuality score.",
+    "EXP-044 primary scoring and INCONCLUSIVE result remain unchanged.",
+    "Repeated authored families and shared outputs; no population inference."
+  ]
+}

@@ -1083,3 +1083,44 @@ Next: preserve the inconclusive exact-score outcome and obtain independent
 blinded semantic annotation for unscorable drafts and a scored sample; do not
 change frozen primary labels. Real retrieval, external source truth and broader
 datasets remain separate unresolved requirements.
+
+## 2026-11-18 — EXP-045: Retrospective AI Semantic Review of EXP-044
+
+Purpose: distinguish target-answer completeness, false target propositions and
+source support for EXP-044's four UNSCORABLE drafts and all other outputs.
+All 24 questions and 72 arm outputs were retained, deduplicated to 38 distinct
+question/context/reference/response records. Prepared a system-anonymized
+review packet, separate mapping, codebook and blank human template. The
+development assistant supplied explicit draft labels with exact quotations;
+it was not blinded or independent. Human-reviewed records remain zero.
+
+The codebook was written before label entry; labels and analysis were frozen
+at e11b116, tag exp045-labels-freeze-2026-11-18, before aggregate calculation.
+This is retrospective exploratory analysis: EXP-044 outputs were already seen.
+No new model inference or scoring modification occurred.
+
+Assistant answer judgments for S1: 14 correct winners, seven incorrect winners,
+three negative-only incomplete answers, zero explicit refusals. Original NS:
+six correct, four incorrect, fourteen refusals. Candidate NS: twelve correct,
+four incorrect, eight refusals. AI false-target-claim YES counts are 7/24 for
+S1 and 4/24 for both NS arms. Candidate withholds three labeled false claims
+(E044-014, 016, 019), two correct winners and three negative-only incomplete
+drafts. It restores six correct drafts relative to Original NS without changing
+the four remaining false-source errors. No statistical or validated efficacy
+claim follows from these unvalidated AI labels.
+
+Of the four originally UNSCORABLE drafts, E044-017, 018 and 020 contain true
+negative statements under the fictional unique-winner reference, but do not
+name the winner and are unsupported by the wrong-year sources. E044-019
+asserts the wrong winner by extending a previous-year win to the requested
+year. Truth, support and answering the question are therefore separate axes.
+The EXP-044 primary labels and INCONCLUSIVE outcome remain unchanged.
+
+All 115 Python tests passed; every label, quoted span, mapping and source hash
+was checked. EXP-045 artifact replay and EXP-044 full replay pass. AI labels:
+results/annotation/exp045_assistant_labels.json, SHA-256
+b5e62a3f200c8f059331ac8ab89c08206cf21a097e60203c7a66b90c8cdca8f1.
+Summary: results/processed/exp045_semantic_summary.json. Interpretation and
+limits: docs/exp045_results.md. Independent human validation remains open;
+the restricted demonstrator and evidence-aligned manuscript are practical
+next deliverables.
