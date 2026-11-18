@@ -1308,3 +1308,46 @@ M1–M5 are implemented with local acceptance evidence. The final five-passage
 collection, venue/network and actual audience checks, demo video, independent
 scientific evaluation and manuscript revision remain open. Broad supervisor Arena
 items stay Partial; no efficacy claim or overall completion percentage changes.
+
+## 2026-11-18 — Proposed EXP-046 and Supervisor Manuscript v8
+
+The author reported that external reviewers cannot be recruited. Independent
+human semantic evaluation remains unmet. Deterministic replay and assistant
+review do not replace it. The research can continue with restricted automatic
+contract scoring, while broad factual/hallucination claims remain unestablished.
+
+Reserved EXP-046 and wrote docs/exp046_proposed_protocol.md with its matching
+configs/exp046_design.json. The proposed fixed-method study has 240 new authored
+fictional questions, six families, five passages per question, and shared-draft
+S1/S2/Candidate NS comparisons. It retains false-source controls, the exact
+scorer and the 80% correct-draft-retention guardrail. Its primary endpoint uses
+full-denominator paired utility bounds, preserving UNSCORABLE cases and
+cancelling identical released drafts. Bootstrap sensitivity is conditional on
+the authored family mixture, not a population guarantee. N=240 is a practical
+allocation, not a claimed power calculation. Planned caps are 720 model calls
+and 307,200 generated tokens; their arithmetic was checked without inference.
+
+This is design preparation only: no completed fixture, runner, non-inference
+preflight, tagged execution manifest, run approval or model result exists.
+The user must approve the concrete bounded run after those artifacts are ready.
+EXP-040/041 failed screens and EXP-044's inconclusive screen are unchanged.
+
+Created deliverables/TDK_Research_Paper_v8_Kirill_Tarasov.docx separately from v7.
+It integrates restricted hybrid results through EXP-045, failure diagnoses,
+measured EXP-044 cost, the difference between source consistency and truth,
+and local Arena M1–M5 scope. Main tables now have unique captions; Appendix B
+records RGB roles/counts/version/license/hashes. EXP IDs remain in Appendix A.
+The proposed next test is future work, not reported evidence. No AI-use
+declaration was added, following the author's earlier instruction.
+
+EXP-044 full replay and EXP-045 packet/label/analysis replay passed. Manuscript
+RGB hashes matched actual files. The v8 document was rendered to 24 pages and
+every full-resolution page image visually inspected; all 41 contents entries
+match final pagination, and ten table captions are unique. v7 remains
+byte-identical to its tracked version. See docs/tdk_v8_revision_notes.md and
+docs/update_tdk_v8.py. No model inference or application changes occurred.
+
+Updated README, hypothesis/evidence notes and supervisor tracker. Independent
+review, broad effectiveness and remaining supervisor tasks are not marked
+complete. v8 is a current supervisor draft, not final submission. No overall
+completion percentage was recalculated.

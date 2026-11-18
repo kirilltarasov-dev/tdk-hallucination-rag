@@ -62,6 +62,37 @@ EXP-031 provides materials for independent semantic annotation of the existing
 about those systems but cannot retroactively evaluate a verifier absent from
 those runs. A new full-system evaluation is needed for the new symbolic layer.
 
+## Latest transfer evidence and reviewer availability
+
+EXP-044 completed a frozen 24-question generated-answer transfer with 72 model
+calls. Candidate NS retained 12 correct answers versus six for Original NS;
+both released the same four wrong answers from false-only sources. Relative to
+S1, candidate correct-draft retention was 12/14 (85.7%), but the paired utility
+difference is bounded by [-0.167, +0.167] because four S1 drafts are UNSCORABLE.
+The primary screen remains INCONCLUSIVE. This does not reverse EXP-040's failed
+utility/retention screen or establish H2. See `docs/exp044_results.md`.
+
+EXP-045 is an exploratory retrospective assistant review, not independent or
+blinded annotation. Its labels identify false target claims in 7/24 S1 outputs
+and 4/24 per NS arm. These judgments are unvalidated; human-reviewed records
+remain zero, and the four primary UNSCORABLE outcomes are unchanged. See
+`docs/exp045_results.md` for the distinction between truth and source support.
+
+On 2026-11-18 the author reported that external reviewers are unavailable.
+Independent human evaluation therefore remains an unmet limitation. It is not
+replaced by another assistant pass or by software replay checks. A credible
+restricted thesis can report automatic contract scores and authored source
+consistency without claiming a human-validated hallucination rate.
+
+`docs/exp046_proposed_protocol.md` specifies a possible next fixed-method study
+with 240 new authored questions, five passages each, S1/S2/Candidate NS, and
+paired utility bounds that retain unscorable outputs. It preserves the 80%
+correct-draft retention guardrail and includes all false-source controls.
+This is a proposed engineering screen, not an execution freeze or a measured
+result. The fixture, runner, non-inference preflight, tagged manifest and
+concrete inference authorization are still missing. H2 is not redefined as
+already proven by this narrower proposal.
+
 ## What a credible thesis can conclude
 
 EXP-043 explicitly substitutes a source-independent finite-grammar claim for

@@ -21,7 +21,9 @@ labels seven S1 drafts and four drafts per NS arm as containing false target
 claims; this is retrospective and not independently human validated.
 These results do not close broad
 effectiveness, independent evaluation, distinct-verifier or demonstrator items.
-The v7 manuscript needs EXP-040–045. Completion percentages do not increase
+The separate v8 manuscript incorporates EXP-032–045, measured EXP-044 latency,
+Arena M1–M5 status and explicit limitations. It remains a supervisor draft,
+not a submission-ready final paper. Completion percentages do not increase
 merely because another experiment finished.
 
 Arena M1 is now complete within the app-shell/loader scope; its recorded trace
@@ -38,8 +40,10 @@ M5 now has local ledger/admission/QR acceptance, 154 passing Python tests,
 100 explicit simulated rounds and 20 simultaneous read-only browser sessions
 (`docs/arena_m5_results.md`). The complete Arena, five-passage collection, venue
 access, actual audience validation and demo video are still open. These changes are
-documented in `docs/arena_m1_results.md`; P0 counts are unchanged, and the older
-P1 percentages remain historical rather than a current recount.
+documented in `docs/arena_m1_results.md`; those software additions did not
+change P0 completion. Subsequent v8 document changes are reflected in the rows
+below, but no overall P0/P1 percentage has been recounted; earlier percentages
+remain dated snapshots.
 
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
@@ -50,15 +54,15 @@ P1 percentages remain historical rather than a current recount.
 | Correct Section 4.3 evidence-miss logic | Done | The draft states that every 80%-noise question had relevant evidence and 27/29 semantic errors failed to use it. |
 | Report hard-filter and fallback-rescue paired tests | Done | Exact p-values were independently recalculated from saved raw rows and included as development results. |
 | Rewrite abstract around key outcomes | Done | v6 draft has a compact abstract with baseline, intervention, and transfer numbers. |
-| Put unbuilt components in Future Work | Partial | v6/v7 separated planned work, but v7 is now stale about the symbolic prototype. It must integrate EXP-032–045 and distinguish the measured restricted prototype from the unbuilt complete pipeline and Arena. |
+| Put unbuilt components in Future Work | Partial | v8 now distinguishes the measured restricted hybrid and local Arena from the unbuilt complete retrieval/selective pipeline and unverified venue/audience demonstration. Broad scope remains incomplete. |
 | Own Contribution in first person, supervisor role, repository URL | Partial | First-person contribution and supervisor role are in v6; no public repository URL exists. |
 | Label 80%-noise RGB as development | Done | v6 and README label all intervention results at 80% noise as development evidence. |
 | Freeze method with tagged commit before new test | Done for EXP-029 | Local commit `77829b1` and annotated tag `exp029-freeze-2026-11-17` precede inference. Future final tests need their own freeze; this is not a public release. |
-| Dataset versions, sizes, licences, hashes in paper table | Partial | `docs/dataset_manifest.md` verifies all three local files against one upstream commit and records CC BY-NC-SA 4.0; the manuscript table is pending. |
+| Dataset versions, sizes, licences, hashes in paper table | Done for local RGB subsets | v8 Appendix B records file counts, SHA-256 digests, roles, upstream commit and CC BY-NC-SA 4.0, following `docs/dataset_manifest.md`. Historical model revision uncertainty remains explicit. |
 | State S3 assessor model and use distinct verifier model | Open | Existing S3 assessor uses the generator model. A distinct verifier requires a new design and controlled evaluation. The new symbolic rule prototype does not replace the neural assessor. |
 | JSON-schema-constrained outputs and parse-failure reporting | Partial | EXP-032 implements strict post-generation JSON/type/provenance checks and visible UNKNOWN/error records. Decoding is not schema constrained; historical text-prefix parsers are unchanged. |
 | RGB-compatible score plus EM and token F1 | Partial | EXP-030 computed supplemental EM/F1 on the 288 single-answer-group questions per condition; EM is 0/288 for both systems because responses are verbose. The manuscript table and multi-group treatment remain open. |
-| Hardware, p50/p95 latency, calls, tokens, peak memory | Partial | EXP-040 and EXP-044 record named hardware, actual calls/tokens, p50/p95 latency and peak process MLX allocation. Historical runs lack full measurements, per-system memory is not isolated, and the manuscript cost table remains incomplete. |
+| Hardware, p50/p95 latency, calls, tokens, peak memory | Partial | v8 Table 8 and surrounding text report EXP-044 hardware, mean/p50/p95 latency, calls, aggregate tokens and peak process MLX allocation. Historical runs lack full measurements and per-system memory is not isolated. |
 | Paired exact McNemar, bootstrap interval, effect sizes | Done for existing paired score comparisons | EXP-026 and EXP-028 report paired transitions, percentage-point effects, exact p-values, and bootstrap intervals. |
 | Keep development p-values separate from test claims | Done | v6 labels the 80%-noise tests as development evidence; EXP-028 is explicitly condition transfer on the same questions. |
 | Public GitHub repository under code license | Open | No Git remote or project code license exists. Upstream RGB data retain their separate CC BY-NC-SA 4.0 license. |
@@ -68,7 +72,7 @@ P1 percentages remain historical rather than a current recount.
 | Publish prompts in repository and appendix | Partial | Prompts are in source files; the manuscript appendix does not reproduce them verbatim. |
 | Architecture figure | Open | No current architecture figure maps failures to interventions. |
 | Remove duplicated noise table/figure; add comparative uncertainty plot | Partial | Duplicate figure was removed from v6; a multi-model uncertainty plot depends on additional model runs. |
-| Number and caption tables | Partial | Latest v7 has captions but repeats Table 1 after Table 4; numbering still needs correction. |
+| Number and caption tables | Done for v8 | Duplicate Table 1 caption removed; main tables 1–8 and appendix tables A1/B1 have unique captions. |
 | Taxonomy percentages and multi-label note | Done | Table 3 and its note specify denominators and label overlap. |
 | IEEE references with DOIs and peer-reviewed versions | Partial | Existing references use numbered citations but there are only four; one remains an arXiv version. Literature review is still too narrow. |
 
@@ -77,9 +81,13 @@ P1 percentages remain historical rather than a current recount.
 1. Freeze the evaluation protocol and repository state before any new model
    result; do not tune on new questions.
 2. EXP-044 is complete, but its candidate-versus-S1 screen is inconclusive.
-   EXP-045's assistant review and independent-review materials are complete;
-   human review remains open. Preserve the four original UNSCORABLE labels.
-   EXP-039 and EXP-045 must retain their unvalidated AI provenance.
+   EXP-045's assistant review and independent-review materials are complete.
+   On 2026-11-18 the author reported that external reviewers are unavailable:
+   human review remains unmet, not a prerequisite for restricted automatic
+   studies or a task satisfied by assistant review. Preserve original labels
+   and unvalidated AI provenance. EXP-046 now has a proposed automatic-score
+   design; fixture, runner, preflight, tagged execution freeze and bounded-run
+   approval are still missing. No new inference has run.
 3. Resolve the title/method choice with the supervisor: either implement and
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.

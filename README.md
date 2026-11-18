@@ -138,8 +138,18 @@ All 80%-noise intervention results are development evidence. RGB answer
 matching is a lexical benchmark score, not a direct hallucination rate. See
 [`research_log.md`](research_log.md) for experiment objectives, raw/processed
 paths, paired comparisons, and limitations. The current supervisor-review
-manuscript is in `deliverables/TDK_Research_Paper_v7_Kirill_Tarasov.docx`; it
-includes EXP-029 and predates the EXP-032–036 development work documented in the log.
+manuscript is in `deliverables/TDK_Research_Paper_v8_Kirill_Tarasov.docx`;
+it incorporates the restricted hybrid results through EXP-045, measured
+transfer cost and local Arena M1–M5 status. It preserves negative results and
+is not submission-ready. Earlier manuscript versions remain unchanged.
+
+External reviewers are currently unavailable. Independent human validation
+remains unmet; assistant review is not a substitute. A proposed restricted
+automatic-score study is specified in
+[`docs/exp046_proposed_protocol.md`](docs/exp046_proposed_protocol.md), with
+240 new fictional questions and five passages per question. It has no completed
+fixture, runner, tagged execution freeze or results. No new inference is
+authorized by the design document; a concrete bounded run requires approval.
 
 ## Data and provenance
 
