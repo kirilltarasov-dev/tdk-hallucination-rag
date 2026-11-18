@@ -1,7 +1,7 @@
 # RAG Red-Team Arena
 
 The Arena offers a recorded explorer (M1), explicit local generation (M2),
-and a source attack editor (M3).
+a source attack editor (M3), and an auditable proof view (M4).
 Recorded mode compares the saved EXP-044 Standard RAG draft, Original NS and
 Candidate NS. Live mode generates Standard RAG, S2-style same-model review and
 neuro-symbolic answers from one shared draft. Original NS in recorded mode is
@@ -82,6 +82,35 @@ own separate run directory. Replay either kind without inference:
 python3 -B -m src.arena.worker --replay results/arena_runs/RUN_ID
 ```
 
+## Inspect the proof
+
+Recorded and completed live rounds include **Proof graph and executed checks**.
+The graph links supplied sources, validated neural facts, the question frame,
+the independently parsed draft and the final decision. Deterministically audited
+negations have separate nodes. All retained facts remain visible, including
+facts outside the target event/year; invalid extraction produces no fact nodes.
+
+The stage checklist distinguishes PASSED, BLOCKED, NOT REACHED and other actual
+trace statuses. It reports emitted rule IDs, not an instrumented log of every
+branch condition. Source selection links the graph to full passages; highlighted
+quotations are rule witnesses. Whole-source diagnostic highlights indicate an
+extraction/audit problem, not that the source is factually false. The graph and
+checks can be downloaded with their underlying trace and raw extraction.
+
+Select **Proof examples** for two pinned walkthroughs requiring no inference:
+
+- **Answer mismatch** replays the actual EXP-040 E040-018 draft and its historical
+  V2 extraction through the current candidate. “Velvet Otters won.” disagrees
+  with the source's “Velvet Otters 19”, so R6_ANSWER_MISMATCH yields REFUTED.
+  This is retrospective replay, not a fresh V3 run or an EXP-044 observation.
+- **Extraction failure** replays the actual M3 attack round. Null fact fields
+  fail extraction validation, so source auditing is not reached. UNKNOWN is
+  not a symbolic refutation or measured attack resistance.
+
+Both examples have full provenance downloads. The examples are diagnostic
+illustrations, not a representative evaluation sample. REFUTED means mismatch
+with supplied evidence under the declared rules, not external factual falsity.
+
 ## A two-minute recorded walkthrough
 
 1. Select **Recovered answer**. The source says “took first place.” Candidate
@@ -112,8 +141,9 @@ live-mode times come from the selected local round. Neither is UI timing.
 Source VERIFIED is not external truth verification, and S2 has no symbolic verdict.
 
 The [specification](SPEC.md), [M2 contract](M2_SPEC.md) and [M3 contract](M3_SPEC.md)
-map the implementation to the supervisor's plan. Five-passage challenges, complete
-proof graph and audience scoreboard remain future work. See [M1 verification](../docs/arena_m1_results.md)
+map the implementation to the supervisor's plan. Five-passage challenges and the
+audience scoreboard remain future work. The proof graph is described in the
+[M4 contract](M4_SPEC.md). See [M1 verification](../docs/arena_m1_results.md)
 and [M2 checks and actual integration sample](../docs/arena_m2_results.md).
 
 ## Checks
@@ -146,3 +176,8 @@ three-call smoke round; this is optional and should not be run as an efficacy te
 order and restore without inference. `TDK_ARENA_M3_SMOKE=1` enables one AI proposal
 and one three-call edited round; `TDK_ARENA_M3_SCREENSHOT` sets a new screenshot
 path. Do not overwrite existing smoke evidence. See [M3 report](../docs/arena_m3_results.md).
+
+`tests/arena_m4_browser_check.mjs` checks graph rendering, source highlights,
+REFUTED, CONFLICT, VERIFIED-but-wrong, extraction failure, export and page width.
+It never runs inference. `TDK_ARENA_M4_SCREENSHOT_DIR` optionally selects a new
+screenshot directory. See [M4 evidence](../docs/arena_m4_results.md).

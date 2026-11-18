@@ -31,7 +31,10 @@ M2 now also has a tested live S1/S2-style/NS interface and one actual local
 integration round (`docs/arena_m2_results.md`). M3 now has the source editor,
 six templates, insertion position and optional AI attacker, with 136 passing
 Python tests and one actual four-call browser smoke (`docs/arena_m3_results.md`).
-The full Arena, M4–M5, five-passage collection and demo video are still open. These changes are
+M4 adds the replay-validated proof graph, executed checks and source highlights,
+with REFUTED and extraction-failure walkthroughs (`docs/arena_m4_results.md`).
+All 144 Python tests and the M4 browser checks pass without new inference.
+The full Arena, M5, five-passage collection and demo video are still open. These changes are
 documented in `docs/arena_m1_results.md`; P0 counts are unchanged, and the older
 P1 percentages remain historical rather than a current recount.
 
@@ -79,8 +82,9 @@ P1 percentages remain historical rather than a current recount.
    metric, or adopt a narrower title aligned with the completed contribution.
 4. Arena M1 provides recorded exploration and M2 provides explicit local
    S1/S2-style/NS generation with auditable raw logs. M3 adds editable attacks
-   and optional AI proposals. Next implement M4's proof view using actual traces,
-   including extraction failures; attack success evaluation requires a separate
-   protocol and actual model runs on new inputs. Revise the
+   and optional AI proposals. M4 exposes actual traces and extraction failures.
+   Next implement M5's round persistence, score accounting and audience controls;
+   attack success evaluation requires a separate protocol and actual model runs
+   on new inputs. Revise the
    manuscript around the measured scope. Publication, licensing, video and
    formal TDK formatting remain separate tasks.

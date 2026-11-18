@@ -11,6 +11,7 @@ from src.arena.replay import FAMILIES, export_challenge, load_challenges
 from src.arena.client import decorate_live_case, export_live_case, run_local
 from src.arena.live import input_hash
 from demo.attack_editor import render_editor
+from demo.proof_panel import render_proof, render_examples
 
 st.set_page_config(page_title='RAG Red-Team Arena', page_icon='◈', layout='wide')
 
@@ -82,34 +83,43 @@ with st.sidebar:
                 '<div class="brand">RAG<br>Red-Team Arena</div>'
                 '<span class="pill">LOCAL RESEARCH DEMONSTRATOR</span>', unsafe_allow_html=True)
     st.write('')
-    mode = st.radio('Mode', ['Recorded experiment', 'Live local run'], key='arena_mode')
+    mode = st.radio('Mode', ['Recorded experiment', 'Live local run', 'Proof examples'], key='arena_mode')
     live_mode = mode == 'Live local run'
-    selected_family = st.selectbox('Source scenario', ['All cases', *FAMILIES.values()],
-                                   key='family_filter')
-    visible = [case for case in challenges if selected_family == 'All cases'
-               or case['family_label'] == selected_family]
-    ids = [case['case_id'] for case in visible]
-    if 'challenge_id' not in st.session_state:
-        st.session_state['challenge_id'] = 'E044-005'
-    if st.session_state['challenge_id'] not in ids:
-        st.session_state['challenge_id'] = ids[0]
-    selected_id = st.selectbox('Challenge', ids, key='challenge_id',
-                               format_func=lambda item: f'{item} · {by_id[item]["question"]}')
-    previous, following = st.columns(2)
-    previous.button('Previous', on_click=step, args=(-1, ids), width='stretch')
-    following.button('Next', on_click=step, args=(1, ids), width='stretch')
-    st.caption(f'{len(visible)} of 24 recorded challenges')
-    show_reference = st.toggle('Reveal fictional reference', value=True)
-    st.divider()
-    st.markdown('**How to read the verdict**')
-    st.markdown('<div class="scope">VERIFIED means the draft agrees with the supplied '
-                'sources within the supported language. It does not establish that '
-                'those sources are true.</div>', unsafe_allow_html=True)
-    st.divider()
-    st.caption('Recorded EXP-044 · 18 November 2026\n\n'
-               '24 fictional questions · 6 scenarios\n\n'
-               'Supplied passages · no live retrieval\n\n'
-               'Model calls require Run or the AI attack button.')
+    if mode == 'Proof examples':
+        st.caption('Pinned historical inputs · no inference\n\n'
+                   'Inspect a source mismatch or an extraction failure. '
+                   'These examples illustrate decisions, not comparative effectiveness.')
+    else:
+        selected_family = st.selectbox('Source scenario', ['All cases', *FAMILIES.values()],
+                                       key='family_filter')
+        visible = [case for case in challenges if selected_family == 'All cases'
+                   or case['family_label'] == selected_family]
+        ids = [case['case_id'] for case in visible]
+        if 'challenge_id' not in st.session_state:
+            st.session_state['challenge_id'] = 'E044-005'
+        if st.session_state['challenge_id'] not in ids:
+            st.session_state['challenge_id'] = ids[0]
+        selected_id = st.selectbox('Challenge', ids, key='challenge_id',
+                                   format_func=lambda item: f'{item} · {by_id[item]["question"]}')
+        previous, following = st.columns(2)
+        previous.button('Previous', on_click=step, args=(-1, ids), width='stretch')
+        following.button('Next', on_click=step, args=(1, ids), width='stretch')
+        st.caption(f'{len(visible)} of 24 recorded challenges')
+        show_reference = st.toggle('Reveal fictional reference', value=True)
+        st.divider()
+        st.markdown('**How to read the verdict**')
+        st.markdown('<div class="scope">VERIFIED means the draft agrees with the supplied '
+                    'sources within the supported language. It does not establish that '
+                    'those sources are true.</div>', unsafe_allow_html=True)
+        st.divider()
+        st.caption('Recorded EXP-044 · 18 November 2026\n\n'
+                   '24 fictional questions · 6 scenarios\n\n'
+                   'Supplied passages · no live retrieval\n\n'
+                   'Model calls require Run or the AI attack button.')
+
+if mode == 'Proof examples':
+    render_examples()
+    st.stop()
 
 case = by_id[selected_id]
 
@@ -252,6 +262,10 @@ with st.expander('Why the candidate made this decision', expanded=True):
                        'Year': f['year'], 'Winner': f['value']} for f in facts],
                      hide_index=True, width='stretch')
 
+with st.expander('Proof graph and executed checks', expanded=True):
+    render_proof(case['question'], case['documents'], case['systems'][0]['answer'],
+                 case['raw_record']['calls']['V3']['output'], trace, key='case_proof')
+
 with st.expander('Raw extraction and full candidate trace'):
     st.caption('Verbatim V3 model output followed by the replayed deterministic trace.')
     st.code(case['raw_record']['calls']['V3']['output'], language='json')
@@ -271,4 +285,4 @@ st.markdown('**Research scope**')
 st.caption('EXP-044 used 24 authored fictional cases. Its candidate-versus-S1 utility screen '
            'was inconclusive because four drafts were outside the frozen answer format. '
            'The app offers recorded exploration, explicit local generation and editable source attacks. '
-           'Attack success measurement, the full proof view and an audience scoreboard remain later work.')
+           'The proof view exposes actual checks and failures. Attack success measurement and an audience scoreboard remain later work.')

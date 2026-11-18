@@ -1233,3 +1233,35 @@ demo/M3_SPEC.md. Evidence and limitations: docs/arena_m3_results.md. M3 is local
 complete within this software scope; M4/M5, five-passage challenges, controlled
 attack evaluation and the revised manuscript remain open. Original supervisor
 Arena items remain Partial; no broad research claim or P0 count changes.
+
+## 2026-11-18 — DEMO-M4: Proof Graph, Executed Checks and Source Witnesses
+
+Added a shared proof panel for recorded and completed live Arena rounds. Every
+view first replays the candidate from the exact question, sources, draft and raw
+extraction. The graph shows all validated neural facts, including wrong-target
+facts, and separately labels deterministic negative-source statements. Invalid
+extraction produces no accepted fact nodes. The checklist reports trace-backed
+stage statuses and emitted rule IDs, not an invented per-rule execution log.
+Exact witness quotations and recorded diagnostic sources are highlighted; an
+unvisited source never receives a successful audit status.
+
+A separate Proof examples mode uses two pinned historical artifacts without
+inference. Saved EXP-040 E040-018 draft Velvet Otters won. and its V2 extraction
+are retrospectively replayed through the current candidate. The source names
+Velvet Otters 19, producing REFUTED / R6_ANSWER_MISMATCH and a concrete witness.
+This is not a new V3 run or an EXP-044 result. The saved M3 attack round provides
+the contrasting UNKNOWN / I1_ORIGINAL_EXTRACTION_INVALID case, with null fact
+fields and no source audit reached. Neither example measures broad effectiveness.
+
+All 144 Python tests passed, including eight M4 tests. M4 browser checks passed
+graph rendering, verdicts, source highlights, executed-stage statuses, selection,
+provenance export, extraction failure and mobile page width. M1/M2/M3 browser
+regressions also passed without inference. Popup selection in the browser test
+was adjusted for graph layout animation and the selected value is asserted.
+Three UI screenshots were visually inspected. No new model calls were made;
+raw research data and the inference/verification method were unchanged.
+
+Specification: demo/M4_SPEC.md. Evidence: docs/arena_m4_results.md. M1–M4 now have
+local software acceptance evidence. M5, the final five-passage collection, demo
+video, independent evaluation and manuscript revision remain open. The original
+broad Arena tasks remain Partial; no new efficacy claim or P0 completion change.
