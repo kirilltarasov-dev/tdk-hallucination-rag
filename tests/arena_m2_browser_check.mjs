@@ -38,6 +38,8 @@ try {
     await page.getByRole('heading',{name:'Local run answers',exact:true}).waitFor({timeout:120000});
     assert.deepEqual(await page.locator('.answer-card .name').allTextContents(),
       ['Standard RAG draft','Self-review (S2)','Neuro-symbolic']);
+    await page.getByRole('heading',{name:'Run three verification approaches',exact:true}).scrollIntoViewIfNeeded();
+    await page.screenshot({path:'results/figures/arena_m2_live.png'});
     const pending = page.waitForEvent('download');
     await page.getByRole('button',{name:'Download this case and full trace',exact:true}).click();
     const download = await pending;
@@ -51,7 +53,6 @@ try {
     assert.equal(exported.result.systems[1].verdict,null);
     assert.equal(exported.result.systems[1].trace.symbolic_verification,false);
     assert.equal((await runs()).length,before.length+1);
-    await page.screenshot({path:'results/figures/arena_m2_live.png'});
     await page.getByRole('switch',{name:'Reveal fictional reference',exact:true}).focus();
     await page.getByRole('switch',{name:'Reveal fictional reference',exact:true}).press('Space');
     await page.getByText('Reference hidden.',{exact:false}).waitFor();

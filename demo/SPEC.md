@@ -64,11 +64,11 @@ Reference truth is display metadata and never an input to verifier replay.
    reveal and JSON export work. Desktop and mobile layouts remain readable.
 5. Loader and UI tests do not load a model or modify historical results.
 
-## Later milestones from the supervisor plan
+## Milestone status from the supervisor plan
 
-| Milestone | Remaining scope after M1 |
+| Milestone | Current scope |
 |---|---|
-| M2 Three systems | Live shared interface for standard RAG, S2 self-review and neuro-symbolic verification; all challenges render actual three-arm outputs. Recorded Original NS is not this requirement. |
+| M2 Three systems | Implemented: explicit local Standard RAG/S2-style/NS interface, all-24 interface fixture checks and one actual browser-driven integration round. See M2_SPEC.md and docs/arena_m2_results.md. Recorded Original NS remains a separate historical arm. |
 | M3 Attack editor | Free-text inserted passages, six attack templates, insertion position and optional local AI attacker. New inputs require actual new runs, not reuse of cached answers. |
 | M4 Proof panel | Complete fact graph, executed-rule display, offending-passage highlighting, and a demonstrated REFUTED case. M1 contains only the available recorded trace preview. |
 | M5 Rounds and scores | SQLite persistence, per-system/attack scoring, JSONL exports, rate limits, participant entry and the supervisor's concurrency/counting checks. |

@@ -1161,3 +1161,41 @@ five-passage challenges, attack editor, complete proof graph, REFUTED showcase,
 audience scoreboard and SQLite round persistence remain M2–M5 work. The original
 Arena, milestone and video/screenshot checklist items progress to Partial,
 not Done. P0 completion is unchanged. See docs/arena_m1_results.md.
+
+## 2026-11-18 — DEMO-M2: Live Standard RAG, Self-Review and NS Interface
+
+Implemented the common answer interface and explicit Streamlit live mode.
+The worker makes one S1 draft and shares it with EXP-040-style same-model
+self-review and the existing EXP-043/044 NS candidate. It makes exactly three
+bounded greedy calls, with no automatic retry/download, and never receives
+the authored reference. Post-generation display scoring stays in the UI.
+S2 has no symbolic verdict and is labeled SELF-REVIEWED, not VERIFIED.
+
+Implementation was committed as 48bf947, tag arena-m2-build-2026-11-18, before
+one actual browser-triggered integration run on the already studied E044-005.
+Run b01d842a926048d5a2c6fe7b6e622fa6 completed three calls: all arms answered
+Crimson Swans won.; NS returned VERIFIED. Exact scoring was CORRECT for all
+three. This is software smoke evidence, not a new hypothesis experiment or
+evidence that one method is better.
+
+The run generated 256 tokens from 1,800 input tokens. Reconstructed shared-draft
+latencies were 0.713 seconds for S1, 0.973 for S2 and 5.447 for NS; loading
+was 1.605 seconds and peak process MLX allocation 5.021 GB. No population
+latency or efficiency inference is made from this single round. Unchanged
+raw calls, manifest, result and completion hashes are archived in
+results/demo/arena_m2_smoke/b01d842a926048d5a2c6fe7b6e622fa6/.
+
+All 128 Python tests passed, including all-24 interface fixture coverage,
+shared-draft identity, NS replay, oracle-field rejection, stale-input/prompt
+checks, exclusive storage and overlapping-run rejection. Test-double outputs
+are not stored as experimental observations. M1 browser regression and M2
+empty-live-state checks passed; the actual browser test confirmed all three
+answers, full export, one new run only, no automatic generation on navigation,
+and no reuse for different inputs. Raw round replay and EXP-044 replay pass.
+
+The UI environment remains separate from the MLX research environment. New
+rounds are stored in unique directories under results/arena_runs; partial
+logs are preserved. Specification: demo/M2_SPEC.md. Evidence and limits:
+docs/arena_m2_results.md. M1 and M2 are implemented within the documented
+software scope; M3 attack editing, M4 full proof view and M5 audience scoring
+remain open. No broad research effectiveness item is newly marked complete.

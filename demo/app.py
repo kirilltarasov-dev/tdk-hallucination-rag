@@ -257,7 +257,9 @@ st.download_button('Download this case and full trace',
                    file_name=(f'arena_{selected_id}_{case["live_payload"]["run_id"]}.json' if live_mode else
                               f'arena_{selected_id}_recorded.json'), mime='application/json',
                    width='content')
-st.caption('Export includes all recorded prompts and outputs, original exact scores, '
+st.caption('Export includes this round’s prompts and outputs, post-generation exact scores, '
+           'the fictional reference and ordered-input fingerprint. Code hashes are in the saved run manifest.'
+           if live_mode else 'Export includes all recorded prompts and outputs, original exact scores, '
            'the fictional reference and source hashes.')
 st.divider()
 st.markdown('**Research scope**')

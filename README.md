@@ -82,15 +82,17 @@ retrospective AI semantic review; independent human validation remains open.
 The [RAG Red-Team Arena recorded explorer](demo/README.md) is now a working
 local Streamlit app. It shows all 24 EXP-044 cases, source text, three recorded
 arms, exact scores, fired rules and full trace downloads, including the known
-false-source failure. This completes the M1 interface/loader scope, with a
-recorded trace preview; live S1/S2/NS execution, attack editing and audience
-scoring remain later milestones. Launch from the separate UI environment:
+false-source failure. M2 now adds explicit local S1/S2-style/NS generation from
+a shared draft, with exclusive raw-call logs and an actual browser-driven
+three-call integration check. Page navigation never starts inference. Attack
+editing and audience scoring remain later milestones. Launch from the separate UI environment:
 
 ```bash
 .venv-arena/bin/python -m streamlit run demo/app.py --server.address 127.0.0.1 --server.port 8501
 ```
 
-See [setup and walkthrough](demo/README.md) and [M1 acceptance evidence](docs/arena_m1_results.md).
+See [setup and walkthrough](demo/README.md), [M1 acceptance evidence](docs/arena_m1_results.md)
+and [M2 implementation and integration scope](docs/arena_m2_results.md).
 
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all

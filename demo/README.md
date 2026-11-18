@@ -1,9 +1,10 @@
-# RAG Red-Team Arena recorded explorer
+# RAG Red-Team Arena
 
-The first Arena milestone is a working local Streamlit app for the 24 saved
-EXP-044 cases. It compares Standard RAG draft, Original NS and Candidate NS,
-shows their supplied sources and recorded answers, and exposes the candidate's
-actual rule trace. Original NS is not S2 self-verification.
+The Arena offers a recorded explorer (M1) and explicit local generation (M2).
+Recorded mode compares the saved EXP-044 Standard RAG draft, Original NS and
+Candidate NS. Live mode generates Standard RAG, S2-style same-model review and
+neuro-symbolic answers from one shared draft. Original NS in recorded mode is
+not S2 self-verification.
 
 ## Start locally
 
@@ -24,9 +25,31 @@ Open <http://127.0.0.1:8501>. Stop the server with Ctrl+C in its terminal.
 The version lock is `requirements-arena.lock`; it is a Python 3.12/macOS arm64
 package snapshot without wheel hashes, not a tested Linux release. It does not
 alter the existing `.venv` inference environment. Model weights and MLX are
-not required to run this recorded explorer.
+not required for recorded mode. Live mode uses the existing research `.venv`
+and cached pinned Mistral model. It never downloads weights automatically;
+a missing inference environment/cache produces an error.
 
-## A two-minute walkthrough
+## Run a live round
+
+Select **Live local run**, choose a challenge, then press **Run three systems
+locally**. This performs exactly three bounded local calls: S1 draft (128 output
+tokens maximum), S2 review (128), and V3 extraction for NS (1,024). S2 and NS
+receive the same draft. The fictional reference is used only after generation
+for the displayed exact score.
+
+Results appear with actual stage measurements and can be downloaded. Switching
+questions, modes or reference visibility makes no new calls. Returning to an
+already run input in the same session shows that round; pressing Run again
+creates a new uniquely identified round. A result is never shown for different
+ordered inputs. Overlapping model runs are rejected by a local lock.
+
+Raw calls, manifest, result and completion hashes are saved under
+`results/arena_runs/<run_id>/`. Failed/partial runs remain there too. This folder
+is ignored by Git; retain/export any rounds needed for future research. These
+are demo records, not additions to the frozen EXP-044 evaluation. The measured
+one-round integration sample is archived under `results/demo/arena_m2_smoke/`.
+
+## A two-minute recorded walkthrough
 
 1. Select **Recovered answer**. The source says “took first place.” Candidate
    NS releases the correct saved draft while Original NS abstains. Expand the
@@ -49,16 +72,16 @@ An integrity mismatch blocks rendering.
 
 ## Scope
 
-This is recorded replay of fictional research cases, with one or two supplied
-passages per question. It does not run a retriever, generate new answers,
-accept attack edits or measure attack success rates. The displayed times and
-tokens are historical model measurements; they are not UI timing. Source
-VERIFIED is not external truth verification.
+The collection uses fictional research cases with one or two supplied passages
+per question. It does not run a retriever, accept attack edits or measure attack
+success rates. Recorded-mode times are historical EXP-044 measurements;
+live-mode times come from the selected local round. Neither is UI timing.
+Source VERIFIED is not external truth verification, and S2 has no symbolic verdict.
 
-The [specification](SPEC.md) maps the remaining M2–M5 work to the supervisor's
-plan. In particular, the live Standard RAG/S2/NS comparison, five-passage
-challenges, attack editor, complete proof graph and audience scoreboard remain
-future milestones. See [M1 verification](../docs/arena_m1_results.md).
+The [specification](SPEC.md) and [M2 contract](M2_SPEC.md) map the implementation
+to the supervisor's plan. Five-passage challenges, attack editor, complete proof
+graph and audience scoreboard remain future work. See [M1 verification](../docs/arena_m1_results.md)
+and [M2 checks and actual integration sample](../docs/arena_m2_results.md).
 
 ## Checks
 
@@ -81,4 +104,7 @@ node tests/arena_browser_check.mjs
 `TDK_ARENA_SCREENSHOT_DIR` optionally selects where UI screenshots are saved.
 The test exercises navigation, every family, the truth/consistency distinction,
 reference visibility, exact-score preservation, download and mobile layout.
-It makes no model calls and writes no experimental records.
+It makes no model calls and writes no experimental records. The separate
+`tests/arena_m2_browser_check.mjs` checks live-mode isolation with no inference
+by default. Setting `TDK_ARENA_LIVE_SMOKE=1` explicitly enables one actual
+three-call smoke round; this is optional and should not be run as an efficacy test.
