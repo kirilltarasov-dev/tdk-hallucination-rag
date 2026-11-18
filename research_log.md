@@ -1124,3 +1124,40 @@ Summary: results/processed/exp045_semantic_summary.json. Interpretation and
 limits: docs/exp045_results.md. Independent human validation remains open;
 the restricted demonstrator and evidence-aligned manuscript are practical
 next deliverables.
+
+## 2026-11-18 — DEMO-M1: Recorded RAG Red-Team Arena Explorer
+
+Completed the supervisor's first demonstrator milestone: a locally running
+Streamlit shell, challenge loader and ordered-passage display. The initial
+collection contains all 24 EXP-044 fictional cases, with their existing one
+or two passages. Added a recorded-results/trace preview using S1, Original NS
+and Candidate NS; Original NS is not mislabeled as S2. This is an engineering
+deliverable and makes zero new model calls, not another efficacy experiment.
+
+The app displays original answers and exact scores, fictional reference reveal,
+source quotations, the actually fired candidate rule and preserved neural
+facts. It explicitly shows the VERIFIED-but-WRONG false-source failure and
+keeps UNKNOWN and UNSCORABLE labels. A full JSON export contains the original
+prompts, raw outputs, historical timings and hashes. The loader validates
+pinned EXP-044 artifacts and replays the saved candidate through the shared
+verification module before display. It writes no experiment data.
+
+Implementation: demo/app.py and src/arena/replay.py. Specification and future
+milestones: demo/SPEC.md. Setup/walkthrough: demo/README.md. Streamlit 1.67.0
+runs in the separate .venv-arena environment with requirements-arena.lock;
+the research inference environment is unchanged. Serving binds to localhost.
+
+All 121 Python tests passed, including six loader/export integrity checks.
+The live browser check passed navigation, all six family filters, showcase
+shortcuts, truth-versus-support display, reference toggle, full JSON export,
+UNKNOWN/UNSCORABLE preservation, mobile width and no browser exceptions.
+Desktop and mobile screenshots were visually inspected after correcting a
+clipped top caption. They are results/figures/arena_m1_false_source.png and
+results/figures/arena_m1_mobile.png. No ASR, live inference latency or user-study
+result is inferred from these software tests.
+
+M1's interface/loader acceptance scope is complete. Full live S1/S2/NS execution,
+five-passage challenges, attack editor, complete proof graph, REFUTED showcase,
+audience scoreboard and SQLite round persistence remain M2–M5 work. The original
+Arena, milestone and video/screenshot checklist items progress to Partial,
+not Done. P0 completion is unchanged. See docs/arena_m1_results.md.

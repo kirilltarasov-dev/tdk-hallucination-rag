@@ -4,7 +4,7 @@ Research code and records for the University of Debrecen BSc thesis and TDK
 project, *Reducing Hallucinations in Small Language Models using Advanced
 Retrieval-Augmented Generation and Neuro-Symbolic Verification*.
 
-**Research status (2026-11-17):** The current experiments support a
+**Research status (2026-11-18):** The current experiments support a
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
 hallucination reduction or neuro-symbolic effectiveness. EXP-036 is a
@@ -28,7 +28,7 @@ These are AI-only exploratory assessments, not human-validated error rates.
 The [full supervisor checklist audit](docs/supervisor_plan_completion_audit_2026-11-17.md)
 distinguishes completed items from partial work and remaining experiments.
 
-[EXP-040](docs/exp040_results.md) is the latest generated-answer integration
+[EXP-040](docs/exp040_results.md) is the first generated-answer integration
 comparison: 40 fictional questions, 120 calls.
 S1-style scored 25 correct / 11 wrong / 4 abstentions; same-model review scored
 25 / 15 / 0; NS-release scored 17 / 4 / 19. Correct-answer retention was 68%,
@@ -48,7 +48,7 @@ on an affirmed-and-denied win; the new guard caught that conflict. This is not
 independent transfer and does not replace EXP-040. Replay:
 `python3 -B -m experiments.exp041_polarity_development --check`.
 
-The latest local inference experiment, [EXP-042](docs/exp042_results.md), tested
+The local inference experiment [EXP-042](docs/exp042_results.md) tested
 answer transcription while changing only evidence: four fixed question/response
 identities, four contexts each, two frozen prompts, 32 calls. Both prompts
 transcribed 12/16 answers correctly; all four identities exhibited status/value
@@ -59,7 +59,7 @@ a development counterexample to context invariance, not a repair result or a
 population error rate. Replay:
 `python3 -B -m experiments.exp042_answer_context_invariance --check`.
 
-The latest offline component study, [EXP-043](docs/exp043_results.md), parses
+The offline component study [EXP-043](docs/exp043_results.md) parses
 the answer without sources and composes it with the unchanged, validated neural
 question/facts. On reused EXP-041 V3 traces it restores one correct REFUTED
 decision, loses none, and adds no false VERIFIED against the source oracle;
@@ -69,6 +69,28 @@ context invariance and known-trace replay, not independent effectiveness. Four
 invalid extractions and one unresolved non-answer record remain blocked. The
 false-source control remains VERIFIED. No new model calls were made.
 Replay: `python3 -B -m experiments.exp043_independent_answer_replay --check`.
+
+The latest inference experiment, [EXP-044](docs/exp044_results.md), tests the
+frozen candidate on 24 new authored fictional questions with generated drafts.
+Candidate NS retains 12 correct answers versus six for Original NS, with four
+wrong answers in each arm. It retains 12/14 correct S1 drafts, but four S1
+outputs are UNSCORABLE, making the predeclared candidate-versus-S1 utility
+screen INCONCLUSIVE. All four false-only sources still yield wrong released
+answers. [EXP-045](docs/exp045_results.md) provides an explicitly unvalidated,
+retrospective AI semantic review; independent human validation remains open.
+
+The [RAG Red-Team Arena recorded explorer](demo/README.md) is now a working
+local Streamlit app. It shows all 24 EXP-044 cases, source text, three recorded
+arms, exact scores, fired rules and full trace downloads, including the known
+false-source failure. This completes the M1 interface/loader scope, with a
+recorded trace preview; live S1/S2/NS execution, attack editing and audience
+scoring remain later milestones. Launch from the separate UI environment:
+
+```bash
+.venv-arena/bin/python -m streamlit run demo/app.py --server.address 127.0.0.1 --server.port 8501
+```
+
+See [setup and walkthrough](demo/README.md) and [M1 acceptance evidence](docs/arena_m1_results.md).
 
 The [EXP-036 results](docs/exp036_results.md) and
 [tradeoff figure](results/figures/exp036_verification_tradeoff.png) report all

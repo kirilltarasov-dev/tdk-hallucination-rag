@@ -24,6 +24,13 @@ effectiveness, independent evaluation, distinct-verifier or demonstrator items.
 The v7 manuscript needs EXP-040–045. Completion percentages do not increase
 merely because another experiment finished.
 
+Arena M1 is now complete within the app-shell/loader scope; its recorded trace
+preview is usable locally. P1-35, P1-36 and P1-39 have advanced from Open in the
+dated audit to Partial (working initial app, M1 tests, verified screenshots).
+The full live Arena, M2–M5 and demo video are still open. These changes are
+documented in `docs/arena_m1_results.md`; P0 counts are unchanged, and the older
+P1 percentages remain historical rather than a current recount.
+
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
 | Align title with measured work | Open | EXP-036 failed its 80% retention target. EXP-040 retained 68% of correct drafts and reduced utility from 0.350 to 0.325. EXP-044 retained 12/14 correct drafts but its S1 comparison is inconclusive because four drafts are unscorable; all four false-source-only controls remain wrong and VERIFIED. General effectiveness and real-world validation remain unestablished. |
@@ -66,6 +73,8 @@ merely because another experiment finished.
 3. Resolve the title/method choice with the supervisor: either implement and
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.
-4. Complete a small, measured demonstration and revise the manuscript from
-   the resulting evidence. Publication, licensing, and formal TDK formatting
-   follow after scientific claims are fixed.
+4. Arena M1 now provides a tested recorded-results demonstration. Next implement
+   M2's actual Standard RAG/S2/NS interface; subsequent attack editor and live
+   round evaluation require new inputs and actual model runs. Revise the
+   manuscript around the measured scope. Publication, licensing, video and
+   formal TDK formatting remain separate tasks.

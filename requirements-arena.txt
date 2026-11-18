@@ -1,0 +1,2 @@
+# Separate UI environment; do not install into the frozen inference environment.
+-r requirements-arena.lock
