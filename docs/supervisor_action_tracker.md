@@ -34,7 +34,10 @@ Python tests and one actual four-call browser smoke (`docs/arena_m3_results.md`)
 M4 adds the replay-validated proof graph, executed checks and source highlights,
 with REFUTED and extraction-failure walkthroughs (`docs/arena_m4_results.md`).
 All 144 Python tests and the M4 browser checks pass without new inference.
-The full Arena, M5, five-passage collection and demo video are still open. These changes are
+M5 now has local ledger/admission/QR acceptance, 154 passing Python tests,
+100 explicit simulated rounds and 20 simultaneous read-only browser sessions
+(`docs/arena_m5_results.md`). The complete Arena, five-passage collection, venue
+access, actual audience validation and demo video are still open. These changes are
 documented in `docs/arena_m1_results.md`; P0 counts are unchanged, and the older
 P1 percentages remain historical rather than a current recount.
 
@@ -83,8 +86,9 @@ P1 percentages remain historical rather than a current recount.
 4. Arena M1 provides recorded exploration and M2 provides explicit local
    S1/S2-style/NS generation with auditable raw logs. M3 adds editable attacks
    and optional AI proposals. M4 exposes actual traces and extraction failures.
-   Next implement M5's round persistence, score accounting and audience controls;
-   attack success evaluation requires a separate protocol and actual model runs
-   on new inputs. Revise the
+   M5 now persists rounds with separate outcome accounting and local admission
+   controls. Next complete the five-passage demonstration collection and check
+   venue access; attack success evaluation still requires a separate protocol
+   and actual model runs on new inputs. Revise the
    manuscript around the measured scope. Publication, licensing, video and
    formal TDK formatting remain separate tasks.

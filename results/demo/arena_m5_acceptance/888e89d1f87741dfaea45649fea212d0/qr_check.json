@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scope": "Decode of actual browser-rendered QR screenshot; not phone or venue reachability",
+  "decoder": "zxing-cpp 2.3.0",
+  "decoded_url": "http://127.0.0.1:8501",
+  "image_sha256": "8ab311e3b8b3bad7be5c173286267382bcb4420da30634ef278206a1d85213ae"
+}

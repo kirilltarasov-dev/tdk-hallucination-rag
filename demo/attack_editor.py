@@ -4,10 +4,10 @@ import copy
 import streamlit as st
 
 from src.arena.attacks import TEMPLATES, insert_passage, template_text
-from src.arena.client import run_local
+from src.arena.service import run_tracked
 
 
-def render_editor(base):
+def render_editor(base, participant):
     case = copy.deepcopy(base)
     key = f'attack_{base["case_id"]}_'
     with st.expander('Attack editor', expanded=False):
@@ -26,7 +26,7 @@ def render_editor(base):
         if ai.button('Ask local AI for an attack', key=key + 'ai', width='stretch'):
             try:
                 with st.spinner('Generating one editable attack proposal…'):
-                    payload = run_local(base['question'], base['documents'], attacker=True)
+                    payload = run_tracked(base, participant, attacker=True)
                 st.session_state[key + 'text'] = payload['result']['proposal']
                 st.session_state[key + 'origin'] = 'AI proposal'
                 st.session_state[key + 'proposal'] = payload['run_id']

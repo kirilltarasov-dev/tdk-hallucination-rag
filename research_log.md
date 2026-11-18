@@ -1265,3 +1265,46 @@ Specification: demo/M4_SPEC.md. Evidence: docs/arena_m4_results.md. M1–M4 now 
 local software acceptance evidence. M5, the final five-passage collection, demo
 video, independent evaluation and manuscript revision remain open. The original
 broad Arena tasks remain Partial; no new efficacy claim or P0 completion change.
+
+## 2026-11-18 — DEMO-M5: SQLite Ledger, Accounting and Local Audience Controls
+
+Implemented a SQLite WAL ledger for admitted UI requests and immutable completed
+payloads, preserving raw worker logs. Duplicate identical run IDs are idempotent;
+changed duplicates are rejected. CORRECT, WRONG, ABSTAIN and UNSCORABLE remain
+separate per-system/attack counts. AI proposals, infrastructure failures and
+admission rejections are not treated as answer errors. Live, archived and explicit
+software-simulation populations remain separate. UI and JSONL use one snapshot.
+
+Both inference buttons now use a shared admission gate: six requests/session/ten
+minutes, thirty globally/hour and one active request with a 240-second lease.
+The original worker lock remains. References are scored only after generation;
+canonical metadata is checked before admission. Worker failure and persistence
+failure preserve logs without retry. Anonymous sessions are not authentication.
+QR entry defaults explicitly to localhost; configuring a URL does not publish
+the app or establish phone/venue reachability.
+
+All 154 Python tests passed, including ten M5 checks. One hundred explicitly
+simulated rounds were persisted by twenty simultaneous database clients with
+exactly 300 expected system outcomes and 100 duplicate writes ignored. A separate
+20-client admission test accepted one request and denied nineteen. These use
+temporary databases and marked test doubles, not measured model observations.
+
+The local browser check passed population isolation, counts, filter, JSONL,
+QR display and twenty independent simultaneous read-only browser sessions with
+no UI exceptions or new raw-run directories. M1–M4 browser regressions also
+passed without inference. This does not measure concurrent inference throughput. Dropdown automation was adjusted to search the option after
+scrolling; downloads also no longer cause a needless rerun. The rendered QR was
+decoded as http://127.0.0.1:8501 using a temporary zxing-cpp 2.3.0 validator.
+qrcode 8.2 is pinned in the UI environment only. UI dependency validation passes.
+
+Three existing M2/M3 records were explicitly imported into Archived demo examples:
+two evaluations and one AI proposal. No software simulation entered the working
+database and no new model calls were made. Final software reports and source
+hashes are in results/demo/arena_m5_acceptance/888e89d1f87741dfaea45649fea212d0/;
+the earlier storage check remains preserved separately. The scoreboard screenshot
+was visually inspected. See demo/M5_SPEC.md and docs/arena_m5_results.md.
+
+M1–M5 are implemented with local acceptance evidence. The final five-passage
+collection, venue/network and actual audience checks, demo video, independent
+scientific evaluation and manuscript revision remain open. Broad supervisor Arena
+items stay Partial; no efficacy claim or overall completion percentage changes.

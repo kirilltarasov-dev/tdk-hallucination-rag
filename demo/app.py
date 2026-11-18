@@ -2,18 +2,22 @@
 from html import escape
 from pathlib import Path
 import sys
+import uuid
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import streamlit as st
 
 from src.arena.replay import FAMILIES, export_challenge, load_challenges
-from src.arena.client import decorate_live_case, export_live_case, run_local
+from src.arena.client import decorate_live_case, export_live_case
 from src.arena.live import input_hash
 from demo.attack_editor import render_editor
+from src.arena.service import run_tracked
+from demo.scoreboard_panel import render_scoreboard
 from demo.proof_panel import render_proof, render_examples
 
 st.set_page_config(page_title='RAG Red-Team Arena', page_icon='◈', layout='wide')
+st.session_state.setdefault('participant_id',uuid.uuid4().hex)
 
 st.markdown('''<style>
 .block-container {max-width:1320px;padding-top:4.3rem;padding-bottom:3rem;}
@@ -83,9 +87,11 @@ with st.sidebar:
                 '<div class="brand">RAG<br>Red-Team Arena</div>'
                 '<span class="pill">LOCAL RESEARCH DEMONSTRATOR</span>', unsafe_allow_html=True)
     st.write('')
-    mode = st.radio('Mode', ['Recorded experiment', 'Live local run', 'Proof examples'], key='arena_mode')
+    mode = st.radio('Mode', ['Recorded experiment', 'Live local run', 'Proof examples', 'Round ledger'], key='arena_mode')
     live_mode = mode == 'Live local run'
-    if mode == 'Proof examples':
+    if mode == 'Round ledger':
+        st.caption('Local demonstration accounting and participant entry.')
+    elif mode == 'Proof examples':
         st.caption('Pinned historical inputs · no inference\n\n'
                    'Inspect a source mismatch or an extraction failure. '
                    'These examples illustrate decisions, not comparative effectiveness.')
@@ -117,6 +123,10 @@ with st.sidebar:
                    'Supplied passages · no live retrieval\n\n'
                    'Model calls require Run or the AI attack button.')
 
+if mode == 'Round ledger':
+    render_scoreboard()
+    st.stop()
+
 if mode == 'Proof examples':
     render_examples()
     st.stop()
@@ -136,7 +146,7 @@ for column, label, identity in zip(shortcut_columns,
 
 attack = None
 if live_mode:
-    case, attack = render_editor(case)
+    case, attack = render_editor(case, st.session_state['participant_id'])
 
 st.markdown(f'<div class="hero"><div class="eyebrow">{escape(case["case_id"])} · '
             f'{escape(case["family_label"].upper())}</div><div class="question">'
@@ -170,7 +180,7 @@ if live_mode:
     if st.button('Run three systems locally', type='primary'):
         try:
             with st.spinner('Generating S1, reviewing with S2, and checking the shared draft…'):
-                payload = run_local(case['question'], case['documents'], attack=attack)
+                payload = run_tracked(case, st.session_state['participant_id'], attack=attack)
             st.session_state['live_rounds'][identity] = payload
         except (RuntimeError, ValueError, OSError) as exc:
             st.error(f'Local run did not complete: {exc}')
@@ -285,4 +295,5 @@ st.markdown('**Research scope**')
 st.caption('EXP-044 used 24 authored fictional cases. Its candidate-versus-S1 utility screen '
            'was inconclusive because four drafts were outside the frozen answer format. '
            'The app offers recorded exploration, explicit local generation and editable source attacks. '
-           'The proof view exposes actual checks and failures. Attack success measurement and an audience scoreboard remain later work.')
+           'The proof view exposes actual checks and failures; the ledger counts demo outcomes. '
+           'Controlled attack success measurement and venue deployment remain separate work.')

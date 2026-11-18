@@ -10,3 +10,5 @@ __pycache__/
 htmlcov/
 results/annotation/exp031_blind_key.json
 *.xlsx.inspect.ndjson
+
+results/arena_state/

@@ -1,7 +1,8 @@
 # RAG Red-Team Arena
 
 The Arena offers a recorded explorer (M1), explicit local generation (M2),
-a source attack editor (M3), and an auditable proof view (M4).
+a source attack editor (M3), an auditable proof view (M4), and a persisted round
+ledger with local audience controls (M5).
 Recorded mode compares the saved EXP-044 Standard RAG draft, Original NS and
 Candidate NS. Live mode generates Standard RAG, S2-style same-model review and
 neuro-symbolic answers from one shared draft. Original NS in recorded mode is
@@ -111,6 +112,49 @@ Both examples have full provenance downloads. The examples are diagnostic
 illustrations, not a representative evaluation sample. REFUTED means mismatch
 with supplied evidence under the declared rules, not external factual falsity.
 
+## Round ledger and entry
+
+Select **Round ledger** to inspect exact outcome counts by system and attack
+origin. Live, archived demo and software-simulation populations remain separate.
+CORRECT, WRONG, ABSTAIN and UNSCORABLE are separate counts. A proposal is not an
+evaluation round; admission rejections and infrastructure failures are not wrong
+answers. Reopening a completed run does not add another round. These are
+self-selected demonstration counts, not an attack success or efficacy estimate.
+
+The view and its JSONL export use one SQLite snapshot. The attack-origin filter
+changes the table only; export includes every attempt in the selected population,
+full completed payloads, scores and provenance. Downloads do not rerun the app.
+**Refresh ledger** explicitly refreshes the snapshot.
+
+Both inference buttons register an attempt before calling the worker. Limits are
+six accepted requests per anonymous session per ten minutes, thirty globally per
+hour, and one active request at a time. A 240-second admission lease expires on a
+later admission attempt after a crash; worker timeout is 180 seconds. The worker's
+file lock still prevents overlapping model execution. A missing/failed ledger
+blocks new UI inference. These anonymous session IDs are not authenticated users;
+resetting a session does not bypass the global quota.
+
+SQLite defaults to `results/arena_state/arena.sqlite3`, ignored by Git. Set
+`TDK_ARENA_DB` before server startup to use a separate file. Preserve raw run
+folders as well as the ledger. If persistence fails after generation, raw logs
+remain available, the UI reports failure, and no automatic retry occurs.
+Previously completed M2/M3 engineering examples can be explicitly imported once:
+
+```bash
+python3 -B -m src.arena.service --import-archives
+```
+
+This verifies existing raw artifacts, adds two evaluations and one AI proposal
+to **Archived demo examples**, and makes no model calls. Repeating the command
+is idempotent. It never adds historical examples to the live population.
+
+The entry section provides a link and QR. The default `http://127.0.0.1:8501`
+works only on this computer. To prepare a venue link, an organizer can set
+`TDK_ARENA_PUBLIC_URL` to a reachable HTTP(S) URL before startup. This setting
+only changes the link/QR: it does not publish the app or change its localhost
+binding. Phone access, actual venue networking and a supervised audience run
+still require separate checks.
+
 ## A two-minute recorded walkthrough
 
 1. Select **Recovered answer**. The source says “took first place.” Candidate
@@ -141,9 +185,10 @@ live-mode times come from the selected local round. Neither is UI timing.
 Source VERIFIED is not external truth verification, and S2 has no symbolic verdict.
 
 The [specification](SPEC.md), [M2 contract](M2_SPEC.md) and [M3 contract](M3_SPEC.md)
-map the implementation to the supervisor's plan. Five-passage challenges and the
-audience scoreboard remain future work. The proof graph is described in the
-[M4 contract](M4_SPEC.md). See [M1 verification](../docs/arena_m1_results.md)
+map the implementation to the supervisor's plan. The [M4 contract](M4_SPEC.md)
+and [M5 contract](M5_SPEC.md) cover proof display and local round accounting.
+The final five-passage collection, venue deployment and independent audience
+validation remain separate work. See [M1 verification](../docs/arena_m1_results.md)
 and [M2 checks and actual integration sample](../docs/arena_m2_results.md).
 
 ## Checks
@@ -181,3 +226,20 @@ path. Do not overwrite existing smoke evidence. See [M3 report](../docs/arena_m3
 REFUTED, CONFLICT, VERIFIED-but-wrong, extraction failure, export and page width.
 It never runs inference. `TDK_ARENA_M4_SCREENSHOT_DIR` optionally selects a new
 screenshot directory. See [M4 evidence](../docs/arena_m4_results.md).
+
+M5 uses standard-library SQLite and adds `qrcode==8.2` only to the UI environment.
+Update that environment from `requirements-arena.txt` after pulling these files.
+
+```bash
+python3 -B -m unittest tests.test_arena_ledger -v
+python3 -B -m tests.arena_m5_acceptance
+```
+
+The acceptance script uses temporary databases, 100 explicit simulated rounds
+and 20 concurrent database/admission clients; it writes a uniquely named software
+report under `results/demo/arena_m5_acceptance/`. It makes no model calls.
+`tests/arena_m5_browser_check.mjs` requires the archived examples imported above.
+It checks UI/export/QR display and 20 simultaneous read-only browser sessions.
+Use `TDK_ARENA_M5_SCREENSHOT_DIR` for new screenshots and `TDK_ARENA_M5_REPORT`
+for an exclusive report file. These checks do not measure concurrent inference
+throughput. See [M5 evidence and limitations](../docs/arena_m5_results.md).

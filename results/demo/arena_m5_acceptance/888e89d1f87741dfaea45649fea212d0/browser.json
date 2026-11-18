@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "M5 local UI and 20 simultaneous read-only browser sessions; not inference throughput",
+  "model_calls": 0,
+  "browser_sessions": 20,
+  "archived_evaluations": 2,
+  "archived_proposals": 1,
+  "checks": [
+    "population isolation",
+    "exact count table",
+    "attack filter",
+    "complete JSONL export",
+    "entry QR display",
+    "no automatic inference"
+  ]
+}

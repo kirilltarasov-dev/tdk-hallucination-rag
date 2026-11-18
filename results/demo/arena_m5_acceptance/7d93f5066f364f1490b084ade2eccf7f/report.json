@@ -1,0 +1,89 @@
+{
+  "artifact_type": "arena_m5_software_acceptance",
+  "created_utc": "2026-11-18T11:04:18.627791+00:00",
+  "status": "passed",
+  "model_calls": 0,
+  "simulation": {
+    "artifact_type": "arena_m5_software_simulation_check",
+    "model_calls": 0,
+    "simulated_rounds": 100,
+    "concurrent_database_clients": 20,
+    "outcomes": 300,
+    "duplicate_writes_ignored": 100,
+    "counts": [
+      {
+        "Origin": "software_simulation",
+        "Attack origin": "Entity swap",
+        "System": "Candidate_NS",
+        "Rounds": 50,
+        "CORRECT": 0,
+        "WRONG": 0,
+        "ABSTAIN": 50,
+        "UNSCORABLE": 0
+      },
+      {
+        "Origin": "software_simulation",
+        "Attack origin": "Entity swap",
+        "System": "S1",
+        "Rounds": 50,
+        "CORRECT": 0,
+        "WRONG": 25,
+        "ABSTAIN": 0,
+        "UNSCORABLE": 25
+      },
+      {
+        "Origin": "software_simulation",
+        "Attack origin": "Entity swap",
+        "System": "S2",
+        "Rounds": 50,
+        "CORRECT": 25,
+        "WRONG": 0,
+        "ABSTAIN": 25,
+        "UNSCORABLE": 0
+      },
+      {
+        "Origin": "software_simulation",
+        "Attack origin": "No insertion",
+        "System": "Candidate_NS",
+        "Rounds": 50,
+        "CORRECT": 25,
+        "WRONG": 0,
+        "ABSTAIN": 25,
+        "UNSCORABLE": 0
+      },
+      {
+        "Origin": "software_simulation",
+        "Attack origin": "No insertion",
+        "System": "S1",
+        "Rounds": 50,
+        "CORRECT": 25,
+        "WRONG": 0,
+        "ABSTAIN": 25,
+        "UNSCORABLE": 0
+      },
+      {
+        "Origin": "software_simulation",
+        "Attack origin": "No insertion",
+        "System": "S2",
+        "Rounds": 50,
+        "CORRECT": 0,
+        "WRONG": 25,
+        "ABSTAIN": 0,
+        "UNSCORABLE": 25
+      }
+    ],
+    "scope": "Explicit software fixtures; not attack efficacy or concurrent model-serving throughput."
+  },
+  "admission": {
+    "simultaneous_clients": 20,
+    "accepted": 1,
+    "denied": 19
+  },
+  "source_sha256": {
+    "src/arena/scoreboard.py": "ab524ed86c5749c49e3550bd08c68c5bb107a1660b210044202906b07d7406d8",
+    "src/arena/service.py": "f0e9ddcb373a27b80b8e2be576d11cb74e310c5b6ddeb1834787ec79e95d6d15",
+    "tests/test_arena_ledger.py": "6fe2c6cb8dc418dcfe5de53eca70fac017addf9f6e869281bc0d748a52cce5ad",
+    "/Users/QXZ6WEJ/Documents/tdk-hallucination-rag/tests/arena_m5_acceptance.py": "644d0f6d6e54a1d547d1adc7846d679c5e7419f961da389d5fc50f8b7d5cdf3c"
+  },
+  "scope": "Temporary-database software fixtures only; not measured answers or inference throughput."
+}

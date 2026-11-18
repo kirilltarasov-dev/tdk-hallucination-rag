@@ -8,20 +8,21 @@ import uuid
 
 from experiments.exp040_generated_answers import score
 from src.arena.attacks import verify_attacker, verify_insertion
-from src.arena.worker import save_new, sha
+from src.arena.worker import save_new, sha, validate_request
 from src.arena.live import input_hash, verify_round
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def run_local(question, documents, *, attacker=False, attack=None):
+def run_local(question, documents, *, attacker=False, attack=None, run_id=None):
     if attack is not None:
         verify_insertion(attack, question, documents)
     input_hash(question, documents)
     python = ROOT / '.venv/bin/python'
     if not python.exists():
         raise RuntimeError('The research .venv Python is unavailable; follow the local inference setup.')
-    request = {'question': question, 'documents': documents, 'run_id': uuid.uuid4().hex}
+    request = {'question': question, 'documents': documents, 'run_id': run_id or uuid.uuid4().hex}
+    validate_request(request)
     environment = {**os.environ, 'HF_HUB_OFFLINE': '1', 'HF_HUB_DISABLE_TELEMETRY': '1'}
     try:
         command = [str(python), '-B', '-u', '-m', 'src.arena.worker']
