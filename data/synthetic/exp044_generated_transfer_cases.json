@@ -1,0 +1,278 @@
+{
+  "experiment_id": "EXP-044",
+  "provenance": "Author-created fictional facts; no independent human labels.",
+  "cases": [
+    {
+      "case_id": "E044-001",
+      "family": "clean",
+      "question": "Who won the 2131 Cedar Cup?",
+      "documents": {
+        "D1": "Copper Ravens won the 2131 Cedar Cup."
+      },
+      "authored_truth": "Copper Ravens",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-002",
+      "family": "clean",
+      "question": "Who won the 2132 Harbor Shield?",
+      "documents": {
+        "D1": "Teal Wolves won the 2132 Harbor Shield."
+      },
+      "authored_truth": "Teal Wolves",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-003",
+      "family": "clean",
+      "question": "Who won the 2133 Quartz Trophy?",
+      "documents": {
+        "D1": "Golden Herons won the 2133 Quartz Trophy."
+      },
+      "authored_truth": "Golden Herons",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-004",
+      "family": "clean",
+      "question": "Who won the 2134 Orchid Challenge?",
+      "documents": {
+        "D1": "Lilac Bears won the 2134 Orchid Challenge."
+      },
+      "authored_truth": "Lilac Bears",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-005",
+      "family": "paraphrase",
+      "question": "Who won the 2135 Willow Cup?",
+      "documents": {
+        "D1": "Crimson Swans took first place in the 2135 Willow Cup."
+      },
+      "authored_truth": "Crimson Swans",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-006",
+      "family": "paraphrase",
+      "question": "Who won the 2136 Marble Shield?",
+      "documents": {
+        "D1": "Navy Foxes took first place in the 2136 Marble Shield."
+      },
+      "authored_truth": "Navy Foxes",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-007",
+      "family": "paraphrase",
+      "question": "Who won the 2137 Elm Trophy?",
+      "documents": {
+        "D1": "Jade Falcons took first place in the 2137 Elm Trophy."
+      },
+      "authored_truth": "Jade Falcons",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-008",
+      "family": "paraphrase",
+      "question": "Who won the 2138 Lagoon Challenge?",
+      "documents": {
+        "D1": "Sable Lynxes took first place in the 2138 Lagoon Challenge."
+      },
+      "authored_truth": "Sable Lynxes",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-009",
+      "family": "negated_distractor",
+      "question": "Who won the 2139 Maple Cup?",
+      "documents": {
+        "D1": "Bronze Cranes won the 2139 Maple Cup.",
+        "D2": "White Terns did not win the 2139 Maple Cup."
+      },
+      "authored_truth": "Bronze Cranes",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-010",
+      "family": "negated_distractor",
+      "question": "Who won the 2140 Topaz Shield?",
+      "documents": {
+        "D1": "Black Pumas did not win the 2140 Topaz Shield.",
+        "D2": "Violet Otters won the 2140 Topaz Shield."
+      },
+      "authored_truth": "Violet Otters",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-011",
+      "family": "negated_distractor",
+      "question": "Who won the 2141 Birch Trophy?",
+      "documents": {
+        "D1": "Scarlet Owls won the 2141 Birch Trophy.",
+        "D2": "Brown Gulls did not win the 2141 Birch Trophy."
+      },
+      "authored_truth": "Scarlet Owls",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-012",
+      "family": "negated_distractor",
+      "question": "Who won the 2142 Cobalt Challenge?",
+      "documents": {
+        "D1": "Pink Ocelots did not win the 2142 Cobalt Challenge.",
+        "D2": "Azure Badgers won the 2142 Cobalt Challenge."
+      },
+      "authored_truth": "Azure Badgers",
+      "unambiguous_true_evidence": true,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-013",
+      "family": "conflict",
+      "question": "Who won the 2143 Pine Cup?",
+      "documents": {
+        "D1": "Silver Kites won the 2143 Pine Cup.",
+        "D2": "White Terns won the 2143 Pine Cup."
+      },
+      "authored_truth": "Silver Kites",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-014",
+      "family": "conflict",
+      "question": "Who won the 2144 Amber Shield?",
+      "documents": {
+        "D1": "Black Pumas won the 2144 Amber Shield.",
+        "D2": "Indigo Seals won the 2144 Amber Shield."
+      },
+      "authored_truth": "Indigo Seals",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-015",
+      "family": "conflict",
+      "question": "Who won the 2145 Reed Trophy?",
+      "documents": {
+        "D1": "Umber Stags won the 2145 Reed Trophy.",
+        "D2": "Brown Gulls won the 2145 Reed Trophy."
+      },
+      "authored_truth": "Umber Stags",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-016",
+      "family": "conflict",
+      "question": "Who won the 2146 Coral Challenge?",
+      "documents": {
+        "D1": "Pink Ocelots won the 2146 Coral Challenge.",
+        "D2": "Coral Ibises won the 2146 Coral Challenge."
+      },
+      "authored_truth": "Coral Ibises",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-017",
+      "family": "no_target_evidence",
+      "question": "Who won the 2147 Juniper Cup?",
+      "documents": {
+        "D1": "White Terns won the 2146 Juniper Cup."
+      },
+      "authored_truth": "Amber Stoats",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-018",
+      "family": "no_target_evidence",
+      "question": "Who won the 2148 Ivory Shield?",
+      "documents": {
+        "D1": "Black Pumas won the 2147 Ivory Shield."
+      },
+      "authored_truth": "Cerulean Hares",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-019",
+      "family": "no_target_evidence",
+      "question": "Who won the 2149 Dune Trophy?",
+      "documents": {
+        "D1": "Brown Gulls won the 2148 Dune Trophy."
+      },
+      "authored_truth": "Olive Martens",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-020",
+      "family": "no_target_evidence",
+      "question": "Who won the 2150 Olive Challenge?",
+      "documents": {
+        "D1": "Pink Ocelots won the 2149 Olive Challenge."
+      },
+      "authored_truth": "Russet Whales",
+      "unambiguous_true_evidence": false,
+      "false_source_control": false
+    },
+    {
+      "case_id": "E044-021",
+      "family": "false_source_only",
+      "question": "Who won the 2151 Aspen Cup?",
+      "documents": {
+        "D1": "White Terns won the 2151 Aspen Cup."
+      },
+      "authored_truth": "Pearl Weasels",
+      "unambiguous_true_evidence": false,
+      "false_source_control": true
+    },
+    {
+      "case_id": "E044-022",
+      "family": "false_source_only",
+      "question": "Who won the 2152 Onyx Shield?",
+      "documents": {
+        "D1": "Black Pumas won the 2152 Onyx Shield."
+      },
+      "authored_truth": "Plum Jackals",
+      "unambiguous_true_evidence": false,
+      "false_source_control": true
+    },
+    {
+      "case_id": "E044-023",
+      "family": "false_source_only",
+      "question": "Who won the 2153 Moss Trophy?",
+      "documents": {
+        "D1": "Brown Gulls won the 2153 Moss Trophy."
+      },
+      "authored_truth": "Saffron Minks",
+      "unambiguous_true_evidence": false,
+      "false_source_control": true
+    },
+    {
+      "case_id": "E044-024",
+      "family": "false_source_only",
+      "question": "Who won the 2154 Pearl Challenge?",
+      "documents": {
+        "D1": "Pink Ocelots won the 2154 Pearl Challenge."
+      },
+      "authored_truth": "Slate Finches",
+      "unambiguous_true_evidence": false,
+      "false_source_control": true
+    }
+  ]
+}
