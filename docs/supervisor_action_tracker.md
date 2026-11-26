@@ -26,7 +26,7 @@ Arena M1–M5 status and explicit limitations. It remains a supervisor draft,
 not a submission-ready final paper. Completion percentages do not increase
 merely because another experiment finished.
 
-The latest v9 manuscript adds completed EXP-046, its failed coverage screen,
+The v9 manuscript adds completed EXP-046, its failed coverage screen,
 source-omission diagnosis, an architecture figure, a paired uncertainty figure
 and nine cited references. EXP-046 retained only 1/77 correct S1 drafts and
 abstained on 236/240 cases. All 76 correct-draft losses occurred at source
@@ -51,15 +51,22 @@ M5 now has local ledger/admission/QR acceptance, 154 passing Python tests,
 (`docs/arena_m5_results.md`). The complete Arena, five-passage collection, venue
 access, actual audience validation and demo video are still open. These changes are
 documented in `docs/arena_m1_results.md`; those software additions did not
-change P0 completion. Subsequent v8 document changes are reflected in the rows
-below, but no overall P0/P1 percentage has been recounted; earlier percentages
-remain dated snapshots.
+change P0 completion. Subsequent document changes are reflected in the rows
+below. Earlier percentages remain dated snapshots; the current P0 count is
+reported separately, without extrapolating to P1/P2.
 
-A row count on 2026-11-26 gives **13 Done, 12 Partial and 3 Open out of 28 P0
-items** (46.4% strictly closed within each row's stated scope). This is a count
+A row count after v10 on 2026-11-26 gives **16 Done, 9 Partial and 3 Open out of
+28 P0 items** (57.1% strictly closed within each row's stated scope; the v9
+snapshot was 13 / 12 / 3). This is a count
 of checklist items, not remaining effort or thesis readiness. P1/P2 and the
 98-item total have not been fully re-audited; do not extrapolate this percentage
 to the whole supervisor plan.
+
+Version 10 closes three reporting tasks: completed versus future scope,
+supplemental lexical metrics for the documented eligible subset, and exact
+prompts in the local repository and manuscript appendix. Public publication,
+unbuilt systems, and scientific effectiveness are separate requirements and
+remain unmet. See `docs/tdk_v10_revision_notes.md`.
 
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
@@ -70,14 +77,14 @@ to the whole supervisor plan.
 | Correct Section 4.3 evidence-miss logic | Done | The draft states that every 80%-noise question had relevant evidence and 27/29 semantic errors failed to use it. |
 | Report hard-filter and fallback-rescue paired tests | Done | Exact p-values were independently recalculated from saved raw rows and included as development results. |
 | Rewrite abstract around key outcomes | Done | v6 draft has a compact abstract with baseline, intervention, and transfer numbers. |
-| Put unbuilt components in Future Work | Partial | v8 now distinguishes the measured restricted hybrid and local Arena from the unbuilt complete retrieval/selective pipeline and unverified venue/audience demonstration. Broad scope remains incomplete. |
+| Put unbuilt components in Future Work | Done for scope reporting | v10 Sections 3, 5.3, 6.1, 7 and 8 distinguish completed restricted studies, offline routing and local Arena checks from the unbuilt complete retrieval/selective pipeline and unverified venue/audience demonstration. The stale planned-study wording is corrected. This closes reporting, not implementation of those components. |
 | Own Contribution in first person, supervisor role, repository URL | Partial | First-person contribution and supervisor role are in v6; no public repository URL exists. |
 | Label 80%-noise RGB as development | Done | v6 and README label all intervention results at 80% noise as development evidence. |
 | Freeze method with tagged commit before new test | Done for completed frozen studies | EXP-029 retains its original freeze. EXP-046 used commit `8bb0d0f` and tag `exp046-freeze-2026-11-18`, verified before its approved 2026-11-26 inference. Future tests need separate freezes; this is not a public release. |
 | Dataset versions, sizes, licences, hashes in paper table | Done for local RGB subsets | v8 Appendix B records file counts, SHA-256 digests, roles, upstream commit and CC BY-NC-SA 4.0, following `docs/dataset_manifest.md`. Historical model revision uncertainty remains explicit. |
 | State S3 assessor model and use distinct verifier model | Open | Existing S3 assessor uses the generator model. A distinct verifier requires a new design and controlled evaluation. The new symbolic rule prototype does not replace the neural assessor. |
 | JSON-schema-constrained outputs and parse-failure reporting | Partial | EXP-032 implements strict post-generation JSON/type/provenance checks and visible UNKNOWN/error records. Decoding is not schema constrained; historical text-prefix parsers are unchanged. |
-| RGB-compatible score plus EM and token F1 | Partial | EXP-030 computed supplemental EM/F1 on the 288 single-answer-group questions per condition; EM is 0/288 for both systems because responses are verbose. The manuscript table and multi-group treatment remain open. |
+| RGB-compatible score plus EM and token F1 | Done for documented single-answer subset | v10 Section 5.13 and Table 11 report replay-verified EXP-030 EM/F1 on 288 single-answer-group questions per condition, normalization and alias handling. All four EM counts are 0/288. The 12 multi-group questions are explicitly excluded from these supplemental metrics and retained in RGB's 300-question denominator; no full-300 EM/F1 or hallucination-rate claim is made. |
 | Hardware, p50/p95 latency, calls, tokens, peak memory | Partial | v8 Table 8 and surrounding text report EXP-044 hardware, mean/p50/p95 latency, calls, aggregate tokens and peak process MLX allocation. Historical runs lack full measurements and per-system memory is not isolated. |
 | Paired exact McNemar, bootstrap interval, effect sizes | Done for existing paired score comparisons | EXP-026 and EXP-028 report paired transitions, percentage-point effects, exact p-values, and bootstrap intervals. |
 | Keep development p-values separate from test claims | Done | v6 labels the 80%-noise tests as development evidence; EXP-028 is explicitly condition transfer on the same questions. |
@@ -85,10 +92,10 @@ to the whole supervisor plan.
 | Locked dependencies and Docker image | Partial | `requirements-mlx-macos.lock` is a 43-package version snapshot; no Docker/Linux inference environment exists. |
 | Complete question-level trace in JSONL | Partial | Historical raw rows are preserved and EXP-028 stores questions, contexts, assessments, answers, and stage timings; not every run stores full prompts, tokens, or memory. |
 | Unit tests for scorer and parsers with CI | Partial | Local tests cover scoring, historical parsers, symbolic rules, and extraction boundaries. Linux GitHub Actions workflow is configured but has not run remotely. These tests do not measure neural extraction accuracy. |
-| Publish prompts in repository and appendix | Partial | Prompts are in source files; the manuscript appendix does not reproduce them verbatim. |
+| Publish prompts in repository and appendix | Done for local repository and manuscript | v10 Appendix C and `docs/prompt_catalog.md` contain 17 exact templates/shared components, including historical prototypes and annotation prompts with explicit scope. `docs/prompt_catalog_2026-11-26.json` records exact text and source hashes; all entries were checked against source and reconstructed from DOCX without text changes. Public GitHub publication remains Open in its own row. |
 | Architecture figure | Done for the restricted candidate | v9 Figure 1 shows neural extraction, independent answer parsing, validation, source checks and release policy; `docs/candidate_verifier_architecture.md` maps observed failures to implemented guards and remaining limits. It does not depict an unevaluated full retrieval/selective system as complete. |
 | Remove duplicated noise table/figure; add comparative uncertainty plot | Partial | Duplicate figure was removed from v6; a multi-model uncertainty plot depends on additional model runs. |
-| Number and caption tables | Done for v8 | Duplicate Table 1 caption removed; main tables 1–8 and appendix tables A1/B1 have unique captions. |
+| Number and caption tables | Done for v10 | Main tables 1–11 and appendix tables A1/B1 have unique captions. All twelve v9 tables are unchanged; v10 adds only Table 11. |
 | Taxonomy percentages and multi-label note | Done | Table 3 and its note specify denominators and label overlap. |
 | IEEE references with DOIs and peer-reviewed versions | Partial | v9 has nine cited references numbered by first appearance. Five additions were verified against primary publisher metadata and papers, including four DOIs. The retained CRAG citation is still a preprint; the literature review is broader but not exhaustive. |
 

@@ -1460,3 +1460,44 @@ scientifically justified experiment is a separate controlled development probe
 of complete transcription versus relevance filtering with a rule-only
 comparator, then fresh prospective evaluation. No correction was tuned on
 EXP-046 and no further inference was launched.
+
+## 2026-11-26 — Manuscript v10: prompt appendix, lexical metrics and scope
+
+The author authorized three reporting tasks after reviewing the P0 status.
+Created `deliverables/TDK_Research_Paper_v10_Kirill_Tarasov.docx` separately
+from unchanged v9. No inference was launched and no new EXP identifier is
+assigned to this documentation pass over existing results.
+
+Added Section 5.13 and Table 11 from EXP-030. Recomputed the existing per-case
+EM/token-F1 records and aggregates offline and verified their source hashes.
+RGB uses 300 questions; supplemental EM/F1 uses 288 single-answer-group questions
+with the twelve multi-group questions explicitly excluded. All four EM counts
+are 0/288. S1/S3 mean token-F1 is 0.234202/0.270594 at 80% noise and
+0.291556/0.293960 at 60% noise. The F1 ranking at 60% disagrees with RGB's
+294/300 versus 290/300; lexical overlap does not overturn the negative transfer
+or establish hallucination reduction. No scoring rule or saved result changed.
+
+Added Appendix C and `docs/prompt_catalog.md` with 17 exact application prompt
+templates/shared components (21,177 characters), including historical and
+machine-annotation prompts with explicit scope. The JSON catalog records text
+and source SHA-256 digests. Replay from source and exact reconstruction from
+the DOCX paragraphs matched all entries without model loading. Shared V2/V3
+components retain exact concatenation; the provisional benchmark reference in
+the historical annotation input is disclosed separately from inference inputs.
+
+Audited completed-versus-future descriptions and corrected stale planned-study
+wording. S4 remains offline routing rather than a measured complete selective
+system. The restricted hybrid and local Arena do not establish natural-text
+retrieval, venue access, independent human validation or broad efficacy.
+
+All 41 final rendered pages were visually checked. All 46 contents entries
+match rendered heading pages; thirteen tables, two figures and nine references
+were checked. The twelve v9 tables and all references are unchanged. Appendices
+A–C occupy ten pages. See `docs/tdk_v10_revision_notes.md` for hashes and QA.
+
+Updated the P0 tracker to 16 Done / 9 Partial / 3 Open out of 28, closing the
+three reporting rows within explicit scopes: future-work placement, lexical
+metrics for the eligible subset, and local prompt documentation. Public release,
+unbuilt components and scientific effectiveness are separate unmet requirements.
+This count is not the percentage of a completed thesis; P1/P2 were not recounted.
+EXP-046's NOT_PASS conclusion and all original raw results remain unchanged.
