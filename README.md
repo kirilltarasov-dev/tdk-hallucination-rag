@@ -4,6 +4,11 @@ Research code and records for the University of Debrecen BSc thesis and TDK
 project, *Reducing Hallucinations in Small Language Models using Advanced
 Retrieval-Augmented Generation and Neuro-Symbolic Verification*.
 
+Public repository: https://github.com/kirilltarasov-dev/tdk-hallucination-rag.
+Project code is under [MIT](LICENSE). The included RGB benchmark files retain
+their upstream CC BY-NC-SA 4.0 license; see [third-party materials](THIRD_PARTY.md)
+and [dataset provenance](docs/dataset_manifest.md).
+
 **Research status (2026-11-18):** The current experiments support a
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
@@ -177,7 +182,7 @@ The local RGB benchmark files `en_refine`, `en_fact`, and `en_int` exactly
 match upstream RGB commit `65ec39e40e7dc9abb50e9bf1b4f32be3f6f16615`.
 Dataset sizes, SHA-256 hashes, evaluation roles, and the source license are
 recorded in [`docs/dataset_manifest.md`](docs/dataset_manifest.md). Upstream
-RGB data are CC BY-NC-SA 4.0; a future license for this project's code does
+RGB data are CC BY-NC-SA 4.0; the MIT license for this project's code does
 not change that data license.
 
 Raw experiment records are under `results/raw/`, processed analyses under
@@ -195,8 +200,11 @@ oracle-fact symbolic rules:
 python3 -B -m unittest discover -s tests -v
 ```
 
-The same command is configured in `.github/workflows/unit-tests.yml` for
-Linux CI after the repository is published.
+The portable scorer, historical parser and symbolic rule subset runs in
+`.github/workflows/unit-tests.yml` on Linux CI. It does not load a model or
+run an experiment. The complete 170-test suite includes an EXP-046 preflight
+that requires the pinned local model cache and Mac environment; run that full
+suite in the recorded Python 3.12 project environment.
 
 `src/verification/symbolic_rules.py` is only a deterministic rule prototype
 over already structured facts. It is not an evaluated neuro-symbolic system;

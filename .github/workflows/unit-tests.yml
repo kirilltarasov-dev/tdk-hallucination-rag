@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check RGB scoring and historical parser behavior
+      - name: Check RGB scoring, historical parsers and symbolic rules
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-        run: python -m unittest discover -s tests -v
+        run: python -B -m unittest tests.test_scoring_and_parsers tests.test_symbolic_rules -v
