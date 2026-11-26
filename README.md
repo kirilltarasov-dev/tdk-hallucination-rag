@@ -9,7 +9,7 @@ Project code is under [MIT](LICENSE). The included RGB benchmark files retain
 their upstream CC BY-NC-SA 4.0 license; see [third-party materials](THIRD_PARTY.md)
 and [dataset provenance](docs/dataset_manifest.md).
 
-**Research status (2026-11-18):** The current experiments support a
+**Research status (2026-11-26):** The current experiments support a
 development-condition diagnosis of harmful evidence filtering and the
 targeted safe-fallback correction. They do not yet establish a general
 hallucination reduction or neuro-symbolic effectiveness. EXP-036 is a
@@ -155,13 +155,14 @@ All 80%-noise intervention results are development evidence. RGB answer
 matching is a lexical benchmark score, not a direct hallucination rate. See
 [`research_log.md`](research_log.md) for experiment objectives, raw/processed
 paths, paired comparisons, and limitations. The current supervisor-review
-manuscript is in `deliverables/TDK_Research_Paper_v10_Kirill_Tarasov.docx`;
+manuscript is in `deliverables/TDK_Research_Paper_v11_Kirill_Tarasov.docx`;
 it incorporates completed EXP-046, the source-coverage diagnosis, a verifier
 architecture figure, paired uncertainty, nine cited references and local Arena
 M1–M5 status. Version 10 adds the existing EXP-030 EM/token-F1 results with
 explicit 288-question eligibility and Appendix C with 17 exact prompt templates
 and shared components, also recorded in [`docs/prompt_catalog.md`](docs/prompt_catalog.md).
-It preserves negative results and is not submission-ready.
+Version 11 adds the verified public repository URL to Own Contribution. It
+preserves negative results and is not submission-ready.
 Earlier manuscript versions remain unchanged.
 
 External reviewers are currently unavailable. Independent human validation

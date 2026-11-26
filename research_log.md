@@ -1501,3 +1501,30 @@ metrics for the eligible subset, and local prompt documentation. Public release,
 unbuilt components and scientific effectiveness are separate unmet requirements.
 This count is not the percentage of a completed thesis; P1/P2 were not recounted.
 EXP-046's NOT_PASS conclusion and all original raw results remain unchanged.
+
+## 2026-11-26 — Public GitHub release and manuscript v11
+
+Published `kirilltarasov-dev/tdk-hallucination-rag` as a public GitHub
+repository with MIT project-code licensing and separate RGB CC BY-NC-SA 4.0
+dataset provenance. Pushed the existing experiment freeze tags, preserving
+their original commit identities. Existing local untracked documents were not
+published. The first GitHub Actions run, `45839658993`, passed the 17 portable
+RGB scorer, historical parser and symbolic-rule tests on Ubuntu/Python 3.12.
+The recorded local Python 3.12 environment passed all 170 tests. A system
+Python 3.14 attempt had one EXP-046 preflight error because that interpreter
+lacks `mlx`; the remote CI is intentionally scoped to the portable tests and does
+not validate inference or model-cache portability.
+
+Created v11 from verified v10 and added the public repository URL to Own
+Contribution. It renders to 41 pages; pages 1–40 are pixel-identical to the
+fully inspected v10 pages, and page 41 was visually checked. Tables, figures,
+references and prompt appendix did not change. See
+`docs/tdk_v11_revision_notes.md` for the digest and verification detail.
+
+Updated the P0 tracker to 19 Done / 7 Partial / 2 Open out of 28. The newly
+closed rows are public repository/license, repository URL in Own Contribution,
+and remote scorer/parser CI. This is a checklist count, not thesis readiness.
+No new model calls, experimental results, revised conclusions or raw file
+changes occurred. EXP-046 remains NOT_PASS. Docker inference, distinct neural
+verification, full telemetry and independent human semantic validation remain
+unfulfilled.

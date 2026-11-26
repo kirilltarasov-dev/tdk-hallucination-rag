@@ -55,9 +55,9 @@ change P0 completion. Subsequent document changes are reflected in the rows
 below. Earlier percentages remain dated snapshots; the current P0 count is
 reported separately, without extrapolating to P1/P2.
 
-A row count after v10 on 2026-11-26 gives **16 Done, 9 Partial and 3 Open out of
-28 P0 items** (57.1% strictly closed within each row's stated scope; the v9
-snapshot was 13 / 12 / 3). This is a count
+A row count after public release and v11 on 2026-11-26 gives **19 Done, 7 Partial
+and 2 Open out of 28 P0 items** (67.9% strictly closed within each row's stated
+scope; the v10 snapshot was 16 / 9 / 3). This is a count
 of checklist items, not remaining effort or thesis readiness. P1/P2 and the
 98-item total have not been fully re-audited; do not extrapolate this percentage
 to the whole supervisor plan.
@@ -66,7 +66,12 @@ Version 10 closes three reporting tasks: completed versus future scope,
 supplemental lexical metrics for the documented eligible subset, and exact
 prompts in the local repository and manuscript appendix. Public publication,
 unbuilt systems, and scientific effectiveness are separate requirements and
-remain unmet. See `docs/tdk_v10_revision_notes.md`.
+remain unmet. See `docs/tdk_v10_revision_notes.md`. A subsequent public
+GitHub release closes the repository/licence row, adds the URL in v11 Own
+Contribution, and validates the portable scorer/parser/rule subset in a
+successful GitHub Actions run. This does not close distinct verifier,
+hallucination-specific human validation, Docker inference, complete historical
+telemetry, or comparative model uncertainty.
 
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
@@ -78,7 +83,7 @@ remain unmet. See `docs/tdk_v10_revision_notes.md`.
 | Report hard-filter and fallback-rescue paired tests | Done | Exact p-values were independently recalculated from saved raw rows and included as development results. |
 | Rewrite abstract around key outcomes | Done | v6 draft has a compact abstract with baseline, intervention, and transfer numbers. |
 | Put unbuilt components in Future Work | Done for scope reporting | v10 Sections 3, 5.3, 6.1, 7 and 8 distinguish completed restricted studies, offline routing and local Arena checks from the unbuilt complete retrieval/selective pipeline and unverified venue/audience demonstration. The stale planned-study wording is corrected. This closes reporting, not implementation of those components. |
-| Own Contribution in first person, supervisor role, repository URL | Partial | First-person contribution and supervisor role are in v6; no public repository URL exists. |
+| Own Contribution in first person, supervisor role, repository URL | Done | v11 retains the itemized first-person contribution and Róbert Lakatos's supervisor role, and adds the verified public URL `https://github.com/kirilltarasov-dev/tdk-hallucination-rag`. |
 | Label 80%-noise RGB as development | Done | v6 and README label all intervention results at 80% noise as development evidence. |
 | Freeze method with tagged commit before new test | Done for completed frozen studies | EXP-029 retains its original freeze. EXP-046 used commit `8bb0d0f` and tag `exp046-freeze-2026-11-18`, verified before its approved 2026-11-26 inference. Future tests need separate freezes; this is not a public release. |
 | Dataset versions, sizes, licences, hashes in paper table | Done for local RGB subsets | v8 Appendix B records file counts, SHA-256 digests, roles, upstream commit and CC BY-NC-SA 4.0, following `docs/dataset_manifest.md`. Historical model revision uncertainty remains explicit. |
@@ -88,11 +93,11 @@ remain unmet. See `docs/tdk_v10_revision_notes.md`.
 | Hardware, p50/p95 latency, calls, tokens, peak memory | Partial | v8 Table 8 and surrounding text report EXP-044 hardware, mean/p50/p95 latency, calls, aggregate tokens and peak process MLX allocation. Historical runs lack full measurements and per-system memory is not isolated. |
 | Paired exact McNemar, bootstrap interval, effect sizes | Done for existing paired score comparisons | EXP-026 and EXP-028 report paired transitions, percentage-point effects, exact p-values, and bootstrap intervals. |
 | Keep development p-values separate from test claims | Done | v6 labels the 80%-noise tests as development evidence; EXP-028 is explicitly condition transfer on the same questions. |
-| Public GitHub repository under code license | Open | No Git remote or project code license exists. Upstream RGB data retain their separate CC BY-NC-SA 4.0 license. |
+| Public GitHub repository under code license | Done | The public repository `kirilltarasov-dev/tdk-hallucination-rag` is online, GitHub recognizes the MIT project-code license, and all 16 frozen/other tags were pushed. `THIRD_PARTY.md` and `data/rgb/LICENSE_RGB.txt` retain separate RGB CC BY-NC-SA 4.0 provenance. This is a source release, not an efficacy validation. |
 | Locked dependencies and Docker image | Partial | `requirements-mlx-macos.lock` is a 43-package version snapshot; no Docker/Linux inference environment exists. |
 | Complete question-level trace in JSONL | Partial | Historical raw rows are preserved and EXP-028 stores questions, contexts, assessments, answers, and stage timings; not every run stores full prompts, tokens, or memory. |
-| Unit tests for scorer and parsers with CI | Partial | Local tests cover scoring, historical parsers, symbolic rules, and extraction boundaries. Linux GitHub Actions workflow is configured but has not run remotely. These tests do not measure neural extraction accuracy. |
-| Publish prompts in repository and appendix | Done for local repository and manuscript | v10 Appendix C and `docs/prompt_catalog.md` contain 17 exact templates/shared components, including historical prototypes and annotation prompts with explicit scope. `docs/prompt_catalog_2026-11-26.json` records exact text and source hashes; all entries were checked against source and reconstructed from DOCX without text changes. Public GitHub publication remains Open in its own row. |
+| Unit tests for scorer and parsers with CI | Done for portable target | GitHub Actions run `45839658993` passed on Ubuntu/Python 3.12 for 17 RGB scorer, historical parser and symbolic-rule tests. The full 170-test local suite passed in the pinned Python 3.12 environment; its EXP-046 preflight requires the local cached model. Neither suite measures neural extraction accuracy. |
+| Publish prompts in repository and appendix | Done | v10 Appendix C and the now-public `docs/prompt_catalog.md` contain 17 exact templates/shared components, including historical prototypes and annotation prompts with explicit scope. `docs/prompt_catalog_2026-11-26.json` records exact text and source hashes; all entries were checked against source and reconstructed from DOCX without text changes. |
 | Architecture figure | Done for the restricted candidate | v9 Figure 1 shows neural extraction, independent answer parsing, validation, source checks and release policy; `docs/candidate_verifier_architecture.md` maps observed failures to implemented guards and remaining limits. It does not depict an unevaluated full retrieval/selective system as complete. |
 | Remove duplicated noise table/figure; add comparative uncertainty plot | Partial | Duplicate figure was removed from v6; a multi-model uncertainty plot depends on additional model runs. |
 | Number and caption tables | Done for v10 | Main tables 1–11 and appendix tables A1/B1 have unique captions. All twelve v9 tables are unchanged; v10 adds only Table 11. |
