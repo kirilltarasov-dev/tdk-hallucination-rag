@@ -1,6 +1,9 @@
 # EXP-046 execution preparation
 
-Date: 2026-11-18. Status: prepared, not approved for inference, not executed.
+Historical snapshot dated 2026-11-18: prepared, not yet approved or executed.
+Update on 2026-11-26: the author approved the bounded run; all 240 cases and
+720 calls completed, with a NOT_PASS screen. See [the result](exp046_results.md).
+The following preparation record is preserved as pre-inference provenance.
 This note reports software and fixture checks only. It is not an experiment
 result and does not change the negative or inconclusive historical findings.
 

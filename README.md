@@ -70,7 +70,7 @@ invalid extractions and one unresolved non-answer record remain blocked. The
 false-source control remains VERIFIED. No new model calls were made.
 Replay: `python3 -B -m experiments.exp043_independent_answer_replay --check`.
 
-The latest inference experiment, [EXP-044](docs/exp044_results.md), tests the
+The earlier inference experiment, [EXP-044](docs/exp044_results.md), tests the
 frozen candidate on 24 new authored fictional questions with generated drafts.
 Candidate NS retains 12 correct answers versus six for Original NS, with four
 wrong answers in each arm. It retains 12/14 correct S1 drafts, but four S1
@@ -79,13 +79,25 @@ screen INCONCLUSIVE. All four false-only sources still yield wrong released
 answers. [EXP-045](docs/exp045_results.md) provides an explicitly unvalidated,
 retrospective AI semantic review; independent human validation remains open.
 
+The latest inference experiment, [EXP-046](docs/exp046_results.md), completed
+240 five-passage questions and 720 calls on 2026-11-26. Its frozen screen is
+**NOT_PASS**: Candidate NS retained only 1/77 correct S1 drafts (1.3%), returning
+236 abstentions and releasing four drafts (one exact-score correct, three
+unscorable). The paired utility bounds are [-0.592, +0.325]. Source-coverage
+failures and invalid extractions account for all 76 lost correct drafts.
+Zero exact-score wrong answers does not establish zero false assertions:
+one released unscorable response follows a false source. The method is not
+effective under the predeclared useful-coverage criterion. Full raw replay
+and all 170 Python tests passed without additional inference.
+
 The [RAG Red-Team Arena recorded explorer](demo/README.md) is now a working
 local Streamlit app. It shows all 24 EXP-044 cases, source text, three recorded
 arms, exact scores, fired rules and full trace downloads, including the known
 false-source failure. M2 now adds explicit local S1/S2-style/NS generation from
 a shared draft, with exclusive raw-call logs and an actual browser-driven
-three-call integration check. Page navigation never starts inference. Attack
-editing and audience scoring remain later milestones. Launch from the separate UI environment:
+three-call integration check. Page navigation never starts inference. M3–M5
+also provide source editing, proof traces and a local ledger; venue access and
+actual audience validation remain open. Launch from the separate UI environment:
 
 ```bash
 .venv-arena/bin/python -m streamlit run demo/app.py --server.address 127.0.0.1 --server.port 8501
@@ -138,20 +150,23 @@ All 80%-noise intervention results are development evidence. RGB answer
 matching is a lexical benchmark score, not a direct hallucination rate. See
 [`research_log.md`](research_log.md) for experiment objectives, raw/processed
 paths, paired comparisons, and limitations. The current supervisor-review
-manuscript is in `deliverables/TDK_Research_Paper_v8_Kirill_Tarasov.docx`;
-it incorporates the restricted hybrid results through EXP-045, measured
-transfer cost and local Arena M1–M5 status. It preserves negative results and
-is not submission-ready. Earlier manuscript versions remain unchanged.
+manuscript is in `deliverables/TDK_Research_Paper_v9_Kirill_Tarasov.docx`;
+it incorporates completed EXP-046, the source-coverage diagnosis, a verifier
+architecture figure, paired uncertainty, nine cited references and local Arena
+M1–M5 status. It preserves negative results and is not submission-ready.
+Earlier manuscript versions remain unchanged.
 
 External reviewers are currently unavailable. Independent human validation
-remains unmet; assistant review is not a substitute. The prepared restricted
-automatic-score study is specified in
+remains unmet; assistant review is not a substitute. The pre-inference
+protocol for the completed restricted automatic-score study is preserved in
 [`docs/exp046_proposed_protocol.md`](docs/exp046_proposed_protocol.md), with
-240 new fictional questions and five passages per question. The fixture, runner,
-software tests and non-inference preflight are complete; see
+240 new fictional questions and five passages per question. See
 [`docs/exp046_preparation.md`](docs/exp046_preparation.md) for the execution freeze
-and verification command. No EXP-046 model results exist. The bounded run still
-requires explicit approval: 720 calls, at most 307,200 generated tokens.
+and verification command. The approved run used 720 calls and 120,063 generated
+tokens, below the 307,200-token cap. Replay it without inference using
+`.venv/bin/python -B -m experiments.exp046_evaluation --check`.
+Laptop sleep and concurrent desktop work limit latency interpretation;
+see [`docs/exp046_execution_notes.md`](docs/exp046_execution_notes.md).
 
 ## Data and provenance
 

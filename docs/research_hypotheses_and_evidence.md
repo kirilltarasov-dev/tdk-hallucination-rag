@@ -1,6 +1,6 @@
 # Research Hypotheses and Evidence Boundaries
 
-**Updated:** 2026-11-17. Completed through the EXP-043 offline component study.
+**Updated:** 2026-11-26. Completed through the EXP-046 frozen evaluation.
 
 ## Current defensible finding
 
@@ -9,6 +9,13 @@ correction improves the harmful hard-filter development variant, but the
 existing comparisons do not establish a general benefit over standard RAG.
 Frozen transfer and counterfactual results must remain visible alongside the
 positive development comparison.
+
+EXP-046 adds a strong negative coverage result: the frozen candidate retained
+only 1/77 correct drafts on 240 five-passage questions, far below the 80%
+requirement. Of the 76 losses, 45 stopped at source coverage and 31 at original
+extraction validation. This is an observed implementation limitation on the
+authored fixture, not a universal impossibility result about neuro-symbolic
+methods. The broad thesis hypothesis remains unestablished.
 
 The neural extraction interface has semantic failures even when JSON is valid.
 EXP-034/035 deterministic guards block two known source-consistency false
@@ -84,15 +91,24 @@ replaced by another assistant pass or by software replay checks. A credible
 restricted thesis can report automatic contract scores and authored source
 consistency without claiming a human-validated hallucination rate.
 
-`docs/exp046_proposed_protocol.md` specifies the prepared next fixed-method study
-with 240 new authored questions, five passages each, S1/S2/Candidate NS, and
-paired utility bounds that retain unscorable outputs. It preserves the 80%
-correct-draft retention guardrail and includes all false-source controls.
-This is a prospective engineering screen, not a measured result. The fixture,
-runner and non-inference preflight are complete; `docs/exp046_preparation.md`
-records the execution freeze. Concrete inference authorization and model
-results remain outstanding. H2 is not redefined as already proven by this
-narrower evaluation package.
+EXP-046 completed the protocol in `docs/exp046_proposed_protocol.md` on 240
+new authored questions with five passages each. S1 counts were 77 correct,
+44 wrong, six abstained and 113 unscorable; Candidate NS counts were one
+correct, zero wrong, 236 abstained and three unscorable. The predeclared screen
+is NOT_PASS because correct-draft retention is only 1/77. Utility bounds are
+[-0.592, +0.325], with a conditional bootstrap envelope [-0.675, +0.417].
+All forty conflict cases ended UNKNOWN, not CONFLICT. One false-source control
+was released outside the scoring format; zero exact-score wrong answers is
+not zero false assertions. No cap was reached. See `docs/exp046_results.md`.
+
+A post-run audit of 176 valid extractions found 482/683 non-target affirmative
+source statements omitted, compared with 14/175 target affirmative statements.
+The prompt explicitly required preserving different-event/year facts. These
+conditional diagnostics do not isolate passage count from vocabulary and
+evidence composition. H2 is not rescued by changing labels or weakening the
+guard after seeing this test. The next justified development step is a controlled
+transcription-versus-filtering diagnosis with a rule-only comparator; a further
+inference run needs a separate concrete protocol and approval.
 
 ## What a credible thesis can conclude
 

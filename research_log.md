@@ -1390,3 +1390,73 @@ or processed summary exist. The user must approve that concrete bounded run
 before execution. Independent human validation and broad effectiveness remain
 unestablished. Supervisor task statuses and completion percentages are not
 promoted by preparation; v8 and historical raw results remain unchanged.
+
+
+## 2026-11-26 — EXP-046 completed and manuscript v9
+
+Objective: test the unchanged candidate against shared S1 drafts and matched
+same-model review on the frozen 240-question, five-passage authored fixture.
+The author approved the concrete 720-call run. Freeze commit
+`8bb0d0f0aece395ab8903b4afc83553ebfc63ba8` and tag
+`exp046-freeze-2026-11-18` were verified before inference. No prompt, rule,
+scoring contract, case, token cap or primary criterion was changed.
+
+All 240 cases and 720 calls completed once. The same process survived laptop
+sleep without runner restart, retries or case replacement. Raw artifacts are
+in `results/raw/exp046/`; the completion record hashes the raw files and
+`results/processed/exp046_summary.json`. The run used the pinned cached 4-bit
+Mistral model on an M5 Pro with 24 GB memory, consuming 516,441 input and
+120,063 generated tokens (below the 307,200 cap). No generation hit its cap.
+Sleep and concurrent document/desktop work mean timings are telemetry, not
+an isolated speed benchmark; original timers and outliers remain unchanged.
+See `docs/exp046_execution_notes.md`.
+
+Primary outcome: NOT_PASS. Counts (correct / wrong / abstain / unscorable)
+were S1 77/44/6/113, S2 95/88/3/54 and Candidate NS 1/0/236/3.
+Correct-draft retention was 1/77 (1.3%), below the predeclared 80% criterion.
+The full-N paired utility bounds were [-0.591667, +0.325000]; the fixed-family
+bootstrap sensitivity envelope was [-0.675000, +0.416667]. These bounds do not
+establish benefit. Unscorable responses retain unresolved utility; none was
+retrospectively relabelled or excluded. All 44 scored wrong drafts were withheld,
+but so were 76 correct drafts. Zero scored WRONG is not zero false assertions.
+
+The candidate produced four VERIFIED and 236 UNKNOWN outcomes, with no final
+REFUTED or CONFLICT verdict. Of the 76 lost correct drafts, 45 stopped at
+source-coverage validation and 31 at original-extraction validation. All forty
+conflict cases became UNKNOWN, so their abstentions are not successful conflict
+detection. There were 64 original-extraction validation failures and 117 false
+abstentions among 120 unambiguous true-evidence cases.
+
+A separate post-run source audit, conditional on 176 schema/provenance-valid
+extractions, found missing facts for 482/683 affirmative non-target statements
+and 14/175 affirmative target statements. At least one non-target positive fact
+was absent in 170/176 valid cases, despite explicit complete-transcription
+instructions. The 64 invalid cases remain in the primary denominator. Evidence
+composition and fictional identities also changed relative to EXP-044, so this
+does not isolate passage count causally. The sole false-source release,
+E046204, names Fawn Condors while the authored winner is Pistachio Ferrets;
+it remains UNSCORABLE under the frozen complete-response contract.
+
+The full saved-call/decision/scoring/summary replay passed, as did all 170 local
+Python tests. Independent transition arithmetic recovered the same bounds and
+checked unchanged released strings and canonical abstentions. Frozen experiment
+source/configuration/fixture/protocol files remain unchanged. See
+`docs/exp046_results.md`, `results/processed/exp046_diagnostics.json` and
+`results/processed/exp046_source_coverage_audit.json`. These are diagnostics of
+the completed EXP-046, not additional inference experiments.
+
+Created manuscript v9 separately from unchanged v8. It adds the failed result,
+source-omission diagnosis, two figures, Tables 9–10 and five verified primary
+literature additions (nine cited references total). All 31 rendered pages were
+visually inspected at full resolution; 44 contents entries, twelve table
+captions and citation order were checked. Historical Tables 1–8 and RGB
+provenance are unchanged. See `docs/tdk_v9_revision_notes.md`.
+
+Updated README, hypothesis notes and supervisor tracker. The current P0 row
+count is 13 Done / 12 Partial / 3 Open, with scope qualifications; this is not
+a percentage of thesis readiness. P1/P2 have not been fully recounted. Broad
+effectiveness and independent human validation remain unestablished. The next
+scientifically justified experiment is a separate controlled development probe
+of complete transcription versus relevance filtering with a rule-only
+comparator, then fresh prospective evaluation. No correction was tuned on
+EXP-046 and no further inference was launched.

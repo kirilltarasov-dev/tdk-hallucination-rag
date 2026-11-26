@@ -1,0 +1,213 @@
+[
+  {
+    "url": "https://aclanthology.org/2023.emnlp-main.313/",
+    "accessed": "2026-11-26",
+    "metadata": {
+      "citation_title": [
+        "LINC: A Neurosymbolic Approach for Logical Reasoning by Combining Language Models with First-Order Logic Provers"
+      ],
+      "citation_author": [
+        "Theo Olausson",
+        "Alex Gu",
+        "Ben Lipkin",
+        "Cedegao Zhang",
+        "Armando Solar-Lezama",
+        "Joshua Tenenbaum",
+        "Roger Levy"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+      ],
+      "citation_publication_date": [
+        "2023/12"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2023.emnlp-main.313.pdf"
+      ],
+      "citation_firstpage": [
+        "5153"
+      ],
+      "citation_lastpage": [
+        "5176"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2023.emnlp-main.313"
+      ]
+    },
+    "title": "LINC: A Neurosymbolic Approach for Logical Reasoning by Combining Language Models with First-Order Logic Provers - ACL Anthology",
+    "pdf_sha256": "6464792ce2dc665ac838d51516a2273b47153f8359965890d599a1a650aa04f2",
+    "verification": "Publisher metadata and original paper abstract/introduction inspected; not a reproduced experiment.",
+    "relevance_and_scope": "Separates neural semantic parsing into first-order logic from external theorem proving. Relevant to extraction error versus reasoning error; the present prototype does not implement LINC or use a general prover."
+  },
+  {
+    "url": "https://aclanthology.org/2023.emnlp-main.741/",
+    "accessed": "2026-11-26",
+    "metadata": {
+      "citation_title": [
+        "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation"
+      ],
+      "citation_author": [
+        "Sewon Min",
+        "Kalpesh Krishna",
+        "Xinxi Lyu",
+        "Mike Lewis",
+        "Wen-tau Yih",
+        "Pang Koh",
+        "Mohit Iyyer",
+        "Luke Zettlemoyer",
+        "Hannaneh Hajishirzi"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+      ],
+      "citation_publication_date": [
+        "2023/12"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2023.emnlp-main.741.pdf"
+      ],
+      "citation_firstpage": [
+        "12076"
+      ],
+      "citation_lastpage": [
+        "12100"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2023.emnlp-main.741"
+      ]
+    },
+    "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation - ACL Anthology",
+    "pdf_sha256": "8486fe22a15aaf3fe2e1d7043d169000600205dde9c601c9fd31c0dd6f7380e9",
+    "verification": "Publisher metadata and original paper abstract/introduction inspected; not a reproduced experiment.",
+    "relevance_and_scope": "Defines factual precision through atomic claims supported by a reliable knowledge source. Relevant to why whole-answer lexical scores and source-consistency verdicts are insufficient as semantic hallucination measurements."
+  },
+  {
+    "url": "https://aclanthology.org/2023.ijcnlp-main.20/",
+    "accessed": "2026-11-26",
+    "metadata": {
+      "citation_title": [
+        "Faithful Chain-of-Thought Reasoning"
+      ],
+      "citation_author": [
+        "Qing Lyu",
+        "Shreya Havaldar",
+        "Adam Stein",
+        "Li Zhang",
+        "Delip Rao",
+        "Eric Wong",
+        "Marianna Apidianaki",
+        "Chris Callison-Burch"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 13th International Joint Conference on Natural Language Processing and the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      ],
+      "citation_publication_date": [
+        "2023/11"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2023.ijcnlp-main.20.pdf"
+      ],
+      "citation_firstpage": [
+        "305"
+      ],
+      "citation_lastpage": [
+        "329"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2023.ijcnlp-main.20"
+      ]
+    },
+    "title": "Faithful Chain-of-Thought Reasoning - ACL Anthology",
+    "pdf_sha256": "c8c2aa25ea95e164edd26f4df1e038a42678184c2b0d8f7000246f3b0e51d4e4",
+    "verification": "Publisher metadata and original paper abstract/introduction inspected; not a reproduced experiment.",
+    "relevance_and_scope": "Uses a language-model translation stage and a deterministic problem-solving stage. Faithfulness of execution is distinct from correctness of the translated representation."
+  },
+  {
+    "url": "https://aclanthology.org/2024.tacl-1.9/",
+    "accessed": "2026-11-26",
+    "metadata": {
+      "citation_title": [
+        "Lost in the Middle: How Language Models Use Long Contexts"
+      ],
+      "citation_author": [
+        "Nelson F. Liu",
+        "Kevin Lin",
+        "John Hewitt",
+        "Ashwin Paranjape",
+        "Michele Bevilacqua",
+        "Fabio Petroni",
+        "Percy Liang"
+      ],
+      "citation_journal_title": [
+        "Transactions of the Association for Computational Linguistics"
+      ],
+      "citation_volume": [
+        "12"
+      ],
+      "citation_publication_date": [
+        "2024"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2024.tacl-1.9.pdf"
+      ],
+      "citation_firstpage": [
+        "157"
+      ],
+      "citation_lastpage": [
+        "173"
+      ],
+      "citation_doi": [
+        "10.1162/tacl_a_00638"
+      ]
+    },
+    "title": "Lost in the Middle: How Language Models Use Long Contexts - ACL Anthology",
+    "pdf_sha256": "f37f6fabe0fe0d8c73b67579cd115dbf14e282cfb7b7af655ae8109638402c9b",
+    "verification": "Publisher metadata and original paper abstract/introduction inspected; not a reproduced experiment.",
+    "relevance_and_scope": "Tests relevant-information position in multi-document QA and key-value retrieval. Motivates controlling passage position; the present five-short-passage fixture does not reproduce a long-context benchmark."
+  },
+  {
+    "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+    "accessed": "2026-11-26",
+    "metadata": {
+      "citation_title": [
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+      ],
+      "citation_author": [
+        "Lewis, Patrick",
+        "Perez, Ethan",
+        "Piktus, Aleksandra",
+        "Petroni, Fabio",
+        "Karpukhin, Vladimir",
+        "Goyal, Naman",
+        "Küttler, Heinrich",
+        "Lewis, Mike",
+        "Yih, Wen-tau",
+        "Rocktäschel, Tim",
+        "Riedel, Sebastian",
+        "Kiela, Douwe"
+      ],
+      "citation_journal_title": [
+        "Advances in Neural Information Processing Systems"
+      ],
+      "citation_volume": [
+        "33"
+      ],
+      "citation_firstpage": [
+        "9459"
+      ],
+      "citation_lastpage": [
+        "9474"
+      ],
+      "citation_pdf_url": [
+        "https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf"
+      ],
+      "citation_publication_date": [
+        "2020"
+      ]
+    },
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "pdf_sha256": "720f67eb41aa49995d5fcf3d24ac7efe431fbe08ce109b14b5a9fa4d4ebe2f8b",
+    "verification": "Publisher metadata and original paper abstract/introduction inspected; not a reproduced experiment.",
+    "relevance_and_scope": "Combines parametric generation with a non-parametric Wikipedia index and neural retrieval. The current supplied-context experiments isolate downstream behavior and do not evaluate a retriever."
+  }
+]

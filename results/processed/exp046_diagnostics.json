@@ -1,0 +1,176 @@
+{
+  "scope": "Descriptive inspection of frozen automatic decisions; no semantic relabelling.",
+  "by_family": {
+    "conflict": {
+      "n": 40,
+      "verdicts": {
+        "UNKNOWN": 40
+      },
+      "decision_rules": {
+        "G4_SOURCE_COVERAGE": 28,
+        "I1_ORIGINAL_EXTRACTION_INVALID": 10,
+        "I3_NONANSWER_UNRESOLVED": 1,
+        "I2_INDEPENDENT_ANSWER_UNRESOLVED": 1
+      },
+      "withheld_S1_categories": {
+        "UNSCORABLE": 14,
+        "CORRECT": 12,
+        "WRONG": 14
+      },
+      "validation_errors": {
+        "D3.status: expected one of ['COMPLETE', 'UNRESOLVED']": 2,
+        "D2.event: quotation must occur verbatim in its source": 2,
+        "D5.year: explicit four-digit integer year required": 1,
+        "D2.status: expected one of ['COMPLETE', 'UNRESOLVED']": 4,
+        "Each input document must be represented exactly once": 1
+      },
+      "V3_at_cap": 0
+    },
+    "no_target_evidence": {
+      "n": 40,
+      "verdicts": {
+        "UNKNOWN": 40
+      },
+      "decision_rules": {
+        "G4_SOURCE_COVERAGE": 8,
+        "R3_NO_MATCH": 1,
+        "I2_INDEPENDENT_ANSWER_UNRESOLVED": 22,
+        "I1_ORIGINAL_EXTRACTION_INVALID": 9
+      },
+      "withheld_S1_categories": {
+        "WRONG": 6,
+        "UNSCORABLE": 34
+      },
+      "validation_errors": {
+        "D1.fact: expected exactly keys ['event', 'source_span', 'value', 'year']": 5,
+        "D5.status: expected one of ['COMPLETE', 'UNRESOLVED']": 1,
+        "D1.source_span: quotation must occur verbatim in its source": 1,
+        "D2.status: expected one of ['COMPLETE', 'UNRESOLVED']": 1,
+        "D2.year: explicit four-digit integer year required": 1
+      },
+      "V3_at_cap": 0
+    },
+    "clean": {
+      "n": 40,
+      "verdicts": {
+        "UNKNOWN": 39,
+        "VERIFIED": 1
+      },
+      "decision_rules": {
+        "G4_SOURCE_COVERAGE": 27,
+        "I2_INDEPENDENT_ANSWER_UNRESOLVED": 4,
+        "I1_ORIGINAL_EXTRACTION_INVALID": 8,
+        "R3_R6_SUPPORTED": 1
+      },
+      "withheld_S1_categories": {
+        "UNSCORABLE": 19,
+        "CORRECT": 19,
+        "WRONG": 1
+      },
+      "validation_errors": {
+        "D2.status: expected one of ['COMPLETE', 'UNRESOLVED']": 2,
+        "root: expected exactly keys ['answer', 'documents', 'question', 'schema_version']": 1,
+        "D3.source_span: quotation must occur verbatim in its source": 1,
+        "D1.source_span: quotation must occur verbatim in its source": 1,
+        "D3.status: expected one of ['COMPLETE', 'UNRESOLVED']": 1,
+        "document: expected exactly keys ['facts', 'source_id', 'status']": 2
+      },
+      "V3_at_cap": 0
+    },
+    "false_source_only": {
+      "n": 40,
+      "verdicts": {
+        "UNKNOWN": 39,
+        "VERIFIED": 1
+      },
+      "decision_rules": {
+        "G4_SOURCE_COVERAGE": 29,
+        "I1_ORIGINAL_EXTRACTION_INVALID": 7,
+        "I2_INDEPENDENT_ANSWER_UNRESOLVED": 3,
+        "R3_R6_SUPPORTED": 1
+      },
+      "withheld_S1_categories": {
+        "WRONG": 21,
+        "UNSCORABLE": 17,
+        "ABSTAIN": 1
+      },
+      "validation_errors": {
+        "D3.status: expected one of ['COMPLETE', 'UNRESOLVED']": 1,
+        "D1.fact: expected exactly keys ['event', 'source_span', 'value', 'year']": 1,
+        "D2.event: quotation must occur verbatim in its source": 1,
+        "document: expected exactly keys ['facts', 'source_id', 'status']": 2,
+        "Each input document must be represented exactly once": 1,
+        "D4.year: explicit four-digit integer year required": 1
+      },
+      "V3_at_cap": 0
+    },
+    "negated_distractor": {
+      "n": 40,
+      "verdicts": {
+        "UNKNOWN": 38,
+        "VERIFIED": 2
+      },
+      "decision_rules": {
+        "G4_SOURCE_COVERAGE": 19,
+        "G4_NEGATIVE_AS_POSITIVE": 1,
+        "I1_ORIGINAL_EXTRACTION_INVALID": 18,
+        "R3_R6_SUPPORTED": 2
+      },
+      "withheld_S1_categories": {
+        "CORRECT": 31,
+        "UNSCORABLE": 7
+      },
+      "validation_errors": {
+        "D2.status: expected one of ['COMPLETE', 'UNRESOLVED']": 3,
+        "D1.fact: expected exactly keys ['event', 'source_span', 'value', 'year']": 2,
+        "D5.value: quotation must occur verbatim in its source": 1,
+        "root: expected exactly keys ['answer', 'documents', 'question', 'schema_version']": 1,
+        "document: expected exactly keys ['facts', 'source_id', 'status']": 3,
+        "D3.status: expected one of ['COMPLETE', 'UNRESOLVED']": 4,
+        "D3.value: quotation must occur verbatim in its source": 2,
+        "D2.value: quotation must occur verbatim in its source": 1,
+        "D1.source_span: quotation must occur verbatim in its source": 1
+      },
+      "V3_at_cap": 0
+    },
+    "paraphrase": {
+      "n": 40,
+      "verdicts": {
+        "UNKNOWN": 40
+      },
+      "decision_rules": {
+        "G4_SOURCE_COVERAGE": 21,
+        "I1_ORIGINAL_EXTRACTION_INVALID": 12,
+        "I2_INDEPENDENT_ANSWER_UNRESOLVED": 7
+      },
+      "withheld_S1_categories": {
+        "UNSCORABLE": 19,
+        "CORRECT": 14,
+        "ABSTAIN": 5,
+        "WRONG": 2
+      },
+      "validation_errors": {
+        "D1.fact: expected exactly keys ['event', 'source_span', 'value', 'year']": 4,
+        "D3.status: expected one of ['COMPLETE', 'UNRESOLVED']": 4,
+        "document: expected exactly keys ['facts', 'source_id', 'status']": 2,
+        "D3.fact: expected exactly keys ['event', 'source_span', 'value', 'year']": 1,
+        "root: expected exactly keys ['answer', 'documents', 'question', 'schema_version']": 1
+      },
+      "V3_at_cap": 0
+    }
+  },
+  "first_case_for_each_rule": {
+    "G4_SOURCE_COVERAGE": "E046-147",
+    "I1_ORIGINAL_EXTRACTION_INVALID": "E046-129",
+    "R3_NO_MATCH": "E046-192",
+    "I2_INDEPENDENT_ANSWER_UNRESOLVED": "E046-020",
+    "G4_NEGATIVE_AS_POSITIVE": "E046-111",
+    "R3_R6_SUPPORTED": "E046-012",
+    "I3_NONANSWER_UNRESOLVED": "E046-126"
+  },
+  "selection_rule": "First occurrence in frozen execution order per decision rule; illustrative only.",
+  "input_sha256": {
+    "results/raw/exp046/cases.jsonl": "254e0a8c7b9f2057c522bd8ee8cd40281d26864b8a51bf65dfa96d91bd2ba62c",
+    "results/processed/exp046_summary.json": "b120db2a9e44dea8c43a7e4f49c6c6e570bcde9c086c0ab91cd5e13a53e2a601"
+  }
+}

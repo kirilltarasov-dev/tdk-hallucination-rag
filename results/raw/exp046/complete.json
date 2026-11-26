@@ -1,0 +1,11 @@
+{
+  "experiment_id": "EXP-046",
+  "status": "completed",
+  "sha256": {
+    "results/processed/exp046_summary.json": "b120db2a9e44dea8c43a7e4f49c6c6e570bcde9c086c0ab91cd5e13a53e2a601",
+    "results/raw/exp046/manifest.json": "ea01870762ae8543878f63d0a0112cf3433eea10f972939a50d0052c42b05ba3",
+    "results/raw/exp046/calls.jsonl": "eb1b7dce0fcf6313ed8075fc96d2a4ec01e04cdb6d78e08a8615336849323c48",
+    "results/raw/exp046/cases.jsonl": "254e0a8c7b9f2057c522bd8ee8cd40281d26864b8a51bf65dfa96d91bd2ba62c",
+    "results/raw/exp046/attempts.jsonl": "981c1c0e04dc4ec83d8b0238c32dc5abfb590b3ccf22fe362fdbbc9a8ea4dc7c"
+  }
+}

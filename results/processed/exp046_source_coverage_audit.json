@@ -1,0 +1,1409 @@
+{
+  "experiment_id": "EXP-046",
+  "evidence_level": "Post-run descriptive audit against the pre-authored source metadata; not a new primary endpoint or independent human evaluation.",
+  "denominator": "Only the 176 cases whose original extractions passed strict schema/provenance validation; 64 invalid extractions are excluded from this diagnostic only, never from primary results.",
+  "source_comparison": "Exactly one extracted fact with the same event, integer year and winner string as the authored affirmative statement. Negative statements are excluded because the positive-only schema cannot represent them.",
+  "counts": {
+    "schema_valid_cases": 176,
+    "non_target_positive_sources": 683,
+    "non_target_positive_zero_facts": 482,
+    "target_positive_sources": 175,
+    "target_positive_exact_fact": 161,
+    "target_positive_zero_facts": 14,
+    "non_target_positive_exact_fact": 201
+  },
+  "missing_cases": {
+    "non_target_positive_missing_cases": 170,
+    "target_positive_missing_cases": 13
+  },
+  "correct_drafts_withheld_by_first_blocking_rule": {
+    "G4_SOURCE_COVERAGE": 45,
+    "I1_ORIGINAL_EXTRACTION_INVALID": 31
+  },
+  "all_first_decision_rules": {
+    "G4_SOURCE_COVERAGE": 132,
+    "I1_ORIGINAL_EXTRACTION_INVALID": 64,
+    "R3_NO_MATCH": 1,
+    "I2_INDEPENDENT_ANSWER_UNRESOLVED": 37,
+    "G4_NEGATIVE_AS_POSITIVE": 1,
+    "R3_R6_SUPPORTED": 4,
+    "I3_NONANSWER_UNRESOLVED": 1
+  },
+  "cases": [
+    {
+      "case_id": "E046-147",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-170",
+      "missing_affirmative_source_ids": [
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-131",
+      "missing_affirmative_source_ids": [
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-005",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-220",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-207",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-097",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-139",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-192",
+      "missing_affirmative_source_ids": []
+    },
+    {
+      "case_id": "E046-020",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-069",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-209",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-178",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-196",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-208",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-217",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-047",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-159",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-114",
+      "missing_affirmative_source_ids": [
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-231",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-077",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-237",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-063",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-155",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-006",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-111",
+      "missing_affirmative_source_ids": []
+    },
+    {
+      "case_id": "E046-042",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-180",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-049",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-169",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-118",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-048",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-184",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-172",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-079",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-226",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-211",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-230",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-227",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-040",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-210",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-181",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-017",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-120",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-195",
+      "missing_affirmative_source_ids": [
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-234",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-235",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-136",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-197",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-091",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-052",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-019",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-061",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-199",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-232",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-145",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-012",
+      "missing_affirmative_source_ids": []
+    },
+    {
+      "case_id": "E046-053",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-168",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-149",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-062",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-070",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-085",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-033",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-224",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-202",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-163",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-083",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-093",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-238",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-219",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-031",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-028",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-160",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-157",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-176",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-008",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-059",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-090",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-030",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-171",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-240",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-214",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-236",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-010",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-058",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-166",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-057",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-140",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-135",
+      "missing_affirmative_source_ids": [
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-189",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-175",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-066",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-239",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-037",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-034",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-156",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-024",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-018",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-164",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-044",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-029",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-072",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-125",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-126",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-108",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-067",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-153",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-014",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-124",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-004",
+      "missing_affirmative_source_ids": [
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-165",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-141",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-113",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-198",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-060",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-038",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-137",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-229",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-221",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-056",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-021",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-223",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-228",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-105",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-099",
+      "missing_affirmative_source_ids": []
+    },
+    {
+      "case_id": "E046-215",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-148",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-182",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-100",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-225",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-133",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-032",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-027",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-073",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-064",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-098",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-177",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-043",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-002",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "case_id": "E046-041",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-065",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-026",
+      "missing_affirmative_source_ids": [
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-200",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-003",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-088",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-075",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-104",
+      "missing_affirmative_source_ids": [
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-188",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-216",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-173",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-123",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-151",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-122",
+      "missing_affirmative_source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-086",
+      "missing_affirmative_source_ids": [
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-142",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-025",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-007",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-206",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-186",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-138",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-204",
+      "missing_affirmative_source_ids": []
+    },
+    {
+      "case_id": "E046-167",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-016",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-146",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-134",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-107",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-128",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-179",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-102",
+      "missing_affirmative_source_ids": []
+    },
+    {
+      "case_id": "E046-013",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-150",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "case_id": "E046-036",
+      "missing_affirmative_source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "case_id": "E046-194",
+      "missing_affirmative_source_ids": [
+        "D1"
+      ]
+    },
+    {
+      "case_id": "E046-115",
+      "missing_affirmative_source_ids": [
+        "D3"
+      ]
+    },
+    {
+      "case_id": "E046-212",
+      "missing_affirmative_source_ids": [
+        "D3"
+      ]
+    }
+  ],
+  "input_sha256": {
+    "data/synthetic/exp046_five_passage_cases.json": "625c59e1c9fd8eaca6bb9377abe9a082bb893b7d860b979e1436bf7989146255",
+    "results/raw/exp046/cases.jsonl": "254e0a8c7b9f2057c522bd8ee8cd40281d26864b8a51bf65dfa96d91bd2ba62c"
+  },
+  "limitations": "Conditional on valid extraction; first blocking rule masks later possible failures. Does not isolate passage count, vocabulary or sentence complexity as causal factors. No correction or relabelling is applied."
+}

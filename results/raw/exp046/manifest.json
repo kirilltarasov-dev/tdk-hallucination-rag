@@ -1,0 +1,66 @@
+{
+  "experiment_id": "EXP-046",
+  "status": "run_started",
+  "started_at_utc": "2026-11-26T13:06:26.922682+00:00",
+  "approval_note": "User authorized execution on 2026-11-26: хорош дававй делвй, following the stated EXP-046 plan of 240 cases, 720 local calls and a 307200 generated-token cap.",
+  "preparation_sha256": "ebe41ced7267d57e8ea18923dc14fd6a3f76e75a9e42350c3108e2caf5d54ef4",
+  "freeze_commit": "8bb0d0f0aece395ab8903b4afc83553ebfc63ba8",
+  "git_commit": "8bb0d0f0aece395ab8903b4afc83553ebfc63ba8",
+  "hardware": "Hardware:\n\n    Hardware Overview:\n\n      Model Name: MacBook Pro\n      Model Identifier: Mac17,8\n      Model Number: Z1MZ000E7D/A\n      Chip: Apple M5 Pro\n      Total Number of Cores: 18 (6 Super and 12 Performance)\n      Memory: 24 GB\n      System Firmware Version: 20457.1.29\n      OS Loader Version: 18000.161.10.701.1\n      Activation Lock Status: Disabled\n",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "runtime_versions": {
+    "mlx": "0.32.2",
+    "mlx-lm": "0.31.3",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3"
+  },
+  "config": {
+    "experiment_id": "EXP-046",
+    "status": "prepared_requires_verified_freeze_and_inference_approval",
+    "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+    "revision": "a4b8f870474b0eb527f466a03fbc187830d271f5",
+    "temperature": 0,
+    "n_questions": 240,
+    "families": [
+      "clean",
+      "paraphrase",
+      "negated_distractor",
+      "conflict",
+      "no_target_evidence",
+      "false_source_only"
+    ],
+    "questions_per_family": 40,
+    "passages_per_question": 5,
+    "arms": [
+      "S1",
+      "S2",
+      "Candidate_NS"
+    ],
+    "shared_draft": true,
+    "call_order": "S1 then alternating S2/V3 by case index",
+    "max_output_tokens": {
+      "S1": 128,
+      "S2": 128,
+      "V3": 1024
+    },
+    "planned_calls": 720,
+    "maximum_generated_tokens": 307200,
+    "primary_comparison": "Candidate_NS minus S1 output-contract utility bounds",
+    "scorer": "experiments.exp040_generated_answers.score",
+    "minimum_correct_draft_retention": 0.8,
+    "fixture_seed": 46018,
+    "bootstrap": {
+      "stratify_by": "fixed_family",
+      "samples": 10000,
+      "seed": 46019,
+      "quantiles": [
+        0.025,
+        0.975
+      ]
+    },
+    "independent_human_review": false,
+    "semantic_hallucination_claim": false,
+    "requires_explicit_inference_approval": true,
+    "execution_ready": true
+  }
+}

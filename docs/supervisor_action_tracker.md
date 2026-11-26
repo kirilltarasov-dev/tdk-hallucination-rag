@@ -1,6 +1,6 @@
 # Supervisor Action Tracker
 
-**Updated:** 2026-11-18. This tracks the P0 items in Róbert Lakatos's
+**Updated:** 2026-11-26. This tracks the P0 items in Róbert Lakatos's
 improvement plan against the actual repository and current supervisor draft.
 "Done" means the specified artifact or analysis exists and was locally
 checked; it does not mean the TDK paper is ready to submit. P1 and P2 remain
@@ -26,6 +26,16 @@ Arena M1–M5 status and explicit limitations. It remains a supervisor draft,
 not a submission-ready final paper. Completion percentages do not increase
 merely because another experiment finished.
 
+The latest v9 manuscript adds completed EXP-046, its failed coverage screen,
+source-omission diagnosis, an architecture figure, a paired uncertainty figure
+and nine cited references. EXP-046 retained only 1/77 correct S1 drafts and
+abstained on 236/240 cases. All 76 correct-draft losses occurred at source
+coverage or original-extraction validation. Its one released false-source
+response remains unscorable under the frozen contract; zero scored wrong
+answers is not factual reliability. The full run and analysis replay are
+complete, but broad effectiveness and independent validation remain unmet.
+See `docs/exp046_results.md`. No overall completion percentage is recalculated.
+
 Arena M1 is now complete within the app-shell/loader scope; its recorded trace
 preview is usable locally. P1-35, P1-36 and P1-39 have advanced from Open in the
 dated audit to Partial (working initial app, M1 tests, verified screenshots).
@@ -45,9 +55,15 @@ change P0 completion. Subsequent v8 document changes are reflected in the rows
 below, but no overall P0/P1 percentage has been recounted; earlier percentages
 remain dated snapshots.
 
+A row count on 2026-11-26 gives **13 Done, 12 Partial and 3 Open out of 28 P0
+items** (46.4% strictly closed within each row's stated scope). This is a count
+of checklist items, not remaining effort or thesis readiness. P1/P2 and the
+98-item total have not been fully re-audited; do not extrapolate this percentage
+to the whole supervisor plan.
+
 | P0 requirement | Status | Evidence or remaining work |
 |---|---|---|
-| Align title with measured work | Open | EXP-036 failed its 80% retention target. EXP-040 retained 68% of correct drafts and reduced utility from 0.350 to 0.325. EXP-044 retained 12/14 correct drafts but its S1 comparison is inconclusive because four drafts are unscorable; all four false-source-only controls remain wrong and VERIFIED. General effectiveness and real-world validation remain unestablished. |
+| Align title with measured work | Open | EXP-036/040 failed their retention screens; EXP-044 was inconclusive. EXP-046 now fails with 1/77 retained correct drafts and utility bounds [-0.592, +0.325]. v9 reports these limits. Title scope still needs supervisor agreement; general effectiveness and real-world validation remain unestablished. |
 | Use a hallucination-specific metric for the title claim | Partial | EXP-039's AI-only analysis of 200 drafts found no established S3 advantage. EXP-045 separately labels false target claims in 7/24 S1 outputs versus 4/24 for each NS arm on fictional cases. Both are unvalidated assistant assessments; human confirmation remains zero. |
 | Remove internal review/process wording | Done | v6 draft omits the review-version marker and approved-direction wording. |
 | Move EXP identifiers out of the main text | Done | Main text uses descriptive system names; Appendix A maps identifiers. |
@@ -57,7 +73,7 @@ remain dated snapshots.
 | Put unbuilt components in Future Work | Partial | v8 now distinguishes the measured restricted hybrid and local Arena from the unbuilt complete retrieval/selective pipeline and unverified venue/audience demonstration. Broad scope remains incomplete. |
 | Own Contribution in first person, supervisor role, repository URL | Partial | First-person contribution and supervisor role are in v6; no public repository URL exists. |
 | Label 80%-noise RGB as development | Done | v6 and README label all intervention results at 80% noise as development evidence. |
-| Freeze method with tagged commit before new test | Done for EXP-029 | Local commit `77829b1` and annotated tag `exp029-freeze-2026-11-17` precede inference. Future final tests need their own freeze; this is not a public release. |
+| Freeze method with tagged commit before new test | Done for completed frozen studies | EXP-029 retains its original freeze. EXP-046 used commit `8bb0d0f` and tag `exp046-freeze-2026-11-18`, verified before its approved 2026-11-26 inference. Future tests need separate freezes; this is not a public release. |
 | Dataset versions, sizes, licences, hashes in paper table | Done for local RGB subsets | v8 Appendix B records file counts, SHA-256 digests, roles, upstream commit and CC BY-NC-SA 4.0, following `docs/dataset_manifest.md`. Historical model revision uncertainty remains explicit. |
 | State S3 assessor model and use distinct verifier model | Open | Existing S3 assessor uses the generator model. A distinct verifier requires a new design and controlled evaluation. The new symbolic rule prototype does not replace the neural assessor. |
 | JSON-schema-constrained outputs and parse-failure reporting | Partial | EXP-032 implements strict post-generation JSON/type/provenance checks and visible UNKNOWN/error records. Decoding is not schema constrained; historical text-prefix parsers are unchanged. |
@@ -70,11 +86,11 @@ remain dated snapshots.
 | Complete question-level trace in JSONL | Partial | Historical raw rows are preserved and EXP-028 stores questions, contexts, assessments, answers, and stage timings; not every run stores full prompts, tokens, or memory. |
 | Unit tests for scorer and parsers with CI | Partial | Local tests cover scoring, historical parsers, symbolic rules, and extraction boundaries. Linux GitHub Actions workflow is configured but has not run remotely. These tests do not measure neural extraction accuracy. |
 | Publish prompts in repository and appendix | Partial | Prompts are in source files; the manuscript appendix does not reproduce them verbatim. |
-| Architecture figure | Open | No current architecture figure maps failures to interventions. |
+| Architecture figure | Done for the restricted candidate | v9 Figure 1 shows neural extraction, independent answer parsing, validation, source checks and release policy; `docs/candidate_verifier_architecture.md` maps observed failures to implemented guards and remaining limits. It does not depict an unevaluated full retrieval/selective system as complete. |
 | Remove duplicated noise table/figure; add comparative uncertainty plot | Partial | Duplicate figure was removed from v6; a multi-model uncertainty plot depends on additional model runs. |
 | Number and caption tables | Done for v8 | Duplicate Table 1 caption removed; main tables 1–8 and appendix tables A1/B1 have unique captions. |
 | Taxonomy percentages and multi-label note | Done | Table 3 and its note specify denominators and label overlap. |
-| IEEE references with DOIs and peer-reviewed versions | Partial | Existing references use numbered citations but there are only four; one remains an arXiv version. Literature review is still too narrow. |
+| IEEE references with DOIs and peer-reviewed versions | Partial | v9 has nine cited references numbered by first appearance. Five additions were verified against primary publisher metadata and papers, including four DOIs. The retained CRAG citation is still a preprint; the literature review is broader but not exhaustive. |
 
 ## Immediate critical path
 
@@ -85,11 +101,11 @@ remain dated snapshots.
    On 2026-11-18 the author reported that external reviewers are unavailable:
    human review remains unmet, not a prerequisite for restricted automatic
    studies or a task satisfied by assistant review. Preserve original labels
-   and unvalidated AI provenance. EXP-046 now has a prepared automatic-score
-   package: fixture, runner, 16 dedicated software tests and non-inference
-   preflight. See `docs/exp046_preparation.md` for the tagged execution freeze.
-   Bounded-run approval and measured results remain outstanding. No new
-   inference has run; preparation does not close an effectiveness task.
+   and unvalidated AI provenance. EXP-046 completed 240 cases / 720 calls after
+   approval and freeze verification. Its 1/77 correct-draft retention fails the
+   joint screen. All 170 tests and full raw replay pass; these software checks
+   do not establish effectiveness. Preserve the failure and diagnose transcription
+   completeness in a separate development protocol, not by tuning this test.
 3. Resolve the title/method choice with the supervisor: either implement and
    validate a genuinely symbolic decision layer and a hallucination-specific
    metric, or adopt a narrower title aligned with the completed contribution.
