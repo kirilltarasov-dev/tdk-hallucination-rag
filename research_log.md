@@ -1528,3 +1528,31 @@ No new model calls, experimental results, revised conclusions or raw file
 changes occurred. EXP-046 remains NOT_PASS. Docker inference, distinct neural
 verification, full telemetry and independent human semantic validation remain
 unfulfilled.
+
+## EXP-047 — Offline target coverage ablation (2026-11-26)
+
+Objective: determine whether the full-source neural coverage requirement causes
+avoidable abstention when non-target affirmative statements are omitted. The
+pre-run protocol and implementation were frozen at commit `44659b9`, tag
+`exp047-offline-freeze-2026-11-26`. Controlled comparison: existing full-source
+guard, target-complete candidate, and rule-only comparator over identical saved
+S1 and verifier outputs from EXP-040 (40 cases, 1–3 sources) and EXP-044 (24
+cases, 1–2 sources). There were zero new model calls. EXP-046 was not used.
+
+Results: full-source and target-complete made the same decision on all 64
+cases. Both scored 19 correct / 4 wrong / 17 abstain on EXP-040 and 12 correct /
+4 wrong / 8 abstain on EXP-044. Rule-only scored 22/4/14 on EXP-040 and
+12/4/8 on EXP-044. Correct S1 draft retention was respectively 19/25 versus
+22/25 for rule-only on EXP-040, and 12/14 for all three policies on EXP-044.
+All four false-source controls in each set were wrongly released by every arm.
+
+Interpretation: the proposed target coverage change has a demonstrated logical
+effect in a constructed unit test but no observed effect on these short saved
+sets. The rule-only comparator is at least as good on this finite grammar,
+raising a substantive question about the neural component's contribution.
+These development results do not validate hallucination reduction, source
+truth, or five-source transfer. EXP-046 remains NOT_PASS. Raw rows:
+`results/raw/exp047_offline_replay.jsonl`; processed summary:
+`results/processed/exp047_offline_summary.json`; analysis:
+`docs/exp047_results.md`. Next step is a new, bounded five-source development
+study, subject to author approval before inference.

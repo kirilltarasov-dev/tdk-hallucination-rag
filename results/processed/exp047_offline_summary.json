@@ -1,0 +1,139 @@
+{
+  "experiment_id": "EXP-047",
+  "kind": "offline_development_ablation",
+  "model_calls": 0,
+  "inputs": {
+    "docs/exp047_offline_protocol.md": "6da6ddc9f33f6d1343f410368708ecacf90eeec345e5bba1b8d17b9b77e2dd4e",
+    "src/verification/target_relevance_candidate.py": "547fa59c6eaf7c393d4775a323c65967cffe562d5758fd1672a1b2e141f869c4",
+    "src/verification/independent_answer.py": "8d546308c9cdb99d659bf5639d40b08b509c9c378cfda5e7123c7395d3a6a655",
+    "src/verification/polarity_guard.py": "04f204b5508a412aa7c297a940f98511d1d7d17e34efd81f24db62116d91d97b",
+    "src/verification/neuro_symbolic.py": "451dc9fcac0bc1f5f3164446a894ff62433d716ecabeb289f48122e7236ea860",
+    "src/verification/symbolic_rules.py": "0708070eaf51191948b2132fb94f1b70ebeafee689ee39a8e605b570da07470c",
+    "src/verification/release_policy.py": "893351d25d9ca960624c2bc75b53e1ce856ec7e54c526d0243b5251e3ea48bd0",
+    "src/verification/answer_claim_guard.py": "eab0c05004a08e9b3755eea321f0a8616e2942aec05ef2f65d82a9e235bdfe55",
+    "experiments/exp040_generated_answers.py": "eb0217eb841f3299a661c7c1b8ff4f92d752660b4d8cbd7e118221b1d129a16d",
+    "tests/test_target_relevance_candidate.py": "d2644b1421ca480f8609a4f48b713436198eb5ecc4bec11f1f1ec5236131046d",
+    "experiments/exp047_offline_target_coverage.py": "94dfe937a86985c875cdcd026ef33a4f8e806e8c059a14fb1ceca1aebbf67995",
+    "results/raw/exp040_generated_answers.jsonl": "a844f72dc19617bbb246761837d822e52d6ad887ca386b3a1c8d38004447d2b5",
+    "data/synthetic/exp040_generated_answer_cases.json": "7c30dce9ef68c73ac6dd93fcd19c0dfc8de02f73d8c1cdbe2cf34ec1a7dead1c",
+    "results/raw/exp044_fresh_transfer.jsonl": "1cee1a96ddedbebf31fc2c770efba608d8c28df4f37ee703121ce18852ce999c",
+    "data/synthetic/exp044_generated_transfer_cases.json": "7a6a57c08bb868610eeb948dae50965796e6f3f473545c127cb2648b73cf67e3"
+  },
+  "results": {
+    "EXP-040": {
+      "n": 40,
+      "source_counts": {
+        "1": 16,
+        "2": 20,
+        "3": 4
+      },
+      "arms": {
+        "full_source": {
+          "categories": {
+            "CORRECT": 19,
+            "ABSTAIN": 17,
+            "WRONG": 4
+          },
+          "verdicts": {
+            "VERIFIED": 23,
+            "REFUTED": 2,
+            "UNKNOWN": 7,
+            "CONFLICT": 8
+          },
+          "correct_s1_drafts_retained": 19,
+          "correct_s1_drafts_denominator": 25,
+          "wrong_false_source_releases": 4
+        },
+        "target_complete": {
+          "categories": {
+            "CORRECT": 19,
+            "ABSTAIN": 17,
+            "WRONG": 4
+          },
+          "verdicts": {
+            "VERIFIED": 23,
+            "REFUTED": 2,
+            "UNKNOWN": 7,
+            "CONFLICT": 8
+          },
+          "correct_s1_drafts_retained": 19,
+          "correct_s1_drafts_denominator": 25,
+          "wrong_false_source_releases": 4
+        },
+        "rule_only": {
+          "categories": {
+            "CORRECT": 22,
+            "ABSTAIN": 14,
+            "WRONG": 4
+          },
+          "verdicts": {
+            "VERIFIED": 26,
+            "REFUTED": 2,
+            "CONFLICT": 8,
+            "UNKNOWN": 4
+          },
+          "correct_s1_drafts_retained": 22,
+          "correct_s1_drafts_denominator": 25,
+          "wrong_false_source_releases": 4
+        }
+      },
+      "target_minus_full_decision_changes": 0
+    },
+    "EXP-044": {
+      "n": 24,
+      "source_counts": {
+        "1": 16,
+        "2": 8
+      },
+      "arms": {
+        "full_source": {
+          "categories": {
+            "CORRECT": 12,
+            "ABSTAIN": 8,
+            "WRONG": 4
+          },
+          "verdicts": {
+            "VERIFIED": 16,
+            "CONFLICT": 4,
+            "UNKNOWN": 4
+          },
+          "correct_s1_drafts_retained": 12,
+          "correct_s1_drafts_denominator": 14,
+          "wrong_false_source_releases": 4
+        },
+        "target_complete": {
+          "categories": {
+            "CORRECT": 12,
+            "ABSTAIN": 8,
+            "WRONG": 4
+          },
+          "verdicts": {
+            "VERIFIED": 16,
+            "CONFLICT": 4,
+            "UNKNOWN": 4
+          },
+          "correct_s1_drafts_retained": 12,
+          "correct_s1_drafts_denominator": 14,
+          "wrong_false_source_releases": 4
+        },
+        "rule_only": {
+          "categories": {
+            "CORRECT": 12,
+            "ABSTAIN": 8,
+            "WRONG": 4
+          },
+          "verdicts": {
+            "VERIFIED": 16,
+            "CONFLICT": 4,
+            "UNKNOWN": 4
+          },
+          "correct_s1_drafts_retained": 12,
+          "correct_s1_drafts_denominator": 14,
+          "wrong_false_source_releases": 4
+        }
+      },
+      "target_minus_full_decision_changes": 0
+    }
+  },
+  "limitations": "Saved V2/V3 calls on previously inspected one- to three-source cases. No five-source or independent prospective result; no source-credibility guarantee. EXP-046 is not an input."
+}
